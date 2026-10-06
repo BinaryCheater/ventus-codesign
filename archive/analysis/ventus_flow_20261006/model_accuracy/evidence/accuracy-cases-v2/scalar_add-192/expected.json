@@ -1,0 +1,8 @@
+{
+  "name": "scalar_add-192",
+  "family": "scalar_add",
+  "n": 192,
+  "expected_words": [
+    192
+  ]
+}

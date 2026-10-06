@@ -1,0 +1,72 @@
+OpenSTA 3.1.0 66c2930332 Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning 1212: ${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib line 13178, timing group from output port.
+Warning 1212: ${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib line 13211, timing group from output port.
+Warning 1212: ${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib line 13244, timing group from output port.
+Warning 1212: ${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib line 13277, timing group from output port.
+Warning 1212: ${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib line 13310, timing group from output port.
+Warning 1212: ${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib line 13343, timing group from output port.
+Warning 1212: ${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib line 13376, timing group from output port.
+Warning 1212: ${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib line 14772, timing group from output port.
+Warning 1212: ${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib line 14805, timing group from output port.
+Warning 1212: ${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib line 14838, timing group from output port.
+ time 1ps
+ capacitance 1fF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1pW
+ distance 1um
+Startpoint: io_func[3] (input port clocked by virtual_clock)
+Endpoint: io_cmp_out (output port clocked by virtual_clock)
+Path Group: virtual_clock
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock virtual_clock (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ input external delay
+   0.0000    0.0000 ^ io_func[3] (in)
+   8.8914    8.8914 v _1125_/Y (INVx1_ASAP7_75t_R)
+ 222.1847  231.0761 ^ _1160_/Y (AOI211xp5_ASAP7_75t_R)
+  64.9850  296.0611 v _1266_/Y (XNOR2xp5_ASAP7_75t_R)
+  49.4094  345.4705 ^ _1272_/Y (MAJIxp5_ASAP7_75t_R)
+  38.9458  384.4163 v _1274_/Y (A2O1A1Ixp33_ASAP7_75t_R)
+  38.2966  422.7129 ^ _1277_/Y (A2O1A1Ixp33_ASAP7_75t_R)
+  23.2713  445.9842 v _1279_/Y (A2O1A1Ixp33_ASAP7_75t_R)
+  36.1543  482.1385 ^ _1282_/Y (A2O1A1O1Ixp25_ASAP7_75t_R)
+  37.8743  520.0128 ^ _1284_/Y (OA33x2_ASAP7_75t_R)
+  27.6787  547.6915 v _1287_/Y (A2O1A1O1Ixp25_ASAP7_75t_R)
+  43.5741  591.2656 v _1289_/Y (OA211x2_ASAP7_75t_R)
+  28.0915  619.3571 ^ _1292_/Y (OAI311xp33_ASAP7_75t_R)
+  28.9761  648.3333 v _1295_/Y (AOI311xp33_ASAP7_75t_R)
+  33.1646  681.4979 ^ _1298_/Y (OAI311xp33_ASAP7_75t_R)
+  28.9925  710.4904 v _1301_/Y (AOI311xp33_ASAP7_75t_R)
+  39.7193  750.2097 ^ _1304_/Y (OAI311xp33_ASAP7_75t_R)
+  32.1496  782.3593 v _1307_/Y (AOI311xp33_ASAP7_75t_R)
+  40.9424  823.3016 ^ _1310_/Y (OAI311xp33_ASAP7_75t_R)
+  31.7215  855.0232 v _1313_/Y (AOI311xp33_ASAP7_75t_R)
+  31.2835  886.3067 ^ _2194_/Y (OAI32xp33_ASAP7_75t_R)
+  28.3160  914.6227 ^ _2196_/Y (XNOR2xp5_ASAP7_75t_R)
+  27.4852  942.1078 v _2247_/Y (A2O1A1O1Ixp25_ASAP7_75t_R)
+  30.2696  972.3774 v _2248_/Y (XNOR2xp5_ASAP7_75t_R)
+   0.0000  972.3774 v io_cmp_out (out)
+           972.3774   data arrival time
+
+1000.0000 1000.0000   clock virtual_clock (rise edge)
+   0.0000 1000.0000   clock network delay (ideal)
+   0.0000 1000.0000   clock reconvergence pessimism
+   0.0000 1000.0000   output external delay
+          1000.0000   data required time
+-------------------------------------------------------------
+          1000.0000   data required time
+          -972.3774   data arrival time
+-------------------------------------------------------------
+            27.6226   slack (MET)
+
+

@@ -1,0 +1,9 @@
+logs/
+build/
+.cache/
+install/
+*.json
+*.fir
+*.v
+*.fst
+rtl_parameters.cpp

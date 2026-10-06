@@ -1,0 +1,8 @@
+{
+  "name": "repeat_load-192",
+  "family": "repeat_load",
+  "n": 192,
+  "expected_words": [
+    0
+  ]
+}

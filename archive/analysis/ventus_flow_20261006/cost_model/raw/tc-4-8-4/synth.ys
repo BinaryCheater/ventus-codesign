@@ -1,0 +1,8 @@
+read_verilog -sv logic.v
+hierarchy -check -top vTCexe
+synth -top vTCexe -noabc
+ dfflibmap -liberty ${REMOTE_STORAGE_ROOT}/ventus-cost-v1-20261006/mapping.lib
+abc -liberty ${REMOTE_STORAGE_ROOT}/ventus-cost-v1-20261006/mapping.lib -D 1000
+clean
+tee -o statistics.json stat -json -liberty ${REMOTE_STORAGE_ROOT}/ventus-cost-v1-20261006/mapping.lib
+write_verilog -noattr mapped.v

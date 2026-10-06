@@ -1,0 +1,100 @@
+{
+  "cases": [
+    {
+      "stride": 1,
+      "write": 1,
+      "responses": 4,
+      "first_latency": 3,
+      "last_latency": 6,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 1,
+      "write": 0,
+      "responses": 4,
+      "first_latency": 3,
+      "last_latency": 6,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 2,
+      "write": 1,
+      "responses": 8,
+      "first_latency": 3,
+      "last_latency": 10,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 2,
+      "write": 0,
+      "responses": 8,
+      "first_latency": 3,
+      "last_latency": 10,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 4,
+      "write": 1,
+      "responses": 16,
+      "first_latency": 3,
+      "last_latency": 18,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 4,
+      "write": 0,
+      "responses": 16,
+      "first_latency": 3,
+      "last_latency": 18,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 8,
+      "write": 1,
+      "responses": 32,
+      "first_latency": 3,
+      "last_latency": 34,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 8,
+      "write": 0,
+      "responses": 32,
+      "first_latency": 3,
+      "last_latency": 34,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 32,
+      "write": 1,
+      "responses": 32,
+      "first_latency": 3,
+      "last_latency": 34,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 32,
+      "write": 0,
+      "responses": 32,
+      "first_latency": 3,
+      "last_latency": 34,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    }
+  ],
+  "kind": "lds",
+  "banks": 8,
+  "depth": 1024,
+  "name": "lds-8-1024",
+  "rtl_sha256": "12e72ab371f55410531432d135a6d4e2a778db2ae54525354a3d5d44c0ff4afd",
+  "binary_sha256": "df9972ea4602d52835f89200d0ec48d630ffdab986a07a54c7098c2b99ee32d6"
+}

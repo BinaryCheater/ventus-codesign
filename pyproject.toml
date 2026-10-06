@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ventus-codesign"
+version = "0.1.0"
+description = "Source-derived Ventus timing, synthesis costs, and finite-menu MILP experiments"
+requires-python = ">=3.12"
+dependencies = ["numpy>=2.0,<3", "highspy>=1.15,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=9,<10", "ruff>=0.15,<1"]
+
+[project.scripts]
+ventus-project = "ventus_project.__main__:main"
+ventus-model = "codesign.ventus.__main__:main"
+ventus-costs = "codesign.ventus_costs.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["codesign", "ventus_project"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+include = ["codesign/**/*.py", "ventus_project/**/*.py", "tests/**/*.py"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

@@ -1,0 +1,31 @@
+{
+  "name": "lds-32-1024",
+  "top": "SharedMemory",
+  "source": "${REMOTE_FLOW_ROOT}/primitive-parameters-v4/lds-32-1024/SharedMemory.v",
+  "rtl_sha256": "d4b1975f1775f86fa542f9b94a8f951561bb99a7c86e7664ec5f8e32ff15429f",
+  "logic_rtl_sha256": "667c5fd9d2d253d0ad546094c08695674a335149b1c9578e8f362fe7a2181ae8",
+  "memory_modules": {
+    "ram_32x1060": {
+      "bits": 33920,
+      "arrays": [
+        [
+          "1059",
+          "Memory",
+          "31"
+        ]
+      ],
+      "source_sha256": "8d1be098c6ca88e0ae46744378462016ee46de16d1c1073a094f240457e9570a"
+    },
+    "array_1024x32": {
+      "bits": 32768,
+      "arrays": [
+        [
+          "31",
+          "Memory",
+          "1023"
+        ]
+      ],
+      "source_sha256": "ec2c440bff2bf5746fdd968bd4c750b3488bab14a0f25dbaa7036cd06b3c1e44"
+    }
+  }
+}

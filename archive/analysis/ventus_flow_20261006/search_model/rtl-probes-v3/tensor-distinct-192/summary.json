@@ -1,0 +1,17 @@
+{
+  "name": "tensor-distinct-192",
+  "n": 192,
+  "family": "tensor-distinct",
+  "predicted_body_interval": 16,
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "af0df2fbc1f4edce8390cdb398fd9a6cd1dc0588d613e7cdb013215692dda710"
+  },
+  "returncode": 0,
+  "wall_seconds": 26.61982513696421,
+  "dispatch_to_finish_cycles": 3165,
+  "checked_words": 32,
+  "all_output_zero": true,
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+}

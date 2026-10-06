@@ -1,0 +1,704 @@
+[
+  {
+    "name": "num_sm",
+    "declaration": "def num_sm = 2",
+    "source_line": 7,
+    "scope": "top"
+  },
+  {
+    "name": "num_warp",
+    "declaration": "var num_warp = 8",
+    "source_line": 8,
+    "scope": "top"
+  },
+  {
+    "name": "num_thread",
+    "declaration": "var num_thread = 32",
+    "source_line": 9,
+    "scope": "top"
+  },
+  {
+    "name": "SINGLE_INST",
+    "declaration": "val SINGLE_INST: Boolean = false",
+    "source_line": 10,
+    "scope": "top"
+  },
+  {
+    "name": "SPIKE_OUTPUT",
+    "declaration": "val SPIKE_OUTPUT: Boolean = true",
+    "source_line": 11,
+    "scope": "top"
+  },
+  {
+    "name": "INST_CNT",
+    "declaration": "val INST_CNT: Boolean = true",
+    "source_line": 12,
+    "scope": "top"
+  },
+  {
+    "name": "INST_CNT_2",
+    "declaration": "val INST_CNT_2: Boolean = false",
+    "source_line": 13,
+    "scope": "top"
+  },
+  {
+    "name": "GVM_ENABLED",
+    "declaration": "val GVM_ENABLED: Boolean = sys.env.getOrElse(\"RTL_GVM_ENABLED\", \"false\").toBoolean",
+    "source_line": 14,
+    "scope": "top"
+  },
+  {
+    "name": "MMU_ENABLED",
+    "declaration": "val MMU_ENABLED: Boolean = false",
+    "source_line": 15,
+    "scope": "top"
+  },
+  {
+    "name": "MMU_ASID_WIDTH",
+    "declaration": "def MMU_ASID_WIDTH = mmu.SV32.asidLen",
+    "source_line": 16,
+    "scope": "top"
+  },
+  {
+    "name": "wid_to_check",
+    "declaration": "val wid_to_check = 2",
+    "source_line": 17,
+    "scope": "top"
+  },
+  {
+    "name": "num_bank",
+    "declaration": "def num_bank = 4                  // # of banks for register file",
+    "source_line": 18,
+    "scope": "top"
+  },
+  {
+    "name": "num_collectorUnit",
+    "declaration": "def num_collectorUnit = num_warp",
+    "source_line": 19,
+    "scope": "top"
+  },
+  {
+    "name": "num_vgpr",
+    "declaration": "def num_vgpr:Int = 128*num_warp",
+    "source_line": 20,
+    "scope": "top"
+  },
+  {
+    "name": "num_sgpr",
+    "declaration": "def num_sgpr:Int = 256*num_warp",
+    "source_line": 21,
+    "scope": "top"
+  },
+  {
+    "name": "depth_regBank",
+    "declaration": "def depth_regBank = log2Ceil(num_vgpr/num_bank)",
+    "source_line": 22,
+    "scope": "top"
+  },
+  {
+    "name": "regidx_width",
+    "declaration": "def regidx_width = 5",
+    "source_line": 23,
+    "scope": "top"
+  },
+  {
+    "name": "regext_width",
+    "declaration": "def regext_width = 3",
+    "source_line": 25,
+    "scope": "top"
+  },
+  {
+    "name": "num_cluster",
+    "declaration": "def num_cluster = 1",
+    "source_line": 27,
+    "scope": "top"
+  },
+  {
+    "name": "num_sm_in_cluster",
+    "declaration": "def num_sm_in_cluster = num_sm / num_cluster",
+    "source_line": 29,
+    "scope": "top"
+  },
+  {
+    "name": "depth_warp",
+    "declaration": "def depth_warp = if (num_warp == 1) 1 else log2Ceil(num_warp)",
+    "source_line": 30,
+    "scope": "top"
+  },
+  {
+    "name": "widSliceHigh",
+    "declaration": "def widSliceHigh = scala.math.min(log2Ceil(num_bank) - 1, depth_warp - 1)",
+    "source_line": 34,
+    "scope": "top"
+  },
+  {
+    "name": "depth_thread",
+    "declaration": "def depth_thread = log2Ceil(num_thread)",
+    "source_line": 36,
+    "scope": "top"
+  },
+  {
+    "name": "num_fetch",
+    "declaration": "def num_fetch = 2",
+    "source_line": 38,
+    "scope": "top"
+  },
+  {
+    "name": "icache_align",
+    "declaration": "def icache_align = num_fetch * 4",
+    "source_line": 41,
+    "scope": "top"
+  },
+  {
+    "name": "num_issue",
+    "declaration": "def num_issue = 1",
+    "source_line": 43,
+    "scope": "top"
+  },
+  {
+    "name": "size_ibuffer",
+    "declaration": "def size_ibuffer = 2",
+    "source_line": 45,
+    "scope": "top"
+  },
+  {
+    "name": "xLen",
+    "declaration": "def xLen = 32 // data length 32-bit",
+    "source_line": 47,
+    "scope": "top"
+  },
+  {
+    "name": "instLen",
+    "declaration": "def instLen = 32",
+    "source_line": 49,
+    "scope": "top"
+  },
+  {
+    "name": "addrLen",
+    "declaration": "def addrLen = 32",
+    "source_line": 51,
+    "scope": "top"
+  },
+  {
+    "name": "num_block",
+    "declaration": "def num_block = 8// not bigger than num_warp",
+    "source_line": 53,
+    "scope": "top"
+  },
+  {
+    "name": "num_warp_in_a_block",
+    "declaration": "def num_warp_in_a_block = num_warp",
+    "source_line": 55,
+    "scope": "top"
+  },
+  {
+    "name": "num_lane",
+    "declaration": "def num_lane = num_thread // 2",
+    "source_line": 57,
+    "scope": "top"
+  },
+  {
+    "name": "num_icachebuf",
+    "declaration": "def num_icachebuf = 1 //blocking for each warp",
+    "source_line": 59,
+    "scope": "top"
+  },
+  {
+    "name": "depth_icachebuf",
+    "declaration": "def depth_icachebuf = log2Ceil(num_icachebuf)",
+    "source_line": 61,
+    "scope": "top"
+  },
+  {
+    "name": "num_ibuffer",
+    "declaration": "def num_ibuffer = 2",
+    "source_line": 63,
+    "scope": "top"
+  },
+  {
+    "name": "depth_ibuffer",
+    "declaration": "def depth_ibuffer = log2Ceil(num_ibuffer)",
+    "source_line": 65,
+    "scope": "top"
+  },
+  {
+    "name": "lsu_num_entry_each_warp",
+    "declaration": "def lsu_num_entry_each_warp = 4 //blocking for each warp",
+    "source_line": 67,
+    "scope": "top"
+  },
+  {
+    "name": "lsu_nMshrEntry",
+    "declaration": "def lsu_nMshrEntry = num_warp // less than num_warp",
+    "source_line": 69,
+    "scope": "top"
+  },
+  {
+    "name": "dcache_NSets",
+    "declaration": "def dcache_NSets: Int = 256",
+    "source_line": 71,
+    "scope": "top"
+  },
+  {
+    "name": "dcache_NWays",
+    "declaration": "def dcache_NWays: Int = 2",
+    "source_line": 73,
+    "scope": "top"
+  },
+  {
+    "name": "dcache_BlockWords",
+    "declaration": "def dcache_BlockWords: Int = 32  // number of words per cacheline(block)",
+    "source_line": 75,
+    "scope": "top"
+  },
+  {
+    "name": "dcache_wshr_entry",
+    "declaration": "def dcache_wshr_entry: Int = 4",
+    "source_line": 76,
+    "scope": "top"
+  },
+  {
+    "name": "dcache_SetIdxBits",
+    "declaration": "def dcache_SetIdxBits: Int = log2Ceil(dcache_NSets)",
+    "source_line": 78,
+    "scope": "top"
+  },
+  {
+    "name": "BytesOfWord",
+    "declaration": "def BytesOfWord = 32 / 8",
+    "source_line": 80,
+    "scope": "top"
+  },
+  {
+    "name": "dcache_WordOffsetBits",
+    "declaration": "def dcache_WordOffsetBits = log2Ceil(BytesOfWord) //a Word has 4 Bytes",
+    "source_line": 82,
+    "scope": "top"
+  },
+  {
+    "name": "dcache_BlockOffsetBits",
+    "declaration": "def dcache_BlockOffsetBits = log2Ceil(dcache_BlockWords) // select word in block",
+    "source_line": 84,
+    "scope": "top"
+  },
+  {
+    "name": "dcache_TagBits",
+    "declaration": "def dcache_TagBits = xLen - (dcache_SetIdxBits + dcache_BlockOffsetBits + dcache_WordOffsetBits)",
+    "source_line": 86,
+    "scope": "top"
+  },
+  {
+    "name": "dcache_MshrEntry",
+    "declaration": "def dcache_MshrEntry: Int = 4",
+    "source_line": 88,
+    "scope": "top"
+  },
+  {
+    "name": "dcache_MshrSubEntry",
+    "declaration": "def dcache_MshrSubEntry: Int = 2",
+    "source_line": 90,
+    "scope": "top"
+  },
+  {
+    "name": "num_sfu",
+    "declaration": "def num_sfu = (num_thread >> 2).max(1)",
+    "source_line": 91,
+    "scope": "top"
+  },
+  {
+    "name": "sharedmem_depth",
+    "declaration": "def sharedmem_depth = 1024",
+    "source_line": 93,
+    "scope": "top"
+  },
+  {
+    "name": "sharedmem_BlockWords",
+    "declaration": "def sharedmem_BlockWords = dcache_BlockWords",
+    "source_line": 95,
+    "scope": "top"
+  },
+  {
+    "name": "sharemem_size",
+    "declaration": "def sharemem_size = sharedmem_depth * sharedmem_BlockWords * 4 //bytes",
+    "source_line": 97,
+    "scope": "top"
+  },
+  {
+    "name": "l2cache_NSets",
+    "declaration": "def l2cache_NSets: Int = 64",
+    "source_line": 99,
+    "scope": "top"
+  },
+  {
+    "name": "l2cache_NWays",
+    "declaration": "def l2cache_NWays: Int = 16",
+    "source_line": 101,
+    "scope": "top"
+  },
+  {
+    "name": "l2cache_BlockWords",
+    "declaration": "def l2cache_BlockWords: Int = dcache_BlockWords",
+    "source_line": 103,
+    "scope": "top"
+  },
+  {
+    "name": "l2cache_writeBytes",
+    "declaration": "def l2cache_writeBytes: Int = 1",
+    "source_line": 105,
+    "scope": "top"
+  },
+  {
+    "name": "l2cache_memCycles",
+    "declaration": "def l2cache_memCycles: Int = 32",
+    "source_line": 107,
+    "scope": "top"
+  },
+  {
+    "name": "l2cache_portFactor",
+    "declaration": "def l2cache_portFactor: Int = 2",
+    "source_line": 109,
+    "scope": "top"
+  },
+  {
+    "name": "l1cache_sourceBits",
+    "declaration": "def l1cache_sourceBits: Int = 3+log2Up(dcache_MshrEntry)+log2Up(dcache_NSets)",
+    "source_line": 111,
+    "scope": "top"
+  },
+  {
+    "name": "l2cache_cache",
+    "declaration": "def l2cache_cache = CacheParameters(2, l2cache_NWays, l2cache_NSets, num_l2cache, l2cache_BlockWords << 2, l2cache_BlockWords << 2)",
+    "source_line": 113,
+    "scope": "top"
+  },
+  {
+    "name": "l2cache_micro",
+    "declaration": "def l2cache_micro = InclusiveCacheMicroParameters(l2cache_writeBytes, l2cache_memCycles, l2cache_portFactor, num_warp, num_sm, num_sm_in_cluster, num_cluster,dcache_MshrEntry,dcache_NSets)",
+    "source_line": 114,
+    "scope": "top"
+  },
+  {
+    "name": "l2cache_micro_l",
+    "declaration": "def l2cache_micro_l = InclusiveCacheMicroParameters(l2cache_writeBytes, l2cache_memCycles, l2cache_portFactor, num_warp, num_sm, num_sm_in_cluster, 1,dcache_MshrEntry,dcache_NSets)",
+    "source_line": 115,
+    "scope": "top"
+  },
+  {
+    "name": "l2cache_params",
+    "declaration": "def l2cache_params = InclusiveCacheParameters_lite(l2cache_cache, l2cache_micro, false, MMU_ENABLED)",
+    "source_line": 116,
+    "scope": "top"
+  },
+  {
+    "name": "l2cache_params_l",
+    "declaration": "def l2cache_params_l = InclusiveCacheParameters_lite(l2cache_cache, l2cache_micro_l, false, MMU_ENABLED)",
+    "source_line": 117,
+    "scope": "top"
+  },
+  {
+    "name": "tc_dim",
+    "declaration": "def tc_dim: Seq[Int] = {",
+    "source_line": 119,
+    "scope": "top"
+  },
+  {
+    "name": "x",
+    "declaration": "var x: Seq[Int] = Seq(2, 2, 2)",
+    "source_line": 120,
+    "scope": "nested"
+  },
+  {
+    "name": "sig_length",
+    "declaration": "def sig_length = 33",
+    "source_line": 128,
+    "scope": "top"
+  },
+  {
+    "name": "num_cache_in_sm",
+    "declaration": "def num_cache_in_sm = 2",
+    "source_line": 130,
+    "scope": "top"
+  },
+  {
+    "name": "num_l2cache",
+    "declaration": "def num_l2cache = 1",
+    "source_line": 132,
+    "scope": "top"
+  },
+  {
+    "name": "l1tlb_ways",
+    "declaration": "def l1tlb_ways = 8",
+    "source_line": 134,
+    "scope": "top"
+  },
+  {
+    "name": "LDS_BASE",
+    "declaration": "val LDS_BASE = 0x70000000  // LDS base address: a hyperparameter used within each SM",
+    "source_line": 136,
+    "scope": "top"
+  },
+  {
+    "name": "NUMBER_CU",
+    "declaration": "def NUMBER_CU = num_sm",
+    "source_line": 138,
+    "scope": "top"
+  },
+  {
+    "name": "NUMBER_VGPR_SLOTS",
+    "declaration": "def NUMBER_VGPR_SLOTS = num_vgpr",
+    "source_line": 139,
+    "scope": "top"
+  },
+  {
+    "name": "NUMBER_SGPR_SLOTS",
+    "declaration": "def NUMBER_SGPR_SLOTS = num_sgpr",
+    "source_line": 140,
+    "scope": "top"
+  },
+  {
+    "name": "NUMBER_LDS_SLOTS",
+    "declaration": "def NUMBER_LDS_SLOTS = sharemem_size //TODO:check LDS max value. 128kB -> 2^17",
+    "source_line": 141,
+    "scope": "top"
+  },
+  {
+    "name": "WG_ID_WIDTH",
+    "declaration": "def WG_ID_WIDTH = 32",
+    "source_line": 142,
+    "scope": "top"
+  },
+  {
+    "name": "WF_COUNT_MAX",
+    "declaration": "def WF_COUNT_MAX = num_warp // max num of wf in a cu",
+    "source_line": 143,
+    "scope": "top"
+  },
+  {
+    "name": "WF_COUNT_PER_WG_MAX",
+    "declaration": "def WF_COUNT_PER_WG_MAX = num_warp_in_a_block // max num of wf in a wg",
+    "source_line": 144,
+    "scope": "top"
+  },
+  {
+    "name": "WAVE_ITEM_WIDTH",
+    "declaration": "def WAVE_ITEM_WIDTH = 10",
+    "source_line": 145,
+    "scope": "top"
+  },
+  {
+    "name": "MEM_ADDR_WIDTH",
+    "declaration": "def MEM_ADDR_WIDTH = 32",
+    "source_line": 146,
+    "scope": "top"
+  },
+  {
+    "name": "CU_ID_WIDTH",
+    "declaration": "def CU_ID_WIDTH = log2Ceil(NUMBER_CU)",
+    "source_line": 147,
+    "scope": "top"
+  },
+  {
+    "name": "VGPR_ID_WIDTH",
+    "declaration": "def VGPR_ID_WIDTH = log2Ceil(NUMBER_VGPR_SLOTS)",
+    "source_line": 148,
+    "scope": "top"
+  },
+  {
+    "name": "SGPR_ID_WIDTH",
+    "declaration": "def SGPR_ID_WIDTH = log2Ceil(NUMBER_SGPR_SLOTS)",
+    "source_line": 149,
+    "scope": "top"
+  },
+  {
+    "name": "LDS_ID_WIDTH",
+    "declaration": "def LDS_ID_WIDTH = log2Ceil(NUMBER_LDS_SLOTS)",
+    "source_line": 150,
+    "scope": "top"
+  },
+  {
+    "name": "WF_COUNT_WIDTH",
+    "declaration": "def WF_COUNT_WIDTH = log2Ceil(WF_COUNT_MAX + 1)",
+    "source_line": 151,
+    "scope": "top"
+  },
+  {
+    "name": "WF_COUNT_WIDTH_PER_WG",
+    "declaration": "def WF_COUNT_WIDTH_PER_WG = log2Ceil(WF_COUNT_PER_WG_MAX + 1)",
+    "source_line": 152,
+    "scope": "top"
+  },
+  {
+    "name": "TAG_WIDTH",
+    "declaration": "def TAG_WIDTH = CTA_SCHE_CONFIG.WG.WF_TAG_WIDTH_UINT",
+    "source_line": 153,
+    "scope": "top"
+  },
+  {
+    "name": "NUM_WG_DIM",
+    "declaration": "def NUM_WG_DIM = 1024",
+    "source_line": 154,
+    "scope": "top"
+  },
+  {
+    "name": "NUM_WG_X",
+    "declaration": "def NUM_WG_X = NUM_WG_DIM // max wg num in kernel",
+    "source_line": 155,
+    "scope": "top"
+  },
+  {
+    "name": "NUM_WG_Y",
+    "declaration": "def NUM_WG_Y = NUM_WG_DIM",
+    "source_line": 156,
+    "scope": "top"
+  },
+  {
+    "name": "NUM_WG_Z",
+    "declaration": "def NUM_WG_Z = NUM_WG_DIM",
+    "source_line": 157,
+    "scope": "top"
+  },
+  {
+    "name": "WG_SIZE_X_WIDTH",
+    "declaration": "def WG_SIZE_X_WIDTH = log2Ceil(NUM_WG_X + 1)",
+    "source_line": 158,
+    "scope": "top"
+  },
+  {
+    "name": "WG_SIZE_Y_WIDTH",
+    "declaration": "def WG_SIZE_Y_WIDTH = log2Ceil(NUM_WG_Y + 1)",
+    "source_line": 159,
+    "scope": "top"
+  },
+  {
+    "name": "WG_SIZE_Z_WIDTH",
+    "declaration": "def WG_SIZE_Z_WIDTH = log2Ceil(NUM_WG_Z + 1)",
+    "source_line": 160,
+    "scope": "top"
+  },
+  {
+    "name": "KNL_ASID_WIDTH",
+    "declaration": "def KNL_ASID_WIDTH = MMU_ASID_WIDTH",
+    "source_line": 162,
+    "scope": "top"
+  },
+  {
+    "name": "NUM_CU",
+    "declaration": "val NUM_CU = num_sm",
+    "source_line": 167,
+    "scope": "nested"
+  },
+  {
+    "name": "MEM_ADDR_WIDTH",
+    "declaration": "val MEM_ADDR_WIDTH = parameters.MEM_ADDR_WIDTH.W",
+    "source_line": 168,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_WG_SLOT",
+    "declaration": "val NUM_WG_SLOT = num_block                  // Number of WG slot in each CU",
+    "source_line": 169,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_WF_SLOT",
+    "declaration": "val NUM_WF_SLOT = num_warp                   // Number of WF slot in each CU",
+    "source_line": 170,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_THREAD",
+    "declaration": "val NUM_THREAD = num_thread                  // Number of thread in each WF",
+    "source_line": 171,
+    "scope": "nested"
+  },
+  {
+    "name": "MMU_ENABLE",
+    "declaration": "val MMU_ENABLE = MMU_ENABLED                 // if MMU will be used",
+    "source_line": 172,
+    "scope": "nested"
+  },
+  {
+    "name": "ASID_WIDTH",
+    "declaration": "val ASID_WIDTH = MMU_ASID_WIDTH.W            // MMU ASID width",
+    "source_line": 173,
+    "scope": "nested"
+  },
+  {
+    "name": "WG_ID_WIDTH",
+    "declaration": "val WG_ID_WIDTH = parameters.WG_ID_WIDTH.W",
+    "source_line": 176,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_WG_DIM_MAX",
+    "declaration": "val NUM_WG_DIM_MAX = NUM_WG_DIM              // Max number of wg in a single dimension in each kernel",
+    "source_line": 177,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_THREAD_MAX",
+    "declaration": "val NUM_THREAD_MAX = GPU.NUM_THREAD          // Max number of thread in each wavefront(warp)",
+    "source_line": 178,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_WF_MAX",
+    "declaration": "val NUM_WF_MAX = num_warp_in_a_block         // Max number of wavefront in each workgroup(block)",
+    "source_line": 179,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_LDS_MAX",
+    "declaration": "val NUM_LDS_MAX = sharemem_size              // Max number of LDS  occupied by a workgroup",
+    "source_line": 180,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_SGPR_MAX",
+    "declaration": "val NUM_SGPR_MAX = num_sgpr                  // Max number of sgpr occupied by a workgroup",
+    "source_line": 181,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_VGPR_MAX",
+    "declaration": "val NUM_VGPR_MAX = num_vgpr                  // Max number of vgpr occupied by a workgroup",
+    "source_line": 182,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_PDS_MAX",
+    "declaration": "val NUM_PDS_MAX = 4096*num_thread            // Max number of PDS  occupied by a *wavefront*",
+    "source_line": 183,
+    "scope": "nested"
+  },
+  {
+    "name": "WF_TAG_WIDTH_UINT",
+    "declaration": "val WF_TAG_WIDTH_UINT = log2Ceil(GPU.NUM_WG_SLOT) + log2Ceil(NUM_WF_MAX)",
+    "source_line": 187,
+    "scope": "nested"
+  },
+  {
+    "name": "WF_TAG_WIDTH",
+    "declaration": "val WF_TAG_WIDTH = WF_TAG_WIDTH_UINT.W",
+    "source_line": 188,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_ENTRIES",
+    "declaration": "val NUM_ENTRIES = 8",
+    "source_line": 191,
+    "scope": "nested"
+  },
+  {
+    "name": "NUM_RESULT",
+    "declaration": "val NUM_RESULT = 2",
+    "source_line": 194,
+    "scope": "nested"
+  },
+  {
+    "name": "DEBUG",
+    "declaration": "val DEBUG = true",
+    "source_line": 196,
+    "scope": "nested"
+  }
+]

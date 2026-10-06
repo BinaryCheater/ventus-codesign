@@ -1,0 +1,59 @@
+{
+  "packaging_version": "0.1.0",
+  "date": "2026-10-07",
+  "regression_tests_passed": 123,
+  "original_timing_cost_solver_bytes_preserved": true,
+  "historical_json_numeric_payloads_unchanged": 421,
+  "historical_non_json_files_with_json_extension_preserved": [
+    "archive/analysis/ventus_flow_20261006/cost_model/default_cost_v1.json"
+  ],
+  "raw_liberty_libraries_preserved": 5,
+  "combined_mapping_libraries_preserved": 2,
+  "frozen_replays_passed": [
+    "cost table from raw synthesis",
+    "six broader RTL kernels",
+    "v7 mixed-memory kernels",
+    "small S16 full-template timing"
+  ],
+  "standalone_smoke_checks": [
+    "menu MILP and read-only replay",
+    "tiny Transformer and read-only replay",
+    "RF8 cost query",
+    "pinned RTL extraction",
+    "GPT2 shape census"
+  ],
+  "owner_default_execution": "remote; private profile excluded from shares",
+  "collaborator_default_execution": "local when private profile absent",
+  "new_full_gpu_rtl_or_synthesis_run": false,
+  "remote_checks": {
+    "locked_environment_installed": true,
+    "regression_tests_passed": 123,
+    "pytest_host_seconds": 33.16,
+    "finite_menu_demo_and_read_only_replay_passed": true,
+    "tiny_transformer_cycles": 23383,
+    "tiny_transformer_instructions": 13770,
+    "tiny_transformer_read_only_replay_passed": true,
+    "cost_query_passed": true,
+    "frozen_kernel_cost_and_small_s16_replays_passed": true
+  },
+  "unchanged_live_timing_and_cost_modules": 17,
+  "portability_extensions": [
+    "pinned source manifest support",
+    "equivalent finite-menu MILP completion bound and executable incumbent; solver status/bound still required",
+    "explicit read-only Transformer replay host budget"
+  ],
+  "collaborator_archive_check": {
+    "private_profile_absent": true,
+    "default_execution": "local",
+    "unconfigured_remote_blocked_before_ssh": true,
+    "initial_archive_tests_passed": 117
+  },
+  "runtime_observation": {
+    "same_tiny_program_mac_seconds": 0.402,
+    "same_tiny_program_server_seconds": 5.025,
+    "isolated_single_core_microbenchmark_server_to_mac_ratio": 5.26,
+    "server_clock_observed_under_load_mhz": 800,
+    "global_power_settings_changed": false,
+    "not_a_gpu_performance_change": true
+  }
+}

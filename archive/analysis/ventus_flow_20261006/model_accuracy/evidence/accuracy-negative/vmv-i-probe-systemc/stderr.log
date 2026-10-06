@@ -1,0 +1,2 @@
+main: ${REMOTE_FLOW_ROOT}/src/cyclesim/src/sm/exec_valu.cpp:210: void Subcore::VALU_CALC(): Assertion `0' failed.
+timeout: the monitored command dumped core

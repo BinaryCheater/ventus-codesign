@@ -1,0 +1,29 @@
+[warn] ventus/src/cta/allocator.scala 251:41: [W004] Dynamic index with width 2 is too wide for Vec of size 2 (expected index width 1).
+[warn] ventus/src/cta/allocator.scala 252:42: [W004] Dynamic index with width 2 is too wide for Vec of size 2 (expected index width 1).
+[warn] ventus/src/cta/allocator.scala 253:42: [W004] Dynamic index with width 2 is too wide for Vec of size 2 (expected index width 1).
+[warn] ventus/src/cta/allocator.scala 262:40: [W004] Dynamic index with width 2 is too wide for Vec of size 2 (expected index width 1).
+[warn] ventus/src/cta/allocator.scala 262:90: [W004] Dynamic index with width 2 is too wide for Vec of size 2 (expected index width 1).
+[warn] ventus/src/pipeline/operandCollector.scala 505:13: [W004] Dynamic index with width 8 is too wide for Vec of size 8 (expected index width 3).
+[warn] ventus/src/pipeline/operandCollector.scala 506:13: [W004] Dynamic index with width 8 is too wide for Vec of size 8 (expected index width 3).
+[warn] ventus/src/pipeline/operandCollector.scala 509:13: [W004] Dynamic index with width 8 is too wide for Vec of size 8 (expected index width 3).
+[warn] ventus/src/pipeline/operandCollector.scala 510:13: [W004] Dynamic index with width 8 is too wide for Vec of size 8 (expected index width 3).
+[warn] ventus/src/pipeline/operandCollector.scala 621:13: [W005] Dynamic index with width 2 is too narrow for Vec of size 8 (expected index width 3).
+[warn] ventus/src/pipeline/operandCollector.scala 622:13: [W005] Dynamic index with width 2 is too narrow for Vec of size 8 (expected index width 3).
+[warn] ventus/src/pipeline/scoreboard.scala 86:33: [W003] Dynamic index with width 1 is too small for extractee of width 256
+[warn] ventus/src/pipeline/scoreboard.scala 86:33: [W002] Dynamic index with width 1 is too large for extractee of width 1
+[warn] ventus/src/L1Cache/ICache/ICacheMSHR.scala 216:19: [W004] Dynamic index with width 3 is too wide for Vec of size 4 (expected index width 2).
+[warn] ventus/src/L1Cache/ICache/ICacheMSHR.scala 218:19: [W004] Dynamic index with width 3 is too wide for Vec of size 4 (expected index width 2).
+[warn] ventus/src/L1Cache/ICache/ICacheMSHR.scala 224:35: [W004] Dynamic index with width 5 is too wide for Vec of size 4 (expected index width 2).
+[warn] ventus/src/L1Cache/L1MSHR.scala 300:40: [W004] Dynamic index with width 2 is too wide for Vec of size 2 (expected index width 1).
+[warn] ventus/src/L2cache/Directory_test.scala 143:22: [W004] Dynamic index with width 5 is too wide for Vec of size 16 (expected index width 4).
+[warn] ventus/src/L2cache/Directory_test.scala 144:95: [W004] Dynamic index with width 11 is too wide for Vec of size 64 (expected index width 6).
+[warn] ventus/src/L2cache/Directory_test.scala 144:112: [W004] Dynamic index with width 5 is too wide for Vec of size 16 (expected index width 4).
+[warn] ventus/src/L2cache/Directory_test.scala 290:93: [W004] Dynamic index with width 11 is too wide for Vec of size 64 (expected index width 6).
+[warn] ventus/src/L2cache/Directory_test.scala 290:110: [W004] Dynamic index with width 5 is too wide for Vec of size 16 (expected index width 4).
+[warn] ventus/src/L2cache/Directory_test.scala 304:70: [W004] Dynamic index with width 11 is too wide for Vec of size 64 (expected index width 6).
+[warn] ventus/src/L2cache/Directory_test.scala 304:87: [W004] Dynamic index with width 5 is too wide for Vec of size 16 (expected index width 4).
+[warn] ventus/src/L2cache/Scheduler.scala 113:54: [W004] Dynamic index with width 16 is too wide for Vec of size 32 (expected index width 5).
+[warn] ventus/src/L2cache/Scheduler.scala 114:54: [W004] Dynamic index with width 16 is too wide for Vec of size 32 (expected index width 5).
+[warn] ventus/src/L2cache/Scheduler.scala 115:60: [W004] Dynamic index with width 16 is too wide for Vec of size 32 (expected index width 5).
+[warn] ventus/src/L2cache/Scheduler.scala 116:54: [W004] Dynamic index with width 16 is too wide for Vec of size 32 (expected index width 5).
+[warn] There were 28 warning(s) during hardware elaboration.

@@ -1,0 +1,1 @@
+{"modes":[{"mode":0,"accepted":64,"outputs":64,"first_output":10,"last_output":73,"min_latency":10,"max_latency":10,"input_stalls":0,"bit_exact":true},{"mode":1,"accepted":64,"outputs":64,"first_output":11,"last_output":125,"min_latency":10,"max_latency":19,"input_stalls":10,"bit_exact":true}]}

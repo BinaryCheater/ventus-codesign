@@ -1,0 +1,11 @@
+
+Warning: (W569) sc_module(const char*), sc_module(const std::string&) have been deprecated, use sc_module(const sc_module_name&): RamulatorWrapper
+In file: ${REMOTE_FLOW_ROOT}/deps/systemc/src/sysc/kernel/sc_module.cpp:248
+Create new vmem for kernel vmv-i-probe, ptroot=0x1000 [trace main.cpp:83]
+Start loading data for kernel vmv-i-probe, ptroot=0x1000 [trace main.cpp:188]
+kernel 0 vmv-i-probe initialized, size={1,1,1} @0ns,0 [info context_model.cpp:23]
+
+Warning: (W509) module construction not properly completed: did you forget to add a sc_module_name parameter to your module constructor?: module 'RamulatorWrapper'
+In file: ${REMOTE_FLOW_ROOT}/deps/systemc/src/sysc/kernel/sc_module.cpp:409
+SM 1 warp 1 receive kernel 0 vmv-i-probe block 0 warp 0 @15ns,1 [trace BASE.cpp:244]
+VALU_CALC warning: switch to unrecognized ins          VMV_V_I_0x5e0030d7 at 85 ns,1

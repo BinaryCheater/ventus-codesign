@@ -1,0 +1,13 @@
+read_verilog -sv memories.v deduplicated.v
+hierarchy -check -top SM_wrapper
+proc
+opt_expr
+opt_clean
+techmap
+opt_expr
+opt_clean
+dfflibmap -liberty mapping.lib
+abc -liberty mapping.lib -D 1000
+clean
+tee -o statistics.json stat -json -liberty mapping.lib
+write_verilog -noattr mapped.v

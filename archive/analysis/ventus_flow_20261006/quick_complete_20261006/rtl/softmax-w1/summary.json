@@ -1,0 +1,5463 @@
+{
+  "input_sha256": {
+    "input.metadata": "053e9f4d25c0ec310b4d8b42c78639d0693b06dde9623aea29407b434ea6afdb",
+    "input.data": "75354e983542b540d3897e2e750c9998adf838f6765afa449707b6f4600bd77c"
+  },
+  "expected_words": [
+    999818059,
+    1020965246,
+    990878863,
+    1011784533,
+    1033149971,
+    1002647596,
+    1024223075,
+    993552023,
+    1015325931,
+    1035916321,
+    1006280809,
+    1026836540,
+    996984450,
+    1017794951,
+    1039468387,
+    1008789454,
+    1030192284,
+    999818059,
+    1020965246,
+    990878863,
+    1011784533,
+    1033149971,
+    1002647596,
+    1024223075,
+    993552023,
+    1015325931,
+    1035916321,
+    1006280809,
+    1026836540,
+    996984450,
+    1017794951,
+    1039468387
+  ],
+  "final_tensor_pc": 2147484836,
+  "output_store_pc": 2147484856,
+  "workload": {
+    "operations": [
+      {
+        "name": "pc80000000",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000004",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v31",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000008",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000000c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000010",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000014",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000018",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v1",
+        "addresses": [
+          2415919104,
+          2415919108,
+          2415919112,
+          2415919116,
+          2415919120,
+          2415919124,
+          2415919128,
+          2415919132,
+          2415919136,
+          2415919140,
+          2415919144,
+          2415919148,
+          2415919152,
+          2415919156,
+          2415919160,
+          2415919164,
+          2415919168,
+          2415919172,
+          2415919176,
+          2415919180,
+          2415919184,
+          2415919188,
+          2415919192,
+          2415919196,
+          2415919200,
+          2415919204,
+          2415919208,
+          2415919212,
+          2415919216,
+          2415919220,
+          2415919224,
+          2415919228
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000001c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v1"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000020",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000024",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000028",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000002c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000030",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048192,
+          1879048196,
+          1879048200,
+          1879048204,
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000034",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000038",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000003c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000040",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000044",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000048",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000004c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000050",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000054",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000058",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000005c",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316,
+          1879048192,
+          1879048196,
+          1879048200,
+          1879048204,
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000060",
+        "kind": "fmax",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v4"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000064",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000068",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000006c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000070",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000074",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048192,
+          1879048196,
+          1879048200,
+          1879048204,
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000078",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000007c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000080",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000084",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000088",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000008c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000090",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000094",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000098",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000009c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000a0",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316,
+          1879048192,
+          1879048196,
+          1879048200,
+          1879048204,
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000a4",
+        "kind": "fmax",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v4"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000a8",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000ac",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000b0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000b4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000b8",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048192,
+          1879048196,
+          1879048200,
+          1879048204,
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000bc",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000c0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000c4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000c8",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000cc",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000d0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000d4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000d8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000dc",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000e0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000e4",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316,
+          1879048192,
+          1879048196,
+          1879048200,
+          1879048204
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000e8",
+        "kind": "fmax",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v4"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000ec",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000f0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000f4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000f8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000fc",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048192,
+          1879048196,
+          1879048200,
+          1879048204,
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000100",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000104",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000108",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000010c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000110",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000114",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000118",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000011c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000120",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000124",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000128",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          1879048200,
+          1879048204,
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316,
+          1879048192,
+          1879048196
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000012c",
+        "kind": "fmax",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v4"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000130",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000134",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000138",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000013c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000140",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048192,
+          1879048196,
+          1879048200,
+          1879048204,
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000144",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000148",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000014c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000150",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000154",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000158",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000015c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000160",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000164",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000168",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000016c",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          1879048196,
+          1879048200,
+          1879048204,
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316,
+          1879048192
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000170",
+        "kind": "fmax",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v4"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000174",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000178",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000017c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000180",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000184",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048192,
+          1879048196,
+          1879048200,
+          1879048204,
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000188",
+        "kind": "fadd",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v2"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "sub"
+      },
+      {
+        "name": "pc8000018c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000190",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v16",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000194",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v31",
+          "v31"
+        ],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000198",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v16",
+          "v12"
+        ],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc8000019c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001a0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001a4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v17",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001a8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v17",
+          "v17"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001ac",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001b0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001b4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v17",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001b8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001bc",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v17",
+          "v17"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001c0",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v12",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc800001c4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001c8",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001cc",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v17",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001d0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001d4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v17",
+          "v17"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001d8",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v12",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc800001dc",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001e0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001e4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v17",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001e8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001ec",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v17",
+          "v17"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001f0",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v12",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc800001f4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001f8",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800001fc",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v17",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000200",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000204",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v17",
+          "v17"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000208",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v12",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc8000020c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000210",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000214",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v17",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000218",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000021c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v17",
+          "v17"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000220",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v12",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc80000224",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000228",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v17",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000022c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000230",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v17",
+          "v17"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000234",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v12",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc80000238",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000023c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v17",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000240",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000244",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v17",
+          "v17"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000248",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v12",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc8000024c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000250",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v17",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000254",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000258",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v17",
+          "v17"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000025c",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v12",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc80000260",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000264",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v31",
+          "v31"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000268",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v30",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc8000026c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000270",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v31",
+          "v31"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000274",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v30",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc80000278",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000027c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v31",
+          "v31"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000280",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v30",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc80000284",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000288",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v31",
+          "v31"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000028c",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v30",
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc80000290",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v13"
+        ],
+        "destination": "v3",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000294",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v3",
+          "v3"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000298",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v3",
+          "v3"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000029c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002a0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002a4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002a8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002ac",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002b0",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048448,
+          1879048452,
+          1879048456,
+          1879048460,
+          1879048464,
+          1879048468,
+          1879048472,
+          1879048476,
+          1879048480,
+          1879048484,
+          1879048488,
+          1879048492,
+          1879048496,
+          1879048500,
+          1879048504,
+          1879048508,
+          1879048512,
+          1879048516,
+          1879048520,
+          1879048524,
+          1879048528,
+          1879048532,
+          1879048536,
+          1879048540,
+          1879048544,
+          1879048548,
+          1879048552,
+          1879048556,
+          1879048560,
+          1879048564,
+          1879048568,
+          1879048572
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002b4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002b8",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002bc",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002c0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002c4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002c8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002cc",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002d0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002d4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002d8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002dc",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002e0",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          1879048512,
+          1879048516,
+          1879048520,
+          1879048524,
+          1879048528,
+          1879048532,
+          1879048536,
+          1879048540,
+          1879048544,
+          1879048548,
+          1879048552,
+          1879048556,
+          1879048560,
+          1879048564,
+          1879048568,
+          1879048572,
+          1879048448,
+          1879048452,
+          1879048456,
+          1879048460,
+          1879048464,
+          1879048468,
+          1879048472,
+          1879048476,
+          1879048480,
+          1879048484,
+          1879048488,
+          1879048492,
+          1879048496,
+          1879048500,
+          1879048504,
+          1879048508
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002e4",
+        "kind": "fadd",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v4"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "add"
+      },
+      {
+        "name": "pc800002e8",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002ec",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002f0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002f4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002f8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800002fc",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048448,
+          1879048452,
+          1879048456,
+          1879048460,
+          1879048464,
+          1879048468,
+          1879048472,
+          1879048476,
+          1879048480,
+          1879048484,
+          1879048488,
+          1879048492,
+          1879048496,
+          1879048500,
+          1879048504,
+          1879048508,
+          1879048512,
+          1879048516,
+          1879048520,
+          1879048524,
+          1879048528,
+          1879048532,
+          1879048536,
+          1879048540,
+          1879048544,
+          1879048548,
+          1879048552,
+          1879048556,
+          1879048560,
+          1879048564,
+          1879048568,
+          1879048572
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000300",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000304",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000308",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000030c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000310",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000314",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000318",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000031c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000320",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000324",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000328",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000032c",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          1879048480,
+          1879048484,
+          1879048488,
+          1879048492,
+          1879048496,
+          1879048500,
+          1879048504,
+          1879048508,
+          1879048512,
+          1879048516,
+          1879048520,
+          1879048524,
+          1879048528,
+          1879048532,
+          1879048536,
+          1879048540,
+          1879048544,
+          1879048548,
+          1879048552,
+          1879048556,
+          1879048560,
+          1879048564,
+          1879048568,
+          1879048572,
+          1879048448,
+          1879048452,
+          1879048456,
+          1879048460,
+          1879048464,
+          1879048468,
+          1879048472,
+          1879048476
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000330",
+        "kind": "fadd",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v4"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "add"
+      },
+      {
+        "name": "pc80000334",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000338",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000033c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000340",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000344",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000348",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048448,
+          1879048452,
+          1879048456,
+          1879048460,
+          1879048464,
+          1879048468,
+          1879048472,
+          1879048476,
+          1879048480,
+          1879048484,
+          1879048488,
+          1879048492,
+          1879048496,
+          1879048500,
+          1879048504,
+          1879048508,
+          1879048512,
+          1879048516,
+          1879048520,
+          1879048524,
+          1879048528,
+          1879048532,
+          1879048536,
+          1879048540,
+          1879048544,
+          1879048548,
+          1879048552,
+          1879048556,
+          1879048560,
+          1879048564,
+          1879048568,
+          1879048572
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000034c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000350",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000354",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000358",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000035c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000360",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000364",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000368",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000036c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000370",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000374",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000378",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          1879048464,
+          1879048468,
+          1879048472,
+          1879048476,
+          1879048480,
+          1879048484,
+          1879048488,
+          1879048492,
+          1879048496,
+          1879048500,
+          1879048504,
+          1879048508,
+          1879048512,
+          1879048516,
+          1879048520,
+          1879048524,
+          1879048528,
+          1879048532,
+          1879048536,
+          1879048540,
+          1879048544,
+          1879048548,
+          1879048552,
+          1879048556,
+          1879048560,
+          1879048564,
+          1879048568,
+          1879048572,
+          1879048448,
+          1879048452,
+          1879048456,
+          1879048460
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000037c",
+        "kind": "fadd",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v4"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "add"
+      },
+      {
+        "name": "pc80000380",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000384",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000388",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000038c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000390",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000394",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048448,
+          1879048452,
+          1879048456,
+          1879048460,
+          1879048464,
+          1879048468,
+          1879048472,
+          1879048476,
+          1879048480,
+          1879048484,
+          1879048488,
+          1879048492,
+          1879048496,
+          1879048500,
+          1879048504,
+          1879048508,
+          1879048512,
+          1879048516,
+          1879048520,
+          1879048524,
+          1879048528,
+          1879048532,
+          1879048536,
+          1879048540,
+          1879048544,
+          1879048548,
+          1879048552,
+          1879048556,
+          1879048560,
+          1879048564,
+          1879048568,
+          1879048572
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000398",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000039c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003a0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003a4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003a8",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003ac",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003b0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003b4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003b8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003bc",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003c0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003c4",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          1879048456,
+          1879048460,
+          1879048464,
+          1879048468,
+          1879048472,
+          1879048476,
+          1879048480,
+          1879048484,
+          1879048488,
+          1879048492,
+          1879048496,
+          1879048500,
+          1879048504,
+          1879048508,
+          1879048512,
+          1879048516,
+          1879048520,
+          1879048524,
+          1879048528,
+          1879048532,
+          1879048536,
+          1879048540,
+          1879048544,
+          1879048548,
+          1879048552,
+          1879048556,
+          1879048560,
+          1879048564,
+          1879048568,
+          1879048572,
+          1879048448,
+          1879048452
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003c8",
+        "kind": "fadd",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v4"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "add"
+      },
+      {
+        "name": "pc800003cc",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003d0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003d4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003d8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003dc",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003e0",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048448,
+          1879048452,
+          1879048456,
+          1879048460,
+          1879048464,
+          1879048468,
+          1879048472,
+          1879048476,
+          1879048480,
+          1879048484,
+          1879048488,
+          1879048492,
+          1879048496,
+          1879048500,
+          1879048504,
+          1879048508,
+          1879048512,
+          1879048516,
+          1879048520,
+          1879048524,
+          1879048528,
+          1879048532,
+          1879048536,
+          1879048540,
+          1879048544,
+          1879048548,
+          1879048552,
+          1879048556,
+          1879048560,
+          1879048564,
+          1879048568,
+          1879048572
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003e4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003e8",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003ec",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003f0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003f4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003f8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800003fc",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000400",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x7"
+        ],
+        "destination": "x7",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000404",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x7"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000408",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000040c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000410",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          1879048452,
+          1879048456,
+          1879048460,
+          1879048464,
+          1879048468,
+          1879048472,
+          1879048476,
+          1879048480,
+          1879048484,
+          1879048488,
+          1879048492,
+          1879048496,
+          1879048500,
+          1879048504,
+          1879048508,
+          1879048512,
+          1879048516,
+          1879048520,
+          1879048524,
+          1879048528,
+          1879048532,
+          1879048536,
+          1879048540,
+          1879048544,
+          1879048548,
+          1879048552,
+          1879048556,
+          1879048560,
+          1879048564,
+          1879048568,
+          1879048572,
+          1879048448
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000414",
+        "kind": "fadd",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v4"
+        ],
+        "destination": "v2",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "add"
+      },
+      {
+        "name": "pc80000418",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000041c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000420",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000424",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000428",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000042c",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v2"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048448,
+          1879048452,
+          1879048456,
+          1879048460,
+          1879048464,
+          1879048468,
+          1879048472,
+          1879048476,
+          1879048480,
+          1879048484,
+          1879048488,
+          1879048492,
+          1879048496,
+          1879048500,
+          1879048504,
+          1879048508,
+          1879048512,
+          1879048516,
+          1879048520,
+          1879048524,
+          1879048528,
+          1879048532,
+          1879048536,
+          1879048540,
+          1879048544,
+          1879048548,
+          1879048552,
+          1879048556,
+          1879048560,
+          1879048564,
+          1879048568,
+          1879048572
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000430",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000434",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000438",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v18",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000043c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v2"
+        ],
+        "destination": "v5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000440",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v18",
+          "v5"
+        ],
+        "destination": "v5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000444",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000448",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "v19",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000044c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v19",
+          "v19"
+        ],
+        "destination": "v14",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000450",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v5",
+          "v14"
+        ],
+        "destination": "v14",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fnmadd"
+      },
+      {
+        "name": "pc80000454",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v5",
+          "v5"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000458",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v31",
+          "v31"
+        ],
+        "destination": "v5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000045c",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v14",
+          "v5"
+        ],
+        "destination": "v5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc80000460",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v19",
+          "v19"
+        ],
+        "destination": "v14",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000464",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v5",
+          "v14"
+        ],
+        "destination": "v14",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fnmadd"
+      },
+      {
+        "name": "pc80000468",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v5",
+          "v5"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000046c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v31",
+          "v31"
+        ],
+        "destination": "v5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000470",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v14",
+          "v5"
+        ],
+        "destination": "v5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc80000474",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v19",
+          "v19"
+        ],
+        "destination": "v14",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000478",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v5",
+          "v14"
+        ],
+        "destination": "v14",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fnmadd"
+      },
+      {
+        "name": "pc8000047c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v5",
+          "v5"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000480",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v31",
+          "v31"
+        ],
+        "destination": "v5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000484",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v14",
+          "v5"
+        ],
+        "destination": "v5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc80000488",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v19",
+          "v19"
+        ],
+        "destination": "v14",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000048c",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v5",
+          "v14"
+        ],
+        "destination": "v14",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fnmadd"
+      },
+      {
+        "name": "pc80000490",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v5",
+          "v5"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000494",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v31",
+          "v31"
+        ],
+        "destination": "v5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000498",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v14",
+          "v5"
+        ],
+        "destination": "v5",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc8000049c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v1"
+        ],
+        "destination": "v30",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800004a0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v31",
+          "v31"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800004a4",
+        "kind": "fma",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v30",
+          "v5",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": "fmadd"
+      },
+      {
+        "name": "pc800004a8",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800004ac",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800004b0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800004b4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800004b8",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v1"
+        ],
+        "destination": null,
+        "addresses": [
+          2415927296,
+          2415927300,
+          2415927304,
+          2415927308,
+          2415927312,
+          2415927316,
+          2415927320,
+          2415927324,
+          2415927328,
+          2415927332,
+          2415927336,
+          2415927340,
+          2415927344,
+          2415927348,
+          2415927352,
+          2415927356,
+          2415927360,
+          2415927364,
+          2415927368,
+          2415927372,
+          2415927376,
+          2415927380,
+          2415927384,
+          2415927388,
+          2415927392,
+          2415927396,
+          2415927400,
+          2415927404,
+          2415927408,
+          2415927412,
+          2415927416,
+          2415927420
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      }
+    ],
+    "warps_per_block": 1,
+    "vgpr_per_warp": 64,
+    "sgpr_per_warp": 64,
+    "lds_per_block": 512
+  },
+  "instruction_count": 304,
+  "name": "softmax-w1",
+  "warps": 1,
+  "words": [
+    695,
+    1577242583,
+    2415919927,
+    1376298327,
+    2527147351,
+    44254551,
+    336123,
+    705724759,
+    1879049015,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    1879049015,
+    1376298327,
+    951,
+    17007507,
+    44287319,
+    951,
+    32736147,
+    648267095,
+    2527147351,
+    44254551,
+    336507,
+    440471895,
+    1879049015,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    1879049015,
+    1376298327,
+    951,
+    8618899,
+    44287319,
+    951,
+    32736147,
+    648267095,
+    2527147351,
+    44254551,
+    336507,
+    440471895,
+    1879049015,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    1879049015,
+    1376298327,
+    951,
+    4424595,
+    44287319,
+    951,
+    32736147,
+    648267095,
+    2527147351,
+    44254551,
+    336507,
+    440471895,
+    1879049015,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    1879049015,
+    1376298327,
+    951,
+    2327443,
+    44287319,
+    951,
+    32736147,
+    648267095,
+    2527147351,
+    44254551,
+    336507,
+    440471895,
+    1879049015,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    1879049015,
+    1376298327,
+    951,
+    1278867,
+    44287319,
+    951,
+    32736147,
+    648267095,
+    2527147351,
+    44254551,
+    336507,
+    440471895,
+    1879049015,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    168890583,
+    1031799479,
+    1577240663,
+    738166359,
+    3003160151,
+    936383159,
+    3490874003,
+    1577240791,
+    723027671,
+    961548983,
+    3490874003,
+    1577240791,
+    718704471,
+    723027671,
+    2999916247,
+    985010871,
+    3054666387,
+    1577240791,
+    718704471,
+    723027671,
+    2999916247,
+    1007194807,
+    2291303059,
+    1577240791,
+    718704471,
+    723027671,
+    2999916247,
+    1026208439,
+    2863825555,
+    1577240791,
+    718704471,
+    723027671,
+    2999916247,
+    1042985655,
+    2863825555,
+    1577240791,
+    718704471,
+    723027671,
+    2999916247,
+    1056965303,
+    1577240791,
+    718704471,
+    723027671,
+    2999916247,
+    1065353911,
+    1577240791,
+    718704471,
+    723027671,
+    2999916247,
+    1065353911,
+    1577240791,
+    718704471,
+    723027671,
+    2999916247,
+    718704471,
+    738166487,
+    3018790615,
+    718704471,
+    738166487,
+    3018790615,
+    718704471,
+    738166487,
+    3018790615,
+    718704471,
+    738166487,
+    3018790615,
+    718701015,
+    707887319,
+    707887447,
+    1879049015,
+    268632851,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    1879049015,
+    268632851,
+    1376298327,
+    951,
+    17007507,
+    44287319,
+    951,
+    32736147,
+    648267095,
+    2527147351,
+    44254551,
+    336507,
+    37818711,
+    1879049015,
+    268632851,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    1879049015,
+    268632851,
+    1376298327,
+    951,
+    8618899,
+    44287319,
+    951,
+    32736147,
+    648267095,
+    2527147351,
+    44254551,
+    336507,
+    37818711,
+    1879049015,
+    268632851,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    1879049015,
+    268632851,
+    1376298327,
+    951,
+    4424595,
+    44287319,
+    951,
+    32736147,
+    648267095,
+    2527147351,
+    44254551,
+    336507,
+    37818711,
+    1879049015,
+    268632851,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    1879049015,
+    268632851,
+    1376298327,
+    951,
+    2327443,
+    44287319,
+    951,
+    32736147,
+    648267095,
+    2527147351,
+    44254551,
+    336507,
+    37818711,
+    1879049015,
+    268632851,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    1879049015,
+    268632851,
+    1376298327,
+    951,
+    1278867,
+    44287319,
+    951,
+    32736147,
+    648267095,
+    2527147351,
+    44254551,
+    336507,
+    37818711,
+    1879049015,
+    268632851,
+    1376298327,
+    2527147351,
+    44254551,
+    2449531,
+    2129859255,
+    473072275,
+    1577240919,
+    706806487,
+    186811095,
+    1073742519,
+    1577241047,
+    725190487,
+    3192985431,
+    710053719,
+    738165463,
+    3002012375,
+    725190487,
+    3192985431,
+    710053719,
+    738165463,
+    3002012375,
+    725190487,
+    3192985431,
+    710053719,
+    738165463,
+    3002012375,
+    725190487,
+    3192985431,
+    710053719,
+    738165463,
+    3002012375,
+    705728343,
+    738164951,
+    2992574679,
+    2415928119,
+    1376298327,
+    2527147351,
+    44254551,
+    1400955,
+    16395
+  ],
+  "final_pc": 2147484836,
+  "prediction": 1395,
+  "predicted_visible": 1429,
+  "counters": {
+    "scalar": 95,
+    "vector": 151,
+    "load": 11,
+    "l1_read_miss": 1,
+    "l2_miss": 2,
+    "memory_read_bytes": 256,
+    "store": 13,
+    "lds_rounds": 22,
+    "fmax": 5,
+    "fadd": 6,
+    "fma": 22,
+    "l1_write_miss": 1,
+    "memory_write_bytes": 128,
+    "writeback_stall_cycles": 1
+  },
+  "metadata": {
+    "max_abs_error_vs_float64": 2.376408071713687e-08,
+    "stages": [
+      {
+        "name": "softmax_normalize",
+        "pc": 2147484836
+      }
+    ]
+  },
+  "returncode": 0,
+  "rf_banks": 4,
+  "wall_seconds": 22.259175430051982,
+  "dispatch_to_finish_cycles": 1446,
+  "checked_words": 32,
+  "all_output_zero": false,
+  "output_matches": true,
+  "output_words": [
+    999818059,
+    1020965246,
+    990878863,
+    1011784533,
+    1033149971,
+    1002647596,
+    1024223075,
+    993552023,
+    1015325931,
+    1035916321,
+    1006280809,
+    1026836540,
+    996984450,
+    1017794951,
+    1039468387,
+    1008789454,
+    1030192284,
+    999818059,
+    1020965246,
+    990878863,
+    1011784533,
+    1033149971,
+    1002647596,
+    1024223075,
+    993552023,
+    1015325931,
+    1035916321,
+    1006280809,
+    1026836540,
+    996984450,
+    1017794951,
+    1039468387
+  ],
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33",
+  "rtl_library_sha256": "1a21bb8a9c3c6715492c4c53fddd92bf6e10d5af661c34c78a204beb29e7feb7",
+  "trace_tool_sha256": "c6144a2848cdc285fea0a3939661cd13c231c3dfc51958c7c0a8d1b7bdf13dcd",
+  "launch_not_before_cycle": 512
+}

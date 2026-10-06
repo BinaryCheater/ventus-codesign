@@ -1,0 +1,153 @@
+{
+  "source_sha256": {
+    "performance-v6/small-s16-final/experiment.json": "5c27f3ac0654f66edfac291a96cf55ee95a23b57abfb99600e353c718d591804",
+    "performance-v6/small-s64-final2/experiment.json": "56fceb455466e100b97de9f10fc749ba04cf56268245aa4ffd47b972a8467c86",
+    "layernorm_rtl_20261006/accuracy.json": "65ad7376e928700d631afba0b81d138c0ba737b87e8db7a66aa440021a3558e4",
+    "layernorm_rtl_20261006/rtl-c/layernorm-d32-s1-c0/summary.json": "82130ac94abc873301d71f9fef0267c24815d85d6fd7430171280204769f8ed9",
+    "layernorm_rtl_20261006/rtl-c/layernorm-d32-s1-c0/trace.csv": "e064eded5d380406298a563b048245a821e5191242e1201c98800401697f40ad",
+    "layernorm_rtl_20261006/rtl-c/layernorm-d64-s2-c0/summary.json": "6233a26d932bf58843609bd38c35af76c24868a35db6c82fbd4116a3ce0bb591",
+    "layernorm_rtl_20261006/rtl-c/layernorm-d64-s2-c0/trace.csv": "981b7d4a0b72bfc0c9bf7b68c7b810780c76c0eb371cae14a062cd855202fa03",
+    "layernorm_rtl_20261006/rtl-c/layernorm-d64-s3-c0/summary.json": "b54b187e10823d38f4c8acdd8e7b7e905bc99b78527ad69bf5d7d20091ad1cbb",
+    "layernorm_rtl_20261006/rtl-c/layernorm-d64-s3-c0/trace.csv": "981b7d4a0b72bfc0c9bf7b68c7b810780c76c0eb371cae14a062cd855202fa03",
+    "layernorm_rtl_20261006/rtl-c/layernorm-d64-s0-c1/summary.json": "4a57fd9947330d93371416d413dd776f50288b429dfd93e926f05bdc4c21c53d",
+    "layernorm_rtl_20261006/rtl-c/layernorm-d64-s0-c1/trace.csv": "981b7d4a0b72bfc0c9bf7b68c7b810780c76c0eb371cae14a062cd855202fa03"
+  },
+  "transformer": [
+    {
+      "name": "small-s16-final",
+      "cycles": 325936,
+      "host_seconds": 9.380063999909908,
+      "instructions": 272606,
+      "dispatches": 546,
+      "by_kind": {
+        "add": {
+          "cycles": 13472,
+          "dispatches": 130,
+          "share_percent": 4.133326788081096
+        },
+        "norm": {
+          "cycles": 25250,
+          "dispatches": 20,
+          "share_percent": 7.746919640665652
+        },
+        "gemm": {
+          "cycles": 233790,
+          "dispatches": 304,
+          "share_percent": 71.72880565509793
+        },
+        "copy": {
+          "cycles": 1912,
+          "dispatches": 24,
+          "share_percent": 0.586618231800108
+        },
+        "softmax": {
+          "cycles": 37184,
+          "dispatches": 32,
+          "share_percent": 11.408374650238084
+        },
+        "gelu": {
+          "cycles": 14328,
+          "dispatches": 36,
+          "share_percent": 4.395955034117128
+        }
+      },
+      "full_network_rtl_verified": false
+    },
+    {
+      "name": "small-s64-final2",
+      "cycles": 1036796,
+      "host_seconds": 31.974845999968238,
+      "instructions": 950022,
+      "dispatches": 1880,
+      "by_kind": {
+        "add": {
+          "cycles": 45379,
+          "dispatches": 442,
+          "share_percent": 4.376849447721635
+        },
+        "norm": {
+          "cycles": 66920,
+          "dispatches": 50,
+          "share_percent": 6.454500210263157
+        },
+        "gemm": {
+          "cycles": 749137,
+          "dispatches": 1104,
+          "share_percent": 72.25500484183966
+        },
+        "copy": {
+          "cycles": 5896,
+          "dispatches": 72,
+          "share_percent": 0.5686750334684934
+        },
+        "softmax": {
+          "cycles": 116928,
+          "dispatches": 80,
+          "share_percent": 11.277821287890772
+        },
+        "gelu": {
+          "cycles": 52536,
+          "dispatches": 132,
+          "share_percent": 5.067149178816276
+        }
+      },
+      "full_network_rtl_verified": false
+    }
+  ],
+  "layernorm": [
+    {
+      "name": "layernorm-d32-s1-c0",
+      "host_wall_seconds": 22.598563377046958,
+      "launch_cycle": 512,
+      "first_collect_cycle": 546,
+      "host_finish_cycle": 1860,
+      "rtl_dispatch_to_finish_cycles": 1348,
+      "prediction_first_collect_to_compute_cycles": 1297,
+      "prediction_first_collect_to_visible_cycles": 1331,
+      "launch_to_first_collect_cycles": 34,
+      "visible_to_host_finish_cycles": -17,
+      "end_to_end_prediction_available": false
+    },
+    {
+      "name": "layernorm-d64-s2-c0",
+      "host_wall_seconds": 23.180439433082938,
+      "launch_cycle": 512,
+      "first_collect_cycle": 546,
+      "host_finish_cycle": 2077,
+      "rtl_dispatch_to_finish_cycles": 1565,
+      "prediction_first_collect_to_compute_cycles": 1508,
+      "prediction_first_collect_to_visible_cycles": 1548,
+      "launch_to_first_collect_cycles": 34,
+      "visible_to_host_finish_cycles": -17,
+      "end_to_end_prediction_available": false
+    },
+    {
+      "name": "layernorm-d64-s3-c0",
+      "host_wall_seconds": 23.01963334903121,
+      "launch_cycle": 512,
+      "first_collect_cycle": 546,
+      "host_finish_cycle": 2077,
+      "rtl_dispatch_to_finish_cycles": 1565,
+      "prediction_first_collect_to_compute_cycles": 1508,
+      "prediction_first_collect_to_visible_cycles": 1548,
+      "launch_to_first_collect_cycles": 34,
+      "visible_to_host_finish_cycles": -17,
+      "end_to_end_prediction_available": false
+    },
+    {
+      "name": "layernorm-d64-s0-c1",
+      "host_wall_seconds": 23.371369151049294,
+      "launch_cycle": 512,
+      "first_collect_cycle": 546,
+      "host_finish_cycle": 2077,
+      "rtl_dispatch_to_finish_cycles": 1565,
+      "prediction_first_collect_to_compute_cycles": 1508,
+      "prediction_first_collect_to_visible_cycles": 1548,
+      "launch_to_first_collect_cycles": 34,
+      "visible_to_host_finish_cycles": -17,
+      "end_to_end_prediction_available": false
+    }
+  ],
+  "accuracy_claim": "Full Transformer accuracy has not been measured.",
+  "overhead_policy": "Observed launch/tail gaps describe these four probes only; do not add them as a fitted per-dispatch constant."
+}

@@ -1,0 +1,100 @@
+{
+  "cases": [
+    {
+      "stride": 1,
+      "write": 1,
+      "responses": 2,
+      "first_latency": 3,
+      "last_latency": 4,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 1,
+      "write": 0,
+      "responses": 2,
+      "first_latency": 3,
+      "last_latency": 4,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 2,
+      "write": 1,
+      "responses": 4,
+      "first_latency": 3,
+      "last_latency": 6,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 2,
+      "write": 0,
+      "responses": 4,
+      "first_latency": 3,
+      "last_latency": 6,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 4,
+      "write": 1,
+      "responses": 8,
+      "first_latency": 3,
+      "last_latency": 10,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 4,
+      "write": 0,
+      "responses": 8,
+      "first_latency": 3,
+      "last_latency": 10,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 8,
+      "write": 1,
+      "responses": 16,
+      "first_latency": 3,
+      "last_latency": 18,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 8,
+      "write": 0,
+      "responses": 16,
+      "first_latency": 3,
+      "last_latency": 18,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 32,
+      "write": 1,
+      "responses": 32,
+      "first_latency": 3,
+      "last_latency": 34,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    },
+    {
+      "stride": 32,
+      "write": 0,
+      "responses": 32,
+      "first_latency": 3,
+      "last_latency": 34,
+      "lane_mask": 4294967295,
+      "bit_exact": true
+    }
+  ],
+  "kind": "lds",
+  "banks": 16,
+  "depth": 128,
+  "name": "lds-16-128",
+  "rtl_sha256": "86e82a7a7a6e942e2764875a0233d47ba0e1cd37d2d748e783c493997d5894c0",
+  "binary_sha256": "0b0d4620a96569060f75ac715e5e445774a5fea9e80176370c8c18b656a4b2d3"
+}

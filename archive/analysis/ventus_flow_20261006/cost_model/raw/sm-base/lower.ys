@@ -1,0 +1,8 @@
+plugin -i slang
+read_slang --top SM_wrapper --keep-hierarchy --ignore-assertions --ignore-initial logic.v
+hierarchy -check -top SM_wrapper
+proc
+opt_expr
+opt_clean
+write_verilog -noattr lowered.v
+write_json lowered.json

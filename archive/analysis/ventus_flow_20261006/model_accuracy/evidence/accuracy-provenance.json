@@ -1,0 +1,46 @@
+{
+  "official_env_commit": "7e9790708d58ebf697d74fa8dadbaafa1232ca1d",
+  "official_rtl_commit": "f5853809f114192b99657e7021d1e50dfe961fe1",
+  "compiled_rtl_commit": "681172541a8a34ffb43c483a19c075acbc11a4eb",
+  "systemc_commit": "335ba24d2c7763c87e8c9bfe889c9074763a32f7",
+  "all_changed_paths_between_rtl_commits": [
+    "README.md",
+    "docs/Ventus_MICRO2025_tutorial_Chinese.pdf",
+    "docs/Ventus_MICRO2025_tutorial_English.pdf"
+  ],
+  "changed_hardware_build_simulator_paths": [],
+  "rtl_submodule_commits": [
+    "9a89c7c6c90683917039e4d1ea1dbbaa5ffcd7e3 dependencies/Membox2.Scala (heads/master)",
+    " 26f00d00c3f3f57480065e02bfcfde3d3b41ec51 dependencies/berkeley-hardfloat (26f00d0)",
+    " 7ea30df00f9353f2e8645b32665b13f9b3f69e6d dependencies/fpuv2 (7ea30df)",
+    " f50b0dbb5d0f8be97ea9315312109e3d77e85051 dependencies/rocket-chip (f50b0dbb)",
+    " e5c74c0170c156cbe540fb597381e1a29fcf8248 dependencies/rocket-chip-inclusive-cache (e5c74c0)"
+  ],
+  "sha256": {
+    "generated_rtl": "9eb262d75b8d1d96fe4ffde0f3d451409dbd8b12ee3990b34638984ed5864c17",
+    "rtl_parameters": "1d1c88fee2dd80200147c35415322878dcd47167bc8b896bd7d661e39552fe06",
+    "rtl_simulator": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33",
+    "systemc_library": "2285395f6bddf755e4fd94bb5b0138b3cbe52e84fe8c06c687fd36ed53db92eb",
+    "accuracy_driver": "6471f438257d8af37fddad2a09ccc2832cd49c42abc0bb59c07b8b0f62e9213f",
+    "accuracy_driver_source": "532bfc4ad7278974441eb6b01c36dca1f8f51179a7336423f4366159764c8b15"
+  },
+  "paths": {
+    "generated_rtl": "${REMOTE_PROJECT_ROOT}/sim-verilator/dut.v",
+    "rtl_parameters": "${REMOTE_PROJECT_ROOT}/sim-verilator/parameters.json",
+    "rtl_simulator": "${REMOTE_PROJECT_ROOT}/sim-verilator/build/driver_example/debug/sim-VentusRTL",
+    "systemc_library": "${REMOTE_FLOW_ROOT}/cyclesim-build/libVentusCycleSim.so",
+    "accuracy_driver": "${REMOTE_FLOW_ROOT}/accuracy-driver-v2/main",
+    "accuracy_driver_source": "${REMOTE_FLOW_ROOT}/accuracy-driver-v2/main.cpp"
+  },
+  "rtl_cycles_per_time_unit": 0.1,
+  "systemc_cycles_per_ns": 0.1,
+  "ddr_timing_enabled": false,
+  "library_timing_code_modified": false,
+  "driver_modifications": [
+    "disable DDR through official config",
+    "read output before virtual memory teardown",
+    "print finish time"
+  ],
+  "boundary_note": "RTL starts at host WG accepted; SystemC starts at SM warp received. Within-family increments cancel fixed dispatch offsets and include instruction fetch and pipeline stalls.",
+  "rtl_output_observation": "after the original driver extra 10000 half-cycle steps; drain is excluded from kernel timing"
+}

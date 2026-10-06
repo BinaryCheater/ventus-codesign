@@ -1,0 +1,17 @@
+{
+  "name": "lds-32way-64",
+  "n": 64,
+  "family": "lds-32way",
+  "predicted_body_interval": null,
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "8002497f90dec0df326fa3bf851b5b0b64eb4cab963fa2b3a677bd2c05a7498e"
+  },
+  "returncode": 0,
+  "wall_seconds": 25.60560805303976,
+  "dispatch_to_finish_cycles": 2804,
+  "checked_words": 32,
+  "all_output_zero": true,
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+}

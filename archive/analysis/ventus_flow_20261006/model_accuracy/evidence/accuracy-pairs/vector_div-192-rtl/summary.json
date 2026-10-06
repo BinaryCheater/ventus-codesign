@@ -1,0 +1,18 @@
+{
+  "case": "vector_div-192",
+  "backend": "rtl",
+  "family": "vector_div",
+  "n": 192,
+  "returncode": 0,
+  "wall_seconds": 33.81201539200265,
+  "first_dispatch_time": 185,
+  "kernel_finish_time": 50995,
+  "output_correct": true,
+  "checked_words": 32,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "43da0046e5c2a90ce0da616785942d1dd2e3fc5720a3580de269398f8dd827a7"
+  },
+  "dispatch_to_finish_cycles": 5081.0
+}

@@ -1,0 +1,37 @@
+diff --git a/src/main.cpp b/src/main.cpp
+index c9e58fe..700f874 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -3,6 +3,7 @@
+ #include <algorithm>
+ #include <cassert>
+ #include <cstdint>
++#include <cstdlib>
+ #include <filesystem>
+ #include <fstream>
+ #include <functional>
+@@ -41,6 +42,8 @@ int main(int argc, char* argv[]) {
+     ventus_cyclesim_config_t config;
+     ventus_cyclesim_get_default_config(&config);
+     config.sim_time_max = 80000;
++    if (const char* timing = std::getenv("VENTUS_TIMING_DDR"))
++        config.ramulator.enable = std::string(timing) != "0";
+     ventus_cyclesim_t* sim = ventus_cyclesim_init(&config);
+ 
+     std::vector<std::shared_ptr<ventus_kernel_metadata_t>> kernels;
+@@ -132,6 +135,15 @@ int main(int argc, char* argv[]) {
+     //
+     for (auto kernel : kernels) {
+         f_send_kernel_to_gpu(kernel, [sim, ptroot = kernel->pagetable]() {
++            // Test-driver instrumentation only; the simulation library is unchanged.
++            if (std::getenv("VENTUS_VERIFY_VECADD")) {
++                std::vector<uint32_t> output(1024);
++                ventus_cyclesim_vmemcpy_d2h(sim, ptroot, output.data(), 0x90002000, 4096);
++                unsigned checked = 0;
++                for (uint32_t word : output) checked += (word == 0x44800000);
++                std::cout << "VERIFIED_VECADD_WORDS=" << checked << " KERNEL_FINISH_TIME_NS=" << ventus_cyclesim_get_time(sim) << std::endl;
++                if (checked != 1024) std::exit(3);
++            }
+             // to destroy the virtual memory space after the kernel finished
+             ventus_cyclesim_vmem_destroy(sim, ptroot);
+         });

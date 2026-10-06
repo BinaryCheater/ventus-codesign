@@ -1,0 +1,18 @@
+{
+  "case": "scalar_add-64",
+  "backend": "rtl",
+  "family": "scalar_add",
+  "n": 64,
+  "returncode": 0,
+  "wall_seconds": 16.929062095936388,
+  "first_dispatch_time": 185,
+  "kernel_finish_time": 4195,
+  "output_correct": true,
+  "checked_words": 1,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "3a57b450e57f9603805fb0af6cd32fa4092b81e1b247c915c5d9f1e38bd95765"
+  },
+  "dispatch_to_finish_cycles": 401.0
+}

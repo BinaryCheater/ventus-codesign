@@ -1,0 +1,413 @@
+{
+  "version": "ventus-synthesis-cost-v1",
+  "status": "estimated",
+  "hardware": {
+    "sms": 2,
+    "warps_per_sm": 8,
+    "blocks_per_sm": 8,
+    "threads": 32,
+    "rf_banks": 4,
+    "rf_read_ports": 1,
+    "rf_write_ports": 1,
+    "writeback_ports": 1,
+    "collectors": 8,
+    "vgpr_slots": 1024,
+    "sgpr_slots": 2048,
+    "tensor_m": 4,
+    "tensor_n": 8,
+    "tensor_k": 4,
+    "tensor_units": 1,
+    "lds_bytes": 131072,
+    "lds_banks": 32,
+    "lds_ports": 1,
+    "line_bytes": 128,
+    "l1_sets": 256,
+    "l1_ways": 2,
+    "l1_mshrs": 4,
+    "l1_subentries": 2,
+    "l1_write_entries": 4,
+    "l2_sets": 64,
+    "l2_ways": 16,
+    "l2_mshrs": 32,
+    "lsu_entries": 8,
+    "lsu_per_warp": 4,
+    "memory_channels": 1,
+    "memory_bytes_per_cycle": 128,
+    "memory_latency": 2
+  },
+  "target": {
+    "version": "ventus-synthesis-cost-v1",
+    "library": "ASAP7 7.5T RVT TT",
+    "pvt": "TT, 0.7V, library nominal temperature",
+    "area_unit": "liberty_area_unit",
+    "area_conversion": null,
+    "abc_delay_target_ps": 1000,
+    "timing_feasible": null,
+    "flow": "native optimized Tensor; coarse slang mapping for other components",
+    "storage": "blackboxed generated memory leaves; bits separate",
+    "libraries_sha256": {
+      "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_AO_RVT_TT_nldm_211120.lib": "b1ece108c0a2acd8d01c05cee6daee2834425037b1d9aad625d6f1dd640f1940",
+      "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib": "a4ceb32e418e1aac8667e28fbd8e9e46baf520180be4db075598a4d7c681a56e",
+      "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_OA_RVT_TT_nldm_211120.lib": "6529c6c72465cd133dfbfb03952327ab2774bb6aa4be866d78fd7bc6c58c9f6f",
+      "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib": "57a0b403485b99ebd676942af4673ac086b86c7c75fbdc3e5c0038501dd22ba3",
+      "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib": "fa92e6ab1481810602811b1eea54bc016a341f11fb5188d7512c026599adf038"
+    },
+    "mapping_lib_sha256": "5dc93b393b29986630963a6ff6e54a77eb937beb510127fc9f8d1238f89d38dd",
+    "script_sha256": "a3ea00ff351e82710f091e098976029e0c6acf63a600ae052837685ba7d02d3f",
+    "tools": "Yosys 0.64+308 (git sha1 78e05dfb0, Release, Clang /usr/bin/clang++ 18.1.8)",
+    "integration_scope": "shared GPU fixed logic + standalone SM replication; estimated",
+    "hardware_contract_sha256": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "collection_scripts_sha256": {
+      "coarse": "a3ea00ff351e82710f091e098976029e0c6acf63a600ae052837685ba7d02d3f",
+      "native": "c1bbdaa08c852d844db6fbeae07a9522b23daa926a777dc7f5df1c64168eafda"
+    }
+  },
+  "hardware_contract_sha256": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+  "hardware_sha256": "e16dc25107844ed6ea5c6e36c236037923571484421b45f38fc03811e160b535",
+  "table_sha256": "5990e97468f1a646e9093db21d6756bcce650c191d701d076a4924f64b9782d3",
+  "model_sha256": "6a491c4f8787f651318afb6ab4d0ca818f45038178020c4427473768b79c3b07",
+  "logic_area": 696678.41448,
+  "area_unit": "liberty_area_unit",
+  "storage_area": null,
+  "memory_bits": 8008970,
+  "data_resources": {
+    "storage_bytes": 802816,
+    "tensor_multipliers": 256
+  },
+  "lds_organization": {
+    "banks": 32,
+    "bank_depth": 1024,
+    "parameter_depth": 1024
+  },
+  "sgpr_addressability": {
+    "bank_address_bits": 8,
+    "ports": {
+      "read_bits": 8,
+      "write_bits": 8
+    },
+    "reserved_slots": 2048,
+    "addressable_slots": 1024,
+    "scope": "measured RegFileBank ports; does not validate allocator behavior"
+  },
+  "timing_feasible": null,
+  "energy": null,
+  "energy_status": "unmodeled",
+  "unsupported_reasons": [],
+  "rtl_unbinding_required": {},
+  "implementation": {
+    "rf_banks": "source-generated, bank-width patch required for 8",
+    "tensor_shape": "source-generated module with parameter unbinding",
+    "lds_organization": "source-generated module with bank/lane unbinding",
+    "sm_count": "replication estimate; shared allocator/interconnect fixed at 2-SM baseline"
+  },
+  "missing": [
+    "memory macro area, decoder/mux/periphery and timing inside blackboxed leaves",
+    "post-placement/routing, clock tree, pads and physical overhead",
+    "STA/common frequency validation; ABC delay target is not timing proof",
+    "power/activity energy model; external DRAM/controller/PHY cost",
+    "SM-dependent shared allocator/interconnect resizing"
+  ],
+  "components": {
+    "shared_fixed_logic": 61683.81012,
+    "baseline_logic_per_sm": 317497.30218,
+    "rf_delta_per_sm": 0.0,
+    "tensor_delta_per_sm": 0.0,
+    "lds_delta_per_sm": 0.0,
+    "fixed_memory_bits": 1160918,
+    "memory_bits_per_sm": 3424026
+  },
+  "storage_components": {
+    "fixed": {
+      "wf_gather_cnt_16x4": {
+        "instances": 1,
+        "bits": 64,
+        "arrays": [
+          [
+            "3",
+            "Memory",
+            "15"
+          ]
+        ],
+        "source_sha256": "3db9703aa64a2469d93544fa2a82d6f03ff2f4af1dbab08d4f62abba321e0661"
+      },
+      "wf_gather_ram_16x39": {
+        "instances": 1,
+        "bits": 624,
+        "arrays": [
+          [
+            "38",
+            "Memory",
+            "15"
+          ]
+        ],
+        "source_sha256": "da6cf1f1e696944395ce898fe88d1ddfebe8207c16a26cd194e301668176bd41"
+      },
+      "ram_2x257": {
+        "instances": 1,
+        "bits": 514,
+        "arrays": [
+          [
+            "256",
+            "Memory",
+            "1"
+          ]
+        ],
+        "source_sha256": "9419a450fd0d8ad92572a002c56d911dfaa8959f46f3f14abce8062c1476adf9"
+      },
+      "ram_2x8": {
+        "instances": 1,
+        "bits": 16,
+        "arrays": [
+          [
+            "7",
+            "Memory",
+            "1"
+          ]
+        ],
+        "source_sha256": "357306d83c0f8098857d5494c5c5afa907d86172f275ad5b4a6cbfebad0a57ac"
+      },
+      "addr_8x17": {
+        "instances": 4,
+        "bits": 136,
+        "arrays": [
+          [
+            "16",
+            "Memory",
+            "7"
+          ]
+        ],
+        "source_sha256": "e3c656ca9642af6585948aae45dbaae978d54294f0a13b130d8573f2c1e65f3f"
+      },
+      "mem_8x3": {
+        "instances": 12,
+        "bits": 24,
+        "arrays": [
+          [
+            "2",
+            "Memory",
+            "7"
+          ]
+        ],
+        "source_sha256": "8a33fcba8b8ddfa6df4ddf4a9108cda9acb3311aa3162e392d89194372eeed95"
+      },
+      "addr_8x11": {
+        "instances": 4,
+        "bits": 88,
+        "arrays": [
+          [
+            "10",
+            "Memory",
+            "7"
+          ]
+        ],
+        "source_sha256": "8950fe0b194ade615d82e84a2dd4d38ef9fef184bb27314af8ee1ee2cd0083ca"
+      },
+      "addr_8x10": {
+        "instances": 4,
+        "bits": 80,
+        "arrays": [
+          [
+            "9",
+            "Memory",
+            "7"
+          ]
+        ],
+        "source_sha256": "a628cf2b4eb00400df618f95b1df63bb4a1516cd6e127779cb37118779227c71"
+      },
+      "wgram1_8x77": {
+        "instances": 1,
+        "bits": 616,
+        "arrays": [
+          [
+            "76",
+            "Memory",
+            "7"
+          ]
+        ],
+        "source_sha256": "0c4f142488b079d084284a043959b04c1e753e58ba2292c12ccf4bdd6ca780b3"
+      },
+      "wgram2_8x241": {
+        "instances": 1,
+        "bits": 1928,
+        "arrays": [
+          [
+            "240",
+            "Memory",
+            "7"
+          ]
+        ],
+        "source_sha256": "ec86bc87ce5ef985799c9758c6f91f93c239c93dfe1af2961526540c8080f642"
+      },
+      "ram_2x1270": {
+        "instances": 1,
+        "bits": 2540,
+        "arrays": [
+          [
+            "1269",
+            "Memory",
+            "1"
+          ]
+        ],
+        "source_sha256": "17693b8c36d80479631c2474534b14e161806ec4982331a780ccecbb05cc4841"
+      },
+      "array_1024x1024": {
+        "instances": 1,
+        "bits": 1048576,
+        "arrays": [
+          [
+            "1023",
+            "Memory",
+            "1023"
+          ]
+        ],
+        "source_sha256": "66733c4895dd6ef0c453e59d233b688510809cdc5727cc6d1a29c023c3803f97"
+      },
+      "array_64x304": {
+        "instances": 1,
+        "bits": 19456,
+        "arrays": [
+          [
+            "303",
+            "Memory",
+            "63"
+          ]
+        ],
+        "source_sha256": "7f097f7b1d7719ca5d92e9d55352de21bca4c31c0ff4b16a223e61e1d6932a67"
+      },
+      "data_32x1176": {
+        "instances": 1,
+        "bits": 37632,
+        "arrays": [
+          [
+            "1175",
+            "Memory",
+            "31"
+          ]
+        ],
+        "source_sha256": "5a2b43e8b06e867c68f318391d92040477791738b8bb5e539e9409a7287caffe"
+      },
+      "head_32x5": {
+        "instances": 2,
+        "bits": 160,
+        "arrays": [
+          [
+            "4",
+            "Memory",
+            "31"
+          ]
+        ],
+        "source_sha256": "0b952a68d33feae68422000e632eec36cf41d6bcc73de74425a9f23c8f17f955"
+      },
+      "next_32x5": {
+        "instances": 2,
+        "bits": 160,
+        "arrays": [
+          [
+            "4",
+            "Memory",
+            "31"
+          ]
+        ],
+        "source_sha256": "2b86b3f58a8478e12a1a5675152aa87ca9918823feb99a9e22e2a0bc9d601768"
+      },
+      "tail_32x5": {
+        "instances": 2,
+        "bits": 160,
+        "arrays": [
+          [
+            "4",
+            "Memory",
+            "31"
+          ]
+        ],
+        "source_sha256": "51326550949bfa16cece424fb432f078ad95813419c0835c6f2efd987e13a9b8"
+      },
+      "ram_8x1203": {
+        "instances": 1,
+        "bits": 9624,
+        "arrays": [
+          [
+            "1202",
+            "Memory",
+            "7"
+          ]
+        ],
+        "source_sha256": "2d7c62fff6268158eddf4640d016d72cd69f5900812ccaf0faef08cccb8f94df"
+      },
+      "data_32x1152": {
+        "instances": 1,
+        "bits": 36864,
+        "arrays": [
+          [
+            "1151",
+            "Memory",
+            "31"
+          ]
+        ],
+        "source_sha256": "498c2f0bcbd8249b104c0bec3ad92651b37c698b4605d443bd88e3d55dd7ac12"
+      }
+    },
+    "rf_per_sm": {
+      "regs_256x1024": {
+        "instances": 4,
+        "bits": 262144,
+        "arrays": [
+          [
+            "1023",
+            "Memory",
+            "255"
+          ]
+        ],
+        "source_sha256": "1a255f45b1a99582351ddbc9b9bbb2cc8fde8b461018d202a1cc9650c9898860"
+      },
+      "regs_1_512x32": {
+        "instances": 4,
+        "bits": 16384,
+        "arrays": [
+          [
+            "31",
+            "Memory",
+            "511"
+          ]
+        ],
+        "source_sha256": "b97462c04eb5ed6852c6c657473c47eb5ffd2d4f25cef57188d086fd21e33642"
+      }
+    },
+    "lds_per_sm": {
+      "ram_32x1060": {
+        "instances": 1,
+        "bits": 33920,
+        "arrays": [
+          [
+            "1059",
+            "Memory",
+            "31"
+          ]
+        ],
+        "source_sha256": "8d1be098c6ca88e0ae46744378462016ee46de16d1c1073a094f240457e9570a"
+      },
+      "array_1024x32": {
+        "instances": 32,
+        "bits": 32768,
+        "arrays": [
+          [
+            "31",
+            "Memory",
+            "1023"
+          ]
+        ],
+        "source_sha256": "ec2c440bff2bf5746fdd968bd4c750b3488bab14a0f25dbaa7036cd06b3c1e44"
+      }
+    },
+    "other_sm_memory_bits": 1227418,
+    "sm_instances": 2
+  },
+  "measurement_keys": [
+    "gpu-fixed",
+    "sm-base",
+    "rf4",
+    "tc-4-8-4",
+    "lds-32-1024"
+  ],
+  "source": "shared fixed top + standalone SM mapped synthesis + measured component deltas"
+}

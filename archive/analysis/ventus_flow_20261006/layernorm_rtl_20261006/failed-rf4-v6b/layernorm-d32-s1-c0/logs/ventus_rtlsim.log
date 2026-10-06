@@ -1,0 +1,16 @@
+[RTL     info]@0 SNAPSHOT created, pid=308242
+[RTL    trace]@20 Hardware reset ok
+[RTL    trace]@30 kernel 0 layernorm-d32-s1-c0 activate
+[RTL    debug]@5125 block0  dispatched to GPU (kernel0  layernorm-d32-s1-c0 block0 )
+[RTL    error]@7180 PMEM page at 0x6fffff80 not allocated, read as all zero
+[RTL    error]@7190 PMEM page at 0x70000000 not allocated, read as all zero
+[RTL    debug]@10000 
+[RTL    debug]@17475 block0  finished (kernel0  layernorm-d32-s1-c0 block0 )
+[RTL     info]@17475 kernel0  layernorm-d32-s1-c0 finished
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL    debug]@60000 
+[RTL     info]@67475 Simulation finished in 67475 unit time
+[RTL    debug]@67475 All snapshot process are cleared, OK

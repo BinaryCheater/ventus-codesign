@@ -1,0 +1,55 @@
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp: In function ‘void observe_eval(Vdut*)’:
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:32:18: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_0_valid’
+   32 |         if (col->__PVT__Demux__DOT__io_in_0_valid && col->__PVT__Demux__DOT__io_in_0_ready) emit("collect", 0 + col->__PVT__Demux__DOT__io_in_0_bits_wid, col->__PVT__Demux__DOT__io_in_0_bits_pc, col->__PVT__Demux__DOT__io_in_0_bits_inst);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:32:59: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_0_ready’
+   32 |         if (col->__PVT__Demux__DOT__io_in_0_valid && col->__PVT__Demux__DOT__io_in_0_ready) emit("collect", 0 + col->__PVT__Demux__DOT__io_in_0_bits_wid, col->__PVT__Demux__DOT__io_in_0_bits_pc, col->__PVT__Demux__DOT__io_in_0_bits_inst);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:32:118: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_0_bits_wid’
+   32 |         if (col->__PVT__Demux__DOT__io_in_0_valid && col->__PVT__Demux__DOT__io_in_0_ready) emit("collect", 0 + col->__PVT__Demux__DOT__io_in_0_bits_wid, col->__PVT__Demux__DOT__io_in_0_bits_pc, col->__PVT__Demux__DOT__io_in_0_bits_inst);
+      |                                                                                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:32:160: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_0_bits_pc’
+   32 |         if (col->__PVT__Demux__DOT__io_in_0_valid && col->__PVT__Demux__DOT__io_in_0_ready) emit("collect", 0 + col->__PVT__Demux__DOT__io_in_0_bits_wid, col->__PVT__Demux__DOT__io_in_0_bits_pc, col->__PVT__Demux__DOT__io_in_0_bits_inst);
+      |                                                                                                                                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:32:201: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_0_bits_inst’
+   32 |         if (col->__PVT__Demux__DOT__io_in_0_valid && col->__PVT__Demux__DOT__io_in_0_ready) emit("collect", 0 + col->__PVT__Demux__DOT__io_in_0_bits_wid, col->__PVT__Demux__DOT__io_in_0_bits_pc, col->__PVT__Demux__DOT__io_in_0_bits_inst);
+      |                                                                                                                                                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:33:18: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_1_valid’
+   33 |         if (col->__PVT__Demux__DOT__io_in_1_valid && col->__PVT__Demux__DOT__outReady2) emit("collect", 0 + col->__PVT__Demux__DOT__io_in_1_bits_wid, col->__PVT__Demux__DOT__io_in_1_bits_pc, col->__PVT__Demux__DOT__io_in_1_bits_inst);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:33:114: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_1_bits_wid’
+   33 |         if (col->__PVT__Demux__DOT__io_in_1_valid && col->__PVT__Demux__DOT__outReady2) emit("collect", 0 + col->__PVT__Demux__DOT__io_in_1_bits_wid, col->__PVT__Demux__DOT__io_in_1_bits_pc, col->__PVT__Demux__DOT__io_in_1_bits_inst);
+      |                                                                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:33:156: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_1_bits_pc’
+   33 |         if (col->__PVT__Demux__DOT__io_in_1_valid && col->__PVT__Demux__DOT__outReady2) emit("collect", 0 + col->__PVT__Demux__DOT__io_in_1_bits_wid, col->__PVT__Demux__DOT__io_in_1_bits_pc, col->__PVT__Demux__DOT__io_in_1_bits_inst);
+      |                                                                                                                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:33:197: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_1_bits_inst’
+   33 |         if (col->__PVT__Demux__DOT__io_in_1_valid && col->__PVT__Demux__DOT__outReady2) emit("collect", 0 + col->__PVT__Demux__DOT__io_in_1_bits_wid, col->__PVT__Demux__DOT__io_in_1_bits_pc, col->__PVT__Demux__DOT__io_in_1_bits_inst);
+      |                                                                                                                                                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:37:18: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_0_valid’
+   37 |         if (col->__PVT__Demux__DOT__io_in_0_valid && col->__PVT__Demux__DOT__io_in_0_ready) emit("collect", 8 + col->__PVT__Demux__DOT__io_in_0_bits_wid, col->__PVT__Demux__DOT__io_in_0_bits_pc, col->__PVT__Demux__DOT__io_in_0_bits_inst);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:37:59: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_0_ready’
+   37 |         if (col->__PVT__Demux__DOT__io_in_0_valid && col->__PVT__Demux__DOT__io_in_0_ready) emit("collect", 8 + col->__PVT__Demux__DOT__io_in_0_bits_wid, col->__PVT__Demux__DOT__io_in_0_bits_pc, col->__PVT__Demux__DOT__io_in_0_bits_inst);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:37:118: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_0_bits_wid’
+   37 |         if (col->__PVT__Demux__DOT__io_in_0_valid && col->__PVT__Demux__DOT__io_in_0_ready) emit("collect", 8 + col->__PVT__Demux__DOT__io_in_0_bits_wid, col->__PVT__Demux__DOT__io_in_0_bits_pc, col->__PVT__Demux__DOT__io_in_0_bits_inst);
+      |                                                                                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:37:160: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_0_bits_pc’
+   37 |         if (col->__PVT__Demux__DOT__io_in_0_valid && col->__PVT__Demux__DOT__io_in_0_ready) emit("collect", 8 + col->__PVT__Demux__DOT__io_in_0_bits_wid, col->__PVT__Demux__DOT__io_in_0_bits_pc, col->__PVT__Demux__DOT__io_in_0_bits_inst);
+      |                                                                                                                                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:37:201: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_0_bits_inst’
+   37 |         if (col->__PVT__Demux__DOT__io_in_0_valid && col->__PVT__Demux__DOT__io_in_0_ready) emit("collect", 8 + col->__PVT__Demux__DOT__io_in_0_bits_wid, col->__PVT__Demux__DOT__io_in_0_bits_pc, col->__PVT__Demux__DOT__io_in_0_bits_inst);
+      |                                                                                                                                                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:38:18: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_1_valid’
+   38 |         if (col->__PVT__Demux__DOT__io_in_1_valid && col->__PVT__Demux__DOT__outReady2) emit("collect", 8 + col->__PVT__Demux__DOT__io_in_1_bits_wid, col->__PVT__Demux__DOT__io_in_1_bits_pc, col->__PVT__Demux__DOT__io_in_1_bits_inst);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:38:114: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_1_bits_wid’
+   38 |         if (col->__PVT__Demux__DOT__io_in_1_valid && col->__PVT__Demux__DOT__outReady2) emit("collect", 8 + col->__PVT__Demux__DOT__io_in_1_bits_wid, col->__PVT__Demux__DOT__io_in_1_bits_pc, col->__PVT__Demux__DOT__io_in_1_bits_inst);
+      |                                                                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:38:156: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_1_bits_pc’
+   38 |         if (col->__PVT__Demux__DOT__io_in_1_valid && col->__PVT__Demux__DOT__outReady2) emit("collect", 8 + col->__PVT__Demux__DOT__io_in_1_bits_wid, col->__PVT__Demux__DOT__io_in_1_bits_pc, col->__PVT__Demux__DOT__io_in_1_bits_inst);
+      |                                                                                                                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${REMOTE_FLOW_ROOT}/trace_rtl-v4.cpp:38:197: error: ‘class Vdut_operandCollector’ has no member named ‘__PVT__Demux__DOT__io_in_1_bits_inst’
+   38 |         if (col->__PVT__Demux__DOT__io_in_1_valid && col->__PVT__Demux__DOT__outReady2) emit("collect", 8 + col->__PVT__Demux__DOT__io_in_1_bits_wid, col->__PVT__Demux__DOT__io_in_1_bits_pc, col->__PVT__Demux__DOT__io_in_1_bits_inst);
+      |                                                                                                                                                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

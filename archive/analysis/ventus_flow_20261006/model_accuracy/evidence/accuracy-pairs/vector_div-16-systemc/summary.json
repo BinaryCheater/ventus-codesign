@@ -1,0 +1,18 @@
+{
+  "case": "vector_div-16",
+  "backend": "systemc",
+  "family": "vector_div",
+  "n": 16,
+  "returncode": 0,
+  "wall_seconds": 0.07528698199894279,
+  "first_dispatch_time": 15,
+  "kernel_finish_time": 1955,
+  "output_correct": true,
+  "checked_words": 32,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "704b06c2115b60b9ceaae2e7f871421b37383fff479072509426f725debf5a3f"
+  },
+  "dispatch_to_finish_cycles": 194.0
+}

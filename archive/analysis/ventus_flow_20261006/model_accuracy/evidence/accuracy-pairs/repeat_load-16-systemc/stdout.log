@@ -1,0 +1,51 @@
+
+Warning: (W569) sc_module(const char*), sc_module(const std::string&) have been deprecated, use sc_module(const sc_module_name&): RamulatorWrapper
+In file: ${REMOTE_FLOW_ROOT}/deps/systemc/src/sysc/kernel/sc_module.cpp:248
+Create new vmem for kernel repeat_load-16, ptroot=0x1000 [trace main.cpp:83]
+Start loading data for kernel repeat_load-16, ptroot=0x1000 [trace main.cpp:188]
+kernel 0 repeat_load-16 initialized, size={1,1,1} @0ns,0 [info context_model.cpp:23]
+
+Warning: (W509) module construction not properly completed: did you forget to add a sc_module_name parameter to your module constructor?: module 'RamulatorWrapper'
+In file: ${REMOTE_FLOW_ROOT}/deps/systemc/src/sysc/kernel/sc_module.cpp:409
+SM 1 warp 1 receive kernel 0 repeat_load-16 block 0 warp 0 @15ns,1 [trace BASE.cpp:244]
+SM 1 warp 1 0x80000000               LUI_0x900002b7 WB x[005]=0x90000000 @75ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000004                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @115ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000004                LW_0x0002a083 WB x[001]=0x00000000 @125ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000008                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @165ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000008                LW_0x0002a083 WB x[001]=0x00000000 @175ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x8000000c                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @215ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x8000000c                LW_0x0002a083 WB x[001]=0x00000000 @225ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000010                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @265ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000010                LW_0x0002a083 WB x[001]=0x00000000 @275ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000014                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @315ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000014                LW_0x0002a083 WB x[001]=0x00000000 @325ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000018                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @365ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000018                LW_0x0002a083 WB x[001]=0x00000000 @375ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x8000001c                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @415ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x8000001c                LW_0x0002a083 WB x[001]=0x00000000 @425ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000020                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @465ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000020                LW_0x0002a083 WB x[001]=0x00000000 @475ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000024                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @515ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000024                LW_0x0002a083 WB x[001]=0x00000000 @525ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000028                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @565ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000028                LW_0x0002a083 WB x[001]=0x00000000 @575ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x8000002c                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @615ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x8000002c                LW_0x0002a083 WB x[001]=0x00000000 @625ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000030                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @665ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000030                LW_0x0002a083 WB x[001]=0x00000000 @675ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000034                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @715ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000034                LW_0x0002a083 WB x[001]=0x00000000 @725ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000038                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @765ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000038                LW_0x0002a083 WB x[001]=0x00000000 @775ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x8000003c                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @815ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x8000003c                LW_0x0002a083 WB x[001]=0x00000000 @825ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000040                LW_0x0002a083 mask=FFFFFFFF MEMADDR 90000000 @865ns,1 [trace exec_lsu.cpp:189]
+SM 1 warp 1 0x80000040                LW_0x0002a083 WB x[001]=0x00000000 @875ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000044               LUI_0x90002137 WB x[002]=0x90002000 @905ns,1 [trace regfile.cpp:87]
+SM 1 warp 1 0x80000048                SW_0x00112023 mask=FFFFFFFF ADDR 90002000, DATA 0 @945ns,1 [trace exec_lsu.cpp:183]
+SM 1 warp 1 0x8000004c            ENDPRG_0x0000400b endprg @965ns,1 [trace warp_scheduler.cpp:50]
+kernel 0 repeat_load-16 block 0 finished @975ns,1 [debug CTA_Scheduler.cpp:179]
+kernel 0 repeat_load-16 finished @975ns,1 [info context_model.cpp:32]
+TEST_OUTPUT 0 0
+TEST_KERNEL_FINISH_NS 975
+Simulation finished at time 980

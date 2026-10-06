@@ -1,0 +1,384 @@
+{
+  "model_sha256": {
+    "__init__.py": "2e3d439837712121c9959593f8e07576cb58e9cd76d3bd5c499d2f9a06916f8e",
+    "__main__.py": "28584e5029ab83bb2f47d45455d2eb8bb017e4f6f44639f70a9c9ba86b2c6c59",
+    "coalescer.py": "68ef20fbab29abb4ccb02bd756252267a298dfb5d2ed87b43135d0d17ba2a34b",
+    "config.py": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "graph.py": "765aeb04bda71d3dbe32938599ab20c341a8ae352fd5981202fce26aec6b5508",
+    "ir.py": "0c611321b3508ce23acb8b39c6c463fc7fd93382f1a2eb94c121bf61f02c9fc0",
+    "mip.py": "0a0f576c7a49010d2f9062d3e600b053e41e3a79f668b789b9e2141c6ecc96fe",
+    "source.py": "302132797637f986b0f752599d5c1fb99383ed6f035752bb39fe73cd865511d9",
+    "timing.py": "c2a181d3969a0346fb86161cb33c081de4d0e0f92de6887cdfaad92c2cc71199",
+    "workloads.py": "df164d864bf62da1700ba4862e6cbabcf39264ba43594eac31d0eb0cdc2ac82d"
+  },
+  "evidence_sha256": {
+    "rtl-probes-v3/results.json": "f8d6d940cf82ce8fc05d87bd921376569ecab81623082725085ce70f175acbda",
+    "probes-v1/tensor-distinct-16/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/tensor-distinct-16/input.data": "67d8a6d4d5d5a9735d8b033c566b4f38b5849c91d8a7703a598e66b9046d8d33",
+    "probes-v1/tensor-distinct-64/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/tensor-distinct-64/input.data": "d9749c3ca596cd41d0fc5ad93432b7691768d877c988429d40cc9585385cf66c",
+    "probes-v1/tensor-distinct-192/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/tensor-distinct-192/input.data": "af0df2fbc1f4edce8390cdb398fd9a6cd1dc0588d613e7cdb013215692dda710",
+    "probes-v1/tensor-conflict-16/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/tensor-conflict-16/input.data": "f8ffdba1334dbcea22dcbe078cbd279ebd0725087c20e4f44809861e32f30e7c",
+    "probes-v1/tensor-conflict-64/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/tensor-conflict-64/input.data": "0bc89398e3c65ddcd2183749a2138531733df81f72b61258c379e7a3014ff71b",
+    "probes-v1/lds-1way-16/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/lds-1way-16/input.data": "1535546b091d5c7de4b2a1d5ec6d001199599ea4f858b63f76337e02e5833b5a",
+    "probes-v1/lds-1way-64/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/lds-1way-64/input.data": "e4b9850dcb47ed2691cc89cc6333b937285a7be7c6b7195fdf8e285517e12dbf",
+    "probes-v1/lds-2way-16/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/lds-2way-16/input.data": "86028b7260548701384a2c3d5dd330f8b621fcd52f3d020b80017b5debc0862f",
+    "probes-v1/lds-2way-64/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/lds-2way-64/input.data": "16352c50a161f90c57bb14a0d95f45e551e6b971764d74aa548b40e6e2e4b2e8",
+    "probes-v1/lds-4way-16/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/lds-4way-16/input.data": "06ea3888fc07cd564df79b1b2ccbb679673b3bc55bb2aba9089444f8d563fc8c",
+    "probes-v1/lds-4way-64/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/lds-4way-64/input.data": "b9c2196cf5594dc59053aee39f91dd8d50cdbbcc0ccde88745e137488cbf397c",
+    "probes-v1/lds-32way-16/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/lds-32way-16/input.data": "18e543834af35eeeadfce8985463894dff68f221c0978570b3f3331731157c3a",
+    "probes-v1/lds-32way-64/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "probes-v1/lds-32way-64/input.data": "8002497f90dec0df326fa3bf851b5b0b64eb4cab963fa2b3a677bd2c05a7498e",
+    "rtl-memory-v1/results.json": "a4673f8d829a4081f76e4f5a31cff987b8e07a5da71c00502f439ffa68a79d20",
+    "memory-probes-v1/global-stride0-16/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-probes-v1/global-stride0-16/input.data": "8151c7ceb78d995fcc5cedadb9aa1c6e0a5f88159a4305120f03b983dc425c24",
+    "memory-probes-v1/global-stride0-64/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-probes-v1/global-stride0-64/input.data": "107cac2cd2200eda646801c911adb7bc448483c64ba901a1004cb19c6f7e546c",
+    "memory-probes-v1/global-stride128-16/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-probes-v1/global-stride128-16/input.data": "6853cbb2fdb824c0d31ee71dde24ec7a34e1f4182c27a7ae9642a09df6c995f0",
+    "memory-probes-v1/global-stride128-64/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-probes-v1/global-stride128-64/input.data": "45a8f17afe80fe088a2aeb81f0e539c4e42a2d712de3dcb8e67532fc9cbed5d2",
+    "rtl-memory-holdout-v1/results.json": "0d4483ca2d43e42b91339df7f50777228088a1e7dd7fd3dfcf9a16ad32d04906",
+    "memory-holdout-v1/global-stride0-16/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-holdout-v1/global-stride0-16/input.data": "8151c7ceb78d995fcc5cedadb9aa1c6e0a5f88159a4305120f03b983dc425c24",
+    "memory-holdout-v1/global-stride0-32/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-holdout-v1/global-stride0-32/input.data": "e6d119c5e96dfee88a45c82402bf03afd54063f106164692653d0a6feb35e597",
+    "memory-holdout-v1/global-stride0-64/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-holdout-v1/global-stride0-64/input.data": "107cac2cd2200eda646801c911adb7bc448483c64ba901a1004cb19c6f7e546c",
+    "memory-holdout-v1/global-stride128-16/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-holdout-v1/global-stride128-16/input.data": "6853cbb2fdb824c0d31ee71dde24ec7a34e1f4182c27a7ae9642a09df6c995f0",
+    "memory-holdout-v1/global-stride128-32/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-holdout-v1/global-stride128-32/input.data": "7072f1efdae311c202efea5fb6f47691f3b63d20747b1a654415c34804c171cd",
+    "memory-holdout-v1/global-stride128-64/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-holdout-v1/global-stride128-64/input.data": "45a8f17afe80fe088a2aeb81f0e539c4e42a2d712de3dcb8e67532fc9cbed5d2",
+    "memory-holdout-v1/global-stride256-16/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-holdout-v1/global-stride256-16/input.data": "38f2bece0a9249020d835c9c315fa61165146b2383f2e5815e7c8df126abcaf0",
+    "memory-holdout-v1/global-stride256-32/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-holdout-v1/global-stride256-32/input.data": "7e159cc716b1e011b454c46af758c09b998837a6b5858d1da1335d11ad47cb61",
+    "memory-holdout-v1/global-stride256-64/input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "memory-holdout-v1/global-stride256-64/input.data": "cbe4f77d570bffa0994ebdef2fa63f87251eab788337a62e2c32bf8a3deacab2",
+    "rtl-multiwarp-v1/results.json": "f8f0a1f9b49fddcfa1c9e554345c347345f26ebc3122e81061d52f0d1e55e794",
+    "multiwarp-probes-v1/multi-tensor-w2-16/input.metadata": "04bd71865a46de22fa70a61be0c1cef259baf764ffe4b2956f3f5e9a6d83892c",
+    "multiwarp-probes-v1/multi-tensor-w2-16/input.data": "67d8a6d4d5d5a9735d8b033c566b4f38b5849c91d8a7703a598e66b9046d8d33",
+    "multiwarp-probes-v1/multi-tensor-w2-64/input.metadata": "04bd71865a46de22fa70a61be0c1cef259baf764ffe4b2956f3f5e9a6d83892c",
+    "multiwarp-probes-v1/multi-tensor-w2-64/input.data": "d9749c3ca596cd41d0fc5ad93432b7691768d877c988429d40cc9585385cf66c",
+    "multiwarp-probes-v1/multi-load-w2-16/input.metadata": "04bd71865a46de22fa70a61be0c1cef259baf764ffe4b2956f3f5e9a6d83892c",
+    "multiwarp-probes-v1/multi-load-w2-16/input.data": "211496403a90f93490fdd776f4f3c70a1bdeb724b31472074f6f249118724633",
+    "multiwarp-probes-v1/multi-load-w2-64/input.metadata": "04bd71865a46de22fa70a61be0c1cef259baf764ffe4b2956f3f5e9a6d83892c",
+    "multiwarp-probes-v1/multi-load-w2-64/input.data": "eb4f7644d59b0ed2565e8f4427ed074222aff07722c78dcb55d3d0dd63138c65",
+    "multiwarp-probes-v1/multi-tensor-w8-16/input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+    "multiwarp-probes-v1/multi-tensor-w8-16/input.data": "67d8a6d4d5d5a9735d8b033c566b4f38b5849c91d8a7703a598e66b9046d8d33",
+    "multiwarp-probes-v1/multi-tensor-w8-64/input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+    "multiwarp-probes-v1/multi-tensor-w8-64/input.data": "d9749c3ca596cd41d0fc5ad93432b7691768d877c988429d40cc9585385cf66c",
+    "multiwarp-probes-v1/multi-load-w8-16/input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+    "multiwarp-probes-v1/multi-load-w8-16/input.data": "211496403a90f93490fdd776f4f3c70a1bdeb724b31472074f6f249118724633",
+    "multiwarp-probes-v1/multi-load-w8-64/input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+    "multiwarp-probes-v1/multi-load-w8-64/input.data": "eb4f7644d59b0ed2565e8f4427ed074222aff07722c78dcb55d3d0dd63138c65",
+    "rtl-multiwarp-holdout-v2/results.json": "72f1f8d0479d42465ffb9074b3a91b73564fe3970c2d5854d0ab9fb6567d4124",
+    "multiwarp-holdout-v2/multi-load-w4-16/input.metadata": "9e8dff506589b1021864eeb0c478eb58533cdcf328c589357bf1459eeaa31397",
+    "multiwarp-holdout-v2/multi-load-w4-16/input.data": "211496403a90f93490fdd776f4f3c70a1bdeb724b31472074f6f249118724633",
+    "multiwarp-holdout-v2/multi-load-w4-32/input.metadata": "9e8dff506589b1021864eeb0c478eb58533cdcf328c589357bf1459eeaa31397",
+    "multiwarp-holdout-v2/multi-load-w4-32/input.data": "2757c31f222fb03fd16c7776b598d1b8b6421499d50c7c08b7b2437fea4965e0",
+    "multiwarp-holdout-v2/multi-load-w4-64/input.metadata": "9e8dff506589b1021864eeb0c478eb58533cdcf328c589357bf1459eeaa31397",
+    "multiwarp-holdout-v2/multi-load-w4-64/input.data": "eb4f7644d59b0ed2565e8f4427ed074222aff07722c78dcb55d3d0dd63138c65",
+    "multiwarp-holdout-v2/multi-load-w8-16/input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+    "multiwarp-holdout-v2/multi-load-w8-16/input.data": "211496403a90f93490fdd776f4f3c70a1bdeb724b31472074f6f249118724633",
+    "multiwarp-holdout-v2/multi-load-w8-32/input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+    "multiwarp-holdout-v2/multi-load-w8-32/input.data": "2757c31f222fb03fd16c7776b598d1b8b6421499d50c7c08b7b2437fea4965e0",
+    "multiwarp-holdout-v2/multi-load-w8-64/input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+    "multiwarp-holdout-v2/multi-load-w8-64/input.data": "eb4f7644d59b0ed2565e8f4427ed074222aff07722c78dcb55d3d0dd63138c65"
+  },
+  "runs": 40,
+  "unique_program_inputs": 34,
+  "comparisons": [
+    {
+      "evidence": "rtl-probes-v3",
+      "family": "tensor-distinct",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 768,
+      "predicted_increment": 768,
+      "relative_error": 0.0,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-probes-v3",
+      "family": "tensor-distinct",
+      "counts": [
+        64,
+        192
+      ],
+      "rtl_increment": 2048,
+      "predicted_increment": 2048,
+      "relative_error": 0.0,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-probes-v3",
+      "family": "tensor-conflict",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 864,
+      "predicted_increment": 864,
+      "relative_error": 0.0,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-probes-v3",
+      "family": "lds-1way",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 528,
+      "predicted_increment": 528,
+      "relative_error": 0.0,
+      "prediction_before_rtl": false
+    },
+    {
+      "evidence": "rtl-probes-v3",
+      "family": "lds-2way",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 576,
+      "predicted_increment": 576,
+      "relative_error": 0.0,
+      "prediction_before_rtl": false
+    },
+    {
+      "evidence": "rtl-probes-v3",
+      "family": "lds-4way",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 672,
+      "predicted_increment": 672,
+      "relative_error": 0.0,
+      "prediction_before_rtl": false
+    },
+    {
+      "evidence": "rtl-probes-v3",
+      "family": "lds-32way",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 2016,
+      "predicted_increment": 2016,
+      "relative_error": 0.0,
+      "prediction_before_rtl": false
+    },
+    {
+      "evidence": "rtl-memory-v1",
+      "family": "global-stride0",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 528,
+      "predicted_increment": 528,
+      "relative_error": 0.0,
+      "prediction_before_rtl": false
+    },
+    {
+      "evidence": "rtl-memory-v1",
+      "family": "global-stride128",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 1350,
+      "predicted_increment": 1344,
+      "relative_error": -0.0044444444444444444,
+      "prediction_before_rtl": false
+    },
+    {
+      "evidence": "rtl-memory-holdout-v1",
+      "family": "global-stride0",
+      "counts": [
+        16,
+        32
+      ],
+      "rtl_increment": 176,
+      "predicted_increment": 176,
+      "relative_error": 0.0,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-memory-holdout-v1",
+      "family": "global-stride0",
+      "counts": [
+        32,
+        64
+      ],
+      "rtl_increment": 352,
+      "predicted_increment": 352,
+      "relative_error": 0.0,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-memory-holdout-v1",
+      "family": "global-stride128",
+      "counts": [
+        16,
+        32
+      ],
+      "rtl_increment": 450,
+      "predicted_increment": 448,
+      "relative_error": -0.0044444444444444444,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-memory-holdout-v1",
+      "family": "global-stride128",
+      "counts": [
+        32,
+        64
+      ],
+      "rtl_increment": 900,
+      "predicted_increment": 896,
+      "relative_error": -0.0044444444444444444,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-memory-holdout-v1",
+      "family": "global-stride256",
+      "counts": [
+        16,
+        32
+      ],
+      "rtl_increment": 450,
+      "predicted_increment": 448,
+      "relative_error": -0.0044444444444444444,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-memory-holdout-v1",
+      "family": "global-stride256",
+      "counts": [
+        32,
+        64
+      ],
+      "rtl_increment": 900,
+      "predicted_increment": 896,
+      "relative_error": -0.0044444444444444444,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-multiwarp-v1",
+      "family": "multi-tensor-w2",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 768,
+      "predicted_increment": 768,
+      "relative_error": 0.0,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-multiwarp-v1",
+      "family": "multi-load-w2",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 528,
+      "predicted_increment": 528,
+      "relative_error": 0.0,
+      "prediction_before_rtl": false
+    },
+    {
+      "evidence": "rtl-multiwarp-v1",
+      "family": "multi-tensor-w8",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 768,
+      "predicted_increment": 768,
+      "relative_error": 0.0,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-multiwarp-v1",
+      "family": "multi-load-w8",
+      "counts": [
+        16,
+        64
+      ],
+      "rtl_increment": 1536,
+      "predicted_increment": 1536,
+      "relative_error": 0.0,
+      "prediction_before_rtl": false
+    },
+    {
+      "evidence": "rtl-multiwarp-holdout-v2",
+      "family": "multi-load-w4",
+      "counts": [
+        16,
+        32
+      ],
+      "rtl_increment": 256,
+      "predicted_increment": 256,
+      "relative_error": 0.0,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-multiwarp-holdout-v2",
+      "family": "multi-load-w4",
+      "counts": [
+        32,
+        64
+      ],
+      "rtl_increment": 512,
+      "predicted_increment": 512,
+      "relative_error": 0.0,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-multiwarp-holdout-v2",
+      "family": "multi-load-w8",
+      "counts": [
+        16,
+        32
+      ],
+      "rtl_increment": 512,
+      "predicted_increment": 512,
+      "relative_error": 0.0,
+      "prediction_before_rtl": true
+    },
+    {
+      "evidence": "rtl-multiwarp-holdout-v2",
+      "family": "multi-load-w8",
+      "counts": [
+        32,
+        64
+      ],
+      "rtl_increment": 1024,
+      "predicted_increment": 1024,
+      "relative_error": 0.0,
+      "prediction_before_rtl": true
+    }
+  ],
+  "scope": "Incremental decoded-body timing including controlled 1/2/4/8-warp traffic; all runs use one unchanged default RTL configuration.",
+  "numerical_gemm_verified": false,
+  "rtl_hardware_search_gain_verified": false
+}

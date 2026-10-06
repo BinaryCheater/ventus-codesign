@@ -1,0 +1,45 @@
+python3 json2cpp.py
+g++ -c -g -O0 -std=c++20 -MMD -MP -o build/driver_example/debug/sim_main.o sim_main.cpp
+g++ -c -g -O0 -std=c++20 -MMD -MP -o build/driver_example/debug/cmdarg.o cmdarg.cpp
+g++ -c -g -O0 -std=c++20 -MMD -MP -o build/driver_example/debug/kernel.o kernel.cpp
+verilator -cc --build -MMD --error-limit 100 --x-assign unique --x-initial unique -Wno-WIDTHEXPAND -Wno-WIDTHTRUNC -DPRINTF_COND=1 -DRANDOMIZE -DRANDOMIZE_MEM_INIT -DRANDOMIZE_REG_INIT --trace-fst --assert --threads 4 --trace-threads 2 -j 12 -CFLAGS "-g -O0 -fPIC -std=c++20 -DSPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_TRACE" -LDFLAGS "-lc" --prefix Vdut -Mdir build/libVentusRTL/debug dut.v ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed/sim-verilator/kernel.cpp ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed/sim-verilator/physical_mem.cpp ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed/sim-verilator/cta_sche_wrapper.cpp ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed/sim-verilator/ventus_rtlsim_impl.cpp ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed/sim-verilator/rtl_parameters.cpp ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed/sim-verilator/ventus_rtlsim.cpp
+%Warning-DEPRECATED: Option '--trace-threads' is deprecated and has no effect.
+                     ... For warning description see https://verilator.org/warn/DEPRECATED?v=5.049
+                     ... Use "/* verilator lint_off DEPRECATED */" and lint_on around source to disable this message.
+In file included from ${REMOTE_SPDLOG_ROOT}/include/spdlog/common.h:50,
+                 from ${REMOTE_SPDLOG_ROOT}/include/spdlog/logger.h:17,
+                 from kernel.hpp:7,
+                 from cmdarg.cpp:1:
+${REMOTE_SPDLOG_ROOT}/include/spdlog/fmt/fmt.h:27:14: fatal error: spdlog/fmt/bundled/core.h: No such file or directory
+   27 | #    include <spdlog/fmt/bundled/core.h>
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ${REMOTE_SPDLOG_ROOT}/include/spdlog/common.h:50,
+                 from ${REMOTE_SPDLOG_ROOT}/include/spdlog/logger.h:17,
+                 from kernel.hpp:7,
+                 from sim_main.cpp:1:
+${REMOTE_SPDLOG_ROOT}/include/spdlog/fmt/fmt.h:27:14: fatal error: spdlog/fmt/bundled/core.h: No such file or directory
+   27 | #    include <spdlog/fmt/bundled/core.h>
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+compilation terminated.
+In file included from ${REMOTE_SPDLOG_ROOT}/include/spdlog/common.h:50,
+                 from ${REMOTE_SPDLOG_ROOT}/include/spdlog/logger.h:17,
+                 from kernel.hpp:7,
+                 from kernel.cpp:1:
+${REMOTE_SPDLOG_ROOT}/include/spdlog/fmt/fmt.h:27:14: fatal error: spdlog/fmt/bundled/core.h: No such file or directory
+   27 | #    include <spdlog/fmt/bundled/core.h>
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:77: build/driver_example/debug/cmdarg.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Makefile:77: build/driver_example/debug/sim_main.o] Error 1
+make: *** [Makefile:77: build/driver_example/debug/kernel.o] Error 1
+%Error: dut.v:119881:5: syntax error, unexpected '.', expecting ')'
+119881 |     .io_out_1_bits_mask_0(),
+       |     ^
+        ... See the manual at https://verilator.org/verilator_doc.html?v=5.049 for more assistance.
+%Error: dut.v:201135:5: syntax error, unexpected '.', expecting ')'
+201135 |     .io_out_1_bits_mask_0(),
+       |     ^
+%Error: Exiting due to 2 error(s), 1 warning(s)
+make: *** [verilate.mk:159: build/libVentusRTL/debug/libVdut.a] Error 1

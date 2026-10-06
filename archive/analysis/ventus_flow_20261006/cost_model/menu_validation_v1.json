@@ -1,0 +1,12 @@
+{
+  "supported_combinations": 384,
+  "logic_area_range": [
+    284517.86705999996,
+    2763275.3456400004
+  ],
+  "memory_bits_range": [
+    3667440,
+    28553126
+  ],
+  "scope": "lookup validation only; no RTL implementation or timing proof"
+}

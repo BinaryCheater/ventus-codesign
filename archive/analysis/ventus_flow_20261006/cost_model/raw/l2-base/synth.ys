@@ -1,0 +1,14 @@
+plugin -i slang
+read_slang --top Scheduler --keep-hierarchy --ignore-assertions --ignore-initial logic.v
+hierarchy -check -top Scheduler
+proc
+opt_expr
+opt_clean
+techmap
+opt_expr
+opt_clean
+ dfflibmap -liberty ${REMOTE_STORAGE_ROOT}/ventus-cost-v1c-20261006/mapping.lib
+abc -liberty ${REMOTE_STORAGE_ROOT}/ventus-cost-v1c-20261006/mapping.lib -D 1000
+clean
+tee -o statistics.json stat -json -liberty ${REMOTE_STORAGE_ROOT}/ventus-cost-v1c-20261006/mapping.lib
+write_verilog -noattr mapped.v

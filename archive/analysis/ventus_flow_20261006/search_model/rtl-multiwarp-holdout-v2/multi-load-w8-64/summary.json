@@ -1,0 +1,19 @@
+{
+  "name": "multi-load-w8-64",
+  "n": 64,
+  "family": "multi-load-w8",
+  "predicted_body_interval": null,
+  "input_sha256": {
+    "input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+    "input.data": "eb4f7644d59b0ed2565e8f4427ed074222aff07722c78dcb55d3d0dd63138c65"
+  },
+  "predicted_segment_cycles": 2054,
+  "warps": 8,
+  "returncode": 0,
+  "wall_seconds": 23.405794837977737,
+  "dispatch_to_finish_cycles": 2222,
+  "checked_words": 32,
+  "all_output_zero": true,
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+}

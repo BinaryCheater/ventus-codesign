@@ -1,0 +1,18 @@
+{
+  "case": "repeat_load-64",
+  "backend": "systemc",
+  "family": "repeat_load",
+  "n": 64,
+  "returncode": 0,
+  "wall_seconds": 0.08715253497939557,
+  "first_dispatch_time": 15,
+  "kernel_finish_time": 3375,
+  "output_correct": true,
+  "checked_words": 1,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "a762887a5ffee767e1d09767c295775e9445e48ba7b6548c8ca7d2040a3ed2b4"
+  },
+  "dispatch_to_finish_cycles": 336.0
+}

@@ -1,0 +1,186 @@
+{
+  "code_sha256": {
+    "__init__.py": "a9ffb79b59dc539b1eb49e40268bce4de172ffc549c17da20fc894da42f35636",
+    "__main__.py": "28584e5029ab83bb2f47d45455d2eb8bb017e4f6f44639f70a9c9ba86b2c6c59",
+    "coalescer.py": "68ef20fbab29abb4ccb02bd756252267a298dfb5d2ed87b43135d0d17ba2a34b",
+    "config.py": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "graph.py": "765aeb04bda71d3dbe32938599ab20c341a8ae352fd5981202fce26aec6b5508",
+    "ir.py": "40265280989aae3202bcc8bb99ba0da57e747422d799210b89f841d8efaa8e4d",
+    "mip.py": "0a0f576c7a49010d2f9062d3e600b053e41e3a79f668b789b9e2141c6ecc96fe",
+    "operators.py": "8aeada5c5cd01f82605b0af7ddbcb00a7ea6635324c12ad0def504cc9184da15",
+    "program.py": "56b8872910d9ddd1a648238dc5451b9bedea54f2d1951e58499e4fc9257d3304",
+    "source.py": "302132797637f986b0f752599d5c1fb99383ed6f035752bb39fe73cd865511d9",
+    "timing.py": "4030e68c455bd048c64a45a674d8ebe2c1954459870729977a271871db68f51d",
+    "workloads.py": "df164d864bf62da1700ba4862e6cbabcf39264ba43594eac31d0eb0cdc2ac82d"
+  },
+  "tensor": [
+    {
+      "m": 4,
+      "n": 8,
+      "k": 4,
+      "latency": 12,
+      "flops": 256
+    },
+    {
+      "m": 4,
+      "n": 4,
+      "k": 4,
+      "latency": 10,
+      "flops": 128
+    },
+    {
+      "m": 2,
+      "n": 16,
+      "k": 2,
+      "latency": 14,
+      "flops": 128
+    },
+    {
+      "m": 8,
+      "n": 4,
+      "k": 4,
+      "latency": 10,
+      "flops": 256
+    },
+    {
+      "m": 2,
+      "n": 4,
+      "k": 2,
+      "latency": 10,
+      "flops": 32
+    },
+    {
+      "m": 4,
+      "n": 2,
+      "k": 4,
+      "latency": 8,
+      "flops": 64
+    }
+  ],
+  "lds": [
+    {
+      "banks": 32,
+      "depth": 1024,
+      "cases": [
+        {
+          "stride": 1,
+          "rounds": 1,
+          "last_latency": 3
+        },
+        {
+          "stride": 2,
+          "rounds": 2,
+          "last_latency": 4
+        },
+        {
+          "stride": 4,
+          "rounds": 4,
+          "last_latency": 6
+        },
+        {
+          "stride": 8,
+          "rounds": 8,
+          "last_latency": 10
+        },
+        {
+          "stride": 32,
+          "rounds": 32,
+          "last_latency": 34
+        }
+      ]
+    },
+    {
+      "banks": 16,
+      "depth": 1024,
+      "cases": [
+        {
+          "stride": 1,
+          "rounds": 2,
+          "last_latency": 4
+        },
+        {
+          "stride": 2,
+          "rounds": 4,
+          "last_latency": 6
+        },
+        {
+          "stride": 4,
+          "rounds": 8,
+          "last_latency": 10
+        },
+        {
+          "stride": 8,
+          "rounds": 16,
+          "last_latency": 18
+        },
+        {
+          "stride": 32,
+          "rounds": 32,
+          "last_latency": 34
+        }
+      ]
+    },
+    {
+      "banks": 8,
+      "depth": 1024,
+      "cases": [
+        {
+          "stride": 1,
+          "rounds": 4,
+          "last_latency": 6
+        },
+        {
+          "stride": 2,
+          "rounds": 8,
+          "last_latency": 10
+        },
+        {
+          "stride": 4,
+          "rounds": 16,
+          "last_latency": 18
+        },
+        {
+          "stride": 8,
+          "rounds": 32,
+          "last_latency": 34
+        },
+        {
+          "stride": 32,
+          "rounds": 32,
+          "last_latency": 34
+        }
+      ]
+    },
+    {
+      "banks": 16,
+      "depth": 128,
+      "cases": [
+        {
+          "stride": 1,
+          "rounds": 2,
+          "last_latency": 4
+        },
+        {
+          "stride": 2,
+          "rounds": 4,
+          "last_latency": 6
+        },
+        {
+          "stride": 4,
+          "rounds": 8,
+          "last_latency": 10
+        },
+        {
+          "stride": 8,
+          "rounds": 16,
+          "last_latency": 18
+        },
+        {
+          "stride": 32,
+          "rounds": 32,
+          "last_latency": 34
+        }
+      ]
+    }
+  ]
+}

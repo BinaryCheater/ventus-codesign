@@ -1,0 +1,12 @@
+{
+  "__init__.py": "0dcd3c379fa3d0e3e78657dfdb6ff29057562d2ea481f870917e911c9514d59c",
+  "table_v1.json": "5990e97468f1a646e9093db21d6756bcce650c191d701d076a4924f64b9782d3",
+  "model.py": "6a491c4f8787f651318afb6ab4d0ca818f45038178020c4427473768b79c3b07",
+  "hardware_config.py": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+  "__main__.py": "562d6263e2188eaa0bcd433477c132cbf1193ad521fae3b962079fabb0c9cbd5",
+  "scripts/run_demo.py": "5b293ef55457c2c52272042c246fd93ae99151ce618089fd6976c73a61f6fa89",
+  "scripts/collect.py": "a713edc776ce5581e11624dc91ec44df042a7da5a2e89a58773da858d1acfec4",
+  "scripts/assemble_raw.py": "f8c3f051d09d0e4f9408d04ff8dcbf36473dfef06f35e477a9c8bc2b4efa4e80",
+  "scripts/dedup_sm.py": "6303ed377a906684f322e16cde53ddf13f17bc179f9a393dfcf55e3eba7330ef",
+  "scripts/build_table.py": "4196de369842db0585445818a547eee71bfb0698e47e81b1a7046abd3c880e8c"
+}

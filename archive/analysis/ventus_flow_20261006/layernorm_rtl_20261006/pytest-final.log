@@ -1,0 +1,272 @@
+........................................................................ [ 12%]
+........................................................................ [ 25%]
+........................................................................ [ 38%]
+........................................................................ [ 51%]
+........................................................................ [ 64%]
+........................................................................ [ 77%]
+........................................................................ [ 90%]
+.......................FFFFFFF..........................                 [100%]
+=================================== FAILURES ===================================
+_________________ test_integrated_anchor_and_reserved_storage __________________
+
+    def test_integrated_anchor_and_reserved_storage():
+>       points = load_table()["points"]
+                 ^^^^^^^^^^^^
+
+tests/test_ventus_costs.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+codesign/ventus_costs/model.py:22: in load_table
+    return json.loads(Path(path).read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json'
+
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1013: FileNotFoundError
+_______________ test_bank_cost_keeps_capacity_but_charges_logic ________________
+
+    def test_bank_cost_keeps_capacity_but_charges_logic():
+>       four = evaluate_cost(Hardware())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ventus_costs.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+codesign/ventus_costs/model.py:32: in evaluate_cost
+    table = load_table()
+            ^^^^^^^^^^^^
+codesign/ventus_costs/model.py:22: in load_table
+    return json.loads(Path(path).read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json'
+
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1013: FileNotFoundError
+__________________ test_missing_cost_is_never_zero[changes0] ___________________
+
+changes = {'rf_read_ports': 2}
+
+    @pytest.mark.parametrize("changes", [{"rf_read_ports": 2}, {"vgpr_slots": 2048}, {"l1_mshrs": 8}])
+    def test_missing_cost_is_never_zero(changes):
+>       cost = evaluate_cost(Hardware(**changes))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ventus_costs.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+codesign/ventus_costs/model.py:32: in evaluate_cost
+    table = load_table()
+            ^^^^^^^^^^^^
+codesign/ventus_costs/model.py:22: in load_table
+    return json.loads(Path(path).read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json'
+
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1013: FileNotFoundError
+__________________ test_missing_cost_is_never_zero[changes1] ___________________
+
+changes = {'vgpr_slots': 2048}
+
+    @pytest.mark.parametrize("changes", [{"rf_read_ports": 2}, {"vgpr_slots": 2048}, {"l1_mshrs": 8}])
+    def test_missing_cost_is_never_zero(changes):
+>       cost = evaluate_cost(Hardware(**changes))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ventus_costs.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+codesign/ventus_costs/model.py:32: in evaluate_cost
+    table = load_table()
+            ^^^^^^^^^^^^
+codesign/ventus_costs/model.py:22: in load_table
+    return json.loads(Path(path).read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json'
+
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1013: FileNotFoundError
+__________________ test_missing_cost_is_never_zero[changes2] ___________________
+
+changes = {'l1_mshrs': 8}
+
+    @pytest.mark.parametrize("changes", [{"rf_read_ports": 2}, {"vgpr_slots": 2048}, {"l1_mshrs": 8}])
+    def test_missing_cost_is_never_zero(changes):
+>       cost = evaluate_cost(Hardware(**changes))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ventus_costs.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+codesign/ventus_costs/model.py:32: in evaluate_cost
+    table = load_table()
+            ^^^^^^^^^^^^
+codesign/ventus_costs/model.py:22: in load_table
+    return json.loads(Path(path).read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json'
+
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1013: FileNotFoundError
+_____ test_activity_cannot_change_static_cost_and_overrides_are_validated ______
+
+    def test_activity_cannot_change_static_cost_and_overrides_are_validated():
+>       assert evaluate_cost({}) == evaluate_cost({}, activity={"operations": 100000})
+               ^^^^^^^^^^^^^^^^^
+
+tests/test_ventus_costs.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+codesign/ventus_costs/model.py:32: in evaluate_cost
+    table = load_table()
+            ^^^^^^^^^^^^
+codesign/ventus_costs/model.py:22: in load_table
+    return json.loads(Path(path).read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json'
+
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1013: FileNotFoundError
+_______________________ test_cost_budget_restricts_menu ________________________
+
+    def test_cost_budget_restricts_menu():
+        work = Workload((Operation("add", "vector", destination="v1", sources=("v2",)),))
+        small = Hardware(sms=1)
+        big = Hardware(sms=2)
+>       cost = evaluate_cost(small)
+               ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ventus_costs.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+codesign/ventus_costs/model.py:32: in evaluate_cost
+    table = load_table()
+            ^^^^^^^^^^^^
+codesign/ventus_costs/model.py:22: in load_table
+    return json.loads(Path(path).read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '${ORIGINAL_PROJECT_ROOT}/codesign/ventus_costs/table_v1.json'
+
+../../.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py:1013: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_ventus_costs.py::test_integrated_anchor_and_reserved_storage
+FAILED tests/test_ventus_costs.py::test_bank_cost_keeps_capacity_but_charges_logic
+FAILED tests/test_ventus_costs.py::test_missing_cost_is_never_zero[changes0]
+FAILED tests/test_ventus_costs.py::test_missing_cost_is_never_zero[changes1]
+FAILED tests/test_ventus_costs.py::test_missing_cost_is_never_zero[changes2]
+FAILED tests/test_ventus_costs.py::test_activity_cannot_change_static_cost_and_overrides_are_validated
+FAILED tests/test_ventus_costs.py::test_cost_budget_restricts_menu - FileNotF...
+7 failed, 553 passed in 190.45s (0:03:10)

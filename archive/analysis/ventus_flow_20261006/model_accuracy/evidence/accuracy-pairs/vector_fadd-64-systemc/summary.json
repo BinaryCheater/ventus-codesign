@@ -1,0 +1,18 @@
+{
+  "case": "vector_fadd-64",
+  "backend": "systemc",
+  "family": "vector_fadd",
+  "n": 64,
+  "returncode": 0,
+  "wall_seconds": 0.10150472598616034,
+  "first_dispatch_time": 15,
+  "kernel_finish_time": 6885,
+  "output_correct": true,
+  "checked_words": 32,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "e307aadfd39f4b67e3fac304beab5936230c9871697e12b9c3ee8485ae626bdd"
+  },
+  "dispatch_to_finish_cycles": 687.0
+}

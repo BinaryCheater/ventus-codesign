@@ -1,0 +1,5156 @@
+{
+  "code_sha256": {
+    "__init__.py": "6ccb454a4ae95d67196003b2cd9cdb8cdf7d20e6cbcab00edc02e795e00bc118",
+    "__main__.py": "f7ebefe86d8f2c584399654392fe0af5789958711b36d3ff3dc7cc8d62786fcb",
+    "coalescer.py": "68ef20fbab29abb4ccb02bd756252267a298dfb5d2ed87b43135d0d17ba2a34b",
+    "config.py": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "elastic.py": "ec41c9d87e95ddda5165106f7a425951aa01df56e6a97dbda711714762186e72",
+    "graph.py": "765aeb04bda71d3dbe32938599ab20c341a8ae352fd5981202fce26aec6b5508",
+    "ir.py": "0d7d997f86190a338af24ad795ddb36415d01231b37d89aa1617558c628b61b8",
+    "mip.py": "f12939c226af7970849dfa3bbb33864b2d12292f1ec108be61bfee526c4b1e46",
+    "online.py": "f2bfa38f46ab079a1d3d504a15e3853eba798ce3b222343438ce24ef332112c1",
+    "operators.py": "8aeada5c5cd01f82605b0af7ddbcb00a7ea6635324c12ad0def504cc9184da15",
+    "program.py": "56b8872910d9ddd1a648238dc5451b9bedea54f2d1951e58499e4fc9257d3304",
+    "session.py": "cd17a65ebf8bdb9e808ffab6c52065fc0c93468ba42805d99e7039a0ee3c0517",
+    "source.py": "f9fac2c004fcc0f94ee888e21750bd74d9a574c1e0335ee80efce1e6dba11976",
+    "timing.py": "915509efc0943263cfab725a31d981532058c1904aabb3b28472ffb48b778680",
+    "transformer.py": "09a53a957eaf325a875d7a77aee2d72c291e9783642ad6079c915ce960ea3aef",
+    "workloads.py": "df164d864bf62da1700ba4862e6cbabcf39264ba43594eac31d0eb0cdc2ac82d"
+  },
+  "cases": [
+    {
+      "name": "mixed-w1",
+      "warps": 1,
+      "words": [
+        772833495,
+        2415919799,
+        1376298327,
+        2527147351,
+        44221783,
+        2415924023,
+        1376298455,
+        2528196055,
+        45303255,
+        336251,
+        369147,
+        238108811,
+        776077911,
+        777159383,
+        778240855,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2415927607,
+        2147494131,
+        12583827,
+        41453747,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        4677755,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        134218771,
+        48514903,
+        5726331,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        268436499,
+        48514903,
+        6774907,
+        16395
+      ],
+      "expected_words": [
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        2147483648,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        0,
+        1116733440,
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        1094713344,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        3231711232,
+        3225419776,
+        3212836864,
+        1065353216,
+        1077936128,
+        0,
+        1073741824,
+        3225419776,
+        0,
+        1073741824,
+        1082130432,
+        1065353216,
+        3229614080,
+        3221225472,
+        0,
+        1073741824,
+        1084227584,
+        3231711232,
+        3225419776,
+        3212836864,
+        1065353216,
+        1077936128,
+        0,
+        1073741824,
+        3221225472,
+        0,
+        1073741824,
+        1082130432,
+        1065353216,
+        3229614080,
+        3221225472,
+        0,
+        3221225472,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1073741824,
+        1077936128,
+        0,
+        0,
+        1065353216,
+        1073741824,
+        1077936128,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1077936128,
+        3221225472,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1073741824,
+        1077936128,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1077936128,
+        3212836864,
+        0,
+        1065353216
+      ],
+      "final_pc": 2147483896,
+      "workload": {
+        "operations": [
+          {
+            "name": "w0.pc80000000",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v1",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000004",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "x5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000008",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000000c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000010",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10",
+              "x5"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000014",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "x6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000018",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000001c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000020",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11",
+              "x6"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000024",
+            "kind": "load",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v2",
+            "addresses": [
+              2415919104,
+              2415919108,
+              2415919112,
+              2415919116,
+              2415919120,
+              2415919124,
+              2415919128,
+              2415919132,
+              2415919136,
+              2415919140,
+              2415919144,
+              2415919148,
+              2415919152,
+              2415919156,
+              2415919160,
+              2415919164,
+              2415919168,
+              2415919172,
+              2415919176,
+              2415919180,
+              2415919184,
+              2415919188,
+              2415919192,
+              2415919196,
+              2415919200,
+              2415919204,
+              2415919208,
+              2415919212,
+              2415919216,
+              2415919220,
+              2415919224,
+              2415919228
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000028",
+            "kind": "load",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v3",
+            "addresses": [
+              2415923200,
+              2415923204,
+              2415923208,
+              2415923212,
+              2415923216,
+              2415923220,
+              2415923224,
+              2415923228,
+              2415923232,
+              2415923236,
+              2415923240,
+              2415923244,
+              2415923248,
+              2415923252,
+              2415923256,
+              2415923260,
+              2415923264,
+              2415923268,
+              2415923272,
+              2415923276,
+              2415923280,
+              2415923284,
+              2415923288,
+              2415923292,
+              2415923296,
+              2415923300,
+              2415923304,
+              2415923308,
+              2415923312,
+              2415923316,
+              2415923320,
+              2415923324
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000002c",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000030",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v4",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000034",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v5",
+              "v5"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000038",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v6",
+              "v6"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000003c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000040",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000044",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000048",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000004c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000050",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000054",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000058",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000005c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000060",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000064",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000068",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000006c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000070",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000074",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000078",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000007c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000080",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000084",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000088",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000008c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000090",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000094",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000098",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000009c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000a0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000a4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000a8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000ac",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000b0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000b4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000b8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000bc",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000c0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000c4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000c8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000cc",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000d0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000d4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000d8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000dc",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000e0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000e4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000e8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000ec",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000f0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000f4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000f8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          }
+        ],
+        "warps_per_block": 1,
+        "vgpr_per_warp": 64,
+        "sgpr_per_warp": 64,
+        "lds_per_block": 0
+      },
+      "prediction": 287,
+      "input_sha256": {
+        "input.metadata": "0b49d276715a9c7aef7465b4deb52298a769731e6a8252555f4a2fc5f53f3b24",
+        "input.data": "67275cb7841ffb522c186082b80cc95a0971fb9a73849fa7477beae167f101ab"
+      }
+    },
+    {
+      "name": "fma-w1",
+      "warps": 1,
+      "words": [
+        772833495,
+        2415919799,
+        1376298327,
+        2527147351,
+        44221783,
+        2415924023,
+        1376298455,
+        2528196055,
+        45303255,
+        336251,
+        369147,
+        238108811,
+        776077911,
+        777159383,
+        778240855,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2415927607,
+        2147494131,
+        12583827,
+        41453747,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        4677755,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        134218771,
+        48514903,
+        5726331,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        268436499,
+        48514903,
+        6774907,
+        16395
+      ],
+      "expected_words": [
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        2147483648,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        0,
+        1116733440,
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        1094713344,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_pc": 2147483752,
+      "workload": {
+        "operations": [
+          {
+            "name": "w0.pc80000000",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v1",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000004",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "x5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000008",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000000c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000010",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10",
+              "x5"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000014",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "x6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000018",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000001c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000020",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11",
+              "x6"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000024",
+            "kind": "load",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v2",
+            "addresses": [
+              2415919104,
+              2415919108,
+              2415919112,
+              2415919116,
+              2415919120,
+              2415919124,
+              2415919128,
+              2415919132,
+              2415919136,
+              2415919140,
+              2415919144,
+              2415919148,
+              2415919152,
+              2415919156,
+              2415919160,
+              2415919164,
+              2415919168,
+              2415919172,
+              2415919176,
+              2415919180,
+              2415919184,
+              2415919188,
+              2415919192,
+              2415919196,
+              2415919200,
+              2415919204,
+              2415919208,
+              2415919212,
+              2415919216,
+              2415919220,
+              2415919224,
+              2415919228
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000028",
+            "kind": "load",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v3",
+            "addresses": [
+              2415923200,
+              2415923204,
+              2415923208,
+              2415923212,
+              2415923216,
+              2415923220,
+              2415923224,
+              2415923228,
+              2415923232,
+              2415923236,
+              2415923240,
+              2415923244,
+              2415923248,
+              2415923252,
+              2415923256,
+              2415923260,
+              2415923264,
+              2415923268,
+              2415923272,
+              2415923276,
+              2415923280,
+              2415923284,
+              2415923288,
+              2415923292,
+              2415923296,
+              2415923300,
+              2415923304,
+              2415923308,
+              2415923312,
+              2415923316,
+              2415923320,
+              2415923324
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000002c",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000030",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v4",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000034",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v5",
+              "v5"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000038",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v6",
+              "v6"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000003c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000040",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000044",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000048",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000004c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000050",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000054",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000058",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000005c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000060",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000064",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000068",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          }
+        ],
+        "warps_per_block": 1,
+        "vgpr_per_warp": 64,
+        "sgpr_per_warp": 64,
+        "lds_per_block": 0
+      },
+      "prediction": 191,
+      "input_sha256": {
+        "input.metadata": "0b49d276715a9c7aef7465b4deb52298a769731e6a8252555f4a2fc5f53f3b24",
+        "input.data": "4882d8c290b2f7926671323384fb2dd2a403dfe4729b7e609c9df014243ae016"
+      }
+    },
+    {
+      "name": "mixed-w2",
+      "warps": 2,
+      "words": [
+        772833495,
+        2415919799,
+        1376298327,
+        2527147351,
+        44221783,
+        2415924023,
+        1376298455,
+        2528196055,
+        45303255,
+        336251,
+        369147,
+        238108811,
+        776077911,
+        777159383,
+        778240855,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2988544599,
+        36770519,
+        439423831,
+        238108811,
+        2415927607,
+        2147494131,
+        12583827,
+        41453747,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        4677755,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        134218771,
+        48514903,
+        5726331,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        268436499,
+        48514903,
+        6774907,
+        16395
+      ],
+      "expected_words": [
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        2147483648,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        0,
+        1116733440,
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        1094713344,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        3231711232,
+        3225419776,
+        3212836864,
+        1065353216,
+        1077936128,
+        0,
+        1073741824,
+        3225419776,
+        0,
+        1073741824,
+        1082130432,
+        1065353216,
+        3229614080,
+        3221225472,
+        0,
+        1073741824,
+        1084227584,
+        3231711232,
+        3225419776,
+        3212836864,
+        1065353216,
+        1077936128,
+        0,
+        1073741824,
+        3221225472,
+        0,
+        1073741824,
+        1082130432,
+        1065353216,
+        3229614080,
+        3221225472,
+        0,
+        3221225472,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1073741824,
+        1077936128,
+        0,
+        0,
+        1065353216,
+        1073741824,
+        1077936128,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1077936128,
+        3221225472,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1073741824,
+        1077936128,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1077936128,
+        3212836864,
+        0,
+        1065353216,
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        2147483648,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        0,
+        1116733440,
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        1094713344,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        3231711232,
+        3225419776,
+        3212836864,
+        1065353216,
+        1077936128,
+        0,
+        1073741824,
+        3225419776,
+        0,
+        1073741824,
+        1082130432,
+        1065353216,
+        3229614080,
+        3221225472,
+        0,
+        1073741824,
+        1084227584,
+        3231711232,
+        3225419776,
+        3212836864,
+        1065353216,
+        1077936128,
+        0,
+        1073741824,
+        3221225472,
+        0,
+        1073741824,
+        1082130432,
+        1065353216,
+        3229614080,
+        3221225472,
+        0,
+        3221225472,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1073741824,
+        1077936128,
+        0,
+        0,
+        1065353216,
+        1073741824,
+        1077936128,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1077936128,
+        3221225472,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1073741824,
+        1077936128,
+        3212836864,
+        0,
+        1065353216,
+        1073741824,
+        1077936128,
+        3212836864,
+        0,
+        1065353216
+      ],
+      "final_pc": 2147483896,
+      "workload": {
+        "operations": [
+          {
+            "name": "w0.pc80000000",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v1",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000000",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v1",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000004",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "x5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000004",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 1,
+            "sources": [],
+            "destination": "x5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000008",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000008",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000000c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000000c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000010",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10",
+              "x5"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000010",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v10",
+              "x5"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000014",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "x6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000014",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 1,
+            "sources": [],
+            "destination": "x6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000018",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000018",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000001c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000001c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000020",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11",
+              "x6"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000020",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v11",
+              "x6"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000024",
+            "kind": "load",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v2",
+            "addresses": [
+              2415919104,
+              2415919108,
+              2415919112,
+              2415919116,
+              2415919120,
+              2415919124,
+              2415919128,
+              2415919132,
+              2415919136,
+              2415919140,
+              2415919144,
+              2415919148,
+              2415919152,
+              2415919156,
+              2415919160,
+              2415919164,
+              2415919168,
+              2415919172,
+              2415919176,
+              2415919180,
+              2415919184,
+              2415919188,
+              2415919192,
+              2415919196,
+              2415919200,
+              2415919204,
+              2415919208,
+              2415919212,
+              2415919216,
+              2415919220,
+              2415919224,
+              2415919228
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000024",
+            "kind": "load",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v2",
+            "addresses": [
+              2415919104,
+              2415919108,
+              2415919112,
+              2415919116,
+              2415919120,
+              2415919124,
+              2415919128,
+              2415919132,
+              2415919136,
+              2415919140,
+              2415919144,
+              2415919148,
+              2415919152,
+              2415919156,
+              2415919160,
+              2415919164,
+              2415919168,
+              2415919172,
+              2415919176,
+              2415919180,
+              2415919184,
+              2415919188,
+              2415919192,
+              2415919196,
+              2415919200,
+              2415919204,
+              2415919208,
+              2415919212,
+              2415919216,
+              2415919220,
+              2415919224,
+              2415919228
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000028",
+            "kind": "load",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v3",
+            "addresses": [
+              2415923200,
+              2415923204,
+              2415923208,
+              2415923212,
+              2415923216,
+              2415923220,
+              2415923224,
+              2415923228,
+              2415923232,
+              2415923236,
+              2415923240,
+              2415923244,
+              2415923248,
+              2415923252,
+              2415923256,
+              2415923260,
+              2415923264,
+              2415923268,
+              2415923272,
+              2415923276,
+              2415923280,
+              2415923284,
+              2415923288,
+              2415923292,
+              2415923296,
+              2415923300,
+              2415923304,
+              2415923308,
+              2415923312,
+              2415923316,
+              2415923320,
+              2415923324
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000028",
+            "kind": "load",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v3",
+            "addresses": [
+              2415923200,
+              2415923204,
+              2415923208,
+              2415923212,
+              2415923216,
+              2415923220,
+              2415923224,
+              2415923228,
+              2415923232,
+              2415923236,
+              2415923240,
+              2415923244,
+              2415923248,
+              2415923252,
+              2415923256,
+              2415923260,
+              2415923264,
+              2415923268,
+              2415923272,
+              2415923276,
+              2415923280,
+              2415923284,
+              2415923288,
+              2415923292,
+              2415923296,
+              2415923300,
+              2415923304,
+              2415923308,
+              2415923312,
+              2415923316,
+              2415923320,
+              2415923324
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000002c",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000002c",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000030",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v4",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000030",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v4",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000034",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v5",
+              "v5"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000034",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v5",
+              "v5"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000038",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v6",
+              "v6"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000038",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v6",
+              "v6"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000003c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000003c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000040",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000040",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000044",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000044",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000048",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000048",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000004c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000004c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000050",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000050",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000054",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000054",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000058",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000058",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000005c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000005c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000060",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000060",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000064",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000064",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000068",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000068",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000006c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000006c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000070",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000070",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000074",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000074",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000078",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000078",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000007c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000007c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000080",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000080",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000084",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000084",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000088",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000088",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000008c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000008c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000090",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000090",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000094",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000094",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000098",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000098",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000009c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000009c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000a0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000a0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000a4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000a4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000a8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000a8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000ac",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000ac",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000b0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000b0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000b4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000b4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000b8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000b8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000bc",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000bc",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000c0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000c0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000c4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000c4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000c8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000c8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000cc",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000cc",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000d0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000d0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000d4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000d4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000d8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000d8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000dc",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000dc",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000e0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000e0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000e4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000e4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000e8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000e8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000ec",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000ec",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000f0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000f0",
+            "kind": "fadd",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000f4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000f4",
+            "kind": "fmax",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc800000f8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc800000f8",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          }
+        ],
+        "warps_per_block": 2,
+        "vgpr_per_warp": 64,
+        "sgpr_per_warp": 64,
+        "lds_per_block": 0
+      },
+      "prediction": 305,
+      "input_sha256": {
+        "input.metadata": "7a3f56e3cd13ffd5f45a058bef226622ab6da1cbc2574e52e83ce1ea153bb5ec",
+        "input.data": "fad4d09529cd5dafd2ff0c6840fc368efcca79d9a19bcb254941d9cfb282ec57"
+      }
+    },
+    {
+      "name": "fma-w2",
+      "warps": 2,
+      "words": [
+        772833495,
+        2415919799,
+        1376298327,
+        2527147351,
+        44221783,
+        2415924023,
+        1376298455,
+        2528196055,
+        45303255,
+        336251,
+        369147,
+        238108811,
+        776077911,
+        777159383,
+        778240855,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2988544599,
+        2415927607,
+        2147494131,
+        12583827,
+        41453747,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        4677755,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        134218771,
+        48514903,
+        5726331,
+        1376298839,
+        2531342167,
+        48318295,
+        48809815,
+        268436499,
+        48514903,
+        6774907,
+        16395
+      ],
+      "expected_words": [
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        2147483648,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        0,
+        1116733440,
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        1094713344,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        2147483648,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        0,
+        1116733440,
+        1116733440,
+        1103101952,
+        2147483648,
+        0,
+        1103101952,
+        3258974208,
+        3255828480,
+        1094713344,
+        0,
+        1094713344,
+        1111490560,
+        3264217088,
+        1108344832,
+        2147483648,
+        3242196992,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_pc": 2147483752,
+      "workload": {
+        "operations": [
+          {
+            "name": "w0.pc80000000",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v1",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000000",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v1",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000004",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "x5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000004",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 1,
+            "sources": [],
+            "destination": "x5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000008",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000008",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000000c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000000c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000010",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10",
+              "x5"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000010",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v10",
+              "x5"
+            ],
+            "destination": "v10",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000014",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "x6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000014",
+            "kind": "scalar",
+            "block": 0,
+            "warp": 1,
+            "sources": [],
+            "destination": "x6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000018",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000018",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000001c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000001c",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000020",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11",
+              "x6"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000020",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v11",
+              "x6"
+            ],
+            "destination": "v11",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000024",
+            "kind": "load",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v2",
+            "addresses": [
+              2415919104,
+              2415919108,
+              2415919112,
+              2415919116,
+              2415919120,
+              2415919124,
+              2415919128,
+              2415919132,
+              2415919136,
+              2415919140,
+              2415919144,
+              2415919148,
+              2415919152,
+              2415919156,
+              2415919160,
+              2415919164,
+              2415919168,
+              2415919172,
+              2415919176,
+              2415919180,
+              2415919184,
+              2415919188,
+              2415919192,
+              2415919196,
+              2415919200,
+              2415919204,
+              2415919208,
+              2415919212,
+              2415919216,
+              2415919220,
+              2415919224,
+              2415919228
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000024",
+            "kind": "load",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v10"
+            ],
+            "destination": "v2",
+            "addresses": [
+              2415919104,
+              2415919108,
+              2415919112,
+              2415919116,
+              2415919120,
+              2415919124,
+              2415919128,
+              2415919132,
+              2415919136,
+              2415919140,
+              2415919144,
+              2415919148,
+              2415919152,
+              2415919156,
+              2415919160,
+              2415919164,
+              2415919168,
+              2415919172,
+              2415919176,
+              2415919180,
+              2415919184,
+              2415919188,
+              2415919192,
+              2415919196,
+              2415919200,
+              2415919204,
+              2415919208,
+              2415919212,
+              2415919216,
+              2415919220,
+              2415919224,
+              2415919228
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000028",
+            "kind": "load",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v3",
+            "addresses": [
+              2415923200,
+              2415923204,
+              2415923208,
+              2415923212,
+              2415923216,
+              2415923220,
+              2415923224,
+              2415923228,
+              2415923232,
+              2415923236,
+              2415923240,
+              2415923244,
+              2415923248,
+              2415923252,
+              2415923256,
+              2415923260,
+              2415923264,
+              2415923268,
+              2415923272,
+              2415923276,
+              2415923280,
+              2415923284,
+              2415923288,
+              2415923292,
+              2415923296,
+              2415923300,
+              2415923304,
+              2415923308,
+              2415923312,
+              2415923316,
+              2415923320,
+              2415923324
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000028",
+            "kind": "load",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v11"
+            ],
+            "destination": "v3",
+            "addresses": [
+              2415923200,
+              2415923204,
+              2415923208,
+              2415923212,
+              2415923216,
+              2415923220,
+              2415923224,
+              2415923228,
+              2415923232,
+              2415923236,
+              2415923240,
+              2415923244,
+              2415923248,
+              2415923252,
+              2415923256,
+              2415923260,
+              2415923264,
+              2415923268,
+              2415923272,
+              2415923276,
+              2415923280,
+              2415923284,
+              2415923288,
+              2415923292,
+              2415923296,
+              2415923300,
+              2415923304,
+              2415923308,
+              2415923312,
+              2415923316,
+              2415923320,
+              2415923324
+            ],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000002c",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000002c",
+            "kind": "tensor",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v2",
+              "v3",
+              "v1"
+            ],
+            "destination": "v1",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000030",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v4",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000030",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v4",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000034",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v5",
+              "v5"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000034",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v5",
+              "v5"
+            ],
+            "destination": "v5",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000038",
+            "kind": "vector",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v6",
+              "v6"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000038",
+            "kind": "vector",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v6",
+              "v6"
+            ],
+            "destination": "v6",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000003c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000003c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000040",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000040",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000044",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000044",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000048",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000048",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000004c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000004c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000050",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000050",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000054",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000054",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000058",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000058",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc8000005c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc8000005c",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000060",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000060",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000064",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000064",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w0.pc80000068",
+            "kind": "fma",
+            "block": 0,
+            "warp": 0,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          },
+          {
+            "name": "w1.pc80000068",
+            "kind": "fma",
+            "block": 0,
+            "warp": 1,
+            "sources": [
+              "v3",
+              "v2",
+              "v4"
+            ],
+            "destination": "v4",
+            "addresses": [],
+            "dependencies": [],
+            "active_lanes": null
+          }
+        ],
+        "warps_per_block": 2,
+        "vgpr_per_warp": 64,
+        "sgpr_per_warp": 64,
+        "lds_per_block": 0
+      },
+      "prediction": 196,
+      "input_sha256": {
+        "input.metadata": "7a3f56e3cd13ffd5f45a058bef226622ab6da1cbc2574e52e83ce1ea153bb5ec",
+        "input.data": "9e33fb42066549c49600df5228ed2a87c8c9962e4003a5d6af8d8b31c5374f2e"
+      }
+    }
+  ]
+}

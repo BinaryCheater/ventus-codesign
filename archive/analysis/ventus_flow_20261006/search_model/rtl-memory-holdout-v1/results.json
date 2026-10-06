@@ -1,0 +1,173 @@
+[
+  {
+    "name": "global-stride0-16",
+    "n": 16,
+    "family": "global-stride0",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "8151c7ceb78d995fcc5cedadb9aa1c6e0a5f88159a4305120f03b983dc425c24"
+    },
+    "predicted_segment_cycles": 192,
+    "expected_words": [],
+    "returncode": 0,
+    "wall_seconds": 17.191014638985507,
+    "dispatch_to_finish_cycles": 446,
+    "checked_words": 32,
+    "all_output_zero": false,
+    "warnings": [],
+    "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+  },
+  {
+    "name": "global-stride0-32",
+    "n": 32,
+    "family": "global-stride0",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "e6d119c5e96dfee88a45c82402bf03afd54063f106164692653d0a6feb35e597"
+    },
+    "predicted_segment_cycles": 368,
+    "expected_words": [],
+    "returncode": 0,
+    "wall_seconds": 17.852294338983484,
+    "dispatch_to_finish_cycles": 622,
+    "checked_words": 32,
+    "all_output_zero": false,
+    "warnings": [],
+    "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+  },
+  {
+    "name": "global-stride0-64",
+    "n": 64,
+    "family": "global-stride0",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "107cac2cd2200eda646801c911adb7bc448483c64ba901a1004cb19c6f7e546c"
+    },
+    "predicted_segment_cycles": 720,
+    "expected_words": [],
+    "returncode": 0,
+    "wall_seconds": 18.733856570906937,
+    "dispatch_to_finish_cycles": 974,
+    "checked_words": 32,
+    "all_output_zero": false,
+    "warnings": [],
+    "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+  },
+  {
+    "name": "global-stride128-16",
+    "n": 16,
+    "family": "global-stride128",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "6853cbb2fdb824c0d31ee71dde24ec7a34e1f4182c27a7ae9642a09df6c995f0"
+    },
+    "predicted_segment_cycles": 447,
+    "expected_words": [],
+    "returncode": 0,
+    "wall_seconds": 17.87767411605455,
+    "dispatch_to_finish_cycles": 691,
+    "checked_words": 32,
+    "all_output_zero": false,
+    "warnings": [],
+    "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+  },
+  {
+    "name": "global-stride128-32",
+    "n": 32,
+    "family": "global-stride128",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "7072f1efdae311c202efea5fb6f47691f3b63d20747b1a654415c34804c171cd"
+    },
+    "predicted_segment_cycles": 895,
+    "expected_words": [],
+    "returncode": 0,
+    "wall_seconds": 19.193386010010727,
+    "dispatch_to_finish_cycles": 1141,
+    "checked_words": 32,
+    "all_output_zero": false,
+    "warnings": [],
+    "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+  },
+  {
+    "name": "global-stride128-64",
+    "n": 64,
+    "family": "global-stride128",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "45a8f17afe80fe088a2aeb81f0e539c4e42a2d712de3dcb8e67532fc9cbed5d2"
+    },
+    "predicted_segment_cycles": 1791,
+    "expected_words": [],
+    "returncode": 0,
+    "wall_seconds": 22.411157513968647,
+    "dispatch_to_finish_cycles": 2041,
+    "checked_words": 32,
+    "all_output_zero": false,
+    "warnings": [],
+    "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+  },
+  {
+    "name": "global-stride256-16",
+    "n": 16,
+    "family": "global-stride256",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "38f2bece0a9249020d835c9c315fa61165146b2383f2e5815e7c8df126abcaf0"
+    },
+    "predicted_segment_cycles": 447,
+    "expected_words": [],
+    "returncode": 0,
+    "wall_seconds": 18.00390414695721,
+    "dispatch_to_finish_cycles": 691,
+    "checked_words": 32,
+    "all_output_zero": false,
+    "warnings": [],
+    "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+  },
+  {
+    "name": "global-stride256-32",
+    "n": 32,
+    "family": "global-stride256",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "7e159cc716b1e011b454c46af758c09b998837a6b5858d1da1335d11ad47cb61"
+    },
+    "predicted_segment_cycles": 895,
+    "expected_words": [],
+    "returncode": 0,
+    "wall_seconds": 20.379710617940873,
+    "dispatch_to_finish_cycles": 1141,
+    "checked_words": 32,
+    "all_output_zero": false,
+    "warnings": [],
+    "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+  },
+  {
+    "name": "global-stride256-64",
+    "n": 64,
+    "family": "global-stride256",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "cbe4f77d570bffa0994ebdef2fa63f87251eab788337a62e2c32bf8a3deacab2"
+    },
+    "predicted_segment_cycles": 1791,
+    "expected_words": [],
+    "returncode": 0,
+    "wall_seconds": 22.556114967912436,
+    "dispatch_to_finish_cycles": 2041,
+    "checked_words": 32,
+    "all_output_zero": true,
+    "warnings": [],
+    "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+  }
+]

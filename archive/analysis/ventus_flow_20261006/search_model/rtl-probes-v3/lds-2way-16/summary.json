@@ -1,0 +1,17 @@
+{
+  "name": "lds-2way-16",
+  "n": 16,
+  "family": "lds-2way",
+  "predicted_body_interval": null,
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "86028b7260548701384a2c3d5dd330f8b621fcd52f3d020b80017b5debc0862f"
+  },
+  "returncode": 0,
+  "wall_seconds": 17.283086140058003,
+  "dispatch_to_finish_cycles": 315,
+  "checked_words": 32,
+  "all_output_zero": true,
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+}

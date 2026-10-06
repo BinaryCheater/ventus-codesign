@@ -1,0 +1,78 @@
+[
+  {
+    "case": "vecadd-vgpr256",
+    "backend": "rtl",
+    "family": "vecadd",
+    "n": 8,
+    "returncode": 0,
+    "wall_seconds": 105.32132395391818,
+    "first_dispatch_time": 185,
+    "kernel_finish_time": 269055,
+    "output_correct": true,
+    "checked_words": 256,
+    "warnings": [
+      "[RTL    error]@3280 PMEM page at 0x80003000 not allocated, read as all zero"
+    ],
+    "input_sha256": {
+      "input.metadata": "7b3953ceee43746ee71f94be479e2d502a5100ed744d546a9ecb08fba7717601",
+      "input.data": "945859a360311dc4fd1045621c8ae3c10e168077fabbb49e4ed2554f1ea5ae53"
+    },
+    "dispatch_to_finish_cycles": 26887.0
+  },
+  {
+    "case": "vecadd-lds96k",
+    "backend": "rtl",
+    "family": "vecadd",
+    "n": 8,
+    "returncode": 0,
+    "wall_seconds": 103.55175819003489,
+    "first_dispatch_time": 185,
+    "kernel_finish_time": 269055,
+    "output_correct": true,
+    "checked_words": 256,
+    "warnings": [
+      "[RTL    error]@3280 PMEM page at 0x80003000 not allocated, read as all zero"
+    ],
+    "input_sha256": {
+      "input.metadata": "6642b32d3bccfcb34bc03ce9d26af00f112d4aa7fe2ab126ab9b1796663bf1ca",
+      "input.data": "945859a360311dc4fd1045621c8ae3c10e168077fabbb49e4ed2554f1ea5ae53"
+    },
+    "dispatch_to_finish_cycles": 26887.0
+  },
+  {
+    "case": "vecadd-vgpr256",
+    "backend": "systemc",
+    "family": "vecadd",
+    "n": 8,
+    "returncode": 0,
+    "wall_seconds": 0.26241526391822845,
+    "first_dispatch_time": 15,
+    "kernel_finish_time": 13575,
+    "output_correct": true,
+    "checked_words": 256,
+    "warnings": [],
+    "input_sha256": {
+      "input.metadata": "7b3953ceee43746ee71f94be479e2d502a5100ed744d546a9ecb08fba7717601",
+      "input.data": "945859a360311dc4fd1045621c8ae3c10e168077fabbb49e4ed2554f1ea5ae53"
+    },
+    "dispatch_to_finish_cycles": 1356.0
+  },
+  {
+    "case": "vecadd-lds96k",
+    "backend": "systemc",
+    "family": "vecadd",
+    "n": 8,
+    "returncode": 0,
+    "wall_seconds": 0.40404280507937074,
+    "first_dispatch_time": 15,
+    "kernel_finish_time": 13575,
+    "output_correct": true,
+    "checked_words": 256,
+    "warnings": [],
+    "input_sha256": {
+      "input.metadata": "6642b32d3bccfcb34bc03ce9d26af00f112d4aa7fe2ab126ab9b1796663bf1ca",
+      "input.data": "945859a360311dc4fd1045621c8ae3c10e168077fabbb49e4ed2554f1ea5ae53"
+    },
+    "dispatch_to_finish_cycles": 1356.0
+  }
+]

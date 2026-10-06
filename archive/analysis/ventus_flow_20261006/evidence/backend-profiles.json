@@ -1,0 +1,39 @@
+{
+  "rtl_commit": "681172541a8a34ffb43c483a19c075acbc11a4eb",
+  "rtl_generated_parameters": {
+    "num_sm": 2,
+    "num_warp": 8,
+    "num_thread": 32,
+    "num_lane": 32,
+    "num_sfu": 8,
+    "num_bank": 4,
+    "num_collectorUnit": 8,
+    "num_vgpr": 1024,
+    "num_sgpr": 2048,
+    "sharemem_size": 131072,
+    "lsu_nMshrEntry": 8,
+    "dcache_NSets": 256,
+    "dcache_NWays": 2,
+    "dcache_BlockWords": 32
+  },
+  "cyclesim_commit": "335ba24d2c7763c87e8c9bfe889c9074763a32f7",
+  "cyclesim_static_declarations": {
+    "NUM_SM": 2,
+    "hw_num_warp": 8,
+    "hw_num_thread": 32,
+    "BANK_NUM": 4,
+    "SUBCORE_NUM": 2,
+    "SUBCORE_WARP_NUM": 4,
+    "hw_lds_size": 268435456,
+    "L1D_NUM_SET": 256,
+    "L1D_NUM_WAY": 2,
+    "L1D_BLOCK_NUM_WORD": 32
+  },
+  "comparison_scope": "Static declarations; actual resource accounting and cycle equivalence require validation.",
+  "known_differences": [
+    "SystemC models two subcores per SM; audited RTL execution organization differs.",
+    "SystemC declared LDS bound is 256 MiB; RTL shared-memory capacity is 128 KiB."
+  ],
+  "cpp_standard": "C++20",
+  "systemc_commit": "5fc1469339775b54b1fcc2020ac744a58be5b50e"
+}

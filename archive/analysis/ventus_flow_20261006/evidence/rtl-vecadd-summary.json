@@ -1,0 +1,19 @@
+{
+  "testcase": "upstream vecadd_32b8w8t",
+  "completed": true,
+  "output_correct": true,
+  "checked_words": 1024,
+  "expected_fp32_value": 1024.0,
+  "kernel_finish_simulation_time_unit": 1177445,
+  "wall_seconds": 385.25,
+  "memory_errors": [
+    "[RTL    error]@3360 PMEM page at 0x80003000 not allocated, read as all zero"
+  ],
+  "artifacts_sha256": {
+    "metadata": "7ea0ac988995608a9c36d5d4bec7afe10e211bbb39abe113426722e073789b2d",
+    "data": "945859a360311dc4fd1045621c8ae3c10e168077fabbb49e4ed2554f1ea5ae53",
+    "generated_rtl": "9eb262d75b8d1d96fe4ffde0f3d451409dbd8b12ee3990b34638984ed5864c17",
+    "parameters": "1d1c88fee2dd80200147c35415322878dcd47167bc8b896bd7d661e39552fe06",
+    "simulator": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+  }
+}

@@ -1,0 +1,11 @@
+[RTL     info]@0 SNAPSHOT created, pid=3748616
+[RTL    trace]@20 Hardware reset ok
+[2026-10-06 12:59:15.449] [trace] kernel0 resident-w8-k64 data loaded from file
+[RTL    trace]@30 kernel 0 resident-w8-k64 activate
+[RTL    debug]@5125 block0  dispatched to GPU (kernel0  resident-w8-k64 block0 )
+[RTL    debug]@8755 block0  finished (kernel0  resident-w8-k64 block0 )
+[RTL     info]@8755 kernel0  resident-w8-k64 finished
+[RTL    debug]@10000 
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 

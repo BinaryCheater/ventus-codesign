@@ -1,0 +1,50 @@
+[
+  {
+    "name": "global-stride0-16",
+    "n": 16,
+    "family": "global-stride0",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "8151c7ceb78d995fcc5cedadb9aa1c6e0a5f88159a4305120f03b983dc425c24"
+    },
+    "predicted_segment_cycles": 200,
+    "expected_words": []
+  },
+  {
+    "name": "global-stride0-64",
+    "n": 64,
+    "family": "global-stride0",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "107cac2cd2200eda646801c911adb7bc448483c64ba901a1004cb19c6f7e546c"
+    },
+    "predicted_segment_cycles": 776,
+    "expected_words": []
+  },
+  {
+    "name": "global-stride128-16",
+    "n": 16,
+    "family": "global-stride128",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "6853cbb2fdb824c0d31ee71dde24ec7a34e1f4182c27a7ae9642a09df6c995f0"
+    },
+    "predicted_segment_cycles": 335,
+    "expected_words": []
+  },
+  {
+    "name": "global-stride128-64",
+    "n": 64,
+    "family": "global-stride128",
+    "predicted_body_interval": null,
+    "input_sha256": {
+      "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+      "input.data": "45a8f17afe80fe088a2aeb81f0e539c4e42a2d712de3dcb8e67532fc9cbed5d2"
+    },
+    "predicted_segment_cycles": 1343,
+    "expected_words": []
+  }
+]

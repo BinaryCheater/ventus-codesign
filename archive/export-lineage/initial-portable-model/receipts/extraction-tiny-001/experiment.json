@@ -1,0 +1,2750 @@
+{
+  "version": "ventus-source-events-v7",
+  "code_sha256": {
+    "__init__.py": "bb90553cbef78a5957d11291e552abf3f84a238d604fa658b643880e1e18e4c6",
+    "__main__.py": "0960d431b67b4c0c474d0f6fb12fb5ed98f4c45df0fa6bc8e8f574878ff3a701",
+    "coalescer.py": "68ef20fbab29abb4ccb02bd756252267a298dfb5d2ed87b43135d0d17ba2a34b",
+    "config.py": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "elastic.py": "ec41c9d87e95ddda5165106f7a425951aa01df56e6a97dbda711714762186e72",
+    "graph.py": "765aeb04bda71d3dbe32938599ab20c341a8ae352fd5981202fce26aec6b5508",
+    "ir.py": "45d16ad41f98d53e678777d5a8e760e92951d56a50f15e0ab147f4c497ca99a3",
+    "layernorm.py": "4d4809733cf3dcc173d60054239687a40ef6ba3596d46262948bdf921264ed83",
+    "mip.py": "884672f5b8863c07ab4ffd46319b0c5eecf15ca964cbfb5f5b393039a0348026",
+    "online.py": "50f12ec56ed87f8e8bdb0f9c9071c818b258abc3d5db9bc27cbc9f7cc9605048",
+    "operators.py": "8aeada5c5cd01f82605b0af7ddbcb00a7ea6635324c12ad0def504cc9184da15",
+    "program.py": "56b8872910d9ddd1a648238dc5451b9bedea54f2d1951e58499e4fc9257d3304",
+    "session.py": "d768cbf50ad5f179d5909a84b0daf5bd1396d6efa193d91dfcaa60fab8d94086",
+    "source.py": "62e42be3e415c8674089cb09df4194972b817f0cfec073898e17a6a6ec60b042",
+    "timing.py": "915509efc0943263cfab725a31d981532058c1904aabb3b28472ffb48b778680",
+    "transformer.py": "a4b38bbe0a0690be871047299b250bbceb964308342a85f3ec3dfdbe066fbf43",
+    "transformer_cli.py": "ebdd1801030242660a1fd08c052cb4497b04daab63841f94937a33442e41760b",
+    "workloads.py": "df164d864bf62da1700ba4862e6cbabcf39264ba43594eac31d0eb0cdc2ac82d"
+  },
+  "program": {
+    "spec": {
+      "layers": 1,
+      "width": 32,
+      "heads": 2,
+      "hidden": 64,
+      "vocab": 32,
+      "prefill": 4,
+      "decode_steps": 1,
+      "positions": 1024,
+      "dtype": "FP32"
+    },
+    "hardware": {
+      "sms": 2,
+      "warps_per_sm": 8,
+      "blocks_per_sm": 8,
+      "threads": 32,
+      "rf_banks": 4,
+      "rf_read_ports": 1,
+      "rf_write_ports": 1,
+      "writeback_ports": 1,
+      "collectors": 8,
+      "vgpr_slots": 1024,
+      "sgpr_slots": 2048,
+      "tensor_m": 4,
+      "tensor_n": 8,
+      "tensor_k": 4,
+      "tensor_units": 1,
+      "lds_bytes": 131072,
+      "lds_banks": 32,
+      "lds_ports": 1,
+      "line_bytes": 128,
+      "l1_sets": 256,
+      "l1_ways": 2,
+      "l1_mshrs": 4,
+      "l1_subentries": 2,
+      "l1_write_entries": 4,
+      "l2_sets": 64,
+      "l2_ways": 16,
+      "l2_mshrs": 32,
+      "lsu_entries": 8,
+      "lsu_per_warp": 4,
+      "memory_channels": 1,
+      "memory_bytes_per_cycle": 128,
+      "memory_latency": 2
+    },
+    "software": {
+      "warps": 2,
+      "dispatch_tiles": 8,
+      "elementary": "range-reduced-polynomial-v1"
+    },
+    "allocations": [
+      {
+        "name": "token_embedding_and_lm_head",
+        "base": 2415919104,
+        "bytes": 4096,
+        "shape": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "position_embedding",
+        "base": 2415923200,
+        "bytes": 131072,
+        "shape": [
+          1024,
+          32
+        ]
+      },
+      {
+        "name": "zero_panel",
+        "base": 2416054272,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "l0.wqkv",
+        "base": 2416054400,
+        "bytes": 12288,
+        "shape": [
+          32,
+          96
+        ]
+      },
+      {
+        "name": "l0.wproj",
+        "base": 2416066688,
+        "bytes": 4096,
+        "shape": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "l0.wup",
+        "base": 2416070784,
+        "bytes": 8192,
+        "shape": [
+          32,
+          64
+        ]
+      },
+      {
+        "name": "l0.wdown",
+        "base": 2416078976,
+        "bytes": 8192,
+        "shape": [
+          64,
+          32
+        ]
+      },
+      {
+        "name": "l0.bqkv",
+        "base": 2416087168,
+        "bytes": 384,
+        "shape": [
+          1,
+          96
+        ]
+      },
+      {
+        "name": "l0.bproj",
+        "base": 2416087552,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "l0.bup",
+        "base": 2416087680,
+        "bytes": 256,
+        "shape": [
+          1,
+          64
+        ]
+      },
+      {
+        "name": "l0.bdown",
+        "base": 2416087936,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "l0.ln1",
+        "base": 2416088064,
+        "bytes": 256,
+        "shape": [
+          2,
+          32
+        ]
+      },
+      {
+        "name": "l0.ln2",
+        "base": 2416088320,
+        "bytes": 256,
+        "shape": [
+          2,
+          32
+        ]
+      },
+      {
+        "name": "l0.K",
+        "base": 2416088576,
+        "bytes": 640,
+        "shape": [
+          5,
+          32
+        ]
+      },
+      {
+        "name": "l0.V",
+        "base": 2416089216,
+        "bytes": 640,
+        "shape": [
+          5,
+          32
+        ]
+      },
+      {
+        "name": "final_ln",
+        "base": 2416089856,
+        "bytes": 256,
+        "shape": [
+          2,
+          32
+        ]
+      },
+      {
+        "name": "prefill.embedding",
+        "base": 2416090112,
+        "bytes": 512,
+        "shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "name": "prefill.l0.norm1",
+        "base": 2416090624,
+        "bytes": 512,
+        "shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "name": "prefill.l0.qkv",
+        "base": 2416091136,
+        "bytes": 1536,
+        "shape": [
+          4,
+          96
+        ]
+      },
+      {
+        "name": "prefill.l0.attn",
+        "base": 2416092672,
+        "bytes": 512,
+        "shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "name": "prefill.l0.h0.scores",
+        "base": 2416093184,
+        "bytes": 64,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      {
+        "name": "prefill.l0.h0.prob",
+        "base": 2416093312,
+        "bytes": 64,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      {
+        "name": "prefill.l0.h1.scores",
+        "base": 2416093440,
+        "bytes": 64,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      {
+        "name": "prefill.l0.h1.prob",
+        "base": 2416093568,
+        "bytes": 64,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      {
+        "name": "prefill.l0.proj",
+        "base": 2416093696,
+        "bytes": 512,
+        "shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "name": "prefill.l0.residual1",
+        "base": 2416094208,
+        "bytes": 512,
+        "shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "name": "prefill.l0.norm2",
+        "base": 2416094720,
+        "bytes": 512,
+        "shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "name": "prefill.l0.up",
+        "base": 2416095232,
+        "bytes": 1024,
+        "shape": [
+          4,
+          64
+        ]
+      },
+      {
+        "name": "prefill.l0.down",
+        "base": 2416096256,
+        "bytes": 512,
+        "shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "name": "prefill.l0.residual2",
+        "base": 2416096768,
+        "bytes": 512,
+        "shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "name": "prefill.final_norm",
+        "base": 2416097280,
+        "bytes": 512,
+        "shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "name": "prefill.logits",
+        "base": 2416097792,
+        "bytes": 512,
+        "shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "name": "decode1.embedding",
+        "base": 2416098304,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "decode1.l0.norm1",
+        "base": 2416098432,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "decode1.l0.qkv",
+        "base": 2416098560,
+        "bytes": 384,
+        "shape": [
+          1,
+          96
+        ]
+      },
+      {
+        "name": "decode1.l0.attn",
+        "base": 2416098944,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "decode1.l0.h0.scores",
+        "base": 2416099072,
+        "bytes": 20,
+        "shape": [
+          1,
+          5
+        ]
+      },
+      {
+        "name": "decode1.l0.h0.prob",
+        "base": 2416099200,
+        "bytes": 20,
+        "shape": [
+          1,
+          5
+        ]
+      },
+      {
+        "name": "decode1.l0.h1.scores",
+        "base": 2416099328,
+        "bytes": 20,
+        "shape": [
+          1,
+          5
+        ]
+      },
+      {
+        "name": "decode1.l0.h1.prob",
+        "base": 2416099456,
+        "bytes": 20,
+        "shape": [
+          1,
+          5
+        ]
+      },
+      {
+        "name": "decode1.l0.proj",
+        "base": 2416099584,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "decode1.l0.residual1",
+        "base": 2416099712,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "decode1.l0.norm2",
+        "base": 2416099840,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "decode1.l0.up",
+        "base": 2416099968,
+        "bytes": 256,
+        "shape": [
+          1,
+          64
+        ]
+      },
+      {
+        "name": "decode1.l0.down",
+        "base": 2416100224,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "decode1.l0.residual2",
+        "base": 2416100352,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "decode1.final_norm",
+        "base": 2416100480,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "decode1.logits",
+        "base": 2416100608,
+        "bytes": 128,
+        "shape": [
+          1,
+          32
+        ]
+      }
+    ],
+    "kernels": [
+      {
+        "name": "prefill.embedding0",
+        "kind": "add",
+        "output": {
+          "base": 2416090112,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2415919104,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2415923200,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.embedding1",
+        "kind": "add",
+        "output": {
+          "base": 2416090240,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2415919232,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2415923328,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.embedding2",
+        "kind": "add",
+        "output": {
+          "base": 2416090368,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2415919360,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2415923456,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.embedding3",
+        "kind": "add",
+        "output": {
+          "base": 2416090496,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2415919488,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2415923584,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.ln1",
+        "kind": "norm",
+        "output": {
+          "base": 2416090624,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416090112,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416088064,
+            "rows": 2,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.qkv",
+        "kind": "gemm",
+        "output": {
+          "base": 2416091136,
+          "rows": 4,
+          "cols": 96,
+          "row_stride": 96,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416090624,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416054400,
+            "rows": 32,
+            "cols": 96,
+            "row_stride": 96,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.qkv_bias",
+        "kind": "add",
+        "output": {
+          "base": 2416091136,
+          "rows": 4,
+          "cols": 96,
+          "row_stride": 96,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416091136,
+            "rows": 4,
+            "cols": 96,
+            "row_stride": 96,
+            "col_stride": 1
+          },
+          {
+            "base": 2416087168,
+            "rows": 1,
+            "cols": 96,
+            "row_stride": 96,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.K_append",
+        "kind": "copy",
+        "output": {
+          "base": 2416088576,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416091264,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 96,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.V_append",
+        "kind": "copy",
+        "output": {
+          "base": 2416089216,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416091392,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 96,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.h0.qk",
+        "kind": "gemm",
+        "output": {
+          "base": 2416093184,
+          "rows": 4,
+          "cols": 4,
+          "row_stride": 4,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416091136,
+            "rows": 4,
+            "cols": 16,
+            "row_stride": 96,
+            "col_stride": 1
+          },
+          {
+            "base": 2416088576,
+            "rows": 16,
+            "cols": 4,
+            "row_stride": 1,
+            "col_stride": 32
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.h0.softmax",
+        "kind": "softmax",
+        "output": {
+          "base": 2416093312,
+          "rows": 4,
+          "cols": 4,
+          "row_stride": 4,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416093184,
+            "rows": 4,
+            "cols": 4,
+            "row_stride": 4,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": 0
+      },
+      {
+        "name": "prefill.l0.h0.av",
+        "kind": "gemm",
+        "output": {
+          "base": 2416092672,
+          "rows": 4,
+          "cols": 16,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416093312,
+            "rows": 4,
+            "cols": 4,
+            "row_stride": 4,
+            "col_stride": 1
+          },
+          {
+            "base": 2416089216,
+            "rows": 4,
+            "cols": 16,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.h1.qk",
+        "kind": "gemm",
+        "output": {
+          "base": 2416093440,
+          "rows": 4,
+          "cols": 4,
+          "row_stride": 4,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416091200,
+            "rows": 4,
+            "cols": 16,
+            "row_stride": 96,
+            "col_stride": 1
+          },
+          {
+            "base": 2416088640,
+            "rows": 16,
+            "cols": 4,
+            "row_stride": 1,
+            "col_stride": 32
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.h1.softmax",
+        "kind": "softmax",
+        "output": {
+          "base": 2416093568,
+          "rows": 4,
+          "cols": 4,
+          "row_stride": 4,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416093440,
+            "rows": 4,
+            "cols": 4,
+            "row_stride": 4,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": 0
+      },
+      {
+        "name": "prefill.l0.h1.av",
+        "kind": "gemm",
+        "output": {
+          "base": 2416092736,
+          "rows": 4,
+          "cols": 16,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416093568,
+            "rows": 4,
+            "cols": 4,
+            "row_stride": 4,
+            "col_stride": 1
+          },
+          {
+            "base": 2416089280,
+            "rows": 4,
+            "cols": 16,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.proj",
+        "kind": "gemm",
+        "output": {
+          "base": 2416093696,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416092672,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416066688,
+            "rows": 32,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.proj_bias",
+        "kind": "add",
+        "output": {
+          "base": 2416093696,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416093696,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416087552,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.residual1",
+        "kind": "add",
+        "output": {
+          "base": 2416094208,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416090112,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416093696,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.ln2",
+        "kind": "norm",
+        "output": {
+          "base": 2416094720,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416094208,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416088320,
+            "rows": 2,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.up",
+        "kind": "gemm",
+        "output": {
+          "base": 2416095232,
+          "rows": 4,
+          "cols": 64,
+          "row_stride": 64,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416094720,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416070784,
+            "rows": 32,
+            "cols": 64,
+            "row_stride": 64,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.up_bias",
+        "kind": "add",
+        "output": {
+          "base": 2416095232,
+          "rows": 4,
+          "cols": 64,
+          "row_stride": 64,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416095232,
+            "rows": 4,
+            "cols": 64,
+            "row_stride": 64,
+            "col_stride": 1
+          },
+          {
+            "base": 2416087680,
+            "rows": 1,
+            "cols": 64,
+            "row_stride": 64,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.gelu",
+        "kind": "gelu",
+        "output": {
+          "base": 2416095232,
+          "rows": 4,
+          "cols": 64,
+          "row_stride": 64,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416095232,
+            "rows": 4,
+            "cols": 64,
+            "row_stride": 64,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.down",
+        "kind": "gemm",
+        "output": {
+          "base": 2416096256,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416095232,
+            "rows": 4,
+            "cols": 64,
+            "row_stride": 64,
+            "col_stride": 1
+          },
+          {
+            "base": 2416078976,
+            "rows": 64,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.down_bias",
+        "kind": "add",
+        "output": {
+          "base": 2416096256,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416096256,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416087936,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.l0.residual2",
+        "kind": "add",
+        "output": {
+          "base": 2416096768,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416094208,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416096256,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.final_ln",
+        "kind": "norm",
+        "output": {
+          "base": 2416097280,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416096768,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416089856,
+            "rows": 2,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "prefill.lm_head",
+        "kind": "gemm",
+        "output": {
+          "base": 2416097792,
+          "rows": 4,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416097280,
+            "rows": 4,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2415919104,
+            "rows": 32,
+            "cols": 32,
+            "row_stride": 1,
+            "col_stride": 32
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.embedding0",
+        "kind": "add",
+        "output": {
+          "base": 2416098304,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2415919616,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2415923712,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.ln1",
+        "kind": "norm",
+        "output": {
+          "base": 2416098432,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416098304,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416088064,
+            "rows": 2,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.qkv",
+        "kind": "gemm",
+        "output": {
+          "base": 2416098560,
+          "rows": 1,
+          "cols": 96,
+          "row_stride": 96,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416098432,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416054400,
+            "rows": 32,
+            "cols": 96,
+            "row_stride": 96,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.qkv_bias",
+        "kind": "add",
+        "output": {
+          "base": 2416098560,
+          "rows": 1,
+          "cols": 96,
+          "row_stride": 96,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416098560,
+            "rows": 1,
+            "cols": 96,
+            "row_stride": 96,
+            "col_stride": 1
+          },
+          {
+            "base": 2416087168,
+            "rows": 1,
+            "cols": 96,
+            "row_stride": 96,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.K_append",
+        "kind": "copy",
+        "output": {
+          "base": 2416089088,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416098688,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 96,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.V_append",
+        "kind": "copy",
+        "output": {
+          "base": 2416089728,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416098816,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 96,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.h0.qk",
+        "kind": "gemm",
+        "output": {
+          "base": 2416099072,
+          "rows": 1,
+          "cols": 5,
+          "row_stride": 5,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416098560,
+            "rows": 1,
+            "cols": 16,
+            "row_stride": 96,
+            "col_stride": 1
+          },
+          {
+            "base": 2416088576,
+            "rows": 16,
+            "cols": 5,
+            "row_stride": 1,
+            "col_stride": 32
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.h0.softmax",
+        "kind": "softmax",
+        "output": {
+          "base": 2416099200,
+          "rows": 1,
+          "cols": 5,
+          "row_stride": 5,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416099072,
+            "rows": 1,
+            "cols": 5,
+            "row_stride": 5,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": 4
+      },
+      {
+        "name": "decode1.l0.h0.av",
+        "kind": "gemm",
+        "output": {
+          "base": 2416098944,
+          "rows": 1,
+          "cols": 16,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416099200,
+            "rows": 1,
+            "cols": 5,
+            "row_stride": 5,
+            "col_stride": 1
+          },
+          {
+            "base": 2416089216,
+            "rows": 5,
+            "cols": 16,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.h1.qk",
+        "kind": "gemm",
+        "output": {
+          "base": 2416099328,
+          "rows": 1,
+          "cols": 5,
+          "row_stride": 5,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416098624,
+            "rows": 1,
+            "cols": 16,
+            "row_stride": 96,
+            "col_stride": 1
+          },
+          {
+            "base": 2416088640,
+            "rows": 16,
+            "cols": 5,
+            "row_stride": 1,
+            "col_stride": 32
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.h1.softmax",
+        "kind": "softmax",
+        "output": {
+          "base": 2416099456,
+          "rows": 1,
+          "cols": 5,
+          "row_stride": 5,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416099328,
+            "rows": 1,
+            "cols": 5,
+            "row_stride": 5,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": 4
+      },
+      {
+        "name": "decode1.l0.h1.av",
+        "kind": "gemm",
+        "output": {
+          "base": 2416099008,
+          "rows": 1,
+          "cols": 16,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416099456,
+            "rows": 1,
+            "cols": 5,
+            "row_stride": 5,
+            "col_stride": 1
+          },
+          {
+            "base": 2416089280,
+            "rows": 5,
+            "cols": 16,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.proj",
+        "kind": "gemm",
+        "output": {
+          "base": 2416099584,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416098944,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416066688,
+            "rows": 32,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.proj_bias",
+        "kind": "add",
+        "output": {
+          "base": 2416099584,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416099584,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416087552,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.residual1",
+        "kind": "add",
+        "output": {
+          "base": 2416099712,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416098304,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416099584,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.ln2",
+        "kind": "norm",
+        "output": {
+          "base": 2416099840,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416099712,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416088320,
+            "rows": 2,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.up",
+        "kind": "gemm",
+        "output": {
+          "base": 2416099968,
+          "rows": 1,
+          "cols": 64,
+          "row_stride": 64,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416099840,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416070784,
+            "rows": 32,
+            "cols": 64,
+            "row_stride": 64,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.up_bias",
+        "kind": "add",
+        "output": {
+          "base": 2416099968,
+          "rows": 1,
+          "cols": 64,
+          "row_stride": 64,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416099968,
+            "rows": 1,
+            "cols": 64,
+            "row_stride": 64,
+            "col_stride": 1
+          },
+          {
+            "base": 2416087680,
+            "rows": 1,
+            "cols": 64,
+            "row_stride": 64,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.gelu",
+        "kind": "gelu",
+        "output": {
+          "base": 2416099968,
+          "rows": 1,
+          "cols": 64,
+          "row_stride": 64,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416099968,
+            "rows": 1,
+            "cols": 64,
+            "row_stride": 64,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.down",
+        "kind": "gemm",
+        "output": {
+          "base": 2416100224,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416099968,
+            "rows": 1,
+            "cols": 64,
+            "row_stride": 64,
+            "col_stride": 1
+          },
+          {
+            "base": 2416078976,
+            "rows": 64,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.down_bias",
+        "kind": "add",
+        "output": {
+          "base": 2416100224,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416100224,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416087936,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.l0.residual2",
+        "kind": "add",
+        "output": {
+          "base": 2416100352,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416099712,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416100224,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.final_ln",
+        "kind": "norm",
+        "output": {
+          "base": 2416100480,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416100352,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2416089856,
+            "rows": 2,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          }
+        ],
+        "causal_start": null
+      },
+      {
+        "name": "decode1.lm_head",
+        "kind": "gemm",
+        "output": {
+          "base": 2416100608,
+          "rows": 1,
+          "cols": 32,
+          "row_stride": 32,
+          "col_stride": 1
+        },
+        "inputs": [
+          {
+            "base": 2416100480,
+            "rows": 1,
+            "cols": 32,
+            "row_stride": 32,
+            "col_stride": 1
+          },
+          {
+            "base": 2415919104,
+            "rows": 32,
+            "cols": 32,
+            "row_stride": 1,
+            "col_stride": 32
+          }
+        ],
+        "causal_start": null
+      }
+    ],
+    "kv_capacity_bytes": 1280,
+    "numerical_payload": false,
+    "layernorm_lowering": "paired-isa-butterfly32-newton4-v1",
+    "rtl_unbinding_required": {}
+  },
+  "result": {
+    "completed": true,
+    "cycles": 23383,
+    "partial_cycles": 23383,
+    "host_seconds": 0.40226216590963304,
+    "instructions": 13770,
+    "events": 196428,
+    "peak_batch_events": 13518,
+    "requested_bytes": 247440,
+    "counters": {
+      "scalar": 3588,
+      "vector": 6199,
+      "load": 1688,
+      "l1_read_miss": 757,
+      "l2_miss": 863,
+      "memory_read_bytes": 110464,
+      "fadd": 325,
+      "store": 561,
+      "l1_write_miss": 422,
+      "memory_write_bytes": 59776,
+      "fma": 705,
+      "lds_rounds": 1234,
+      "l1_hit": 4565,
+      "l2_hit": 316,
+      "l1_merge": 1195,
+      "writeback_stall_cycles": 1006,
+      "tensor": 604,
+      "fmax": 60,
+      "ftoi": 20,
+      "itof": 20,
+      "fpu_add_backpressure_cycles": 6
+    },
+    "stages": [
+      {
+        "name": "prefill.embedding0",
+        "kind": "add",
+        "start": 0,
+        "end": 101,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.embedding1",
+        "kind": "add",
+        "start": 101,
+        "end": 202,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.embedding2",
+        "kind": "add",
+        "start": 202,
+        "end": 303,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.embedding3",
+        "kind": "add",
+        "start": 303,
+        "end": 404,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.ln1",
+        "kind": "norm",
+        "start": 404,
+        "end": 1824,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.qkv",
+        "kind": "gemm",
+        "start": 1824,
+        "end": 3309,
+        "dispatches": 3,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.qkv_bias",
+        "kind": "add",
+        "start": 3309,
+        "end": 3502,
+        "dispatches": 2,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.K_append",
+        "kind": "copy",
+        "start": 3502,
+        "end": 3576,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.V_append",
+        "kind": "copy",
+        "start": 3576,
+        "end": 3650,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.h0.qk",
+        "kind": "gemm",
+        "start": 3650,
+        "end": 3808,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.h0.softmax",
+        "kind": "softmax",
+        "start": 3808,
+        "end": 4903,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.h0.av",
+        "kind": "gemm",
+        "start": 4903,
+        "end": 5042,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.h1.qk",
+        "kind": "gemm",
+        "start": 5042,
+        "end": 5181,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.h1.softmax",
+        "kind": "softmax",
+        "start": 5181,
+        "end": 6276,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.h1.av",
+        "kind": "gemm",
+        "start": 6276,
+        "end": 6399,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.proj",
+        "kind": "gemm",
+        "start": 6399,
+        "end": 6894,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.proj_bias",
+        "kind": "add",
+        "start": 6894,
+        "end": 6991,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.residual1",
+        "kind": "add",
+        "start": 6991,
+        "end": 7097,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.ln2",
+        "kind": "norm",
+        "start": 7097,
+        "end": 8517,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.up",
+        "kind": "gemm",
+        "start": 8517,
+        "end": 9507,
+        "dispatches": 2,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.up_bias",
+        "kind": "add",
+        "start": 9507,
+        "end": 9619,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.gelu",
+        "kind": "gelu",
+        "start": 9619,
+        "end": 10017,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.down",
+        "kind": "gemm",
+        "start": 10017,
+        "end": 10890,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.down_bias",
+        "kind": "add",
+        "start": 10890,
+        "end": 10987,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.l0.residual2",
+        "kind": "add",
+        "start": 10987,
+        "end": 11093,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.final_ln",
+        "kind": "norm",
+        "start": 11093,
+        "end": 12513,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "prefill.lm_head",
+        "kind": "gemm",
+        "start": 12513,
+        "end": 12872,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.embedding0",
+        "kind": "add",
+        "start": 12872,
+        "end": 12973,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.ln1",
+        "kind": "norm",
+        "start": 12973,
+        "end": 14312,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.qkv",
+        "kind": "gemm",
+        "start": 14312,
+        "end": 15302,
+        "dispatches": 3,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.qkv_bias",
+        "kind": "add",
+        "start": 15302,
+        "end": 15381,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.K_append",
+        "kind": "copy",
+        "start": 15381,
+        "end": 15450,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.V_append",
+        "kind": "copy",
+        "start": 15450,
+        "end": 15519,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.h0.qk",
+        "kind": "gemm",
+        "start": 15519,
+        "end": 15677,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.h0.softmax",
+        "kind": "softmax",
+        "start": 15677,
+        "end": 16675,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.h0.av",
+        "kind": "gemm",
+        "start": 16675,
+        "end": 16792,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.h1.qk",
+        "kind": "gemm",
+        "start": 16792,
+        "end": 16937,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.h1.softmax",
+        "kind": "softmax",
+        "start": 16937,
+        "end": 17935,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.h1.av",
+        "kind": "gemm",
+        "start": 17935,
+        "end": 18040,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.proj",
+        "kind": "gemm",
+        "start": 18040,
+        "end": 18370,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.proj_bias",
+        "kind": "add",
+        "start": 18370,
+        "end": 18450,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.residual1",
+        "kind": "add",
+        "start": 18450,
+        "end": 18551,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.ln2",
+        "kind": "norm",
+        "start": 18551,
+        "end": 19890,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.up",
+        "kind": "gemm",
+        "start": 19890,
+        "end": 20550,
+        "dispatches": 2,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.up_bias",
+        "kind": "add",
+        "start": 20550,
+        "end": 20628,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.gelu",
+        "kind": "gelu",
+        "start": 20628,
+        "end": 21001,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.down",
+        "kind": "gemm",
+        "start": 21001,
+        "end": 21587,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.down_bias",
+        "kind": "add",
+        "start": 21587,
+        "end": 21660,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.l0.residual2",
+        "kind": "add",
+        "start": 21660,
+        "end": 21761,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.final_ln",
+        "kind": "norm",
+        "start": 21761,
+        "end": 23100,
+        "dispatches": 1,
+        "completed": true
+      },
+      {
+        "name": "decode1.lm_head",
+        "kind": "gemm",
+        "start": 23100,
+        "end": 23383,
+        "dispatches": 1,
+        "completed": true
+      }
+    ],
+    "mode": "summary",
+    "census": {
+      "kernels": [
+        {
+          "name": "prefill.embedding0",
+          "kind": "add",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.embedding1",
+          "kind": "add",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.embedding2",
+          "kind": "add",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.embedding3",
+          "kind": "add",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.ln1",
+          "kind": "norm",
+          "output_elements": 128,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.qkv",
+          "kind": "gemm",
+          "output_elements": 384,
+          "tensor_instructions": 96,
+          "effective_tensor_flops": 24576,
+          "issued_tensor_flops": 24576
+        },
+        {
+          "name": "prefill.l0.qkv_bias",
+          "kind": "add",
+          "output_elements": 384,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.K_append",
+          "kind": "copy",
+          "output_elements": 128,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.V_append",
+          "kind": "copy",
+          "output_elements": 128,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.h0.qk",
+          "kind": "gemm",
+          "output_elements": 16,
+          "tensor_instructions": 2,
+          "effective_tensor_flops": 512,
+          "issued_tensor_flops": 512
+        },
+        {
+          "name": "prefill.l0.h0.softmax",
+          "kind": "softmax",
+          "output_elements": 16,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.h0.av",
+          "kind": "gemm",
+          "output_elements": 64,
+          "tensor_instructions": 4,
+          "effective_tensor_flops": 512,
+          "issued_tensor_flops": 1024
+        },
+        {
+          "name": "prefill.l0.h1.qk",
+          "kind": "gemm",
+          "output_elements": 16,
+          "tensor_instructions": 2,
+          "effective_tensor_flops": 512,
+          "issued_tensor_flops": 512
+        },
+        {
+          "name": "prefill.l0.h1.softmax",
+          "kind": "softmax",
+          "output_elements": 16,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.h1.av",
+          "kind": "gemm",
+          "output_elements": 64,
+          "tensor_instructions": 4,
+          "effective_tensor_flops": 512,
+          "issued_tensor_flops": 1024
+        },
+        {
+          "name": "prefill.l0.proj",
+          "kind": "gemm",
+          "output_elements": 128,
+          "tensor_instructions": 32,
+          "effective_tensor_flops": 8192,
+          "issued_tensor_flops": 8192
+        },
+        {
+          "name": "prefill.l0.proj_bias",
+          "kind": "add",
+          "output_elements": 128,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.residual1",
+          "kind": "add",
+          "output_elements": 128,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.ln2",
+          "kind": "norm",
+          "output_elements": 128,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.up",
+          "kind": "gemm",
+          "output_elements": 256,
+          "tensor_instructions": 64,
+          "effective_tensor_flops": 16384,
+          "issued_tensor_flops": 16384
+        },
+        {
+          "name": "prefill.l0.up_bias",
+          "kind": "add",
+          "output_elements": 256,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.gelu",
+          "kind": "gelu",
+          "output_elements": 256,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.down",
+          "kind": "gemm",
+          "output_elements": 128,
+          "tensor_instructions": 64,
+          "effective_tensor_flops": 16384,
+          "issued_tensor_flops": 16384
+        },
+        {
+          "name": "prefill.l0.down_bias",
+          "kind": "add",
+          "output_elements": 128,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.l0.residual2",
+          "kind": "add",
+          "output_elements": 128,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.final_ln",
+          "kind": "norm",
+          "output_elements": 128,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "prefill.lm_head",
+          "kind": "gemm",
+          "output_elements": 128,
+          "tensor_instructions": 32,
+          "effective_tensor_flops": 8192,
+          "issued_tensor_flops": 8192
+        },
+        {
+          "name": "decode1.embedding0",
+          "kind": "add",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.ln1",
+          "kind": "norm",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.qkv",
+          "kind": "gemm",
+          "output_elements": 96,
+          "tensor_instructions": 96,
+          "effective_tensor_flops": 6144,
+          "issued_tensor_flops": 24576
+        },
+        {
+          "name": "decode1.l0.qkv_bias",
+          "kind": "add",
+          "output_elements": 96,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.K_append",
+          "kind": "copy",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.V_append",
+          "kind": "copy",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.h0.qk",
+          "kind": "gemm",
+          "output_elements": 5,
+          "tensor_instructions": 4,
+          "effective_tensor_flops": 160,
+          "issued_tensor_flops": 1024
+        },
+        {
+          "name": "decode1.l0.h0.softmax",
+          "kind": "softmax",
+          "output_elements": 5,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.h0.av",
+          "kind": "gemm",
+          "output_elements": 16,
+          "tensor_instructions": 4,
+          "effective_tensor_flops": 160,
+          "issued_tensor_flops": 1024
+        },
+        {
+          "name": "decode1.l0.h1.qk",
+          "kind": "gemm",
+          "output_elements": 5,
+          "tensor_instructions": 4,
+          "effective_tensor_flops": 160,
+          "issued_tensor_flops": 1024
+        },
+        {
+          "name": "decode1.l0.h1.softmax",
+          "kind": "softmax",
+          "output_elements": 5,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.h1.av",
+          "kind": "gemm",
+          "output_elements": 16,
+          "tensor_instructions": 4,
+          "effective_tensor_flops": 160,
+          "issued_tensor_flops": 1024
+        },
+        {
+          "name": "decode1.l0.proj",
+          "kind": "gemm",
+          "output_elements": 32,
+          "tensor_instructions": 32,
+          "effective_tensor_flops": 2048,
+          "issued_tensor_flops": 8192
+        },
+        {
+          "name": "decode1.l0.proj_bias",
+          "kind": "add",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.residual1",
+          "kind": "add",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.ln2",
+          "kind": "norm",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.up",
+          "kind": "gemm",
+          "output_elements": 64,
+          "tensor_instructions": 64,
+          "effective_tensor_flops": 4096,
+          "issued_tensor_flops": 16384
+        },
+        {
+          "name": "decode1.l0.up_bias",
+          "kind": "add",
+          "output_elements": 64,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.gelu",
+          "kind": "gelu",
+          "output_elements": 64,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.down",
+          "kind": "gemm",
+          "output_elements": 32,
+          "tensor_instructions": 64,
+          "effective_tensor_flops": 4096,
+          "issued_tensor_flops": 16384
+        },
+        {
+          "name": "decode1.l0.down_bias",
+          "kind": "add",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.l0.residual2",
+          "kind": "add",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.final_ln",
+          "kind": "norm",
+          "output_elements": 32,
+          "tensor_instructions": 0,
+          "effective_tensor_flops": 0,
+          "issued_tensor_flops": 0
+        },
+        {
+          "name": "decode1.lm_head",
+          "kind": "gemm",
+          "output_elements": 32,
+          "tensor_instructions": 32,
+          "effective_tensor_flops": 2048,
+          "issued_tensor_flops": 8192
+        }
+      ],
+      "tensor_instructions": 604,
+      "effective_tensor_flops": 94848,
+      "issued_tensor_flops": 154624
+    },
+    "state_policy": "fenced tile dispatches; drain writes; invalidate written L1/L2 lines; retain read-only tags and L2 replacement state",
+    "limitations": [
+      "Decoded timing excludes CTA/I-cache/host launch and invalidation scan cycles; 8-warp absolute timing remains unvalidated.",
+      "LayerNorm uses the paired ISA butterfly32 template for widths divisible by 32; other widths retain an unvalidated masked template. Relocated, concurrent and larger-width timing still needs RTL validation.",
+      "Polynomial exp, reciprocal and tanh GELU remain unvalidated software templates, not official compiled kernels.",
+      "Cache/MSHR and LDS response timing retain v5 abstraction limits; coherence fences are a declared software policy, not a translated RTL flush FSM.",
+      "Dispatch boundaries serialize batches by software contract; changing dispatch_tiles changes the program, not merely debug memory usage.",
+      "Full GPT-2 shape uses FP32 templates; no equivalence to a low-precision PyTorch backend or full-network RTL accuracy is claimed."
+    ],
+    "units": {
+      "cycles": "decoded model cycles",
+      "requested_bytes": "active-lane read+write bytes, including LDS",
+      "memory_read_bytes": "external line transactions",
+      "tensor_flops": "multiply and add each count one"
+    },
+    "process_peak_rss_mib": 37.78125
+  },
+  "time_budget_seconds": 60.0,
+  "rtl_full_network_verified": false
+}

@@ -1,0 +1,12 @@
+# The only owner/server profile. Do not force-add it.
+/local.toml
+/.venv/
+/.git/
+/results/
+/dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store

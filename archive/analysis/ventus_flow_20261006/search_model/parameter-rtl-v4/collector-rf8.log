@@ -1,0 +1,7 @@
+[warn] ventus/src/pipeline/operandCollector.scala 505:13: [W004] Dynamic index with width 8 is too wide for Vec of size 8 (expected index width 3).
+[warn] ventus/src/pipeline/operandCollector.scala 506:13: [W004] Dynamic index with width 8 is too wide for Vec of size 8 (expected index width 3).
+[warn] ventus/src/pipeline/operandCollector.scala 509:13: [W004] Dynamic index with width 8 is too wide for Vec of size 8 (expected index width 3).
+[warn] ventus/src/pipeline/operandCollector.scala 510:13: [W004] Dynamic index with width 8 is too wide for Vec of size 8 (expected index width 3).
+[warn] ventus/src/pipeline/operandCollector.scala 621:13: [W005] Dynamic index with width 2 is too narrow for Vec of size 8 (expected index width 3).
+[warn] ventus/src/pipeline/operandCollector.scala 622:13: [W005] Dynamic index with width 2 is too narrow for Vec of size 8 (expected index width 3).
+[warn] There were 6 warning(s) during hardware elaboration.

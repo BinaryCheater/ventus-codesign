@@ -1,0 +1,837 @@
+{
+  "version": "ventus-source-events-v1",
+  "rtl_commit": "681172541a8a34ffb43c483a19c075acbc11a4eb",
+  "default_hardware": {
+    "sms": 2,
+    "warps_per_sm": 8,
+    "blocks_per_sm": 8,
+    "threads": 32,
+    "rf_banks": 4,
+    "rf_read_ports": 1,
+    "rf_write_ports": 1,
+    "writeback_ports": 1,
+    "collectors": 8,
+    "vgpr_slots": 1024,
+    "sgpr_slots": 2048,
+    "tensor_m": 4,
+    "tensor_n": 8,
+    "tensor_k": 4,
+    "tensor_units": 1,
+    "lds_bytes": 131072,
+    "lds_banks": 32,
+    "lds_ports": 1,
+    "line_bytes": 128,
+    "l1_sets": 256,
+    "l1_ways": 2,
+    "l1_mshrs": 4,
+    "l1_subentries": 2,
+    "l1_write_entries": 4,
+    "l2_sets": 64,
+    "l2_ways": 16,
+    "l2_mshrs": 32,
+    "lsu_entries": 8,
+    "lsu_per_warp": 4,
+    "memory_channels": 1,
+    "memory_bytes_per_cycle": 128,
+    "memory_latency": 2
+  },
+  "hardware_dimension_count": 29,
+  "external_memory_dimension_count": 3,
+  "uses_fitted_timing": false,
+  "derived_defaults": {
+    "l2_block_beats": 1,
+    "l2_mshrs": "max(2, ceil(32 / 1)) = 32",
+    "l2_replacement_in_rtl": "global 16-bit LFSR, not PLRU or LRU",
+    "cache_replacement_in_prototype": "L1 LRU approximation; L2 source LFSR advanced by modeled data requests (I-cache omitted)",
+    "cold_read_stages_added": [
+      "L1 memReq queue: 1",
+      "SM2cluster queue: 1",
+      "wrapper pipe_a: 2",
+      "wrapper pipe_d: 2",
+      "SourceD stage4: 1",
+      "L1 coreRsp_st2 register: 1"
+    ]
+  },
+  "source_evidence": [
+    {
+      "path": "ventus/src/top/parameters.scala",
+      "sha256": "71dbd95411c7c28c63345cdb5de61394353aec479e05db513744af2d9edbbee0",
+      "rules": [
+        {
+          "anchor": "def num_sm = 2",
+          "lines": [
+            7
+          ],
+          "examples": [
+            "def num_sm = 2"
+          ]
+        },
+        {
+          "anchor": "var num_warp = 8",
+          "lines": [
+            8
+          ],
+          "examples": [
+            "var num_warp = 8"
+          ]
+        },
+        {
+          "anchor": "var num_thread = 32",
+          "lines": [
+            9
+          ],
+          "examples": [
+            "var num_thread = 32"
+          ]
+        },
+        {
+          "anchor": "def num_bank = 4",
+          "lines": [
+            18
+          ],
+          "examples": [
+            "def num_bank = 4                  // # of banks for register file"
+          ]
+        },
+        {
+          "anchor": "def num_collectorUnit = num_warp",
+          "lines": [
+            19
+          ],
+          "examples": [
+            "def num_collectorUnit = num_warp"
+          ]
+        },
+        {
+          "anchor": "def num_vgpr:Int = 128*num_warp",
+          "lines": [
+            20
+          ],
+          "examples": [
+            "def num_vgpr:Int = 128*num_warp"
+          ]
+        },
+        {
+          "anchor": "def num_sgpr:Int = 256*num_warp",
+          "lines": [
+            21
+          ],
+          "examples": [
+            "def num_sgpr:Int = 256*num_warp"
+          ]
+        },
+        {
+          "anchor": "def num_lane = num_thread",
+          "lines": [
+            57
+          ],
+          "examples": [
+            "def num_lane = num_thread // 2"
+          ]
+        },
+        {
+          "anchor": "def dcache_NSets: Int = 256",
+          "lines": [
+            71
+          ],
+          "examples": [
+            "def dcache_NSets: Int = 256"
+          ]
+        },
+        {
+          "anchor": "def dcache_NWays: Int = 2",
+          "lines": [
+            73
+          ],
+          "examples": [
+            "def dcache_NWays: Int = 2"
+          ]
+        },
+        {
+          "anchor": "def dcache_MshrEntry: Int = 4",
+          "lines": [
+            88
+          ],
+          "examples": [
+            "def dcache_MshrEntry: Int = 4"
+          ]
+        },
+        {
+          "anchor": "def dcache_MshrSubEntry: Int = 2",
+          "lines": [
+            90
+          ],
+          "examples": [
+            "def dcache_MshrSubEntry: Int = 2"
+          ]
+        },
+        {
+          "anchor": "def dcache_wshr_entry: Int = 4",
+          "lines": [
+            76
+          ],
+          "examples": [
+            "def dcache_wshr_entry: Int = 4"
+          ]
+        },
+        {
+          "anchor": "def sharedmem_depth = 1024",
+          "lines": [
+            93
+          ],
+          "examples": [
+            "def sharedmem_depth = 1024"
+          ]
+        },
+        {
+          "anchor": "def sharemem_size = sharedmem_depth * sharedmem_BlockWords * 4",
+          "lines": [
+            97
+          ],
+          "examples": [
+            "def sharemem_size = sharedmem_depth * sharedmem_BlockWords * 4 //bytes"
+          ]
+        },
+        {
+          "anchor": "def l2cache_NSets: Int = 64",
+          "lines": [
+            99
+          ],
+          "examples": [
+            "def l2cache_NSets: Int = 64"
+          ]
+        },
+        {
+          "anchor": "def l2cache_NWays: Int = 16",
+          "lines": [
+            101
+          ],
+          "examples": [
+            "def l2cache_NWays: Int = 16"
+          ]
+        },
+        {
+          "anchor": "x = Seq(4, 8, 4)",
+          "lines": [
+            124
+          ],
+          "examples": [
+            "x = Seq(4, 8, 4)"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "dependencies/fpuv2/src/main/scala/Tensor.scala",
+      "sha256": "a900e4e73f0391a2b561c0a4ab23db27d7eb22c88df40d519ff43fe57540be50",
+      "rules": [
+        {
+          "anchor": "override def latency = 2",
+          "lines": [
+            14,
+            35
+          ],
+          "examples": [
+            "override def latency = 2",
+            "override def latency = 2"
+          ]
+        },
+        {
+          "anchor": "assert(isPow2(DimN) && DimN > 1)",
+          "lines": [
+            89
+          ],
+          "examples": [
+            "assert(isPow2(DimN) && DimN > 1)"
+          ]
+        },
+        {
+          "anchor": "Seq.fill(DimM*DimK-1)",
+          "lines": [
+            203
+          ],
+          "examples": [
+            "Seq.fill(DimM*DimK-1)(Module(new TCDotProduct(DimN, 8, 24)))"
+          ]
+        },
+        {
+          "anchor": "adds = adds :+",
+          "lines": [
+            102
+          ],
+          "examples": [
+            "adds = adds :+ Seq(Module(new TCAddPipe(expWidth, precision, new DotProdCtrl(len, tcCtrl)))) ++"
+          ]
+        },
+        {
+          "anchor": "val finalAdd = Module",
+          "lines": [
+            161
+          ],
+          "examples": [
+            "val finalAdd = Module(new TCAddPipe(expWidth, precision, new DotProdCtrl(len, tcCtrl)))"
+          ]
+        },
+        {
+          "anchor": "entries = 1, pipe = true",
+          "lines": [
+            173
+          ],
+          "examples": [
+            "val fifo = Module(new Queue(new TCDotProductOutput(len, tcCtrl), entries = 1, pipe = true))"
+          ]
+        },
+        {
+          "anchor": "assert(DimM * DimN <= vl)",
+          "lines": [
+            195
+          ],
+          "examples": [
+            "assert(DimM * DimN <= vl)"
+          ]
+        },
+        {
+          "anchor": "assert(DimN * DimK <= vl)",
+          "lines": [
+            196
+          ],
+          "examples": [
+            "assert(DimN * DimK <= vl)"
+          ]
+        },
+        {
+          "anchor": "assert(DimM * DimK <= vl)",
+          "lines": [
+            197
+          ],
+          "examples": [
+            "assert(DimM * DimK <= vl)"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/pipeline/execution.scala",
+      "sha256": "5e1690815fb58b7b503bc8cab8be68f879418490c905aabd87cd42813b7b9b0e",
+      "rules": [
+        {
+          "anchor": "val tensor = Module(new TensorCoreFP32",
+          "lines": [
+            122
+          ],
+          "examples": [
+            "val tensor = Module(new TensorCoreFP32(num_thread, tc_dim(0), tc_dim(1), tc_dim(2), new TCCtrlv2(xLen, depth_warp)))"
+          ]
+        },
+        {
+          "anchor": "val result_v=Module(new Queue(new WriteVecCtrl,1,pipe=true))",
+          "lines": [
+            74,
+            124,
+            814
+          ],
+          "examples": [
+            "val result_v=Module(new Queue(new WriteVecCtrl,1,pipe=true))",
+            "val result_v=Module(new Queue(new WriteVecCtrl,1,pipe=true))"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/pipeline/operandCollector.scala",
+      "sha256": "813e93aace5298ddd47013e07b95b90daca04909c0b8be1dba3d3b6eb78f9b44",
+      "rules": [
+        {
+          "anchor": "val s_idle :: s_add :: s_out",
+          "lines": [
+            85
+          ],
+          "examples": [
+            "val s_idle :: s_add :: s_out :: Nil = Enum(3)"
+          ]
+        },
+        {
+          "anchor": "when(valid.asUInt =/= ready.asUInt",
+          "lines": [
+            150
+          ],
+          "examples": [
+            "when(valid.asUInt =/= ready.asUInt ) {"
+          ]
+        },
+        {
+          "anchor": "io.issue.valid := state===s_out",
+          "lines": [
+            139
+          ],
+          "examples": [
+            "io.issue.valid := state===s_out"
+          ]
+        },
+        {
+          "anchor": "// bankID = (wid + regIdx) % num_bank",
+          "lines": [
+            581
+          ],
+          "examples": [
+            "// bankID = (wid + regIdx) % num_bank"
+          ]
+        },
+        {
+          "anchor": "crossBar.io.validArbiterVector := RegNext",
+          "lines": [
+            552
+          ],
+          "examples": [
+            "crossBar.io.validArbiterVector := RegNext(VecInit(Arbiter.io.readArbiterOutVector.map(_.valid)))"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/pipeline/Scoreboard.scala",
+      "sha256": "aebec04b6987d614234786d73280c8b61b44c7b9c2974550b7afb84ccc282630",
+      "rules": [
+        {
+          "anchor": "vectorReg.clear(io.wb_v_fire",
+          "lines": [
+            110
+          ],
+          "examples": [
+            "vectorReg.clear(io.wb_v_fire & io.wb_v_ctrl.wvd,io.wb_v_ctrl.reg_idxw)"
+          ]
+        },
+        {
+          "anchor": "OpColRegV.clear(io.op_colV_out_fire",
+          "lines": [
+            116
+          ],
+          "examples": [
+            "OpColRegV.clear(io.op_colV_out_fire, 0.U)"
+          ]
+        },
+        {
+          "anchor": "vectorReg.read(io.ibuffer_if_ctrl.reg_idxw)",
+          "lines": [
+            129
+          ],
+          "examples": [
+            "val readw=Mux(io.ibuffer_if_ctrl.wxd,scalarReg.read(io.ibuffer_if_ctrl.reg_idxw),false.B)|Mux(io.ibuffer_if_ctrl.wvd,vectorReg.read(io.ibuffer_if_ctrl.reg_idxw),false.B)"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/pipeline/LSU.scala",
+      "sha256": "70d45d08a732d426b40b5027b96c9923fd51b69139530c248bb829d739bc58d6",
+      "rules": [
+        {
+          "anchor": "entries=1, pipe=true",
+          "lines": [
+            551
+          ],
+          "examples": [
+            "val InputFIFO = Module(new Queue(new vExeData, entries=1, pipe=true))"
+          ]
+        },
+        {
+          "anchor": "val s_idle :: s_save :: s_shared",
+          "lines": [
+            128
+          ],
+          "examples": [
+            "val s_idle :: s_save :: s_shared :: s_dcache ::s_dcache_1::s_dcache_2:: Nil = Enum(6)"
+          ]
+        },
+        {
+          "anchor": "io.to_shared.valid := state===s_shared",
+          "lines": [
+            224
+          ],
+          "examples": [
+            "io.to_shared.valid := state===s_shared"
+          ]
+        },
+        {
+          "anchor": "class LSU2WB",
+          "lines": [
+            490
+          ],
+          "examples": [
+            "class LSU2WB extends Module{"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/pipeline/MSHR.scala",
+      "sha256": "15525c33cc281198de5183456467939aec64551719e0fb7c2c2fb82491108ee7",
+      "rules": [
+        {
+          "anchor": "val s_idle :: s_add  :: s_out",
+          "lines": [
+            42
+          ],
+          "examples": [
+            "val s_idle :: s_add  :: s_out :: Nil = Enum(3)"
+          ]
+        },
+        {
+          "anchor": "io.to_pipe.valid := complete.orR && state===s_out",
+          "lines": [
+            106
+          ],
+          "examples": [
+            "io.to_pipe.valid := complete.orR && state===s_out"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/L1Cache/ShareMem/ShareMem.scala",
+      "sha256": "2404e17fe75dabdac20416f62628ed2409051a3a4d769b7077dce92df7fec700",
+      "rules": [
+        {
+          "anchor": "flow=false,pipe=true",
+          "lines": [
+            73
+          ],
+          "examples": [
+            "val coreRsp_Q = Module(new Queue(new ShareMemCoreRsp,entries = DepthCoreRsp_Q,flow=false,pipe=true))"
+          ]
+        },
+        {
+          "anchor": "val coreReqisValidRead_st2 = RegNext",
+          "lines": [
+            128
+          ],
+          "examples": [
+            "val coreReqisValidRead_st2 = RegNext(coreReqisValidRead_st1)//TODO verification for bank conflict"
+          ]
+        },
+        {
+          "anchor": "val dataAccess_data_st2 = RegEnable",
+          "lines": [
+            174
+          ],
+          "examples": [
+            "val dataAccess_data_st2 = RegEnable(VecInit(DataAccessesRRsp),coreReqisValidRead_st1)"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/L1Cache/ShareMem/BankConflictArbiter.scala",
+      "sha256": "48152c7669e907a9866dcffe15dcdb9c857fe8de481e5bde58789086b30c0ef2",
+      "rules": [
+        {
+          "anchor": "perBankReqCount.map(_>1.U)",
+          "lines": [
+            158
+          ],
+          "examples": [
+            "perBankReqConflict := perBankReqCount.map(_>1.U)"
+          ]
+        },
+        {
+          "anchor": "do not merge req to same addr",
+          "lines": [
+            184
+          ],
+          "examples": [
+            "//do not merge req to same addr from different lane. assume this optimization to be done at register level"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/L1Cache/DCache/DCache.scala",
+      "sha256": "bdf9a65110eb29f8bec69a4e2044cf28ba363c4d24af2944da8fbc1623c3955e",
+      "rules": [
+        {
+          "anchor": "entries = 1,flow=false,pipe=true",
+          "lines": [
+            188
+          ],
+          "examples": [
+            "val coreReq_Q = Module(new Queue(new DCacheCoreReq,entries = 1,flow=false,pipe=true))"
+          ]
+        },
+        {
+          "anchor": "entries = 8,flow=false,pipe=false",
+          "lines": [
+            198
+          ],
+          "examples": [
+            "val memReq_Q = Module(new Queue(new WshrMemReq,entries = 8,flow=false,pipe=false))"
+          ]
+        },
+        {
+          "anchor": "writeMissReq",
+          "lines": [
+            334,
+            358,
+            359,
+            360,
+            362,
+            364,
+            365,
+            376,
+            378,
+            380,
+            381,
+            382,
+            391,
+            399
+          ],
+          "examples": [
+            "val writeMissReq = Wire(new WshrMemReq)",
+            "writeMissReq.a_opcode := 1.U //PutPartialData:Get"
+          ]
+        },
+        {
+          "anchor": "val memRsp_Q = Module(new Queue",
+          "lines": [
+            194
+          ],
+          "examples": [
+            "val memRsp_Q = Module(new Queue(new DCacheMemRsp,entries = 2,flow=false,pipe=false))"
+          ]
+        },
+        {
+          "anchor": "val memReq_Q = Module(new Queue",
+          "lines": [
+            198
+          ],
+          "examples": [
+            "val memReq_Q = Module(new Queue(new WshrMemReq,entries = 8,flow=false,pipe=false))"
+          ]
+        },
+        {
+          "anchor": "coreRsp_st2_valid_from_memRsp := RegEnable",
+          "lines": [
+            745
+          ],
+          "examples": [
+            "coreRsp_st2_valid_from_memRsp := RegEnable(MshrAccess.io.missRspOut.valid, false.B, coreRsp_st2.io.enq.ready)"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/L1Cache/L1MSHR.scala",
+      "sha256": "4dcf12fe3ad092f92b29b4de887a9b723c3fe98a04ac44fdd7db9463675890f1",
+      "rules": [
+        {
+          "anchor": "val missRspOut_st1 = Module(new Queue",
+          "lines": [
+            332
+          ],
+          "examples": [
+            "val missRspOut_st1 = Module(new Queue(new MSHRmissRspOut(bABits, tIWidth, WIdBits, AsidBits),1,true,false))"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/top/GPGPU_top.scala",
+      "sha256": "965bba3434688105ca58c675c9fc3edc95c8b5c0944af142986e7dcc49cb1f3e",
+      "rules": [
+        {
+          "anchor": "val memReqBuf = Module(new Queue(new TLBundleA_lite(L2param),2))",
+          "lines": [
+            530
+          ],
+          "examples": [
+            "val memReqBuf = Module(new Queue(new TLBundleA_lite(L2param),2))"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/top/GPGPU_SimWrapper.scala",
+      "sha256": "194fdad7f2464c21a630423316ac5ee9b9eb29b74104c42aafe5f204aa554473",
+      "rules": [
+        {
+          "anchor": "new DecoupledPipe(new TLBundleA_lite(l2cache_params), 2)",
+          "lines": [
+            101
+          ],
+          "examples": [
+            "val pipe_a = Module(new DecoupledPipe(new TLBundleA_lite(l2cache_params), 2))"
+          ]
+        },
+        {
+          "anchor": "new DecoupledPipe(new TLBundleD_lite(l2cache_params), 2)",
+          "lines": [
+            102
+          ],
+          "examples": [
+            "val pipe_d = Module(new DecoupledPipe(new TLBundleD_lite(l2cache_params), 2))"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/L2cache/Parameters.scala",
+      "sha256": "aae9022a244cd5c7a573488f3348db5de937d4f992670c6800e9e97803d318d8",
+      "rules": [
+        {
+          "anchor": "max(if (micro.dirReg) 3 else 2, (micro.memCycles + cache.blockBeats - 1) / cache.blockBeats)",
+          "lines": [
+            427
+          ],
+          "examples": [
+            "max(if (micro.dirReg) 3 else 2, (micro.memCycles + cache.blockBeats - 1) / cache.blockBeats)"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/L2cache/Directory_test.scala",
+      "sha256": "d19a49b5b2e75d80ac2bc60f862e540f3c26ee201238b1ce75cc03236569a12e",
+      "rules": [
+        {
+          "anchor": "val victimWay = victim_LFSR",
+          "lines": [
+            227
+          ],
+          "examples": [
+            "val victimWay = victim_LFSR(params.wayBits-1,0)//replacer_array(set)"
+          ]
+        },
+        {
+          "anchor": "val xor = lfsr(0) ^ lfsr(1) ^ lfsr(3) ^ lfsr(4)",
+          "lines": [
+            220
+          ],
+          "examples": [
+            "val xor = lfsr(0) ^ lfsr(1) ^ lfsr(3) ^ lfsr(4)"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/L2cache/SinkD.scala",
+      "sha256": "4a4852cf174e6270c7e5d4980334e8f2c24f2586de5e11756a360bf8fb5df4be",
+      "rules": [
+        {
+          "anchor": "io.resp.valid       := RegNext(d.fire",
+          "lines": [
+            65
+          ],
+          "examples": [
+            "io.resp.valid       := RegNext(d.fire, false.B)"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/L2cache/MSHR.scala",
+      "sha256": "d97481c722895d7bb3dbfedc279597586a151061eee6cf9c35b7518b73aba306",
+      "rules": [
+        {
+          "anchor": "sink_d_reg :=true.B",
+          "lines": [
+            145
+          ],
+          "examples": [
+            "sink_d_reg :=true.B"
+          ]
+        },
+        {
+          "anchor": "sche_a_valid := true.B",
+          "lines": [
+            113
+          ],
+          "examples": [
+            "sche_a_valid := true.B"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/L2cache/SourceD.scala",
+      "sha256": "b0aeb9aeba2a157291a1ec682107266b57e0f06cc21b8067bfd0b5d66a1a5eb5",
+      "rules": [
+        {
+          "anchor": "stateReg := stage_4",
+          "lines": [
+            139,
+            148,
+            159,
+            165,
+            175
+          ],
+          "examples": [
+            "stateReg := stage_4",
+            "//          stateReg := stage_4"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/L1Cache/L1TagAccess.scala",
+      "sha256": "a3090442d5752b8c2c8124d27650940d4649e127c97fc570ad792bee590200ba",
+      "rules": [
+        {
+          "anchor": "Counter(accessFire,1000)",
+          "lines": [
+            77
+          ],
+          "examples": [
+            "val (accessCount,accessCounterFull) = Counter(accessFire,1000)"
+          ]
+        },
+        {
+          "anchor": "//LRU replacement policy",
+          "lines": [
+            186
+          ],
+          "examples": [
+            "//LRU replacement policy"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ventus/src/top/Mem_SimWrapper.scala",
+      "sha256": "33d961207a4079f9c77d41c58e07273673ae2af66037cab3dbe31ef9c18bfca1",
+      "rules": [
+        {
+          "anchor": "val DELAY_DDR: Int = 2",
+          "lines": [
+            22
+          ],
+          "examples": [
+            "class Mem_SimWrapper(val genA: TLBundleA_lite, genD: TLBundleD_lite, DELAY_LDS: Int = 0, val DELAY_DDR: Int = 2) extends Module {"
+          ]
+        },
+        {
+          "anchor": "val DEPTH = 5",
+          "lines": [
+            24
+          ],
+          "examples": [
+            "val DEPTH = 5"
+          ]
+        },
+        {
+          "anchor": "rsp_data(i).delay === 0.U",
+          "lines": [
+            69
+          ],
+          "examples": [
+            "rsp_delay_finish(i) := rsp_data(i).delay === 0.U"
+          ]
+        }
+      ]
+    }
+  ],
+  "fidelity": {
+    "tensor_and_collector": "source-derived stage graph; validate with independent RTL",
+    "lds": "source-derived bank rounds and response stages",
+    "global_memory": "transaction approximation with explicit target; inclusive-cache internal timing is not fully translated",
+    "scheduling": "fixed service-order templates; ready-aware RTL arbiter not fully translated"
+  }
+}

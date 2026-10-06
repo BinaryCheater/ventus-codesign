@@ -1,0 +1,2997 @@
+{
+  "name": "resident-w4-k256",
+  "warps": 4,
+  "steps": 32,
+  "words": [
+    772833495,
+    2415919799,
+    1376298327,
+    2527147351,
+    44221783,
+    2415924023,
+    1376298455,
+    2528196055,
+    45303255,
+    336251,
+    369147,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    2415927607,
+    1376298839,
+    2531342167,
+    48318295,
+    2147494131,
+    2660499,
+    48809815,
+    1532027,
+    16395
+  ],
+  "expected_words": [
+    1119879168,
+    3279945728,
+    1107296256,
+    3273654272,
+    1107296256,
+    1107296256,
+    3280994304,
+    1140850688,
+    3279945728,
+    1119879168,
+    1133510656,
+    3273654272,
+    1141899264,
+    3280994304,
+    3254779904,
+    1115684864,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1119879168,
+    3279945728,
+    1107296256,
+    3273654272,
+    1107296256,
+    1107296256,
+    3280994304,
+    1140850688,
+    3279945728,
+    1119879168,
+    1133510656,
+    3273654272,
+    1141899264,
+    3280994304,
+    3254779904,
+    1115684864,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1119879168,
+    3279945728,
+    1107296256,
+    3273654272,
+    1107296256,
+    1107296256,
+    3280994304,
+    1140850688,
+    3279945728,
+    1119879168,
+    1133510656,
+    3273654272,
+    1141899264,
+    3280994304,
+    3254779904,
+    1115684864,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1119879168,
+    3279945728,
+    1107296256,
+    3273654272,
+    1107296256,
+    1107296256,
+    3280994304,
+    1140850688,
+    3279945728,
+    1119879168,
+    1133510656,
+    3273654272,
+    1141899264,
+    3280994304,
+    3254779904,
+    1115684864,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "final_tensor_pc": 2147483816,
+  "modeled_prefix_instructions": 43,
+  "workload": {
+    "operations": [
+      {
+        "name": "w0.pc80000000",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000000",
+        "kind": "vector",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v1",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000000",
+        "kind": "vector",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v1",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000000",
+        "kind": "vector",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v1",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000004",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000004",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 1,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000004",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 2,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000004",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 3,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000008",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000008",
+        "kind": "vector",
+        "block": 0,
+        "warp": 1,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000008",
+        "kind": "vector",
+        "block": 0,
+        "warp": 2,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000008",
+        "kind": "vector",
+        "block": 0,
+        "warp": 3,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc8000000c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc8000000c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc8000000c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc8000000c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000010",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x5"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000010",
+        "kind": "vector",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v10",
+          "x5"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000010",
+        "kind": "vector",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v10",
+          "x5"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000010",
+        "kind": "vector",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v10",
+          "x5"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000014",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000014",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 1,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000014",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 2,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000014",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 3,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000018",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000018",
+        "kind": "vector",
+        "block": 0,
+        "warp": 1,
+        "sources": [],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000018",
+        "kind": "vector",
+        "block": 0,
+        "warp": 2,
+        "sources": [],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000018",
+        "kind": "vector",
+        "block": 0,
+        "warp": 3,
+        "sources": [],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc8000001c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc8000001c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc8000001c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc8000001c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000020",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11",
+          "x6"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000020",
+        "kind": "vector",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v11",
+          "x6"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000020",
+        "kind": "vector",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v11",
+          "x6"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000020",
+        "kind": "vector",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v11",
+          "x6"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000024",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v2",
+        "addresses": [
+          2415919104,
+          2415919108,
+          2415919112,
+          2415919116,
+          2415919120,
+          2415919124,
+          2415919128,
+          2415919132,
+          2415919136,
+          2415919140,
+          2415919144,
+          2415919148,
+          2415919152,
+          2415919156,
+          2415919160,
+          2415919164,
+          2415919168,
+          2415919172,
+          2415919176,
+          2415919180,
+          2415919184,
+          2415919188,
+          2415919192,
+          2415919196,
+          2415919200,
+          2415919204,
+          2415919208,
+          2415919212,
+          2415919216,
+          2415919220,
+          2415919224,
+          2415919228
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000024",
+        "kind": "load",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v2",
+        "addresses": [
+          2415919104,
+          2415919108,
+          2415919112,
+          2415919116,
+          2415919120,
+          2415919124,
+          2415919128,
+          2415919132,
+          2415919136,
+          2415919140,
+          2415919144,
+          2415919148,
+          2415919152,
+          2415919156,
+          2415919160,
+          2415919164,
+          2415919168,
+          2415919172,
+          2415919176,
+          2415919180,
+          2415919184,
+          2415919188,
+          2415919192,
+          2415919196,
+          2415919200,
+          2415919204,
+          2415919208,
+          2415919212,
+          2415919216,
+          2415919220,
+          2415919224,
+          2415919228
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000024",
+        "kind": "load",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v2",
+        "addresses": [
+          2415919104,
+          2415919108,
+          2415919112,
+          2415919116,
+          2415919120,
+          2415919124,
+          2415919128,
+          2415919132,
+          2415919136,
+          2415919140,
+          2415919144,
+          2415919148,
+          2415919152,
+          2415919156,
+          2415919160,
+          2415919164,
+          2415919168,
+          2415919172,
+          2415919176,
+          2415919180,
+          2415919184,
+          2415919188,
+          2415919192,
+          2415919196,
+          2415919200,
+          2415919204,
+          2415919208,
+          2415919212,
+          2415919216,
+          2415919220,
+          2415919224,
+          2415919228
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000024",
+        "kind": "load",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v2",
+        "addresses": [
+          2415919104,
+          2415919108,
+          2415919112,
+          2415919116,
+          2415919120,
+          2415919124,
+          2415919128,
+          2415919132,
+          2415919136,
+          2415919140,
+          2415919144,
+          2415919148,
+          2415919152,
+          2415919156,
+          2415919160,
+          2415919164,
+          2415919168,
+          2415919172,
+          2415919176,
+          2415919180,
+          2415919184,
+          2415919188,
+          2415919192,
+          2415919196,
+          2415919200,
+          2415919204,
+          2415919208,
+          2415919212,
+          2415919216,
+          2415919220,
+          2415919224,
+          2415919228
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000028",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v3",
+        "addresses": [
+          2415923200,
+          2415923204,
+          2415923208,
+          2415923212,
+          2415923216,
+          2415923220,
+          2415923224,
+          2415923228,
+          2415923232,
+          2415923236,
+          2415923240,
+          2415923244,
+          2415923248,
+          2415923252,
+          2415923256,
+          2415923260,
+          2415923264,
+          2415923268,
+          2415923272,
+          2415923276,
+          2415923280,
+          2415923284,
+          2415923288,
+          2415923292,
+          2415923296,
+          2415923300,
+          2415923304,
+          2415923308,
+          2415923312,
+          2415923316,
+          2415923320,
+          2415923324
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000028",
+        "kind": "load",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v3",
+        "addresses": [
+          2415923200,
+          2415923204,
+          2415923208,
+          2415923212,
+          2415923216,
+          2415923220,
+          2415923224,
+          2415923228,
+          2415923232,
+          2415923236,
+          2415923240,
+          2415923244,
+          2415923248,
+          2415923252,
+          2415923256,
+          2415923260,
+          2415923264,
+          2415923268,
+          2415923272,
+          2415923276,
+          2415923280,
+          2415923284,
+          2415923288,
+          2415923292,
+          2415923296,
+          2415923300,
+          2415923304,
+          2415923308,
+          2415923312,
+          2415923316,
+          2415923320,
+          2415923324
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000028",
+        "kind": "load",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v3",
+        "addresses": [
+          2415923200,
+          2415923204,
+          2415923208,
+          2415923212,
+          2415923216,
+          2415923220,
+          2415923224,
+          2415923228,
+          2415923232,
+          2415923236,
+          2415923240,
+          2415923244,
+          2415923248,
+          2415923252,
+          2415923256,
+          2415923260,
+          2415923264,
+          2415923268,
+          2415923272,
+          2415923276,
+          2415923280,
+          2415923284,
+          2415923288,
+          2415923292,
+          2415923296,
+          2415923300,
+          2415923304,
+          2415923308,
+          2415923312,
+          2415923316,
+          2415923320,
+          2415923324
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000028",
+        "kind": "load",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v3",
+        "addresses": [
+          2415923200,
+          2415923204,
+          2415923208,
+          2415923212,
+          2415923216,
+          2415923220,
+          2415923224,
+          2415923228,
+          2415923232,
+          2415923236,
+          2415923240,
+          2415923244,
+          2415923248,
+          2415923252,
+          2415923256,
+          2415923260,
+          2415923264,
+          2415923268,
+          2415923272,
+          2415923276,
+          2415923280,
+          2415923284,
+          2415923288,
+          2415923292,
+          2415923296,
+          2415923300,
+          2415923304,
+          2415923308,
+          2415923312,
+          2415923316,
+          2415923320,
+          2415923324
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc8000002c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc8000002c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc8000002c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc8000002c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000030",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000030",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000030",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000030",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000034",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000034",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000034",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000034",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000038",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000038",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000038",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000038",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc8000003c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc8000003c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc8000003c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc8000003c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000040",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000040",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000040",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000040",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000044",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000044",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000044",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000044",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000048",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000048",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000048",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000048",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc8000004c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc8000004c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc8000004c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc8000004c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000050",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000050",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000050",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000050",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000054",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000054",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000054",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000054",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000058",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000058",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000058",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000058",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc8000005c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc8000005c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc8000005c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc8000005c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000060",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000060",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000060",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000060",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000064",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000064",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000064",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000064",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000068",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000068",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000068",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000068",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc8000006c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc8000006c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc8000006c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc8000006c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000070",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000070",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000070",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000070",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000074",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000074",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000074",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000074",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000078",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000078",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000078",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000078",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc8000007c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc8000007c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc8000007c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc8000007c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000080",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000080",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000080",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000080",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000084",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000084",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000084",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000084",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000088",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000088",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000088",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000088",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc8000008c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc8000008c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc8000008c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc8000008c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000090",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000090",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000090",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000090",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000094",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000094",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000094",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000094",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc80000098",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc80000098",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc80000098",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc80000098",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc8000009c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc8000009c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc8000009c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc8000009c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc800000a0",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc800000a0",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc800000a0",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc800000a0",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc800000a4",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc800000a4",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc800000a4",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc800000a4",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w0.pc800000a8",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w1.pc800000a8",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 1,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w2.pc800000a8",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 2,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "w3.pc800000a8",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 3,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      }
+    ],
+    "warps_per_block": 4,
+    "vgpr_per_warp": 64,
+    "sgpr_per_warp": 64,
+    "lds_per_block": 0
+  },
+  "predictions": [
+    {
+      "hardware": {
+        "sms": 2,
+        "warps_per_sm": 8,
+        "blocks_per_sm": 8,
+        "threads": 32,
+        "rf_banks": 4,
+        "rf_read_ports": 1,
+        "rf_write_ports": 1,
+        "writeback_ports": 1,
+        "collectors": 8,
+        "vgpr_slots": 1024,
+        "sgpr_slots": 2048,
+        "tensor_m": 4,
+        "tensor_n": 8,
+        "tensor_k": 4,
+        "tensor_units": 1,
+        "lds_bytes": 131072,
+        "lds_banks": 32,
+        "lds_ports": 1,
+        "line_bytes": 128,
+        "l1_sets": 256,
+        "l1_ways": 2,
+        "l1_mshrs": 4,
+        "l1_subentries": 2,
+        "l1_write_entries": 4,
+        "l2_sets": 64,
+        "l2_ways": 16,
+        "l2_mshrs": 32,
+        "lsu_entries": 8,
+        "lsu_per_warp": 4,
+        "memory_channels": 1,
+        "memory_bytes_per_cycle": 128,
+        "memory_latency": 2
+      },
+      "cycles": 594,
+      "per_warp": [
+        590,
+        591,
+        594,
+        593
+      ]
+    },
+    {
+      "hardware": {
+        "sms": 2,
+        "warps_per_sm": 8,
+        "blocks_per_sm": 8,
+        "threads": 32,
+        "rf_banks": 8,
+        "rf_read_ports": 1,
+        "rf_write_ports": 1,
+        "writeback_ports": 1,
+        "collectors": 8,
+        "vgpr_slots": 1024,
+        "sgpr_slots": 2048,
+        "tensor_m": 4,
+        "tensor_n": 8,
+        "tensor_k": 4,
+        "tensor_units": 1,
+        "lds_bytes": 131072,
+        "lds_banks": 32,
+        "lds_ports": 1,
+        "line_bytes": 128,
+        "l1_sets": 256,
+        "l1_ways": 2,
+        "l1_mshrs": 4,
+        "l1_subentries": 2,
+        "l1_write_entries": 4,
+        "l2_sets": 64,
+        "l2_ways": 16,
+        "l2_mshrs": 32,
+        "lsu_entries": 8,
+        "lsu_per_warp": 4,
+        "memory_channels": 1,
+        "memory_bytes_per_cycle": 128,
+        "memory_latency": 2
+      },
+      "cycles": 594,
+      "per_warp": [
+        590,
+        591,
+        594,
+        593
+      ]
+    }
+  ],
+  "input_sha256": {
+    "input.metadata": "0f6a60d6d1aec995929aa2c6286d6a12d9fb9c88ee2aa91b383575803b70e5d8",
+    "input.data": "2c84300f71a0ce923ce7ca8149f226689e2af8b023ea8d9878b164706755c210"
+  },
+  "returncode": 0,
+  "rf_banks": 8,
+  "wall_seconds": 24.372072233934887,
+  "dispatch_to_finish_cycles": 661,
+  "checked_words": 128,
+  "all_output_zero": false,
+  "output_matches": true,
+  "output_words": [
+    1119879168,
+    3279945728,
+    1107296256,
+    3273654272,
+    1107296256,
+    1107296256,
+    3280994304,
+    1140850688,
+    3279945728,
+    1119879168,
+    1133510656,
+    3273654272,
+    1141899264,
+    3280994304,
+    3254779904,
+    1115684864,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1119879168,
+    3279945728,
+    1107296256,
+    3273654272,
+    1107296256,
+    1107296256,
+    3280994304,
+    1140850688,
+    3279945728,
+    1119879168,
+    1133510656,
+    3273654272,
+    1141899264,
+    3280994304,
+    3254779904,
+    1115684864,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1119879168,
+    3279945728,
+    1107296256,
+    3273654272,
+    1107296256,
+    1107296256,
+    3280994304,
+    1140850688,
+    3279945728,
+    1119879168,
+    1133510656,
+    3273654272,
+    1141899264,
+    3280994304,
+    3254779904,
+    1115684864,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1119879168,
+    3279945728,
+    1107296256,
+    3273654272,
+    1107296256,
+    1107296256,
+    3280994304,
+    1140850688,
+    3279945728,
+    1119879168,
+    1133510656,
+    3273654272,
+    1141899264,
+    3280994304,
+    3254779904,
+    1115684864,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "warnings": [],
+  "rtl_binary_sha256": "c93b1eff0a950d52d1c04af588f941c2b37a79aac8f94f32397764402949cd29",
+  "rtl_library_sha256": "d15270b0f78ad30c0cb3b03c049c977834a532b46b22779c15f5ddc44a9319db",
+  "trace_tool_sha256": "a3dc87499ab3bac6f78a2f82db370b868f51ff1912664e4718d232faabd07595",
+  "launch_not_before_cycle": 512
+}

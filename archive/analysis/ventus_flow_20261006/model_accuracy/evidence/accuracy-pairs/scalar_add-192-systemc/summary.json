@@ -1,0 +1,18 @@
+{
+  "case": "scalar_add-192",
+  "backend": "systemc",
+  "family": "scalar_add",
+  "n": 192,
+  "returncode": 0,
+  "wall_seconds": 0.12827325297985226,
+  "first_dispatch_time": 15,
+  "kernel_finish_time": 11705,
+  "output_correct": true,
+  "checked_words": 1,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "2602d45053fc0853234bfcfda4015d881f909d27871f00401ef53e140b0b9c04"
+  },
+  "dispatch_to_finish_cycles": 1169.0
+}

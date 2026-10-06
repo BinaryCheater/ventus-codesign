@@ -1,0 +1,15 @@
+[RTL     info]@0 SNAPSHOT created, pid=643317
+[RTL    trace]@20 Hardware reset ok
+[RTL    trace]@30 kernel 0 stream activate
+[RTL    debug]@5125 block0  dispatched to GPU (kernel0  stream block0 )
+[RTL    debug]@10000 
+[RTL    debug]@20000 
+[RTL    debug]@29975 block0  finished (kernel0  stream block0 )
+[RTL     info]@29975 kernel0  stream finished
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL    debug]@60000 
+[RTL    debug]@70000 
+[RTL     info]@79975 Simulation finished in 79975 unit time
+[RTL    debug]@79975 All snapshot process are cleared, OK

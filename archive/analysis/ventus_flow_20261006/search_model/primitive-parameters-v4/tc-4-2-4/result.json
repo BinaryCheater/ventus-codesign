@@ -1,0 +1,33 @@
+{
+  "modes": [
+    {
+      "mode": 0,
+      "accepted": 64,
+      "outputs": 64,
+      "first_output": 8,
+      "last_output": 71,
+      "min_latency": 8,
+      "max_latency": 8,
+      "input_stalls": 0,
+      "bit_exact": true
+    },
+    {
+      "mode": 1,
+      "accepted": 64,
+      "outputs": 64,
+      "first_output": 11,
+      "last_output": 124,
+      "min_latency": 8,
+      "max_latency": 16,
+      "input_stalls": 11,
+      "bit_exact": true
+    }
+  ],
+  "kind": "tensor",
+  "m": 4,
+  "n": 2,
+  "k": 4,
+  "name": "tc-4-2-4",
+  "rtl_sha256": "207ebea69b075d6226254bb5519846dc5d158e828c806a71cd4de5dfe7fbbd25",
+  "binary_sha256": "8baa304402e017f4eac16459c76b2a90050754759513ae3c7d2cad299004ffb5"
+}

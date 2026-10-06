@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-03",
+  "inventory_rows": 278,
+  "source_anchors_checked": 278,
+  "referenced_source_file_hashes_checked": 52,
+  "csv_json_row_count_consistent": true,
+  "unique_keys": 278,
+  "core_non_derived_fields": 209,
+  "candidate_axis_groups": 123,
+  "checks": [
+    {
+      "command": "uv run ruff check codesign tests",
+      "result": "passed",
+      "exit_code": 0
+    },
+    {
+      "command": "uv run ruff format --check codesign tests",
+      "result": "passed; 86 files already formatted",
+      "exit_code": 0
+    },
+    {
+      "command": "uv run pytest -q",
+      "result": "464 passed in 165.50s",
+      "exit_code": 0
+    }
+  ],
+  "limitations": "未执行本次Ventus RTL实验，未实现或验证性能预测模型；候选轴替代实现未开发。"
+}

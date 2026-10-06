@@ -1,0 +1,1642 @@
+{
+  "input_sha256": {
+    "input.metadata": "cdfd48b96072c026f086f4548a15910855cf8ac05c1f3afa4339e3983ca83a9f",
+    "input.data": "096fafbbb9281aafbd88ca30c5d3ed6d30c40b832f0c98380789716f6d7be6f8"
+  },
+  "expected_words": [
+    3241148416,
+    3249012736,
+    3255304192,
+    1107558400,
+    3240099840,
+    3249012736,
+    3255566336,
+    3229614080,
+    3212836864,
+    3243245568,
+    3255566336,
+    3258712064,
+    3244294144,
+    1099431936,
+    3241148416,
+    1086324736,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "final_tensor_pc": 2147483972,
+  "output_store_pc": 2147484020,
+  "workload": {
+    "operations": [
+      {
+        "name": "pc80000000",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v28",
+          "v28"
+        ],
+        "destination": "v28",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000004",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000008",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000000c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000010",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000014",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x5"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000018",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v2",
+        "addresses": [
+          2415919104,
+          2415919108,
+          2415919112,
+          2415919116,
+          2415919120,
+          2415919124,
+          2415919128,
+          2415919132,
+          2415919136,
+          2415919140,
+          2415919144,
+          2415919148,
+          2415919152,
+          2415919156,
+          2415919160,
+          2415919164,
+          2415919168,
+          2415919172,
+          2415919176,
+          2415919180,
+          2415919184,
+          2415919188,
+          2415919192,
+          2415919196,
+          2415919200,
+          2415919204,
+          2415919208,
+          2415919212,
+          2415919216,
+          2415919220,
+          2415919224,
+          2415919228
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000001c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000020",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000024",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000028",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11",
+          "x6"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000002c",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v3",
+        "addresses": [
+          2415923200,
+          2415923204,
+          2415923208,
+          2415923212,
+          2415923216,
+          2415923220,
+          2415923224,
+          2415923228,
+          2415923232,
+          2415923236,
+          2415923240,
+          2415923244,
+          2415923248,
+          2415923252,
+          2415923256,
+          2415923260,
+          2415923264,
+          2415923268,
+          2415923272,
+          2415923276,
+          2415923280,
+          2415923284,
+          2415923288,
+          2415923292,
+          2415923296,
+          2415923300,
+          2415923304,
+          2415923308,
+          2415923312,
+          2415923316,
+          2415923320,
+          2415923324
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000030",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000034",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000038",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000003c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000040",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000044",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x5"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000048",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          2415919232,
+          2415919236,
+          2415919240,
+          2415919244,
+          2415919248,
+          2415919252,
+          2415919256,
+          2415919260,
+          2415919264,
+          2415919268,
+          2415919272,
+          2415919276,
+          2415919280,
+          2415919284,
+          2415919288,
+          2415919292,
+          2415919296,
+          2415919300,
+          2415919304,
+          2415919308,
+          2415919312,
+          2415919316,
+          2415919320,
+          2415919324,
+          2415919328,
+          2415919332,
+          2415919336,
+          2415919340,
+          2415919344,
+          2415919348,
+          2415919352,
+          2415919356
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000004c",
+        "kind": "fadd",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v4"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000050",
+        "kind": "fmax",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v28"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000054",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000058",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v15",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000005c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v12"
+        ],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000060",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v12"
+        ],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000064",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v15"
+        ],
+        "destination": "v15",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000068",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v15"
+        ],
+        "destination": "v15",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000006c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v12",
+          "v15"
+        ],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000070",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x8",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000074",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v12",
+          "x8"
+        ],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000078",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v12",
+          "v1"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048192,
+          1879048196,
+          1879048200,
+          1879048204,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048320,
+          1879048324,
+          1879048328,
+          1879048332,
+          1879048352,
+          1879048356,
+          1879048360,
+          1879048364,
+          1879048384,
+          1879048388,
+          1879048392,
+          1879048396,
+          1879048416,
+          1879048420,
+          1879048424,
+          1879048428
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000007c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000080",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000084",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000088",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000008c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000090",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x5"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000094",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v2",
+        "addresses": [
+          2415919360,
+          2415919364,
+          2415919368,
+          2415919372,
+          2415919376,
+          2415919380,
+          2415919384,
+          2415919388,
+          2415919392,
+          2415919396,
+          2415919400,
+          2415919404,
+          2415919408,
+          2415919412,
+          2415919416,
+          2415919420,
+          2415919424,
+          2415919428,
+          2415919432,
+          2415919436,
+          2415919440,
+          2415919444,
+          2415919448,
+          2415919452,
+          2415919456,
+          2415919460,
+          2415919464,
+          2415919468,
+          2415919472,
+          2415919476,
+          2415919480,
+          2415919484
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000098",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000009c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000a0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000a4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000a8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11",
+          "x6"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000ac",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v3",
+        "addresses": [
+          2415923328,
+          2415923332,
+          2415923336,
+          2415923340,
+          2415923344,
+          2415923348,
+          2415923352,
+          2415923356,
+          2415923360,
+          2415923364,
+          2415923368,
+          2415923372,
+          2415923376,
+          2415923380,
+          2415923384,
+          2415923388,
+          2415923392,
+          2415923396,
+          2415923400,
+          2415923404,
+          2415923408,
+          2415923412,
+          2415923416,
+          2415923420,
+          2415923424,
+          2415923428,
+          2415923432,
+          2415923436,
+          2415923440,
+          2415923444,
+          2415923448,
+          2415923452
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000b0",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000b4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000b8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000bc",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000c0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000c4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x5"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000c8",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          2415919488,
+          2415919492,
+          2415919496,
+          2415919500,
+          2415919504,
+          2415919508,
+          2415919512,
+          2415919516,
+          2415919520,
+          2415919524,
+          2415919528,
+          2415919532,
+          2415919536,
+          2415919540,
+          2415919544,
+          2415919548,
+          2415919552,
+          2415919556,
+          2415919560,
+          2415919564,
+          2415919568,
+          2415919572,
+          2415919576,
+          2415919580,
+          2415919584,
+          2415919588,
+          2415919592,
+          2415919596,
+          2415919600,
+          2415919604,
+          2415919608,
+          2415919612
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000cc",
+        "kind": "fadd",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v4"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000d0",
+        "kind": "fmax",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v28"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000d4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000d8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v15",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000dc",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v12"
+        ],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000e0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v12"
+        ],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000e4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v15"
+        ],
+        "destination": "v15",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000e8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v15"
+        ],
+        "destination": "v15",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000ec",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v12",
+          "v15"
+        ],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000f0",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x8",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000f4",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x8"
+        ],
+        "destination": "x8",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000f8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v12",
+          "x8"
+        ],
+        "destination": "v12",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc800000fc",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v12",
+          "v1"
+        ],
+        "destination": null,
+        "addresses": [
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316,
+          1879048336,
+          1879048340,
+          1879048344,
+          1879048348,
+          1879048368,
+          1879048372,
+          1879048376,
+          1879048380,
+          1879048400,
+          1879048404,
+          1879048408,
+          1879048412,
+          1879048432,
+          1879048436,
+          1879048440,
+          1879048444
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000100",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000104",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000108",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v15",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000010c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000110",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000114",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v15"
+        ],
+        "destination": "v15",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000118",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v15"
+        ],
+        "destination": "v15",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000011c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "v15"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000120",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x9",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000124",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13",
+          "x9"
+        ],
+        "destination": "v13",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000128",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v13"
+        ],
+        "destination": "v2",
+        "addresses": [
+          1879048192,
+          1879048196,
+          1879048200,
+          1879048204,
+          1879048208,
+          1879048212,
+          1879048216,
+          1879048220,
+          1879048224,
+          1879048228,
+          1879048232,
+          1879048236,
+          1879048240,
+          1879048244,
+          1879048248,
+          1879048252,
+          1879048256,
+          1879048260,
+          1879048264,
+          1879048268,
+          1879048272,
+          1879048276,
+          1879048280,
+          1879048284,
+          1879048288,
+          1879048292,
+          1879048296,
+          1879048300,
+          1879048304,
+          1879048308,
+          1879048312,
+          1879048316
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000012c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000130",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000134",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000138",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x6"
+        ],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000013c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11",
+          "x6"
+        ],
+        "destination": "v11",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000140",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v11"
+        ],
+        "destination": "v3",
+        "addresses": [
+          2415923456,
+          2415923460,
+          2415923464,
+          2415923468,
+          2415923472,
+          2415923476,
+          2415923480,
+          2415923484,
+          2415923488,
+          2415923492,
+          2415923496,
+          2415923500,
+          2415923504,
+          2415923508,
+          2415923512,
+          2415923516,
+          2415923520,
+          2415923524,
+          2415923528,
+          2415923532,
+          2415923536,
+          2415923540,
+          2415923544,
+          2415923548,
+          2415923552,
+          2415923556,
+          2415923560,
+          2415923564,
+          2415923568,
+          2415923572,
+          2415923576,
+          2415923580
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000144",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000148",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000014c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000150",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000154",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "x5"
+        ],
+        "destination": "x5",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000158",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x5"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000015c",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v4",
+        "addresses": [
+          2415919616,
+          2415919620,
+          2415919624,
+          2415919628,
+          2415919632,
+          2415919636,
+          2415919640,
+          2415919644,
+          2415919648,
+          2415919652,
+          2415919656,
+          2415919660,
+          2415919664,
+          2415919668,
+          2415919672,
+          2415919676,
+          2415919680,
+          2415919684,
+          2415919688,
+          2415919692,
+          2415919696,
+          2415919700,
+          2415919704,
+          2415919708,
+          2415919712,
+          2415919716,
+          2415919720,
+          2415919724,
+          2415919728,
+          2415919732,
+          2415919736,
+          2415919740
+        ],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000160",
+        "kind": "fadd",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v4"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000164",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v14",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000168",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v14"
+        ],
+        "destination": "v14",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc8000016c",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x2",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000170",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v14",
+          "x2"
+        ],
+        "destination": "v14",
+        "addresses": [],
+        "dependencies": []
+      },
+      {
+        "name": "pc80000174",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v14",
+          "v1"
+        ],
+        "destination": null,
+        "addresses": [
+          2415927296,
+          2415927300,
+          2415927304,
+          2415927308,
+          2415927312,
+          2415927316,
+          2415927320,
+          2415927324,
+          2415927328,
+          2415927332,
+          2415927336,
+          2415927340,
+          2415927344,
+          2415927348,
+          2415927352,
+          2415927356,
+          2415927360,
+          2415927364,
+          2415927368,
+          2415927372,
+          2415927376,
+          2415927380,
+          2415927384,
+          2415927388,
+          2415927392,
+          2415927396,
+          2415927400,
+          2415927404,
+          2415927408,
+          2415927412,
+          2415927416,
+          2415927420
+        ],
+        "dependencies": []
+      }
+    ],
+    "warps_per_block": 1,
+    "vgpr_per_warp": 64,
+    "sgpr_per_warp": 64,
+    "lds_per_block": 4096
+  },
+  "instruction_count": 95,
+  "name": "ffn-d8-h8-lds-r0-s1",
+  "config": {
+    "kind": "ffn",
+    "depth": 8,
+    "hidden": 8,
+    "seed": 1,
+    "intermediate": "lds"
+  },
+  "output_compute_pc": 2147484000,
+  "stages": [
+    {
+      "name": "first_gemm_tile0",
+      "pc": 2147483696,
+      "predicted": 87
+    },
+    {
+      "name": "relu_tile0",
+      "pc": 2147483728,
+      "predicted": 136
+    },
+    {
+      "name": "first_gemm_tile1",
+      "pc": 2147483824,
+      "predicted": 266
+    },
+    {
+      "name": "relu_tile1",
+      "pc": 2147483856,
+      "predicted": 315
+    },
+    {
+      "name": "second_gemm",
+      "pc": 2147483972,
+      "predicted": 465
+    },
+    {
+      "name": "second_bias",
+      "pc": 2147484000,
+      "predicted": 508
+    }
+  ],
+  "predicted_compute_cycles": 508,
+  "predicted_visible_cycles": 546,
+  "returncode": 0,
+  "wall_seconds": 19.80174780008383,
+  "dispatch_to_finish_cycles": 562,
+  "checked_words": 32,
+  "all_output_zero": false,
+  "output_matches": true,
+  "output_words": [
+    3241148416,
+    3249012736,
+    3255304192,
+    1107558400,
+    3240099840,
+    3249012736,
+    3255566336,
+    3229614080,
+    3212836864,
+    3243245568,
+    3255566336,
+    3258712064,
+    3244294144,
+    1099431936,
+    3241148416,
+    1086324736,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33",
+  "rtl_library_sha256": "1a21bb8a9c3c6715492c4c53fddd92bf6e10d5af661c34c78a204beb29e7feb7",
+  "trace_tool_sha256": "c6144a2848cdc285fea0a3939661cd13c231c3dfc51958c7c0a8d1b7bdf13dcd",
+  "launch_not_before_cycle": 512
+}

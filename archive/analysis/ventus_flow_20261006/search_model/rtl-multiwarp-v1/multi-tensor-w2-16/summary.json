@@ -1,0 +1,19 @@
+{
+  "name": "multi-tensor-w2-16",
+  "n": 16,
+  "family": "multi-tensor-w2",
+  "predicted_body_interval": null,
+  "input_sha256": {
+    "input.metadata": "04bd71865a46de22fa70a61be0c1cef259baf764ffe4b2956f3f5e9a6d83892c",
+    "input.data": "67d8a6d4d5d5a9735d8b033c566b4f38b5849c91d8a7703a598e66b9046d8d33"
+  },
+  "predicted_segment_cycles": 256,
+  "warps": 2,
+  "returncode": 0,
+  "wall_seconds": 17.444647569092922,
+  "dispatch_to_finish_cycles": 355,
+  "checked_words": 32,
+  "all_output_zero": true,
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+}

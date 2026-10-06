@@ -1,0 +1,287 @@
+{
+  "changes": {
+    "rf_banks": [
+      4,
+      8
+    ],
+    "writeback_bank_index_width": [
+      2,
+      3
+    ]
+  },
+  "generated_parameters": {
+    "BytesOfWord": 4,
+    "CU_ID_WIDTH": 1,
+    "GVM_ENABLED": false,
+    "INST_CNT": true,
+    "INST_CNT_2": false,
+    "KNL_ASID_WIDTH": 16,
+    "LDS_BASE": 1879048192,
+    "LDS_ID_WIDTH": 17,
+    "MEM_ADDR_WIDTH": 32,
+    "MMU_ASID_WIDTH": 16,
+    "MMU_ENABLED": false,
+    "NUMBER_CU": 2,
+    "NUMBER_LDS_SLOTS": 131072,
+    "NUMBER_SGPR_SLOTS": 2048,
+    "NUMBER_VGPR_SLOTS": 1024,
+    "NUM_WG_DIM": 1024,
+    "NUM_WG_X": 1024,
+    "NUM_WG_Y": 1024,
+    "NUM_WG_Z": 1024,
+    "SGPR_ID_WIDTH": 11,
+    "SINGLE_INST": false,
+    "SPIKE_OUTPUT": true,
+    "TAG_WIDTH": 6,
+    "VGPR_ID_WIDTH": 10,
+    "WAVE_ITEM_WIDTH": 10,
+    "WF_COUNT_MAX": 8,
+    "WF_COUNT_PER_WG_MAX": 8,
+    "WF_COUNT_WIDTH": 4,
+    "WF_COUNT_WIDTH_PER_WG": 4,
+    "WG_ID_WIDTH": 32,
+    "WG_SIZE_X_WIDTH": 11,
+    "WG_SIZE_Y_WIDTH": 11,
+    "WG_SIZE_Z_WIDTH": 11,
+    "addrLen": 32,
+    "dcache_BlockOffsetBits": 5,
+    "dcache_BlockWords": 32,
+    "dcache_MshrEntry": 4,
+    "dcache_MshrSubEntry": 2,
+    "dcache_NSets": 256,
+    "dcache_NWays": 2,
+    "dcache_SetIdxBits": 8,
+    "dcache_TagBits": 17,
+    "dcache_WordOffsetBits": 2,
+    "dcache_wshr_entry": 4,
+    "depth_ibuffer": 1,
+    "depth_icachebuf": 0,
+    "depth_regBank": 7,
+    "depth_thread": 5,
+    "depth_warp": 3,
+    "icache_align": 8,
+    "instLen": 32,
+    "l1cache_sourceBits": 13,
+    "l1tlb_ways": 8,
+    "l2cache_BlockWords": 32,
+    "l2cache_NSets": 64,
+    "l2cache_NWays": 16,
+    "l2cache_cache": "CacheParameters(2,16,64,1,128,128,plru)",
+    "l2cache_memCycles": 32,
+    "l2cache_micro": "InclusiveCacheMicroParameters(1,32,2,8,2,2,1,4,256,false,InclusiveCachePortParameters(BufferParams:0,BufferParams:0,BufferParams:0,BufferParams:0,BufferParams:0),InclusiveCachePortParameters(BufferParams:2,BufferParams:2,BufferParams:2,BufferParams:2,BufferParams:2))",
+    "l2cache_micro_l": "InclusiveCacheMicroParameters(1,32,2,8,2,2,1,4,256,false,InclusiveCachePortParameters(BufferParams:0,BufferParams:0,BufferParams:0,BufferParams:0,BufferParams:0),InclusiveCachePortParameters(BufferParams:2,BufferParams:2,BufferParams:2,BufferParams:2,BufferParams:2))",
+    "l2cache_params": "InclusiveCacheParameters_lite(CacheParameters(2,16,64,1,128,128,plru),InclusiveCacheMicroParameters(1,32,2,8,2,2,1,4,256,false,InclusiveCachePortParameters(BufferParams:0,BufferParams:0,BufferParams:0,BufferParams:0,BufferParams:0),InclusiveCachePortParameters(BufferParams:2,BufferParams:2,BufferParams:2,BufferParams:2,BufferParams:2)),false,false)",
+    "l2cache_params_l": "InclusiveCacheParameters_lite(CacheParameters(2,16,64,1,128,128,plru),InclusiveCacheMicroParameters(1,32,2,8,2,2,1,4,256,false,InclusiveCachePortParameters(BufferParams:0,BufferParams:0,BufferParams:0,BufferParams:0,BufferParams:0),InclusiveCachePortParameters(BufferParams:2,BufferParams:2,BufferParams:2,BufferParams:2,BufferParams:2)),false,false)",
+    "l2cache_portFactor": 2,
+    "l2cache_writeBytes": 1,
+    "lsu_nMshrEntry": 8,
+    "lsu_num_entry_each_warp": 4,
+    "num_bank": 8,
+    "num_block": 8,
+    "num_cache_in_sm": 2,
+    "num_cluster": 1,
+    "num_collectorUnit": 8,
+    "num_fetch": 2,
+    "num_ibuffer": 2,
+    "num_icachebuf": 1,
+    "num_issue": 1,
+    "num_l2cache": 1,
+    "num_lane": 32,
+    "num_sfu": 8,
+    "num_sgpr": 2048,
+    "num_sm": 2,
+    "num_sm_in_cluster": 2,
+    "num_thread": 32,
+    "num_vgpr": 1024,
+    "num_warp": 8,
+    "num_warp_in_a_block": 8,
+    "regext_width": 3,
+    "regidx_width": 5,
+    "sharedmem_BlockWords": 32,
+    "sharedmem_depth": 1024,
+    "sharemem_size": 131072,
+    "sig_length": 33,
+    "size_ibuffer": 2,
+    "tc_dim": [
+      4,
+      8,
+      4
+    ],
+    "widSliceHigh": 2,
+    "wid_to_check": 2,
+    "xLen": 32
+  },
+  "collector_existing_interface_unchanged": true,
+  "standalone_pruned_ports": {
+    "io_out_1_bits_mask_0": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_1": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_2": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_3": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_4": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_5": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_6": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_7": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_8": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_9": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_10": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_11": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_12": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_13": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_14": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_15": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_16": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_17": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_18": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_19": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_20": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_21": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_22": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_23": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_24": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_25": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_26": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_27": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_28": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_29": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_30": [
+      "output",
+      1
+    ],
+    "io_out_1_bits_mask_31": [
+      "output",
+      1
+    ],
+    "io_writeScalarCtrl_ready": [
+      "output",
+      1
+    ],
+    "io_writeScalarCtrl_bits_spike_info_sm_id": [
+      "input",
+      8
+    ],
+    "io_writeScalarCtrl_bits_spike_info_pc": [
+      "input",
+      32
+    ],
+    "io_writeScalarCtrl_bits_spike_info_inst": [
+      "input",
+      32
+    ],
+    "io_writeVecCtrl_ready": [
+      "output",
+      1
+    ],
+    "io_writeVecCtrl_bits_spike_info_sm_id": [
+      "input",
+      8
+    ],
+    "io_writeVecCtrl_bits_spike_info_pc": [
+      "input",
+      32
+    ],
+    "io_writeVecCtrl_bits_spike_info_inst": [
+      "input",
+      32
+    ]
+  },
+  "composition": "Source-generated RF/collector subtree; all other original modules preserved byte-for-byte",
+  "source_sha256": "0662aafd1041fad67091a4e56b879f8f039096c4cc4db24982a1a1c902db27f3",
+  "original_source_sha256": "813e93aace5298ddd47013e07b95b90daca04909c0b8be1dba3d3b6eb78f9b44",
+  "source_patch_sha256": "cf2994da29ae7177bdc5ab31b2a2f97b9913862b3df93f51f457f785595bbbb7",
+  "original_dut_sha256": "9eb262d75b8d1d96fe4ffde0f3d451409dbd8b12ee3990b34638984ed5864c17",
+  "collector_rtl_sha256": "5fb7bb2c22b92bcd24a6cc88b7b31cf8def037f98320c83fe0fb65c2748920b2",
+  "composed_dut_sha256": "0c7c760d30326c5f2abb6058d600d27f4f4b41f23d3007c3f8c730e0b8576563",
+  "unchanged_modules": 289,
+  "interface_only_parent_change": "pipe: explicit unused output/debug input termination",
+  "regenerated_modules": 13
+}

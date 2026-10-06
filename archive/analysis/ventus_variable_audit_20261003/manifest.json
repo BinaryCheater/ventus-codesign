@@ -1,0 +1,240 @@
+{
+  "schema": "ventus-static-variable-audit-v1",
+  "date": "2026-10-03",
+  "upstream_commit": "681172541a8a34ffb43c483a19c075acbc11a4eb",
+  "fpu_commit": "7ea30df00f9353f2e8645b32665b13f9b3f69e6d",
+  "scope": "静态源码字段审计，未实现模拟器，未运行RTL，未校准预测误差",
+  "counting": "一行一个可解释模型字段；数组/同结构模板只计一项；非独立自由度证明",
+  "row_count": 278,
+  "core_candidate_fields": 151,
+  "core_candidate_groups": 123,
+  "by_scope": {
+    "core": 213,
+    "mmu": 14,
+    "axi": 7,
+    "system": 15,
+    "software": 12,
+    "derived": 17
+  },
+  "by_provenance": {
+    "P": 71,
+    "H": 151,
+    "C": 14,
+    "D": 13,
+    "E": 9,
+    "W": 12,
+    "X": 8
+  },
+  "top_declaration_count": 117,
+  "top_scope_count": 96,
+  "source_files": [
+    {
+      "path": "dependencies/fpuv2/src/main/scala/FCMP.scala",
+      "sha256": "efd5aeb4f6aabaf15ca1a769cc0cec5cac560a9547b8e79276e8c238fed987fe"
+    },
+    {
+      "path": "dependencies/fpuv2/src/main/scala/FMA.scala",
+      "sha256": "2a04662a5b079fb1d6e595793da18698400dda7b9b9611f457fc19e0120d0154"
+    },
+    {
+      "path": "dependencies/fpuv2/src/main/scala/FPMV.scala",
+      "sha256": "4a45f58000b95e6f3e25f7a05cde28e982fb4868491aa513de9c7d55312f2ecf"
+    },
+    {
+      "path": "dependencies/fpuv2/src/main/scala/FPToInt.scala",
+      "sha256": "9956b0144e63778f275780cbc079f48e4154e877fbb9d445d59dff75e2f93634"
+    },
+    {
+      "path": "dependencies/fpuv2/src/main/scala/FPU.scala",
+      "sha256": "e2b87077a4f2ebdaec583ec3e43bd94509944db790bbe0ed83fce944edc24372"
+    },
+    {
+      "path": "dependencies/fpuv2/src/main/scala/IntToFP.scala",
+      "sha256": "0a6866c9d31f43b26e67e8d892498d5792334718fb51ca22f3fdff4d397d9c4b"
+    },
+    {
+      "path": "dependencies/fpuv2/src/main/scala/Tensor.scala",
+      "sha256": "a900e4e73f0391a2b561c0a4ab23db27d7eb22c88df40d519ff43fe57540be50"
+    },
+    {
+      "path": "sim-verilator/kernel.hpp",
+      "sha256": "35ae66d6c3ba0e14ffe0590d88931535c927191e264b6531e80a710b98e3a9da"
+    },
+    {
+      "path": "ventus/src/L1Cache/DCache/DCache.scala",
+      "sha256": "bdf9a65110eb29f8bec69a4e2044cf28ba363c4d24af2944da8fbc1623c3955e"
+    },
+    {
+      "path": "ventus/src/L1Cache/ICache/ICache.scala",
+      "sha256": "9ee858ee4cfbec560987d4516c3d825ecae6b629ed20867f660c12c98954626a"
+    },
+    {
+      "path": "ventus/src/L1Cache/ICache/ICacheMSHR.scala",
+      "sha256": "9bbb00dc0a4ff85a72d1ddedd43e495a65813bd9c378cb652fe3ffda86777ae1"
+    },
+    {
+      "path": "ventus/src/L1Cache/ICache/ICacheParameters.scala",
+      "sha256": "a9ffd242d11542e719f03eab8f919a9e56a171140eb8c6abdc3d07e0ef7ee14b"
+    },
+    {
+      "path": "ventus/src/L1Cache/L1Cache2L2Arbiter.scala",
+      "sha256": "1bdbcce09a05e90f6e15aabc7a2c46146b88cd102df2d68e2a34e9d43dd2916f"
+    },
+    {
+      "path": "ventus/src/L1Cache/L1TagAccess.scala",
+      "sha256": "a3090442d5752b8c2c8124d27650940d4649e127c97fc570ad792bee590200ba"
+    },
+    {
+      "path": "ventus/src/L1Cache/ShareMem/BankConflictArbiter.scala",
+      "sha256": "48152c7669e907a9866dcffe15dcdb9c857fe8de481e5bde58789086b30c0ef2"
+    },
+    {
+      "path": "ventus/src/L1Cache/ShareMem/ShareMem.scala",
+      "sha256": "2404e17fe75dabdac20416f62628ed2409051a3a4d769b7077dce92df7fec700"
+    },
+    {
+      "path": "ventus/src/L1Cache/ShareMem/ShareMemParameters.scala",
+      "sha256": "89143346612bf6ec940f83c6aaa4cad92e34333a212e7211c846eb02a58640db"
+    },
+    {
+      "path": "ventus/src/L2cache/BankedStore.scala",
+      "sha256": "032ecae670adb6e364a5dda83cb928fc7c067a76edad904bb98a17034b12d8cc"
+    },
+    {
+      "path": "ventus/src/L2cache/Directory_test.scala",
+      "sha256": "d19a49b5b2e75d80ac2bc60f862e540f3c26ee201238b1ce75cc03236569a12e"
+    },
+    {
+      "path": "ventus/src/L2cache/Parameters.scala",
+      "sha256": "aae9022a244cd5c7a573488f3348db5de937d4f992670c6800e9e97803d318d8"
+    },
+    {
+      "path": "ventus/src/L2cache/Scheduler.scala",
+      "sha256": "f701b5192523dc1c51ce937b27325fc55fb19c5cc2091989518d66551283a894"
+    },
+    {
+      "path": "ventus/src/L2cache/SinkA.scala",
+      "sha256": "1834025d9d317b030e64a93614e119f92ffa580adea344e9cf7fdfc8d6a42d07"
+    },
+    {
+      "path": "ventus/src/L2cache/SourceD.scala",
+      "sha256": "b0aeb9aeba2a157291a1ec682107266b57e0f06cc21b8067bfd0b5d66a1a5eb5"
+    },
+    {
+      "path": "ventus/src/axi/AXI4Adapter.scala",
+      "sha256": "d039b40cf4dc9d0f962b4d7ff4f0bf88176ab0f6def58f0e38cc9dd0c1bf91cc"
+    },
+    {
+      "path": "ventus/src/cta/allocator.scala",
+      "sha256": "f656f4234ee5f21d801fddb961d307579279893d77a350c16f90b7de25ccd81c"
+    },
+    {
+      "path": "ventus/src/cta/cu_interface.scala",
+      "sha256": "3f9c44bfd38f381d8171a268c17198d54e95c8ba38018af59fef282085b05bc0"
+    },
+    {
+      "path": "ventus/src/cta/resource_table.scala",
+      "sha256": "2e300ac2281342c687d70f58bc485342879e56272d89a5dd6d34a73de8aa85e4"
+    },
+    {
+      "path": "ventus/src/cta/wg_buffer.scala",
+      "sha256": "256cdc7ab73049886a9ff556fbc94ec03c832d2d6aada73476b78293de3400d8"
+    },
+    {
+      "path": "ventus/src/mmu/AsidLookup.scala",
+      "sha256": "41f20471d734996b128566305b1946abdd7b11c03745715800e0493b37293607"
+    },
+    {
+      "path": "ventus/src/mmu/L1TLB.scala",
+      "sha256": "a0552c5cbfbd4a32cac24d0ec733234bc93811bd35c29b55e78504ad0837d207"
+    },
+    {
+      "path": "ventus/src/mmu/L2TLB.scala",
+      "sha256": "5ba8856da21ff8c133a78a11b3285f2d9ce718b523b1ffa49e806740fb0429cd"
+    },
+    {
+      "path": "ventus/src/mmu/PTW.scala",
+      "sha256": "b150b56c118aeaeceb7ac477e6ee1aa6bb13b0cc16db5d474ff049dc19859323"
+    },
+    {
+      "path": "ventus/src/pipeline/CTA2warp.scala",
+      "sha256": "1a93780ed9ec51cbf9a2e1ca74cbc11206af56b9763ae5bb60326d2db153ccc6"
+    },
+    {
+      "path": "ventus/src/pipeline/FloatDivSqrt.scala",
+      "sha256": "45144bed8708e3a5994d81f29f795154108d5a725247ed3a7871091631f6c94e"
+    },
+    {
+      "path": "ventus/src/pipeline/IntDivMod.scala",
+      "sha256": "e6fc71815aaf3c323b10e7e7b7cca948f5190992134ff52f5a43e7fd5395473a"
+    },
+    {
+      "path": "ventus/src/pipeline/LSU.scala",
+      "sha256": "70d45d08a732d426b40b5027b96c9923fd51b69139530c248bb829d739bc58d6"
+    },
+    {
+      "path": "ventus/src/pipeline/MSHR.scala",
+      "sha256": "15525c33cc281198de5183456467939aec64551719e0fb7c2c2fb82491108ee7"
+    },
+    {
+      "path": "ventus/src/pipeline/Multiplier.scala",
+      "sha256": "6ded4252be87d117bf84c18d5539cd9dd14af60270bbfe9dc76e9e5cacf74c1c"
+    },
+    {
+      "path": "ventus/src/pipeline/branch_join.scala",
+      "sha256": "f99c167dafb702d939df4dd1341ea5273f64ce7ce5da9fe35e80fa89377eea21"
+    },
+    {
+      "path": "ventus/src/pipeline/execution.scala",
+      "sha256": "5e1690815fb58b7b503bc8cab8be68f879418490c905aabd87cd42813b7b9b0e"
+    },
+    {
+      "path": "ventus/src/pipeline/ibuffer.scala",
+      "sha256": "3901b162c732dece9b2c398ff008d797f6607db560b97a9c32020da510efb100"
+    },
+    {
+      "path": "ventus/src/pipeline/issue.scala",
+      "sha256": "a5ab0dafbaa7efb07268356041b228798c5408fe654985cc11d0b56b82a1c534"
+    },
+    {
+      "path": "ventus/src/pipeline/operandCollector.scala",
+      "sha256": "813e93aace5298ddd47013e07b95b90daca04909c0b8be1dba3d3b6eb78f9b44"
+    },
+    {
+      "path": "ventus/src/pipeline/pipe.scala",
+      "sha256": "dce19e9e32d0d9dcda7caeb99b01029c0ffb32ebaf36caf979b87ea9098ddacb"
+    },
+    {
+      "path": "ventus/src/pipeline/regfile.scala",
+      "sha256": "7a99944052966dfff19d240597a7b42105a8c9a96bbf0cfb22971a4a196f7f83"
+    },
+    {
+      "path": "ventus/src/pipeline/scoreboard.scala",
+      "sha256": "aebec04b6987d614234786d73280c8b61b44c7b9c2974550b7afb84ccc282630"
+    },
+    {
+      "path": "ventus/src/pipeline/warp_schedule.scala",
+      "sha256": "46fd436c8d67aa4331687dddd25aea456735a17d3462502c32bc29bc7c7e2fc0"
+    },
+    {
+      "path": "ventus/src/pipeline/writeback.scala",
+      "sha256": "a2c4b699240e59c9faba9ee1d26c1165da4b1d61870eb47cbe146170c90eaa2b"
+    },
+    {
+      "path": "ventus/src/top/GPGPU_SimWrapper.scala",
+      "sha256": "194fdad7f2464c21a630423316ac5ee9b9eb29b74104c42aafe5f204aa554473"
+    },
+    {
+      "path": "ventus/src/top/GPGPU_top.scala",
+      "sha256": "965bba3434688105ca58c675c9fc3edc95c8b5c0944af142986e7dcc49cb1f3e"
+    },
+    {
+      "path": "ventus/src/top/Mem_SimWrapper.scala",
+      "sha256": "33d961207a4079f9c77d41c58e07273673ae2af66037cab3dbe31ef9c18bfca1"
+    },
+    {
+      "path": "ventus/src/top/parameters.scala",
+      "sha256": "71dbd95411c7c28c63345cdb5de61394353aec479e05db513744af2d9edbbee0"
+    }
+  ]
+}

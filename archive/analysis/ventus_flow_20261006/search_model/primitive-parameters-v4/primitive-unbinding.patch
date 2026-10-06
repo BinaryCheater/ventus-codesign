@@ -1,0 +1,114 @@
+--- a/parameters.scala
++++ b/parameters.scala
+@@ -90,7 +90,7 @@
+   def dcache_MshrSubEntry: Int = 2
+   def num_sfu = (num_thread >> 2).max(1)
+ 
+-  def sharedmem_depth = 1024
++  def sharedmem_depth = sys.props.getOrElse("lds.depth", "1024").toInt
+ 
+   def sharedmem_BlockWords = dcache_BlockWords
+ 
+@@ -116,14 +116,7 @@
+   def l2cache_params = InclusiveCacheParameters_lite(l2cache_cache, l2cache_micro, false, MMU_ENABLED)
+   def l2cache_params_l = InclusiveCacheParameters_lite(l2cache_cache, l2cache_micro_l, false, MMU_ENABLED)
+ 
+-  def tc_dim: Seq[Int] = {
+-    var x: Seq[Int] = Seq(2, 2, 2)
+-    if (num_thread == 8)
+-      x = Seq(2, 4, 2)
+-    else if (num_thread == 32)
+-      x = Seq(4, 8, 4)
+-    x
+-  }
++  def tc_dim: Seq[Int] = Seq("m", "n", "k").map(x => sys.props("tc." + x).toInt)
+ 
+   def sig_length = 33
+ 
+--- a/ShareMemParameters.scala
++++ b/ShareMemParameters.scala
+@@ -37,7 +37,7 @@
+   override def NWays: Int = 1//share mem is a direct mapped memory
+   override def BlockWords: Int = shareMemParams.BlockWords
+ 
+-  def NBanks = NLanes//TODO after support, decouple 2 params
++  def NBanks = sys.props.getOrElse("lds.banks", "32").toInt//TODO after support, decouple 2 params
+ 
+   //                                       |   blockOffset  |
+   //                                     bankOffset       wordOffset
+--- a/BankConflictArbiter.scala
++++ b/BankConflictArbiter.scala
+@@ -57,13 +57,15 @@
+   }
+ }
+ 
+-class DataCrossbar(implicit p: Parameters) extends ShareMemModule {
++class DataCrossbar(inputs: Int = 0, outputs: Int = 0)(implicit p: Parameters) extends ShareMemModule {
++  val nIn = if(inputs == 0) NBanks else inputs
++  val nOut = if(outputs == 0) NLanes else outputs
+   val io=IO(new Bundle {
+-    val DataIn = Input(Vec(NBanks, UInt(WordLength.W)))
+-    val DataOut = Output(Vec(NLanes, UInt(WordLength.W)))
+-    val Select1H = Input(Vec(NLanes, UInt(NBanks.W)))
++    val DataIn = Input(Vec(nIn, UInt(WordLength.W)))
++    val DataOut = Output(Vec(nOut, UInt(WordLength.W)))
++    val Select1H = Input(Vec(nOut, UInt(nIn.W)))
+   })
+-  (0 until NLanes).foreach{ iofL =>
++  (0 until nOut).foreach{ iofL =>
+       io.DataOut(iofL):= Mux1H(io.Select1H(iofL), io.DataIn)
+   }
+ }
+@@ -103,7 +105,8 @@
+   val io = IO(new Bundle{
+     val coreReqArb = Input(new coreReqArb)
+ 
+-    val dataCrsbarSel1H = Output(Vec(NBanks, UInt(NBanks.W)))
++    val writeSel1H = Output(Vec(NBanks, UInt(NLanes.W)))
++    val readSel1H = Output(Vec(NLanes, UInt(NBanks.W)))
+     val addrCrsbarOut = Output(Vec(NBanks, new AddrBundle1T))
+     val dataArrayEn = Output(Vec(NBanks, Bool()))
+     val activeLane = Output(Vec(NLanes,Bool()))
+@@ -163,7 +166,7 @@
+   val perBankActiveLaneWhenConflict1H = Wire(Vec(NBanks, UInt(NLanes.W)))
+   perBankActiveLaneWhenConflict1H := perBankReq_Bin.map(Cat(_)).map(PriorityEncoderOH(_))
+   val ActiveLaneWhenConflict1H = Wire(Vec(NLanes, Bool()))
+-  (0 until NBanks).foreach{ i =>
++  (0 until NLanes).foreach{ i =>
+     ActiveLaneWhenConflict1H(i) := Cat(perBankActiveLaneWhenConflict1H.map(_(i))).orR}
+   val ReserveLaneWhenConflict1H = VecInit(((~Cat(ActiveLaneWhenConflict1H)).asUInt & Cat(laneActiveMask)).asBools.reverse)
+ 
+@@ -182,7 +185,8 @@
+ 
+   //**************output to DataCrossbar**************
+   //do not merge req to same addr from different lane. assume this optimization to be done at register level
+-  io.dataCrsbarSel1H := Mux(isWrite,perBankActiveLaneWhenConflict1H,bankIdxMasked)
++  io.writeSel1H := perBankActiveLaneWhenConflict1H
++  io.readSel1H := bankIdxMasked
+ 
+   //**************output to DataArray**************
+   io.dataArrayEn := perBankActiveLaneWhenConflict1H.map(_.orR)
+--- a/ShareMem.scala
++++ b/ShareMem.scala
+@@ -61,8 +61,8 @@
+   // ******     important submodules     ******
+   val BankConfArb = Module(new BankConflictArbiter)
+   //val TagAccess = Module(new L1TagAccess(set=NSets, way=NWays, tagBits=TagBits))
+-  val DataCorssBarForWrite = Module(new DataCrossbar)
+-  val DataCorssBarForRead = Module(new DataCrossbar)
++  val DataCorssBarForWrite = Module(new DataCrossbar(NLanes, NBanks))
++  val DataCorssBarForRead = Module(new DataCrossbar())
+   /*val EntryValidArray = RegInit(
+     VecInit(Seq.fill(NSets)(
+       VecInit(Seq.fill(BlockWords)(
+@@ -133,8 +133,8 @@
+   val coreReqIsWrite_st2 = RegNext(coreReq_st1.isWrite)
+ 
+   val arbAddrCrsbarOut_st1 = RegNext(BankConfArb.io.addrCrsbarOut)
+-  val arbDataCrsbarSel1H_st1 = RegNext(BankConfArb.io.dataCrsbarSel1H)
+-  val arbDataCrsbarSel1H_st2 = RegNext(arbDataCrsbarSel1H_st1)
++  val arbDataCrsbarSel1H_st1 = RegNext(BankConfArb.io.writeSel1H)
++  val arbDataCrsbarSel1H_st2 = ShiftRegister(BankConfArb.io.readSel1H, 2)
+ 
+   val bankConflictHolding = Bool()
+   // ******     DataAccess      ******

@@ -1,0 +1,17 @@
+{
+  "name": "lds-4way-64",
+  "n": 64,
+  "family": "lds-4way",
+  "predicted_body_interval": null,
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "b9c2196cf5594dc59053aee39f91dd8d50cdbbcc0ccde88745e137488cbf397c"
+  },
+  "returncode": 0,
+  "wall_seconds": 18.806225540000014,
+  "dispatch_to_finish_cycles": 1017,
+  "checked_words": 32,
+  "all_output_zero": true,
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+}

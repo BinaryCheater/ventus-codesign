@@ -1,0 +1,10 @@
+{
+  "name": "tc-4-4-4",
+  "top": "vTCexe",
+  "source": "${REMOTE_FLOW_ROOT}/primitive-parameters-v4/tc-4-4-4/vTCexe.v",
+  "rtl_sha256": "4a3671e61e825337ebe6d862337d1ab08749ae2c6ad4134e8f52717133cafc78",
+  "logic_rtl_sha256": "4a3671e61e825337ebe6d862337d1ab08749ae2c6ad4134e8f52717133cafc78",
+  "memory_modules": {},
+  "flow": "native-synth",
+  "original_manifest_sha256": "682e48e5b74965c78d4fc0def5a8841ac7e52dc89d4a276fa8f1b701e522721a"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "lds-16-128",
+  "top": "SharedMemory",
+  "source": "${REMOTE_FLOW_ROOT}/primitive-parameters-v4/lds-16-128/SharedMemory.v",
+  "rtl_sha256": "86e82a7a7a6e942e2764875a0233d47ba0e1cd37d2d748e783c493997d5894c0",
+  "logic_rtl_sha256": "046a04e20075ff2e7de130e9834ced45286c6436caaa21df642d78820e03d465",
+  "memory_modules": {
+    "ram_32x1060": {
+      "bits": 33920,
+      "arrays": [
+        [
+          "1059",
+          "Memory",
+          "31"
+        ]
+      ],
+      "source_sha256": "8d1be098c6ca88e0ae46744378462016ee46de16d1c1073a094f240457e9570a"
+    },
+    "array_256x32": {
+      "bits": 8192,
+      "arrays": [
+        [
+          "31",
+          "Memory",
+          "255"
+        ]
+      ],
+      "source_sha256": "1fde1923edb9baa666ce95167dbba533306814483ec3568129049cd23281d1cf"
+    }
+  },
+  "flow": "coarse-slang",
+  "original_manifest_sha256": "b54693e1aba31e44afb95c652c7f4e53f5b207dfa45b2d427c7f2d76ee9ac8c9"
+}

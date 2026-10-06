@@ -1,0 +1,17 @@
+{
+  "name": "lds-32way-16",
+  "n": 16,
+  "family": "lds-32way",
+  "predicted_body_interval": null,
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "18e543834af35eeeadfce8985463894dff68f221c0978570b3f3331731157c3a"
+  },
+  "returncode": 0,
+  "wall_seconds": 18.73573577206116,
+  "dispatch_to_finish_cycles": 788,
+  "checked_words": 32,
+  "all_output_zero": true,
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+}

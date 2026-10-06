@@ -1,0 +1,90 @@
+{
+  "version": "ventus-source-events-v4",
+  "code_sha256": {
+    "__init__.py": "a9ffb79b59dc539b1eb49e40268bce4de172ffc549c17da20fc894da42f35636",
+    "__main__.py": "28584e5029ab83bb2f47d45455d2eb8bb017e4f6f44639f70a9c9ba86b2c6c59",
+    "coalescer.py": "68ef20fbab29abb4ccb02bd756252267a298dfb5d2ed87b43135d0d17ba2a34b",
+    "config.py": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "graph.py": "765aeb04bda71d3dbe32938599ab20c341a8ae352fd5981202fce26aec6b5508",
+    "ir.py": "40265280989aae3202bcc8bb99ba0da57e747422d799210b89f841d8efaa8e4d",
+    "mip.py": "0a0f576c7a49010d2f9062d3e600b053e41e3a79f668b789b9e2141c6ecc96fe",
+    "operators.py": "8aeada5c5cd01f82605b0af7ddbcb00a7ea6635324c12ad0def504cc9184da15",
+    "program.py": "56b8872910d9ddd1a648238dc5451b9bedea54f2d1951e58499e4fc9257d3304",
+    "source.py": "302132797637f986b0f752599d5c1fb99383ed6f035752bb39fe73cd865511d9",
+    "timing.py": "4030e68c455bd048c64a45a674d8ebe2c1954459870729977a271871db68f51d",
+    "workloads.py": "df164d864bf62da1700ba4862e6cbabcf39264ba43594eac31d0eb0cdc2ac82d"
+  },
+  "reference": "accuracy-v3.json",
+  "results": [
+    {
+      "name": "resident-16-rf0-lds1",
+      "predicted_compute": 320,
+      "predicted_visible": 348
+    },
+    {
+      "name": "resident-16-rf1-lds1",
+      "predicted_compute": 352,
+      "predicted_visible": 380
+    },
+    {
+      "name": "shared-4-rf0-lds1",
+      "predicted_compute": 304,
+      "predicted_visible": 332
+    },
+    {
+      "name": "shared-4-rf0-lds4",
+      "predicted_compute": 373,
+      "predicted_visible": 401
+    },
+    {
+      "name": "stream-16-rf0-lds1",
+      "predicted_compute": 624,
+      "predicted_visible": 652
+    },
+    {
+      "name": "stream-4-rf0-lds1",
+      "predicted_compute": 192,
+      "predicted_visible": 220
+    },
+    {
+      "name": "reload-12-rf0-lds1",
+      "predicted_compute": 289,
+      "predicted_visible": 317
+    },
+    {
+      "name": "resident-24-rf1-lds1",
+      "predicted_compute": 496,
+      "predicted_visible": 524
+    },
+    {
+      "name": "resident-7-rf0-lds1",
+      "predicted_compute": 176,
+      "predicted_visible": 204
+    },
+    {
+      "name": "shared-12-rf0-lds4",
+      "predicted_compute": 957,
+      "predicted_visible": 985
+    },
+    {
+      "name": "shared-7-rf0-lds1",
+      "predicted_compute": 472,
+      "predicted_visible": 500
+    },
+    {
+      "name": "shared-7-rf0-lds2",
+      "predicted_compute": 508,
+      "predicted_visible": 536
+    },
+    {
+      "name": "stream-24-rf0-lds1",
+      "predicted_compute": 912,
+      "predicted_visible": 940
+    },
+    {
+      "name": "stream-7-rf0-lds1",
+      "predicted_compute": 300,
+      "predicted_visible": 328
+    }
+  ]
+}

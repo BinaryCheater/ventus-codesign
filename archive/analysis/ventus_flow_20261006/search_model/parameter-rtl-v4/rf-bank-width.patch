@@ -1,0 +1,13 @@
+--- a/ventus/src/pipeline/operandCollector.scala
++++ b/ventus/src/pipeline/operandCollector.scala
+@@ -590,8 +590,8 @@
+     (x -> (io.vgpr_base(x) >> log2Ceil(num_bank)).asUInt)
+   }.map { x => (x._1.U -> x._2) }
+ 
+-  val wbVecBankId = Wire(UInt(2.W))
+-  val wbScaBankId = Wire(UInt(2.W))
++  val wbVecBankId = Wire(UInt(log2Ceil(num_bank).W))
++  val wbScaBankId = Wire(UInt(log2Ceil(num_bank).W))
+   val wbVecBankAddr = Wire(UInt(depth_regBank.W))
+   val wbScaBankAddr = Wire(UInt(depth_regBank.W))
+ 

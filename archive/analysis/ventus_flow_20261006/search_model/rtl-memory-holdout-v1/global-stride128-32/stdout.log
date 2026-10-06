@@ -1,0 +1,50 @@
+[RTL     info]@0 SNAPSHOT created, pid=3439734
+[RTL    trace]@20 Hardware reset ok
+[2026-10-06 09:48:21.055] [trace] kernel0 ‹X data loaded from file
+[RTL    trace]@30 kernel 0 global-stride128-32 activate
+[RTL    debug]@185 block0  dispatched to GPU (kernel0  global-stride128-32 block0 )
+[RTL    debug]@10000 
+[RTL    debug]@11595 block0  finished (kernel0  global-stride128-32 block0 )
+[RTL     info]@11595 kernel0  global-stride128-32 finished
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL    debug]@60000 
+dump-mem: mem[0x90002000 +: 4] = 0x44780000
+dump-mem: mem[0x90002004 +: 4] = 0x44784000
+dump-mem: mem[0x90002008 +: 4] = 0x44788000
+dump-mem: mem[0x9000200C +: 4] = 0x4478C000
+dump-mem: mem[0x90002010 +: 4] = 0x44790000
+dump-mem: mem[0x90002014 +: 4] = 0x44794000
+dump-mem: mem[0x90002018 +: 4] = 0x44798000
+dump-mem: mem[0x9000201C +: 4] = 0x4479C000
+dump-mem: mem[0x90002020 +: 4] = 0x447A0000
+dump-mem: mem[0x90002024 +: 4] = 0x447A4000
+dump-mem: mem[0x90002028 +: 4] = 0x447A8000
+dump-mem: mem[0x9000202C +: 4] = 0x447AC000
+dump-mem: mem[0x90002030 +: 4] = 0x447B0000
+dump-mem: mem[0x90002034 +: 4] = 0x447B4000
+dump-mem: mem[0x90002038 +: 4] = 0x447B8000
+dump-mem: mem[0x9000203C +: 4] = 0x447BC000
+dump-mem: mem[0x90002040 +: 4] = 0x447C0000
+dump-mem: mem[0x90002044 +: 4] = 0x447C4000
+dump-mem: mem[0x90002048 +: 4] = 0x447C8000
+dump-mem: mem[0x9000204C +: 4] = 0x447CC000
+dump-mem: mem[0x90002050 +: 4] = 0x447D0000
+dump-mem: mem[0x90002054 +: 4] = 0x447D4000
+dump-mem: mem[0x90002058 +: 4] = 0x447D8000
+dump-mem: mem[0x9000205C +: 4] = 0x447DC000
+dump-mem: mem[0x90002060 +: 4] = 0x447E0000
+dump-mem: mem[0x90002064 +: 4] = 0x447E4000
+dump-mem: mem[0x90002068 +: 4] = 0x447E8000
+dump-mem: mem[0x9000206C +: 4] = 0x447EC000
+dump-mem: mem[0x90002070 +: 4] = 0x447F0000
+dump-mem: mem[0x90002074 +: 4] = 0x447F4000
+dump-mem: mem[0x90002078 +: 4] = 0x447F8000
+dump-mem: mem[0x9000207C +: 4] = 0x447FC000
+[RTL     info]@61595 Simulation finished in 61595 unit time
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: end at 62ns; walltime 19.125 s; speed 3.221 ns/s
+- Verilator: cpu 76.227 s on 4 threads; allocated 583 MB
+[RTL    debug]@61595 All snapshot process are cleared, OK

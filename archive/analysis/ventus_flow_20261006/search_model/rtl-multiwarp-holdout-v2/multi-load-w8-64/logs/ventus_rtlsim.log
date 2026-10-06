@@ -1,0 +1,15 @@
+[RTL     info]@0 SNAPSHOT created, pid=3464381
+[RTL    trace]@20 Hardware reset ok
+[RTL    trace]@30 kernel 0 multi-load-w8-64 activate
+[RTL    debug]@185 block0  dispatched to GPU (kernel0  multi-load-w8-64 block0 )
+[RTL    debug]@10000 
+[RTL    debug]@20000 
+[RTL    debug]@22405 block0  finished (kernel0  multi-load-w8-64 block0 )
+[RTL     info]@22405 kernel0  multi-load-w8-64 finished
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL    debug]@60000 
+[RTL    debug]@70000 
+[RTL     info]@72405 Simulation finished in 72405 unit time
+[RTL    debug]@72405 All snapshot process are cleared, OK

@@ -1,0 +1,88 @@
+{
+  "model_sha256": {
+    "__init__.py": "2e3d439837712121c9959593f8e07576cb58e9cd76d3bd5c499d2f9a06916f8e",
+    "__main__.py": "28584e5029ab83bb2f47d45455d2eb8bb017e4f6f44639f70a9c9ba86b2c6c59",
+    "coalescer.py": "68ef20fbab29abb4ccb02bd756252267a298dfb5d2ed87b43135d0d17ba2a34b",
+    "config.py": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "graph.py": "765aeb04bda71d3dbe32938599ab20c341a8ae352fd5981202fce26aec6b5508",
+    "ir.py": "0c611321b3508ce23acb8b39c6c463fc7fd93382f1a2eb94c121bf61f02c9fc0",
+    "mip.py": "0a0f576c7a49010d2f9062d3e600b053e41e3a79f668b789b9e2141c6ecc96fe",
+    "source.py": "302132797637f986b0f752599d5c1fb99383ed6f035752bb39fe73cd865511d9",
+    "timing.py": "c2a181d3969a0346fb86161cb33c081de4d0e0f92de6887cdfaad92c2cc71199",
+    "workloads.py": "df164d864bf62da1700ba4862e6cbabcf39264ba43594eac31d0eb0cdc2ac82d"
+  },
+  "cases": [
+    {
+      "name": "multi-load-w4-16",
+      "n": 16,
+      "family": "multi-load-w4",
+      "predicted_body_interval": null,
+      "input_sha256": {
+        "input.metadata": "9e8dff506589b1021864eeb0c478eb58533cdcf328c589357bf1459eeaa31397",
+        "input.data": "211496403a90f93490fdd776f4f3c70a1bdeb724b31472074f6f249118724633"
+      },
+      "predicted_segment_cycles": 262,
+      "warps": 4
+    },
+    {
+      "name": "multi-load-w4-32",
+      "n": 32,
+      "family": "multi-load-w4",
+      "predicted_body_interval": null,
+      "input_sha256": {
+        "input.metadata": "9e8dff506589b1021864eeb0c478eb58533cdcf328c589357bf1459eeaa31397",
+        "input.data": "2757c31f222fb03fd16c7776b598d1b8b6421499d50c7c08b7b2437fea4965e0"
+      },
+      "predicted_segment_cycles": 518,
+      "warps": 4
+    },
+    {
+      "name": "multi-load-w4-64",
+      "n": 64,
+      "family": "multi-load-w4",
+      "predicted_body_interval": null,
+      "input_sha256": {
+        "input.metadata": "9e8dff506589b1021864eeb0c478eb58533cdcf328c589357bf1459eeaa31397",
+        "input.data": "eb4f7644d59b0ed2565e8f4427ed074222aff07722c78dcb55d3d0dd63138c65"
+      },
+      "predicted_segment_cycles": 1030,
+      "warps": 4
+    },
+    {
+      "name": "multi-load-w8-16",
+      "n": 16,
+      "family": "multi-load-w8",
+      "predicted_body_interval": null,
+      "input_sha256": {
+        "input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+        "input.data": "211496403a90f93490fdd776f4f3c70a1bdeb724b31472074f6f249118724633"
+      },
+      "predicted_segment_cycles": 518,
+      "warps": 8
+    },
+    {
+      "name": "multi-load-w8-32",
+      "n": 32,
+      "family": "multi-load-w8",
+      "predicted_body_interval": null,
+      "input_sha256": {
+        "input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+        "input.data": "2757c31f222fb03fd16c7776b598d1b8b6421499d50c7c08b7b2437fea4965e0"
+      },
+      "predicted_segment_cycles": 1030,
+      "warps": 8
+    },
+    {
+      "name": "multi-load-w8-64",
+      "n": 64,
+      "family": "multi-load-w8",
+      "predicted_body_interval": null,
+      "input_sha256": {
+        "input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+        "input.data": "eb4f7644d59b0ed2565e8f4427ed074222aff07722c78dcb55d3d0dd63138c65"
+      },
+      "predicted_segment_cycles": 2054,
+      "warps": 8
+    }
+  ]
+}

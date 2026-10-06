@@ -1,0 +1,662 @@
+
+-- Running command `read_verilog ScalarALU.v; rename ScalarALU gold; read_liberty -ignore_miss_func mapping.lib; read_verilog ScalarALU_mapped.v; proc; flatten ScalarALU; equiv_make gold ScalarALU equiv; hierarchy -top equiv; equiv_simple; equiv_status -assert' --
+
+1. Executing Verilog-2005 frontend: ScalarALU.v
+Parsing Verilog input from `ScalarALU.v' to AST representation.
+Generating RTLIL representation for module `\ScalarALU'.
+Successfully finished Verilog frontend.
+Renaming module \ScalarALU to \gold.
+
+2. Executing Liberty frontend: mapping.lib
+Ignoring cell ICGx1_ASAP7_75t_R with missing function on output IQ.
+Ignoring cell ICGx2_ASAP7_75t_R with missing function on output IQ.
+Ignoring cell ICGx2p67DC_ASAP7_75t_R with missing function on output IQ.
+Ignoring cell ICGx3_ASAP7_75t_R with missing function on output IQ.
+Ignoring cell ICGx4DC_ASAP7_75t_R with missing function on output IQ.
+Ignoring cell ICGx4_ASAP7_75t_R with missing function on output IQ.
+Ignoring cell ICGx5_ASAP7_75t_R with missing function on output IQ.
+Ignoring cell ICGx5p33DC_ASAP7_75t_R with missing function on output IQ.
+Ignoring cell ICGx6p67DC_ASAP7_75t_R with missing function on output IQ.
+Ignoring cell ICGx8DC_ASAP7_75t_R with missing function on output IQ.
+Imported 192 cell types from liberty file.
+<suppressed ~2 debug messages>
+
+3. Executing Verilog-2005 frontend: ScalarALU_mapped.v
+Parsing Verilog input from `ScalarALU_mapped.v' to AST representation.
+Generating RTLIL representation for module `\ScalarALU'.
+Successfully finished Verilog frontend.
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ScalarALU.
+Optimizing module XOR2xp5_ASAP7_75t_R.
+Optimizing module XOR2x2_ASAP7_75t_R.
+Optimizing module XOR2x1_ASAP7_75t_R.
+Optimizing module XNOR2xp5_ASAP7_75t_R.
+Optimizing module XNOR2x2_ASAP7_75t_R.
+Optimizing module XNOR2x1_ASAP7_75t_R.
+Optimizing module TIELOx1_ASAP7_75t_R.
+Optimizing module TIEHIx1_ASAP7_75t_R.
+Optimizing module OR5x2_ASAP7_75t_R.
+Optimizing module OR5x1_ASAP7_75t_R.
+Optimizing module OR4x2_ASAP7_75t_R.
+Optimizing module OR4x1_ASAP7_75t_R.
+Optimizing module OR3x4_ASAP7_75t_R.
+Optimizing module OR3x2_ASAP7_75t_R.
+Optimizing module OR3x1_ASAP7_75t_R.
+Optimizing module OR2x6_ASAP7_75t_R.
+Optimizing module OR2x4_ASAP7_75t_R.
+Optimizing module OR2x2_ASAP7_75t_R.
+Optimizing module NOR5xp2_ASAP7_75t_R.
+Optimizing module NOR4xp75_ASAP7_75t_R.
+Optimizing module NOR4xp25_ASAP7_75t_R.
+Optimizing module NOR3xp33_ASAP7_75t_R.
+Optimizing module NOR3x2_ASAP7_75t_R.
+Optimizing module NOR3x1_ASAP7_75t_R.
+Optimizing module NOR2xp67_ASAP7_75t_R.
+Optimizing module NOR2xp33_ASAP7_75t_R.
+Optimizing module NOR2x2_ASAP7_75t_R.
+Optimizing module NOR2x1p5_ASAP7_75t_R.
+Optimizing module NOR2x1_ASAP7_75t_R.
+Optimizing module NAND5xp2_ASAP7_75t_R.
+Optimizing module NAND4xp75_ASAP7_75t_R.
+Optimizing module NAND4xp25_ASAP7_75t_R.
+Optimizing module NAND3xp33_ASAP7_75t_R.
+Optimizing module NAND3x2_ASAP7_75t_R.
+Optimizing module NAND3x1_ASAP7_75t_R.
+Optimizing module NAND2xp67_ASAP7_75t_R.
+Optimizing module NAND2xp5_ASAP7_75t_R.
+Optimizing module NAND2xp33_ASAP7_75t_R.
+Optimizing module NAND2x2_ASAP7_75t_R.
+Optimizing module NAND2x1p5_ASAP7_75t_R.
+Optimizing module NAND2x1_ASAP7_75t_R.
+Optimizing module MAJx3_ASAP7_75t_R.
+Optimizing module MAJx2_ASAP7_75t_R.
+Optimizing module MAJIxp5_ASAP7_75t_R.
+Optimizing module HAxp5_ASAP7_75t_R.
+Optimizing module FAx1_ASAP7_75t_R.
+Optimizing module AND5x2_ASAP7_75t_R.
+Optimizing module AND5x1_ASAP7_75t_R.
+Optimizing module AND4x2_ASAP7_75t_R.
+Optimizing module AND4x1_ASAP7_75t_R.
+Optimizing module AND3x4_ASAP7_75t_R.
+Optimizing module AND3x2_ASAP7_75t_R.
+Optimizing module AND3x1_ASAP7_75t_R.
+Optimizing module AND2x6_ASAP7_75t_R.
+Optimizing module AND2x4_ASAP7_75t_R.
+Optimizing module AND2x2_ASAP7_75t_R.
+Optimizing module SDFLx4_ASAP7_75t_R.
+Optimizing module SDFLx3_ASAP7_75t_R.
+Optimizing module SDFLx2_ASAP7_75t_R.
+Optimizing module SDFLx1_ASAP7_75t_R.
+Optimizing module SDFHx4_ASAP7_75t_R.
+Optimizing module SDFHx3_ASAP7_75t_R.
+Optimizing module SDFHx2_ASAP7_75t_R.
+Optimizing module SDFHx1_ASAP7_75t_R.
+Optimizing module DLLx3_ASAP7_75t_R.
+Optimizing module DLLx2_ASAP7_75t_R.
+Optimizing module DLLx1_ASAP7_75t_R.
+Optimizing module DHLx3_ASAP7_75t_R.
+Optimizing module DHLx2_ASAP7_75t_R.
+Optimizing module DHLx1_ASAP7_75t_R.
+Optimizing module DFFLQx4_ASAP7_75t_R.
+Optimizing module DFFLQNx3_ASAP7_75t_R.
+Optimizing module DFFLQNx2_ASAP7_75t_R.
+Optimizing module DFFLQNx1_ASAP7_75t_R.
+Optimizing module DFFHQx4_ASAP7_75t_R.
+Optimizing module DFFHQNx3_ASAP7_75t_R.
+Optimizing module DFFHQNx2_ASAP7_75t_R.
+Optimizing module DFFHQNx1_ASAP7_75t_R.
+Optimizing module DFFASRHQNx1_ASAP7_75t_R.
+Optimizing module OAI33xp33_ASAP7_75t_R.
+Optimizing module OAI333xp33_ASAP7_75t_R.
+Optimizing module OAI332xp33_ASAP7_75t_R.
+Optimizing module OAI331xp33_ASAP7_75t_R.
+Optimizing module OAI32xp33_ASAP7_75t_R.
+Optimizing module OAI322xp33_ASAP7_75t_R.
+Optimizing module OAI321xp33_ASAP7_75t_R.
+Optimizing module OAI31xp67_ASAP7_75t_R.
+Optimizing module OAI31xp33_ASAP7_75t_R.
+Optimizing module OAI311xp33_ASAP7_75t_R.
+Optimizing module OAI22xp5_ASAP7_75t_R.
+Optimizing module OAI22xp33_ASAP7_75t_R.
+Optimizing module OAI22x1_ASAP7_75t_R.
+Optimizing module OAI222xp33_ASAP7_75t_R.
+Optimizing module OAI221xp5_ASAP7_75t_R.
+Optimizing module OAI21xp5_ASAP7_75t_R.
+Optimizing module OAI21xp33_ASAP7_75t_R.
+Optimizing module OAI21x1_ASAP7_75t_R.
+Optimizing module OAI211xp5_ASAP7_75t_R.
+Optimizing module OA33x2_ASAP7_75t_R.
+Optimizing module OA333x2_ASAP7_75t_R.
+Optimizing module OA333x1_ASAP7_75t_R.
+Optimizing module OA332x2_ASAP7_75t_R.
+Optimizing module OA332x1_ASAP7_75t_R.
+Optimizing module OA331x2_ASAP7_75t_R.
+Optimizing module OA331x1_ASAP7_75t_R.
+Optimizing module OA31x2_ASAP7_75t_R.
+Optimizing module OA22x2_ASAP7_75t_R.
+Optimizing module OA222x2_ASAP7_75t_R.
+Optimizing module OA221x2_ASAP7_75t_R.
+Optimizing module OA21x2_ASAP7_75t_R.
+Optimizing module OA211x2_ASAP7_75t_R.
+Optimizing module O2A1O1Ixp5_ASAP7_75t_R.
+Optimizing module O2A1O1Ixp33_ASAP7_75t_R.
+Optimizing module INVxp67_ASAP7_75t_R.
+Optimizing module INVxp33_ASAP7_75t_R.
+Optimizing module INVx8_ASAP7_75t_R.
+Optimizing module INVx6_ASAP7_75t_R.
+Optimizing module INVx5_ASAP7_75t_R.
+Optimizing module INVx4_ASAP7_75t_R.
+Optimizing module INVx3_ASAP7_75t_R.
+Optimizing module INVx2_ASAP7_75t_R.
+Optimizing module INVx1_ASAP7_75t_R.
+Optimizing module INVx13_ASAP7_75t_R.
+Optimizing module INVx11_ASAP7_75t_R.
+Optimizing module HB4xp67_ASAP7_75t_R.
+Optimizing module HB3xp67_ASAP7_75t_R.
+Optimizing module HB2xp67_ASAP7_75t_R.
+Optimizing module HB1xp67_ASAP7_75t_R.
+Optimizing module CKINVDCx9p33_ASAP7_75t_R.
+Optimizing module CKINVDCx8_ASAP7_75t_R.
+Optimizing module CKINVDCx6p67_ASAP7_75t_R.
+Optimizing module CKINVDCx5p33_ASAP7_75t_R.
+Optimizing module CKINVDCx20_ASAP7_75t_R.
+Optimizing module CKINVDCx16_ASAP7_75t_R.
+Optimizing module CKINVDCx14_ASAP7_75t_R.
+Optimizing module CKINVDCx12_ASAP7_75t_R.
+Optimizing module CKINVDCx11_ASAP7_75t_R.
+Optimizing module CKINVDCx10_ASAP7_75t_R.
+Optimizing module BUFx8_ASAP7_75t_R.
+Optimizing module BUFx6f_ASAP7_75t_R.
+Optimizing module BUFx5_ASAP7_75t_R.
+Optimizing module BUFx4f_ASAP7_75t_R.
+Optimizing module BUFx4_ASAP7_75t_R.
+Optimizing module BUFx3_ASAP7_75t_R.
+Optimizing module BUFx2_ASAP7_75t_R.
+Optimizing module BUFx24_ASAP7_75t_R.
+Optimizing module BUFx16f_ASAP7_75t_R.
+Optimizing module BUFx12f_ASAP7_75t_R.
+Optimizing module BUFx12_ASAP7_75t_R.
+Optimizing module BUFx10_ASAP7_75t_R.
+Optimizing module AOI33xp33_ASAP7_75t_R.
+Optimizing module AOI333xp33_ASAP7_75t_R.
+Optimizing module AOI332xp33_ASAP7_75t_R.
+Optimizing module AOI331xp33_ASAP7_75t_R.
+Optimizing module AOI32xp33_ASAP7_75t_R.
+Optimizing module AOI322xp5_ASAP7_75t_R.
+Optimizing module AOI321xp33_ASAP7_75t_R.
+Optimizing module AOI31xp67_ASAP7_75t_R.
+Optimizing module AOI31xp33_ASAP7_75t_R.
+Optimizing module AOI311xp33_ASAP7_75t_R.
+Optimizing module AOI22xp5_ASAP7_75t_R.
+Optimizing module AOI22xp33_ASAP7_75t_R.
+Optimizing module AOI22x1_ASAP7_75t_R.
+Optimizing module AOI222xp33_ASAP7_75t_R.
+Optimizing module AOI221xp5_ASAP7_75t_R.
+Optimizing module AOI221x1_ASAP7_75t_R.
+Optimizing module AOI21xp5_ASAP7_75t_R.
+Optimizing module AOI21xp33_ASAP7_75t_R.
+Optimizing module AOI21x1_ASAP7_75t_R.
+Optimizing module AOI211xp5_ASAP7_75t_R.
+Optimizing module AOI211x1_ASAP7_75t_R.
+Optimizing module AO33x2_ASAP7_75t_R.
+Optimizing module AO333x2_ASAP7_75t_R.
+Optimizing module AO333x1_ASAP7_75t_R.
+Optimizing module AO332x2_ASAP7_75t_R.
+Optimizing module AO332x1_ASAP7_75t_R.
+Optimizing module AO331x2_ASAP7_75t_R.
+Optimizing module AO331x1_ASAP7_75t_R.
+Optimizing module AO32x2_ASAP7_75t_R.
+Optimizing module AO32x1_ASAP7_75t_R.
+Optimizing module AO322x2_ASAP7_75t_R.
+Optimizing module AO31x2_ASAP7_75t_R.
+Optimizing module AO22x2_ASAP7_75t_R.
+Optimizing module AO22x1_ASAP7_75t_R.
+Optimizing module AO222x2_ASAP7_75t_R.
+Optimizing module AO221x2_ASAP7_75t_R.
+Optimizing module AO221x1_ASAP7_75t_R.
+Optimizing module AO21x2_ASAP7_75t_R.
+Optimizing module AO21x1_ASAP7_75t_R.
+Optimizing module AO211x2_ASAP7_75t_R.
+Optimizing module A2O1A1O1Ixp25_ASAP7_75t_R.
+Optimizing module A2O1A1Ixp33_ASAP7_75t_R.
+Optimizing module gold.
+<suppressed ~16 debug messages>
+
+5. Executing FLATTEN pass (flatten design).
+<suppressed ~1141 debug messages>
+
+6. Executing EQUIV_MAKE pass (creating equiv checking module).
+Presumably equivalent wires: _GEN_2_gold ({ $sshr$ScalarALU.v:50$30_Y_gold [5] 1'0 $sshr$ScalarALU.v:50$30_Y_gold [7] 1'0 $sshr$ScalarALU.v:50$30_Y_gold [9] 1'0 $or$ScalarALU.v:52$33_Y_gold [7] 1'0 $or$ScalarALU.v:52$33_Y_gold [5] 1'0 $or$ScalarALU.v:52$33_Y_gold [3] 1'0 $or$ScalarALU.v:52$33_Y_gold [1] 1'0 $sshr$ScalarALU.v:50$30_Y_gold [19] 1'0 $sshr$ScalarALU.v:50$30_Y_gold [21] 1'0 $sshr$ScalarALU.v:50$30_Y_gold [23] }), _GEN_2_gate ({ \_GEN_2_gate [18] 1'0 \_GEN_2_gate [16] 1'0 \_GEN_2_gate [14] 1'0 \_GEN_2_gate [12] 1'0 \_GEN_2_gate [10] 1'0 \_GEN_2_gate [8] 1'0 \_GEN_2_gate [6] 1'0 \_GEN_2_gate [4] 1'0 \_GEN_2_gate [2] 1'0 \_GEN_2_gate [0] }) -> _GEN_2
+  Skipping signal bit _GEN_2_gate [0]: undriven on gate side.
+  Skipping signal bit _GEN_2_gate [2]: undriven on gate side.
+  Skipping signal bit _GEN_2_gate [4]: undriven on gate side.
+  Skipping signal bit _GEN_2_gate [6]: undriven on gate side.
+  Skipping signal bit _GEN_2_gate [8]: undriven on gate side.
+  Skipping signal bit _GEN_2_gate [10]: undriven on gate side.
+  Skipping signal bit _GEN_2_gate [12]: undriven on gate side.
+  Skipping signal bit _GEN_2_gate [14]: undriven on gate side.
+  Skipping signal bit _GEN_2_gate [16]: undriven on gate side.
+  Skipping signal bit _GEN_2_gate [18]: undriven on gate side.
+Presumably equivalent wires: _GEN_0_gold ({ \io_in1_gold [5] 1'0 \io_in1_gold [7] 1'0 \io_in1_gold [9] 1'0 $or$ScalarALU.v:17$16_Y_gold [7] 1'0 $or$ScalarALU.v:17$16_Y_gold [5] 1'0 $or$ScalarALU.v:17$16_Y_gold [3] 1'0 $or$ScalarALU.v:17$16_Y_gold [1] 1'0 \io_in1_gold [19] 1'0 \io_in1_gold [21] 1'0 \io_in1_gold [23] }), _GEN_0_gate ({ \io_in1_gate [5] 1'0 \io_in1_gate [7] 1'0 \io_in1_gate [9] 1'0 \io_in1_gate [11] 1'0 \io_in1_gate [13] 1'0 \io_in1_gate [15] 1'0 \io_in1_gate [17] 1'0 \io_in1_gate [19] 1'0 \io_in1_gate [21] 1'0 \io_in1_gate [23] }) -> _GEN_0
+Presumably equivalent wires: _GEN_gold ($or$ScalarALU.v:17$16_Y_gold), _GEN_gate ({ \io_in1_gate [11:10] \io_in1_gate [13:12] \io_in1_gate [15:14] \io_in1_gate [17:16] }) -> _GEN
+Presumably equivalent wires: io_cmp_out_gold ($xor$ScalarALU.v:113$93_Y_gold), io_cmp_out_gate ($flatten\_2248_.$auto$rtlil.cc:3495:OrGate$3675_gate) -> io_cmp_out
+Presumably equivalent wires: io_out_gold ($ternary$ScalarALU.v:65$89_Y_gold), io_out_gate ({ $flatten\_2232_.$auto$rtlil.cc:3495:OrGate$3447_gate $flatten\_1616_.$auto$rtlil.cc:3495:OrGate$2731_gate $flatten\_1689_.$auto$rtlil.cc:3495:OrGate$2731_gate $flatten\_1730_.$auto$rtlil.cc:3495:OrGate$2621_gate $flatten\_1766_.$auto$rtlil.cc:3495:OrGate$2601_gate $flatten\_1793_.$auto$rtlil.cc:3495:OrGate$2745_gate $flatten\_1819_.$auto$rtlil.cc:3495:OrGate$3405_gate $flatten\_1847_.$auto$rtlil.cc:3495:OrGate$2621_gate $flatten\_1870_.$auto$rtlil.cc:3495:OrGate$2601_gate $flatten\_1888_.$auto$rtlil.cc:3495:OrGate$2621_gate $flatten\_1904_.$auto$rtlil.cc:3495:OrGate$151_gate $flatten\_1919_.$auto$rtlil.cc:3495:OrGate$2621_gate $flatten\_1937_.$auto$rtlil.cc:3495:OrGate$163_gate $flatten\_1955_.$auto$rtlil.cc:3495:OrGate$2601_gate $flatten\_1973_.$auto$rtlil.cc:3495:OrGate$2621_gate $flatten\_1993_.$auto$rtlil.cc:3495:OrGate$2621_gate $flatten\_2007_.$auto$rtlil.cc:3495:OrGate$2621_gate $flatten\_2022_.$auto$rtlil.cc:3495:OrGate$111_gate $flatten\_2037_.$auto$rtlil.cc:3495:OrGate$2601_gate $flatten\_2049_.$auto$rtlil.cc:3495:OrGate$2745_gate $flatten\_2063_.$auto$rtlil.cc:3495:OrGate$2601_gate $flatten\_2076_.$auto$rtlil.cc:3495:OrGate$2745_gate $flatten\_2090_.$auto$rtlil.cc:3495:OrGate$3405_gate $flatten\_2104_.$auto$rtlil.cc:3495:OrGate$2745_gate $flatten\_2117_.$auto$rtlil.cc:3495:OrGate$111_gate $flatten\_2131_.$auto$rtlil.cc:3495:OrGate$2601_gate $flatten\_2144_.$auto$rtlil.cc:3495:OrGate$2601_gate $flatten\_2157_.$auto$rtlil.cc:3495:OrGate$111_gate $flatten\_2169_.$auto$rtlil.cc:3495:OrGate$2621_gate $flatten\_2181_.$auto$rtlil.cc:3495:OrGate$3461_gate $flatten\_2193_.$auto$rtlil.cc:3495:OrGate$3447_gate $flatten\_2223_.$auto$rtlil.cc:3495:OrGate$2731_gate }) -> io_out
+Presumably equivalent wires: io_in1_gold (\io_in1_gold), io_in1_gate (\io_in1_gate) -> io_in1
+Presumably equivalent wires: io_in2_gold (\io_in2_gold), io_in2_gate (\io_in2_gate) -> io_in2
+Presumably equivalent wires: io_func_gold (\io_func_gold), io_func_gate (\io_func_gate) -> io_func
+Setting undriven nets to undef: \_GEN_2 [0]
+Setting undriven nets to undef: \_GEN_2 [2]
+Setting undriven nets to undef: \_GEN_2 [4]
+Setting undriven nets to undef: \_GEN_2 [6]
+Setting undriven nets to undef: \_GEN_2 [8]
+Setting undriven nets to undef: \_GEN_2 [10]
+Setting undriven nets to undef: \_GEN_2 [12]
+Setting undriven nets to undef: \_GEN_2 [14]
+Setting undriven nets to undef: \_GEN_2 [16]
+Setting undriven nets to undef: \_GEN_2 [18]
+Setting undriven nets to undef: \_GEN_2_gate [0]
+Setting undriven nets to undef: \_GEN_2_gate [2]
+Setting undriven nets to undef: \_GEN_2_gate [4]
+Setting undriven nets to undef: \_GEN_2_gate [6]
+Setting undriven nets to undef: \_GEN_2_gate [8]
+Setting undriven nets to undef: \_GEN_2_gate [10]
+Setting undriven nets to undef: \_GEN_2_gate [12]
+Setting undriven nets to undef: \_GEN_2_gate [14]
+Setting undriven nets to undef: \_GEN_2_gate [16]
+Setting undriven nets to undef: \_GEN_2_gate [18]
+Setting undriven nets to undef: \_shout_r_T_7_gate [4:0]
+Setting undriven nets to undef: \_shout_r_T_7_gate [6]
+Setting undriven nets to undef: \_shout_r_T_7_gate [8]
+Setting undriven nets to undef: \_shout_r_T_7_gate [18:10]
+Setting undriven nets to undef: \_shout_r_T_7_gate [20]
+Setting undriven nets to undef: \_shout_r_T_7_gate [22]
+Setting undriven nets to undef: \_shout_r_T_7_gate [31:24]
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \equiv
+
+7.2. Analyzing design hierarchy..
+Top module:  \equiv
+Removing unused module `\ScalarALU'.
+Removing unused module `\XOR2xp5_ASAP7_75t_R'.
+Removing unused module `\XOR2x2_ASAP7_75t_R'.
+Removing unused module `\XOR2x1_ASAP7_75t_R'.
+Removing unused module `\XNOR2xp5_ASAP7_75t_R'.
+Removing unused module `\XNOR2x2_ASAP7_75t_R'.
+Removing unused module `\XNOR2x1_ASAP7_75t_R'.
+Removing unused module `\TIELOx1_ASAP7_75t_R'.
+Removing unused module `\TIEHIx1_ASAP7_75t_R'.
+Removing unused module `\OR5x2_ASAP7_75t_R'.
+Removing unused module `\OR5x1_ASAP7_75t_R'.
+Removing unused module `\OR4x2_ASAP7_75t_R'.
+Removing unused module `\OR4x1_ASAP7_75t_R'.
+Removing unused module `\OR3x4_ASAP7_75t_R'.
+Removing unused module `\OR3x2_ASAP7_75t_R'.
+Removing unused module `\OR3x1_ASAP7_75t_R'.
+Removing unused module `\OR2x6_ASAP7_75t_R'.
+Removing unused module `\OR2x4_ASAP7_75t_R'.
+Removing unused module `\OR2x2_ASAP7_75t_R'.
+Removing unused module `\NOR5xp2_ASAP7_75t_R'.
+Removing unused module `\NOR4xp75_ASAP7_75t_R'.
+Removing unused module `\NOR4xp25_ASAP7_75t_R'.
+Removing unused module `\NOR3xp33_ASAP7_75t_R'.
+Removing unused module `\NOR3x2_ASAP7_75t_R'.
+Removing unused module `\NOR3x1_ASAP7_75t_R'.
+Removing unused module `\NOR2xp67_ASAP7_75t_R'.
+Removing unused module `\NOR2xp33_ASAP7_75t_R'.
+Removing unused module `\NOR2x2_ASAP7_75t_R'.
+Removing unused module `\NOR2x1p5_ASAP7_75t_R'.
+Removing unused module `\NOR2x1_ASAP7_75t_R'.
+Removing unused module `\NAND5xp2_ASAP7_75t_R'.
+Removing unused module `\NAND4xp75_ASAP7_75t_R'.
+Removing unused module `\NAND4xp25_ASAP7_75t_R'.
+Removing unused module `\NAND3xp33_ASAP7_75t_R'.
+Removing unused module `\NAND3x2_ASAP7_75t_R'.
+Removing unused module `\NAND3x1_ASAP7_75t_R'.
+Removing unused module `\NAND2xp67_ASAP7_75t_R'.
+Removing unused module `\NAND2xp5_ASAP7_75t_R'.
+Removing unused module `\NAND2xp33_ASAP7_75t_R'.
+Removing unused module `\NAND2x2_ASAP7_75t_R'.
+Removing unused module `\NAND2x1p5_ASAP7_75t_R'.
+Removing unused module `\NAND2x1_ASAP7_75t_R'.
+Removing unused module `\MAJx3_ASAP7_75t_R'.
+Removing unused module `\MAJx2_ASAP7_75t_R'.
+Removing unused module `\MAJIxp5_ASAP7_75t_R'.
+Removing unused module `\HAxp5_ASAP7_75t_R'.
+Removing unused module `\FAx1_ASAP7_75t_R'.
+Removing unused module `\AND5x2_ASAP7_75t_R'.
+Removing unused module `\AND5x1_ASAP7_75t_R'.
+Removing unused module `\AND4x2_ASAP7_75t_R'.
+Removing unused module `\AND4x1_ASAP7_75t_R'.
+Removing unused module `\AND3x4_ASAP7_75t_R'.
+Removing unused module `\AND3x2_ASAP7_75t_R'.
+Removing unused module `\AND3x1_ASAP7_75t_R'.
+Removing unused module `\AND2x6_ASAP7_75t_R'.
+Removing unused module `\AND2x4_ASAP7_75t_R'.
+Removing unused module `\AND2x2_ASAP7_75t_R'.
+Removing unused module `\SDFLx4_ASAP7_75t_R'.
+Removing unused module `\SDFLx3_ASAP7_75t_R'.
+Removing unused module `\SDFLx2_ASAP7_75t_R'.
+Removing unused module `\SDFLx1_ASAP7_75t_R'.
+Removing unused module `\SDFHx4_ASAP7_75t_R'.
+Removing unused module `\SDFHx3_ASAP7_75t_R'.
+Removing unused module `\SDFHx2_ASAP7_75t_R'.
+Removing unused module `\SDFHx1_ASAP7_75t_R'.
+Removing unused module `\DLLx3_ASAP7_75t_R'.
+Removing unused module `\DLLx2_ASAP7_75t_R'.
+Removing unused module `\DLLx1_ASAP7_75t_R'.
+Removing unused module `\DHLx3_ASAP7_75t_R'.
+Removing unused module `\DHLx2_ASAP7_75t_R'.
+Removing unused module `\DHLx1_ASAP7_75t_R'.
+Removing unused module `\DFFLQx4_ASAP7_75t_R'.
+Removing unused module `\DFFLQNx3_ASAP7_75t_R'.
+Removing unused module `\DFFLQNx2_ASAP7_75t_R'.
+Removing unused module `\DFFLQNx1_ASAP7_75t_R'.
+Removing unused module `\DFFHQx4_ASAP7_75t_R'.
+Removing unused module `\DFFHQNx3_ASAP7_75t_R'.
+Removing unused module `\DFFHQNx2_ASAP7_75t_R'.
+Removing unused module `\DFFHQNx1_ASAP7_75t_R'.
+Removing unused module `\DFFASRHQNx1_ASAP7_75t_R'.
+Removing unused module `\OAI33xp33_ASAP7_75t_R'.
+Removing unused module `\OAI333xp33_ASAP7_75t_R'.
+Removing unused module `\OAI332xp33_ASAP7_75t_R'.
+Removing unused module `\OAI331xp33_ASAP7_75t_R'.
+Removing unused module `\OAI32xp33_ASAP7_75t_R'.
+Removing unused module `\OAI322xp33_ASAP7_75t_R'.
+Removing unused module `\OAI321xp33_ASAP7_75t_R'.
+Removing unused module `\OAI31xp67_ASAP7_75t_R'.
+Removing unused module `\OAI31xp33_ASAP7_75t_R'.
+Removing unused module `\OAI311xp33_ASAP7_75t_R'.
+Removing unused module `\OAI22xp5_ASAP7_75t_R'.
+Removing unused module `\OAI22xp33_ASAP7_75t_R'.
+Removing unused module `\OAI22x1_ASAP7_75t_R'.
+Removing unused module `\OAI222xp33_ASAP7_75t_R'.
+Removing unused module `\OAI221xp5_ASAP7_75t_R'.
+Removing unused module `\OAI21xp5_ASAP7_75t_R'.
+Removing unused module `\OAI21xp33_ASAP7_75t_R'.
+Removing unused module `\OAI21x1_ASAP7_75t_R'.
+Removing unused module `\OAI211xp5_ASAP7_75t_R'.
+Removing unused module `\OA33x2_ASAP7_75t_R'.
+Removing unused module `\OA333x2_ASAP7_75t_R'.
+Removing unused module `\OA333x1_ASAP7_75t_R'.
+Removing unused module `\OA332x2_ASAP7_75t_R'.
+Removing unused module `\OA332x1_ASAP7_75t_R'.
+Removing unused module `\OA331x2_ASAP7_75t_R'.
+Removing unused module `\OA331x1_ASAP7_75t_R'.
+Removing unused module `\OA31x2_ASAP7_75t_R'.
+Removing unused module `\OA22x2_ASAP7_75t_R'.
+Removing unused module `\OA222x2_ASAP7_75t_R'.
+Removing unused module `\OA221x2_ASAP7_75t_R'.
+Removing unused module `\OA21x2_ASAP7_75t_R'.
+Removing unused module `\OA211x2_ASAP7_75t_R'.
+Removing unused module `\O2A1O1Ixp5_ASAP7_75t_R'.
+Removing unused module `\O2A1O1Ixp33_ASAP7_75t_R'.
+Removing unused module `\INVxp67_ASAP7_75t_R'.
+Removing unused module `\INVxp33_ASAP7_75t_R'.
+Removing unused module `\INVx8_ASAP7_75t_R'.
+Removing unused module `\INVx6_ASAP7_75t_R'.
+Removing unused module `\INVx5_ASAP7_75t_R'.
+Removing unused module `\INVx4_ASAP7_75t_R'.
+Removing unused module `\INVx3_ASAP7_75t_R'.
+Removing unused module `\INVx2_ASAP7_75t_R'.
+Removing unused module `\INVx1_ASAP7_75t_R'.
+Removing unused module `\INVx13_ASAP7_75t_R'.
+Removing unused module `\INVx11_ASAP7_75t_R'.
+Removing unused module `\HB4xp67_ASAP7_75t_R'.
+Removing unused module `\HB3xp67_ASAP7_75t_R'.
+Removing unused module `\HB2xp67_ASAP7_75t_R'.
+Removing unused module `\HB1xp67_ASAP7_75t_R'.
+Removing unused module `\CKINVDCx9p33_ASAP7_75t_R'.
+Removing unused module `\CKINVDCx8_ASAP7_75t_R'.
+Removing unused module `\CKINVDCx6p67_ASAP7_75t_R'.
+Removing unused module `\CKINVDCx5p33_ASAP7_75t_R'.
+Removing unused module `\CKINVDCx20_ASAP7_75t_R'.
+Removing unused module `\CKINVDCx16_ASAP7_75t_R'.
+Removing unused module `\CKINVDCx14_ASAP7_75t_R'.
+Removing unused module `\CKINVDCx12_ASAP7_75t_R'.
+Removing unused module `\CKINVDCx11_ASAP7_75t_R'.
+Removing unused module `\CKINVDCx10_ASAP7_75t_R'.
+Removing unused module `\BUFx8_ASAP7_75t_R'.
+Removing unused module `\BUFx6f_ASAP7_75t_R'.
+Removing unused module `\BUFx5_ASAP7_75t_R'.
+Removing unused module `\BUFx4f_ASAP7_75t_R'.
+Removing unused module `\BUFx4_ASAP7_75t_R'.
+Removing unused module `\BUFx3_ASAP7_75t_R'.
+Removing unused module `\BUFx2_ASAP7_75t_R'.
+Removing unused module `\BUFx24_ASAP7_75t_R'.
+Removing unused module `\BUFx16f_ASAP7_75t_R'.
+Removing unused module `\BUFx12f_ASAP7_75t_R'.
+Removing unused module `\BUFx12_ASAP7_75t_R'.
+Removing unused module `\BUFx10_ASAP7_75t_R'.
+Removing unused module `\AOI33xp33_ASAP7_75t_R'.
+Removing unused module `\AOI333xp33_ASAP7_75t_R'.
+Removing unused module `\AOI332xp33_ASAP7_75t_R'.
+Removing unused module `\AOI331xp33_ASAP7_75t_R'.
+Removing unused module `\AOI32xp33_ASAP7_75t_R'.
+Removing unused module `\AOI322xp5_ASAP7_75t_R'.
+Removing unused module `\AOI321xp33_ASAP7_75t_R'.
+Removing unused module `\AOI31xp67_ASAP7_75t_R'.
+Removing unused module `\AOI31xp33_ASAP7_75t_R'.
+Removing unused module `\AOI311xp33_ASAP7_75t_R'.
+Removing unused module `\AOI22xp5_ASAP7_75t_R'.
+Removing unused module `\AOI22xp33_ASAP7_75t_R'.
+Removing unused module `\AOI22x1_ASAP7_75t_R'.
+Removing unused module `\AOI222xp33_ASAP7_75t_R'.
+Removing unused module `\AOI221xp5_ASAP7_75t_R'.
+Removing unused module `\AOI221x1_ASAP7_75t_R'.
+Removing unused module `\AOI21xp5_ASAP7_75t_R'.
+Removing unused module `\AOI21xp33_ASAP7_75t_R'.
+Removing unused module `\AOI21x1_ASAP7_75t_R'.
+Removing unused module `\AOI211xp5_ASAP7_75t_R'.
+Removing unused module `\AOI211x1_ASAP7_75t_R'.
+Removing unused module `\AO33x2_ASAP7_75t_R'.
+Removing unused module `\AO333x2_ASAP7_75t_R'.
+Removing unused module `\AO333x1_ASAP7_75t_R'.
+Removing unused module `\AO332x2_ASAP7_75t_R'.
+Removing unused module `\AO332x1_ASAP7_75t_R'.
+Removing unused module `\AO331x2_ASAP7_75t_R'.
+Removing unused module `\AO331x1_ASAP7_75t_R'.
+Removing unused module `\AO32x2_ASAP7_75t_R'.
+Removing unused module `\AO32x1_ASAP7_75t_R'.
+Removing unused module `\AO322x2_ASAP7_75t_R'.
+Removing unused module `\AO31x2_ASAP7_75t_R'.
+Removing unused module `\AO22x2_ASAP7_75t_R'.
+Removing unused module `\AO22x1_ASAP7_75t_R'.
+Removing unused module `\AO222x2_ASAP7_75t_R'.
+Removing unused module `\AO221x2_ASAP7_75t_R'.
+Removing unused module `\AO221x1_ASAP7_75t_R'.
+Removing unused module `\AO21x2_ASAP7_75t_R'.
+Removing unused module `\AO21x1_ASAP7_75t_R'.
+Removing unused module `\AO211x2_ASAP7_75t_R'.
+Removing unused module `\A2O1A1O1Ixp25_ASAP7_75t_R'.
+Removing unused module `\A2O1A1Ixp33_ASAP7_75t_R'.
+Removing unused module `\gold'.
+Removed 194 unused modules.
+
+8. Executing EQUIV_SIMPLE pass.
+Found 69 unproven $equiv cells (5 groups) in equiv:
+ Grouping SAT models for \io_out:
+  Trying to prove $equiv for \io_out [0]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [1]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [2]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [3]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [4]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [5]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [6]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [7]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [8]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [9]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [10]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [11]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [12]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [13]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [14]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [15]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [16]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [17]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [18]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [19]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [20]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [21]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [22]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [23]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [24]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [25]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [26]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [27]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [28]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [29]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [30]:ezsat
+ success!
+  Trying to prove $equiv for \io_out [31]:ezsat
+ success!
+  Trying to prove $equiv for \io_cmp_out:ezsat
+ success!
+ Grouping SAT models for \_GEN:
+  Trying to prove $equiv for \_GEN [0]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN [1]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN [2]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN [3]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN [4]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN [5]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN [6]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN [7]:ezsat
+ success!
+ Grouping SAT models for \_GEN_0:
+  Trying to prove $equiv for \_GEN_0 [0]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [1]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [2]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [3]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [4]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [5]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [6]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [7]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [8]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [9]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [10]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [11]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [12]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [13]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [14]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [15]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [16]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [17]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_0 [18]:ezsat
+ success!
+ Grouping SAT models for { \_GEN_2 [17] \_GEN_2 [15] \_GEN_2 [13] \_GEN_2 [11] \_GEN_2 [9] \_GEN_2 [7] \_GEN_2 [5] \_GEN_2 [3] \_GEN_2 [1] }:
+  Trying to prove $equiv for \_GEN_2 [1]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_2 [3]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_2 [5]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_2 [7]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_2 [9]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_2 [11]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_2 [13]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_2 [15]:ezsat
+ success!
+  Trying to prove $equiv for \_GEN_2 [17]:ezsat
+ success!
+Proved 69 previously unproven $equiv cells.
+
+9. Executing EQUIV_STATUS pass.
+Found 69 $equiv cells in equiv:
+  Of those cells 69 are proven and 0 are unproven.
+  Equivalence successfully proven!
+
+End of script. Logfile hash: 90badc21ee, time: 3.95s, user: 3.81s, system: 0.17s, MEM: 133.98 MB peak
+Yosys 0.64+308 (git sha1 78e05dfb0, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 61% 1x equiv_simple (2 sec), 19% 2x read_liberty (0 sec), ...

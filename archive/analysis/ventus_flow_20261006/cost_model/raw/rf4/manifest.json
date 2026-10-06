@@ -1,0 +1,33 @@
+{
+  "name": "rf4",
+  "top": "operandCollector",
+  "source": "${REMOTE_FLOW_ROOT}/parameter-rtl-v4/collector-rf4/operandCollector.v",
+  "rtl_sha256": "3f9ee59d250cf5cf5b2a9cb6263229e3b723fb357a547edd8cab61822de28e7a",
+  "logic_rtl_sha256": "70367119023ef99a973f37a9db90d93e425d4017481b6093e7ceda704086ba39",
+  "memory_modules": {
+    "regs_256x1024": {
+      "bits": 262144,
+      "arrays": [
+        [
+          "1023",
+          "Memory",
+          "255"
+        ]
+      ],
+      "source_sha256": "1a255f45b1a99582351ddbc9b9bbb2cc8fde8b461018d202a1cc9650c9898860"
+    },
+    "regs_1_512x32": {
+      "bits": 16384,
+      "arrays": [
+        [
+          "31",
+          "Memory",
+          "511"
+        ]
+      ],
+      "source_sha256": "b97462c04eb5ed6852c6c657473c47eb5ffd2d4f25cef57188d086fd21e33642"
+    }
+  },
+  "flow": "coarse-slang",
+  "original_manifest_sha256": "3165e216a89d88df4e7c26520490259ef97f82bcd3f624f0fe56414a8128718e"
+}

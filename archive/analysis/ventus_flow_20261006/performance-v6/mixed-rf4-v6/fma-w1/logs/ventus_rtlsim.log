@@ -1,0 +1,13 @@
+[RTL     info]@0 SNAPSHOT created, pid=225765
+[RTL    trace]@20 Hardware reset ok
+[RTL    trace]@30 kernel 0 fma-w1 activate
+[RTL    debug]@5125 block0  dispatched to GPU (kernel0  fma-w1 block0 )
+[RTL    debug]@8365 block0  finished (kernel0  fma-w1 block0 )
+[RTL     info]@8365 kernel0  fma-w1 finished
+[RTL    debug]@10000 
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL     info]@58365 Simulation finished in 58365 unit time
+[RTL    debug]@58365 All snapshot process are cleared, OK

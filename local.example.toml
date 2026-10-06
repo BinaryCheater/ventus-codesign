@@ -1,0 +1,19 @@
+# Copy to local.toml only when machine-specific settings are needed.
+# Local timing/cost/search runs work with no configuration file.
+[execution]
+mode = "local" # Set "remote" to keep SSH as the default for your own profile.
+
+[remote]
+enabled = false
+host = "" # SSH alias or user@hostname from your own SSH configuration.
+run_root = "" # Absolute path for the standalone project on your server.
+python = "python3"
+uv = "" # Optional uv command/path when it is not on the server PATH.
+project_root = "" # Upstream RTL checkout, needed only for fresh RTL work.
+environment_script = "" # Optional server toolchain setup script.
+flow_root = "" # A new directory for fresh hardware evidence.
+liberty_root = "" # Technology libraries for synthesis.
+
+[privacy]
+# Optional private literals that must never enter a share archive.
+redactions = []

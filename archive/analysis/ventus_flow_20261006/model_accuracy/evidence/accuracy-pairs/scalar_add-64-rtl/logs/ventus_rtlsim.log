@@ -1,0 +1,13 @@
+[RTL     info]@0 SNAPSHOT created, pid=3350636
+[RTL    trace]@20 Hardware reset ok
+[RTL    trace]@30 kernel 0 scalar_add-64 activate
+[RTL    debug]@185 block0  dispatched to GPU (kernel0  scalar_add-64 block0 )
+[RTL    debug]@4195 block0  finished (kernel0  scalar_add-64 block0 )
+[RTL     info]@4195 kernel0  scalar_add-64 finished
+[RTL    debug]@10000 
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL     info]@54195 Simulation finished in 54195 unit time
+[RTL    debug]@54195 All snapshot process are cleared, OK

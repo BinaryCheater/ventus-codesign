@@ -1,0 +1,37 @@
+python3 json2cpp.py
+g++ -c -g -O0 -std=c++20 -MMD -MP -DSPDLOG_FMT_EXTERNAL -o build/driver_example/debug/sim_main.o sim_main.cpp
+g++ -c -g -O0 -std=c++20 -MMD -MP -DSPDLOG_FMT_EXTERNAL -o build/driver_example/debug/cmdarg.o cmdarg.cpp
+g++ -c -g -O0 -std=c++20 -MMD -MP -DSPDLOG_FMT_EXTERNAL -o build/driver_example/debug/kernel.o kernel.cpp
+verilator -cc --build -MMD --error-limit 100 --x-assign unique --x-initial unique -Wno-WIDTHEXPAND -Wno-WIDTHTRUNC -DPRINTF_COND=1 -DRANDOMIZE -DRANDOMIZE_MEM_INIT -DRANDOMIZE_REG_INIT --trace-fst --assert --threads 4 --trace-threads 2 -j 12 -CFLAGS "-g -O0 -fPIC -std=c++20 -DSPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_TRACE -DSPDLOG_FMT_EXTERNAL" -LDFLAGS "-lc" --prefix Vdut -Mdir build/libVentusRTL/debug dut.v ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed2/sim-verilator/kernel.cpp ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed2/sim-verilator/physical_mem.cpp ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed2/sim-verilator/cta_sche_wrapper.cpp ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed2/sim-verilator/ventus_rtlsim_impl.cpp ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed2/sim-verilator/rtl_parameters.cpp ${REMOTE_FLOW_ROOT}/parameter-rtl-v4/rf-banks8-fixed2/sim-verilator/ventus_rtlsim.cpp
+%Warning-DEPRECATED: Option '--trace-threads' is deprecated and has no effect.
+                     ... For warning description see https://verilator.org/warn/DEPRECATED?v=5.049
+                     ... Use "/* verilator lint_off DEPRECATED */" and lint_on around source to disable this message.
+%Warning-MULTITOP: dut.v:18885:8: Multiple top level modules
+                                : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... For warning description see https://verilator.org/warn/MULTITOP?v=5.049
+                   ... Use "/* verilator lint_off MULTITOP */" and lint_on around source to disable this message.
+                                : ... Top module 'collectorUnit'
+15330 | module collectorUnit(  
+      |        ^~~~~~~~~~~~~
+                                : ... Top module 'operandArbiter'
+18885 | module operandArbiter(  
+      |        ^~~~~~~~~~~~~~
+                                : ... Top module 'FloatRegFileBank'
+20130 | module FloatRegFileBank(  
+      |        ^~~~~~~~~~~~~~~~
+                                : ... Top module 'RegFileBank'
+20509 | module RegFileBank(  
+      |        ^~~~~~~~~~~
+                                : ... Top module 'crossBar'
+20559 | module crossBar(  
+      |        ^~~~~~~~
+                                : ... Top module 'instDemux'
+37160 | module instDemux(  
+      |        ^~~~~~~~~
+                                : ... Top module 'DualIssueIO'
+41613 | module DualIssueIO(  
+      |        ^~~~~~~~~~~
+                                : ... Top module 'GPGPU_SimTop'
+248489 | module GPGPU_SimTop(  
+       |        ^~~~~~~~~~~~
+make: *** [verilate.mk:159: build/libVentusRTL/debug/libVdut.a] Terminated

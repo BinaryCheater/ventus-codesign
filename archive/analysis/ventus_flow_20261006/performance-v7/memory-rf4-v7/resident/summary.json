@@ -1,0 +1,993 @@
+{
+  "input_sha256": {
+    "input.metadata": "29f452fb5324480e6c5e964d4179c1e752caef1ac4c642011636875542ac1916",
+    "input.data": "84e4cc6649de6c5cd260ac242e61ea6dfdd042f42247527d09ef6fc0cfebf423"
+  },
+  "expected_words": [
+    1119879168,
+    3279945728,
+    1107296256,
+    3273654272,
+    1107296256,
+    1107296256,
+    3280994304,
+    1140850688,
+    3279945728,
+    1119879168,
+    1133510656,
+    3273654272,
+    1141899264,
+    3280994304,
+    3254779904,
+    1115684864,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "final_tensor_pc": 2147483816,
+  "output_store_pc": 2147483836,
+  "workload": {
+    "operations": [
+      {
+        "name": "pc80000000",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v1",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000004",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000008",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000000c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000010",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000014",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v2",
+        "addresses": [
+          2415984640,
+          2415984644,
+          2415984648,
+          2415984652,
+          2415984656,
+          2415984660,
+          2415984664,
+          2415984668,
+          2415984672,
+          2415984676,
+          2415984680,
+          2415984684,
+          2415984688,
+          2415984692,
+          2415984696,
+          2415984700,
+          2415984704,
+          2415984708,
+          2415984712,
+          2415984716,
+          2415984720,
+          2415984724,
+          2415984728,
+          2415984732,
+          2415984736,
+          2415984740,
+          2415984744,
+          2415984748,
+          2415984752,
+          2415984756,
+          2415984760,
+          2415984764
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000018",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000001c",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000020",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000024",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000028",
+        "kind": "load",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v3",
+        "addresses": [
+          2416967680,
+          2416967684,
+          2416967688,
+          2416967692,
+          2416967696,
+          2416967700,
+          2416967704,
+          2416967708,
+          2416967712,
+          2416967716,
+          2416967720,
+          2416967724,
+          2416967728,
+          2416967732,
+          2416967736,
+          2416967740,
+          2416967744,
+          2416967748,
+          2416967752,
+          2416967756,
+          2416967760,
+          2416967764,
+          2416967768,
+          2416967772,
+          2416967776,
+          2416967780,
+          2416967784,
+          2416967788,
+          2416967792,
+          2416967796,
+          2416967800,
+          2416967804
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000002c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000030",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000034",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000038",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000003c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000040",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000044",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000048",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000004c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000050",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000054",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000058",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000005c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000060",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000064",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000068",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000006c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000070",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000074",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000078",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000007c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000080",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000084",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000088",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000008c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000090",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000094",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc80000098",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc8000009c",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000a0",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000a4",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000a8",
+        "kind": "tensor",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v2",
+          "v3",
+          "v1"
+        ],
+        "destination": "v1",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000ac",
+        "kind": "scalar",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "x6",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000b0",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000b4",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000b8",
+        "kind": "vector",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "x6"
+        ],
+        "destination": "v10",
+        "addresses": [],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      },
+      {
+        "name": "pc800000bc",
+        "kind": "store",
+        "block": 0,
+        "warp": 0,
+        "sources": [
+          "v10",
+          "v1"
+        ],
+        "destination": null,
+        "addresses": [
+          2415927296,
+          2415927300,
+          2415927304,
+          2415927308,
+          2415927312,
+          2415927316,
+          2415927320,
+          2415927324,
+          2415927328,
+          2415927332,
+          2415927336,
+          2415927340,
+          2415927344,
+          2415927348,
+          2415927352,
+          2415927356,
+          2415927360,
+          2415927364,
+          2415927368,
+          2415927372,
+          2415927376,
+          2415927380,
+          2415927384,
+          2415927388,
+          2415927392,
+          2415927396,
+          2415927400,
+          2415927404,
+          2415927408,
+          2415927412,
+          2415927416,
+          2415927420
+        ],
+        "dependencies": [],
+        "active_lanes": null,
+        "variant": null
+      }
+    ],
+    "warps_per_block": 1,
+    "vgpr_per_warp": 64,
+    "sgpr_per_warp": 64,
+    "lds_per_block": 4096
+  },
+  "instruction_count": 49,
+  "name": "resident",
+  "words": [
+    772833495,
+    2415985463,
+    1376298327,
+    2527147351,
+    44254551,
+    336251,
+    2416968503,
+    1376298327,
+    2527147351,
+    44254551,
+    336379,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    238108811,
+    2415928119,
+    1376298327,
+    2527147351,
+    44254551,
+    1400955,
+    16395
+  ],
+  "final_pc": 2147483816,
+  "prediction": 578,
+  "predicted_visible": 606,
+  "counters": {
+    "vector": 10,
+    "scalar": 3,
+    "load": 2,
+    "l1_read_miss": 2,
+    "l2_miss": 3,
+    "memory_read_bytes": 384,
+    "tensor": 32,
+    "store": 1,
+    "l1_write_miss": 1,
+    "memory_write_bytes": 128
+  },
+  "model_version": "ventus-source-events-v7",
+  "returncode": 0,
+  "rf_banks": 4,
+  "wall_seconds": 20.43669842800591,
+  "dispatch_to_finish_cycles": 623,
+  "checked_words": 32,
+  "all_output_zero": false,
+  "output_matches": true,
+  "output_words": [
+    1119879168,
+    3279945728,
+    1107296256,
+    3273654272,
+    1107296256,
+    1107296256,
+    3280994304,
+    1140850688,
+    3279945728,
+    1119879168,
+    1133510656,
+    3273654272,
+    1141899264,
+    3280994304,
+    3254779904,
+    1115684864,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33",
+  "rtl_library_sha256": "1a21bb8a9c3c6715492c4c53fddd92bf6e10d5af661c34c78a204beb29e7feb7",
+  "trace_tool_sha256": "c6144a2848cdc285fea0a3939661cd13c231c3dfc51958c7c0a8d1b7bdf13dcd",
+  "launch_not_before_cycle": 512
+}

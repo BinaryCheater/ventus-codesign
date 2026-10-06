@@ -1,0 +1,31 @@
+{
+  "name": "rf8",
+  "top": "operandCollector",
+  "source": "${REMOTE_FLOW_ROOT}/parameter-rtl-v4/collector-rf8-fixed/operandCollector.v",
+  "rtl_sha256": "5fb7bb2c22b92bcd24a6cc88b7b31cf8def037f98320c83fe0fb65c2748920b2",
+  "logic_rtl_sha256": "e70070b825027e8025cf5a6eacb9d41e8265ac0035161100b0f439a2abb2e34b",
+  "memory_modules": {
+    "regs_128x1024": {
+      "bits": 131072,
+      "arrays": [
+        [
+          "1023",
+          "Memory",
+          "127"
+        ]
+      ],
+      "source_sha256": "25f032b7e6b5968b88237083d0d7ab007347814f58eb2c8e74d457565c8c7ac0"
+    },
+    "regs_1_256x32": {
+      "bits": 8192,
+      "arrays": [
+        [
+          "31",
+          "Memory",
+          "255"
+        ]
+      ],
+      "source_sha256": "6e986f51287317f8a6ca8f652e60f9f34d20bced431824debe8d06cfb18a5e89"
+    }
+  }
+}

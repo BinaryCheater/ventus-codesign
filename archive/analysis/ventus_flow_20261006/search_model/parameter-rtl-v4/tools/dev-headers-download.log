@@ -1,0 +1,3 @@
+Get:1 https://mirrors.pku.edu.cn/ubuntu noble-updates/main amd64 liblz4-dev amd64 1.9.4-1build1.1 [87.6 kB]
+Get:2 https://mirrors.pku.edu.cn/ubuntu noble-updates/main amd64 libzstd-dev amd64 1.5.5+dfsg2-2build1.1 [364 kB]
+Fetched 452 kB in 1s (650 kB/s)

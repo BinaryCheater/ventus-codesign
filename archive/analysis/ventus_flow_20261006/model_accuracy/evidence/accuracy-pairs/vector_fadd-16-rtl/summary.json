@@ -1,0 +1,18 @@
+{
+  "case": "vector_fadd-16",
+  "backend": "rtl",
+  "family": "vector_fadd",
+  "n": 16,
+  "returncode": 0,
+  "wall_seconds": 17.007294392911717,
+  "first_dispatch_time": 185,
+  "kernel_finish_time": 2295,
+  "output_correct": true,
+  "checked_words": 32,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "896572db9410e0a10b71a2fa977ae8522af6be48512718a76be3d554bc768f04"
+  },
+  "dispatch_to_finish_cycles": 211.0
+}

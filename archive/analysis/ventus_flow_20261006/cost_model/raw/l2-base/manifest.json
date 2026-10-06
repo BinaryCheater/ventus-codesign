@@ -1,0 +1,429 @@
+{
+  "name": "l2-base",
+  "top": "Scheduler",
+  "source": "${REMOTE_PROJECT_ROOT}/sim-verilator/dut.v",
+  "rtl_sha256": "9eb262d75b8d1d96fe4ffde0f3d451409dbd8b12ee3990b34638984ed5864c17",
+  "logic_rtl_sha256": "04f3a745a7b8a5eb6d59c9ae1da7af1a8156f12e962f29b731a5052f05ad2a0c",
+  "memory_modules": {
+    "wgram1_8x77": {
+      "bits": 616,
+      "arrays": [
+        [
+          "76",
+          "Memory",
+          "7"
+        ]
+      ],
+      "source_sha256": "0c4f142488b079d084284a043959b04c1e753e58ba2292c12ccf4bdd6ca780b3"
+    },
+    "wgram2_8x241": {
+      "bits": 1928,
+      "arrays": [
+        [
+          "240",
+          "Memory",
+          "7"
+        ]
+      ],
+      "source_sha256": "ec86bc87ce5ef985799c9758c6f91f93c239c93dfe1af2961526540c8080f642"
+    },
+    "mem_8x3": {
+      "bits": 24,
+      "arrays": [
+        [
+          "2",
+          "Memory",
+          "7"
+        ]
+      ],
+      "source_sha256": "8a33fcba8b8ddfa6df4ddf4a9108cda9acb3311aa3162e392d89194372eeed95"
+    },
+    "addr_8x17": {
+      "bits": 136,
+      "arrays": [
+        [
+          "16",
+          "Memory",
+          "7"
+        ]
+      ],
+      "source_sha256": "e3c656ca9642af6585948aae45dbaae978d54294f0a13b130d8573f2c1e65f3f"
+    },
+    "addr_8x11": {
+      "bits": 88,
+      "arrays": [
+        [
+          "10",
+          "Memory",
+          "7"
+        ]
+      ],
+      "source_sha256": "8950fe0b194ade615d82e84a2dd4d38ef9fef184bb27314af8ee1ee2cd0083ca"
+    },
+    "addr_8x10": {
+      "bits": 80,
+      "arrays": [
+        [
+          "9",
+          "Memory",
+          "7"
+        ]
+      ],
+      "source_sha256": "a628cf2b4eb00400df618f95b1df63bb4a1516cd6e127779cb37118779227c71"
+    },
+    "ram_2x8": {
+      "bits": 16,
+      "arrays": [
+        [
+          "7",
+          "Memory",
+          "1"
+        ]
+      ],
+      "source_sha256": "357306d83c0f8098857d5494c5c5afa907d86172f275ad5b4a6cbfebad0a57ac"
+    },
+    "ram_2x257": {
+      "bits": 514,
+      "arrays": [
+        [
+          "256",
+          "Memory",
+          "1"
+        ]
+      ],
+      "source_sha256": "9419a450fd0d8ad92572a002c56d911dfaa8959f46f3f14abce8062c1476adf9"
+    },
+    "wf_gather_ram_16x39": {
+      "bits": 624,
+      "arrays": [
+        [
+          "38",
+          "Memory",
+          "15"
+        ]
+      ],
+      "source_sha256": "da6cf1f1e696944395ce898fe88d1ddfebe8207c16a26cd194e301668176bd41"
+    },
+    "wf_gather_cnt_16x4": {
+      "bits": 64,
+      "arrays": [
+        [
+          "3",
+          "Memory",
+          "15"
+        ]
+      ],
+      "source_sha256": "3db9703aa64a2469d93544fa2a82d6f03ff2f4af1dbab08d4f62abba321e0661"
+    },
+    "ram_wid_16x3": {
+      "bits": 48,
+      "arrays": [
+        [
+          "2",
+          "Memory",
+          "15"
+        ]
+      ],
+      "source_sha256": "9ea49f7072f7648f8d4fae57310be876848ebc5f99a91e327d57ab1b49c9db65"
+    },
+    "regs_256x1024": {
+      "bits": 262144,
+      "arrays": [
+        [
+          "1023",
+          "Memory",
+          "255"
+        ]
+      ],
+      "source_sha256": "1a255f45b1a99582351ddbc9b9bbb2cc8fde8b461018d202a1cc9650c9898860"
+    },
+    "regs_1_512x32": {
+      "bits": 16384,
+      "arrays": [
+        [
+          "31",
+          "Memory",
+          "511"
+        ]
+      ],
+      "source_sha256": "b97462c04eb5ed6852c6c657473c47eb5ffd2d4f25cef57188d086fd21e33642"
+    },
+    "data_8x1024": {
+      "bits": 8192,
+      "arrays": [
+        [
+          "1023",
+          "Memory",
+          "7"
+        ]
+      ],
+      "source_sha256": "8110227119e1d6d2099a3db959f8a1571f1ceb6986f139f4f1366b5f0b45f393"
+    },
+    "tag_8x248": {
+      "bits": 1984,
+      "arrays": [
+        [
+          "247",
+          "Memory",
+          "7"
+        ]
+      ],
+      "source_sha256": "1a1a507fd5833ee35ae65dd518ad577e87c0cc28e05e2c074a8c8a2ff39465b2"
+    },
+    "ram_2x456": {
+      "bits": 912,
+      "arrays": [
+        [
+          "455",
+          "Memory",
+          "1"
+        ]
+      ],
+      "source_sha256": "1a964bbc3f4d7aaed9db710776722cdd4fa15a636724caf9d1430a6c78e7f427"
+    },
+    "ram_2x2": {
+      "bits": 4,
+      "arrays": [
+        [
+          "1",
+          "Memory",
+          "1"
+        ]
+      ],
+      "source_sha256": "f87d7aa20b4cdf0d8d81c2e2a278a16d4d6f939aba4cf3f75a734c20e13a5727"
+    },
+    "stack_mem_32x96": {
+      "bits": 3072,
+      "arrays": [
+        [
+          "95",
+          "Memory",
+          "31"
+        ]
+      ],
+      "source_sha256": "7ec02196800e2f88338ee4b8ee0dd1132506d04817127501deee9b183b2fec8b"
+    },
+    "array_256x34": {
+      "bits": 8704,
+      "arrays": [
+        [
+          "33",
+          "Memory",
+          "255"
+        ]
+      ],
+      "source_sha256": "231ecb852acd3f247df9ad0c50f56a4988031e782e3923c81d894a7dd2039da0"
+    },
+    "array_256x2048": {
+      "bits": 524288,
+      "arrays": [
+        [
+          "2047",
+          "Memory",
+          "255"
+        ]
+      ],
+      "source_sha256": "e06e398f3c83571cbafb3dd5e88820004704fc94fd6b767b9553b82b42e63c0a"
+    },
+    "ram_2x1029": {
+      "bits": 2058,
+      "arrays": [
+        [
+          "1028",
+          "Memory",
+          "1"
+        ]
+      ],
+      "source_sha256": "436e83887120c48a9a328c07e2383a55929ba9ab99ecfeae977d72d0f94ccbe6"
+    },
+    "array_256x20": {
+      "bits": 5120,
+      "arrays": [
+        [
+          "19",
+          "Memory",
+          "255"
+        ]
+      ],
+      "source_sha256": "b22739d06f71079f43623a34c3928802dd6424d37ad8fabdda1fa17dcc31f357"
+    },
+    "array_256x256": {
+      "bits": 65536,
+      "arrays": [
+        [
+          "255",
+          "Memory",
+          "255"
+        ]
+      ],
+      "source_sha256": "7ee1a8c780327d149600106f5a141b2769bb895e7c0ae1655e75c23adf3c26bf"
+    },
+    "ram_32x1059": {
+      "bits": 33888,
+      "arrays": [
+        [
+          "1058",
+          "Memory",
+          "31"
+        ]
+      ],
+      "source_sha256": "b4ff01ba6ae10a487b010c37f41632483165b8fa472f1933b522df9a1e4e710e"
+    },
+    "ram_2x1040": {
+      "bits": 2080,
+      "arrays": [
+        [
+          "1039",
+          "Memory",
+          "1"
+        ]
+      ],
+      "source_sha256": "f7a3509f9270284477e6b04ef09872d6849f2df6b1ba653529eb408d5697dd3c"
+    },
+    "ram_8x1300": {
+      "bits": 10400,
+      "arrays": [
+        [
+          "1299",
+          "Memory",
+          "7"
+        ]
+      ],
+      "source_sha256": "02fe920c17dc4e8988f091b2c3e4a97799e4c98ce3b7be7066a117836f8a741d"
+    },
+    "array_512x32": {
+      "bits": 16384,
+      "arrays": [
+        [
+          "31",
+          "Memory",
+          "511"
+        ]
+      ],
+      "source_sha256": "ffdf84c59bd9fdefc9e6080208110943ac3a690139bf160a718fe747aae976ab"
+    },
+    "ram_8x32": {
+      "bits": 256,
+      "arrays": [
+        [
+          "31",
+          "Memory",
+          "7"
+        ]
+      ],
+      "source_sha256": "5ae2c52278fdf928d9224ab5b59b398e9c10f49e42da9484148e8cf244e36c9c"
+    },
+    "array_1024x32": {
+      "bits": 32768,
+      "arrays": [
+        [
+          "31",
+          "Memory",
+          "1023"
+        ]
+      ],
+      "source_sha256": "ec2c440bff2bf5746fdd968bd4c750b3488bab14a0f25dbaa7036cd06b3c1e44"
+    },
+    "head_32x5": {
+      "bits": 160,
+      "arrays": [
+        [
+          "4",
+          "Memory",
+          "31"
+        ]
+      ],
+      "source_sha256": "0b952a68d33feae68422000e632eec36cf41d6bcc73de74425a9f23c8f17f955"
+    },
+    "tail_32x5": {
+      "bits": 160,
+      "arrays": [
+        [
+          "4",
+          "Memory",
+          "31"
+        ]
+      ],
+      "source_sha256": "51326550949bfa16cece424fb432f078ad95813419c0835c6f2efd987e13a9b8"
+    },
+    "next_32x5": {
+      "bits": 160,
+      "arrays": [
+        [
+          "4",
+          "Memory",
+          "31"
+        ]
+      ],
+      "source_sha256": "2b86b3f58a8478e12a1a5675152aa87ca9918823feb99a9e22e2a0bc9d601768"
+    },
+    "data_32x1152": {
+      "bits": 36864,
+      "arrays": [
+        [
+          "1151",
+          "Memory",
+          "31"
+        ]
+      ],
+      "source_sha256": "498c2f0bcbd8249b104c0bec3ad92651b37c698b4605d443bd88e3d55dd7ac12"
+    },
+    "array_64x304": {
+      "bits": 19456,
+      "arrays": [
+        [
+          "303",
+          "Memory",
+          "63"
+        ]
+      ],
+      "source_sha256": "7f097f7b1d7719ca5d92e9d55352de21bca4c31c0ff4b16a223e61e1d6932a67"
+    },
+    "array_1024x1024": {
+      "bits": 1048576,
+      "arrays": [
+        [
+          "1023",
+          "Memory",
+          "1023"
+        ]
+      ],
+      "source_sha256": "66733c4895dd6ef0c453e59d233b688510809cdc5727cc6d1a29c023c3803f97"
+    },
+    "data_32x1176": {
+      "bits": 37632,
+      "arrays": [
+        [
+          "1175",
+          "Memory",
+          "31"
+        ]
+      ],
+      "source_sha256": "5a2b43e8b06e867c68f318391d92040477791738b8bb5e539e9409a7287caffe"
+    },
+    "ram_8x1203": {
+      "bits": 9624,
+      "arrays": [
+        [
+          "1202",
+          "Memory",
+          "7"
+        ]
+      ],
+      "source_sha256": "2d7c62fff6268158eddf4640d016d72cd69f5900812ccaf0faef08cccb8f94df"
+    },
+    "ram_2x1270": {
+      "bits": 2540,
+      "arrays": [
+        [
+          "1269",
+          "Memory",
+          "1"
+        ]
+      ],
+      "source_sha256": "17693b8c36d80479631c2474534b14e161806ec4982331a780ccecbb05cc4841"
+    }
+  },
+  "flow": "coarse-slang",
+  "original_manifest_sha256": "2a0f5dc8b6094a3f716e4c13cdb17afca9e0997bf6ba56efa19f8c85dbc01748"
+}

@@ -1,0 +1,18 @@
+[RTL     info]@0 SNAPSHOT created, pid=3350636
+[RTL    trace]@20 Hardware reset ok
+[2026-10-06 08:52:57.614] [trace] kernel0 scalar_add-64 data loaded from file
+[RTL    trace]@30 kernel 0 scalar_add-64 activate
+[RTL    debug]@185 block0  dispatched to GPU (kernel0  scalar_add-64 block0 )
+[RTL    debug]@4195 block0  finished (kernel0  scalar_add-64 block0 )
+[RTL     info]@4195 kernel0  scalar_add-64 finished
+[RTL    debug]@10000 
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+dump-mem: mem[0x90002000 +: 4] = 0x00000040
+[RTL     info]@54195 Simulation finished in 54195 unit time
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: end at 54ns; walltime 16.862 s; speed 3.214 ns/s
+- Verilator: cpu 67.199 s on 4 threads; allocated 583 MB
+[RTL    debug]@54195 All snapshot process are cleared, OK

@@ -1,0 +1,13 @@
+[RTL     info]@0 SNAPSHOT created, pid=3550191
+[RTL    trace]@20 Hardware reset ok
+[RTL    trace]@30 kernel 0 epilogue-d24-h4-lds-r0-s4 activate
+[RTL    debug]@5125 block0  dispatched to GPU (kernel0  epilogue-d24-h4-lds-r0-s4 block0 )
+[RTL    debug]@8555 block0  finished (kernel0  epilogue-d24-h4-lds-r0-s4 block0 )
+[RTL     info]@8555 kernel0  epilogue-d24-h4-lds-r0-s4 finished
+[RTL    debug]@10000 
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL     info]@58555 Simulation finished in 58555 unit time
+[RTL    debug]@58555 All snapshot process are cleared, OK

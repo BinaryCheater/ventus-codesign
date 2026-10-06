@@ -1,0 +1,11 @@
+[RTL     info]@0 SNAPSHOT created, pid=310223
+[RTL    trace]@20 Hardware reset ok
+[2026-10-06 20:48:40.562] [trace] kernel0 ό~ƒχαZ data loaded from file
+[RTL    trace]@30 kernel 0 layernorm-d64-s3-c0 activate
+[RTL    debug]@5125 block0  dispatched to GPU (kernel0  layernorm-d64-s3-c0 block0 )
+[RTL    error]@7750 PMEM page at 0x6fffff80 not allocated, read as all zero
+[RTL    error]@7760 PMEM page at 0x70000000 not allocated, read as all zero
+[RTL    debug]@10000 
+[RTL    debug]@19645 block0  finished (kernel0  layernorm-d64-s3-c0 block0 )
+[RTL     info]@19645 kernel0  layernorm-d64-s3-c0 finished
+[RTL    debug]@20000 

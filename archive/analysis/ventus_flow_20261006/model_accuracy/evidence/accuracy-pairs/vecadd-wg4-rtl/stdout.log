@@ -1,0 +1,160 @@
+[RTL     info]@0 SNAPSHOT created, pid=3360130
+[RTL    trace]@20 Hardware reset ok
+[2026-10-06 08:57:53.441] [trace] kernel0 vecadd-wg4 data loaded from file
+[RTL    trace]@30 kernel 0 vecadd-wg4 activate
+[RTL    debug]@185 block0  dispatched to GPU (kernel0  vecadd-wg4 block0 )
+[RTL    debug]@195 block1  dispatched to GPU (kernel0  vecadd-wg4 block1 )
+[RTL    debug]@205 block2  dispatched to GPU (kernel0  vecadd-wg4 block2 )
+[RTL    debug]@215 block3  dispatched to GPU (kernel0  vecadd-wg4 block3 )
+[RTL    error]@3360 PMEM page at 0x80003000 not allocated, read as all zero
+[RTL    debug]@10000 
+[RTL    debug]@12205 block0  finished (kernel0  vecadd-wg4 block0 )
+[RTL    debug]@12225 block1  finished (kernel0  vecadd-wg4 block1 )
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL    debug]@60000 
+[RTL    debug]@67905 block2  finished (kernel0  vecadd-wg4 block2 )
+[RTL    debug]@70000 
+[RTL    debug]@80000 
+[RTL    debug]@88575 block3  finished (kernel0  vecadd-wg4 block3 )
+[RTL     info]@88575 kernel0  vecadd-wg4 finished
+[RTL    debug]@90000 
+[RTL    debug]@100000 
+[RTL    debug]@110000 
+[RTL    debug]@120000 
+[RTL    debug]@130000 
+dump-mem: mem[0x90002000 +: 4] = 0x44800000
+dump-mem: mem[0x90002004 +: 4] = 0x44800000
+dump-mem: mem[0x90002008 +: 4] = 0x44800000
+dump-mem: mem[0x9000200C +: 4] = 0x44800000
+dump-mem: mem[0x90002010 +: 4] = 0x44800000
+dump-mem: mem[0x90002014 +: 4] = 0x44800000
+dump-mem: mem[0x90002018 +: 4] = 0x44800000
+dump-mem: mem[0x9000201C +: 4] = 0x44800000
+dump-mem: mem[0x90002020 +: 4] = 0x44800000
+dump-mem: mem[0x90002024 +: 4] = 0x44800000
+dump-mem: mem[0x90002028 +: 4] = 0x44800000
+dump-mem: mem[0x9000202C +: 4] = 0x44800000
+dump-mem: mem[0x90002030 +: 4] = 0x44800000
+dump-mem: mem[0x90002034 +: 4] = 0x44800000
+dump-mem: mem[0x90002038 +: 4] = 0x44800000
+dump-mem: mem[0x9000203C +: 4] = 0x44800000
+dump-mem: mem[0x90002040 +: 4] = 0x44800000
+dump-mem: mem[0x90002044 +: 4] = 0x44800000
+dump-mem: mem[0x90002048 +: 4] = 0x44800000
+dump-mem: mem[0x9000204C +: 4] = 0x44800000
+dump-mem: mem[0x90002050 +: 4] = 0x44800000
+dump-mem: mem[0x90002054 +: 4] = 0x44800000
+dump-mem: mem[0x90002058 +: 4] = 0x44800000
+dump-mem: mem[0x9000205C +: 4] = 0x44800000
+dump-mem: mem[0x90002060 +: 4] = 0x44800000
+dump-mem: mem[0x90002064 +: 4] = 0x44800000
+dump-mem: mem[0x90002068 +: 4] = 0x44800000
+dump-mem: mem[0x9000206C +: 4] = 0x44800000
+dump-mem: mem[0x90002070 +: 4] = 0x44800000
+dump-mem: mem[0x90002074 +: 4] = 0x44800000
+dump-mem: mem[0x90002078 +: 4] = 0x44800000
+dump-mem: mem[0x9000207C +: 4] = 0x44800000
+dump-mem: mem[0x90002080 +: 4] = 0x44800000
+dump-mem: mem[0x90002084 +: 4] = 0x44800000
+dump-mem: mem[0x90002088 +: 4] = 0x44800000
+dump-mem: mem[0x9000208C +: 4] = 0x44800000
+dump-mem: mem[0x90002090 +: 4] = 0x44800000
+dump-mem: mem[0x90002094 +: 4] = 0x44800000
+dump-mem: mem[0x90002098 +: 4] = 0x44800000
+dump-mem: mem[0x9000209C +: 4] = 0x44800000
+dump-mem: mem[0x900020A0 +: 4] = 0x44800000
+dump-mem: mem[0x900020A4 +: 4] = 0x44800000
+dump-mem: mem[0x900020A8 +: 4] = 0x44800000
+dump-mem: mem[0x900020AC +: 4] = 0x44800000
+dump-mem: mem[0x900020B0 +: 4] = 0x44800000
+dump-mem: mem[0x900020B4 +: 4] = 0x44800000
+dump-mem: mem[0x900020B8 +: 4] = 0x44800000
+dump-mem: mem[0x900020BC +: 4] = 0x44800000
+dump-mem: mem[0x900020C0 +: 4] = 0x44800000
+dump-mem: mem[0x900020C4 +: 4] = 0x44800000
+dump-mem: mem[0x900020C8 +: 4] = 0x44800000
+dump-mem: mem[0x900020CC +: 4] = 0x44800000
+dump-mem: mem[0x900020D0 +: 4] = 0x44800000
+dump-mem: mem[0x900020D4 +: 4] = 0x44800000
+dump-mem: mem[0x900020D8 +: 4] = 0x44800000
+dump-mem: mem[0x900020DC +: 4] = 0x44800000
+dump-mem: mem[0x900020E0 +: 4] = 0x44800000
+dump-mem: mem[0x900020E4 +: 4] = 0x44800000
+dump-mem: mem[0x900020E8 +: 4] = 0x44800000
+dump-mem: mem[0x900020EC +: 4] = 0x44800000
+dump-mem: mem[0x900020F0 +: 4] = 0x44800000
+dump-mem: mem[0x900020F4 +: 4] = 0x44800000
+dump-mem: mem[0x900020F8 +: 4] = 0x44800000
+dump-mem: mem[0x900020FC +: 4] = 0x44800000
+dump-mem: mem[0x90002100 +: 4] = 0x44800000
+dump-mem: mem[0x90002104 +: 4] = 0x44800000
+dump-mem: mem[0x90002108 +: 4] = 0x44800000
+dump-mem: mem[0x9000210C +: 4] = 0x44800000
+dump-mem: mem[0x90002110 +: 4] = 0x44800000
+dump-mem: mem[0x90002114 +: 4] = 0x44800000
+dump-mem: mem[0x90002118 +: 4] = 0x44800000
+dump-mem: mem[0x9000211C +: 4] = 0x44800000
+dump-mem: mem[0x90002120 +: 4] = 0x44800000
+dump-mem: mem[0x90002124 +: 4] = 0x44800000
+dump-mem: mem[0x90002128 +: 4] = 0x44800000
+dump-mem: mem[0x9000212C +: 4] = 0x44800000
+dump-mem: mem[0x90002130 +: 4] = 0x44800000
+dump-mem: mem[0x90002134 +: 4] = 0x44800000
+dump-mem: mem[0x90002138 +: 4] = 0x44800000
+dump-mem: mem[0x9000213C +: 4] = 0x44800000
+dump-mem: mem[0x90002140 +: 4] = 0x44800000
+dump-mem: mem[0x90002144 +: 4] = 0x44800000
+dump-mem: mem[0x90002148 +: 4] = 0x44800000
+dump-mem: mem[0x9000214C +: 4] = 0x44800000
+dump-mem: mem[0x90002150 +: 4] = 0x44800000
+dump-mem: mem[0x90002154 +: 4] = 0x44800000
+dump-mem: mem[0x90002158 +: 4] = 0x44800000
+dump-mem: mem[0x9000215C +: 4] = 0x44800000
+dump-mem: mem[0x90002160 +: 4] = 0x44800000
+dump-mem: mem[0x90002164 +: 4] = 0x44800000
+dump-mem: mem[0x90002168 +: 4] = 0x44800000
+dump-mem: mem[0x9000216C +: 4] = 0x44800000
+dump-mem: mem[0x90002170 +: 4] = 0x44800000
+dump-mem: mem[0x90002174 +: 4] = 0x44800000
+dump-mem: mem[0x90002178 +: 4] = 0x44800000
+dump-mem: mem[0x9000217C +: 4] = 0x44800000
+dump-mem: mem[0x90002180 +: 4] = 0x44800000
+dump-mem: mem[0x90002184 +: 4] = 0x44800000
+dump-mem: mem[0x90002188 +: 4] = 0x44800000
+dump-mem: mem[0x9000218C +: 4] = 0x44800000
+dump-mem: mem[0x90002190 +: 4] = 0x44800000
+dump-mem: mem[0x90002194 +: 4] = 0x44800000
+dump-mem: mem[0x90002198 +: 4] = 0x44800000
+dump-mem: mem[0x9000219C +: 4] = 0x44800000
+dump-mem: mem[0x900021A0 +: 4] = 0x44800000
+dump-mem: mem[0x900021A4 +: 4] = 0x44800000
+dump-mem: mem[0x900021A8 +: 4] = 0x44800000
+dump-mem: mem[0x900021AC +: 4] = 0x44800000
+dump-mem: mem[0x900021B0 +: 4] = 0x44800000
+dump-mem: mem[0x900021B4 +: 4] = 0x44800000
+dump-mem: mem[0x900021B8 +: 4] = 0x44800000
+dump-mem: mem[0x900021BC +: 4] = 0x44800000
+dump-mem: mem[0x900021C0 +: 4] = 0x44800000
+dump-mem: mem[0x900021C4 +: 4] = 0x44800000
+dump-mem: mem[0x900021C8 +: 4] = 0x44800000
+dump-mem: mem[0x900021CC +: 4] = 0x44800000
+dump-mem: mem[0x900021D0 +: 4] = 0x44800000
+dump-mem: mem[0x900021D4 +: 4] = 0x44800000
+dump-mem: mem[0x900021D8 +: 4] = 0x44800000
+dump-mem: mem[0x900021DC +: 4] = 0x44800000
+dump-mem: mem[0x900021E0 +: 4] = 0x44800000
+dump-mem: mem[0x900021E4 +: 4] = 0x44800000
+dump-mem: mem[0x900021E8 +: 4] = 0x44800000
+dump-mem: mem[0x900021EC +: 4] = 0x44800000
+dump-mem: mem[0x900021F0 +: 4] = 0x44800000
+dump-mem: mem[0x900021F4 +: 4] = 0x44800000
+dump-mem: mem[0x900021F8 +: 4] = 0x44800000
+dump-mem: mem[0x900021FC +: 4] = 0x44800000
+[RTL     info]@138575 Simulation finished in 138575 unit time
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: end at 139ns; walltime 43.551 s; speed 3.182 ns/s
+- Verilator: cpu 173.931 s on 4 threads; allocated 583 MB
+[RTL    debug]@138575 All snapshot process are cleared, OK

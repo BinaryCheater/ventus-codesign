@@ -1,0 +1,18 @@
+{
+  "case": "div-1-by-1",
+  "backend": "systemc",
+  "family": "div_operands",
+  "n": 16,
+  "returncode": 0,
+  "wall_seconds": 0.07894436898641288,
+  "first_dispatch_time": 15,
+  "kernel_finish_time": 2005,
+  "output_correct": true,
+  "checked_words": 32,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "296afa626c675ed6b2509f06d2ee0893836391d5a7b2ef7e8a57df4bf2497680"
+  },
+  "dispatch_to_finish_cycles": 199.0
+}

@@ -1,0 +1,18 @@
+{
+  "case": "vecadd-wg4",
+  "backend": "systemc",
+  "family": "vecadd",
+  "n": 4,
+  "returncode": 0,
+  "wall_seconds": 0.1653521800180897,
+  "first_dispatch_time": 15,
+  "kernel_finish_time": 6825,
+  "output_correct": true,
+  "checked_words": 128,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "8dee58dec1a7f86c4c934e37fed93a8d6f2b3902fe3181469123a44bea6a0264",
+    "input.data": "945859a360311dc4fd1045621c8ae3c10e168077fabbb49e4ed2554f1ea5ae53"
+  },
+  "dispatch_to_finish_cycles": 681.0
+}

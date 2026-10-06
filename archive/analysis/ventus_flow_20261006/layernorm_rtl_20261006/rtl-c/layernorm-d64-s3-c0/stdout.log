@@ -1,0 +1,83 @@
+[RTL     info]@0 SNAPSHOT created, pid=316101
+[RTL    trace]@20 Hardware reset ok
+[2026-10-06 20:50:18.202] [trace] kernel0 ¿ í~ÙY data loaded from file
+[RTL    trace]@30 kernel 0 layernorm-d64-s3-c0 activate
+[RTL    debug]@5125 block0  dispatched to GPU (kernel0  layernorm-d64-s3-c0 block0 )
+[RTL    debug]@10000 
+[RTL    debug]@20000 
+[RTL    debug]@20775 block0  finished (kernel0  layernorm-d64-s3-c0 block0 )
+[RTL     info]@20775 kernel0  layernorm-d64-s3-c0 finished
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL    debug]@60000 
+[RTL    debug]@70000 
+dump-mem: mem[0x90002000 +: 4] = 0x3EB62311
+dump-mem: mem[0x90002004 +: 4] = 0x3FABC0FB
+dump-mem: mem[0x90002008 +: 4] = 0x3D93E2B0
+dump-mem: mem[0x9000200C +: 4] = 0x3FAB8DC3
+dump-mem: mem[0x90002010 +: 4] = 0xBF04D782
+dump-mem: mem[0x90002014 +: 4] = 0x3F455115
+dump-mem: mem[0x90002018 +: 4] = 0xBECAE9FF
+dump-mem: mem[0x9000201C +: 4] = 0x3DCEDD42
+dump-mem: mem[0x90002020 +: 4] = 0x3FB2855D
+dump-mem: mem[0x90002024 +: 4] = 0xBEE0B0D2
+dump-mem: mem[0x90002028 +: 4] = 0x3F3F90A1
+dump-mem: mem[0x9000202C +: 4] = 0xBEC94B1E
+dump-mem: mem[0x90002030 +: 4] = 0x3F113AFB
+dump-mem: mem[0x90002034 +: 4] = 0x3FF17CF8
+dump-mem: mem[0x90002038 +: 4] = 0xBEB7B2A2
+dump-mem: mem[0x9000203C +: 4] = 0x3F39D02E
+dump-mem: mem[0x90002040 +: 4] = 0xBEC7AC40
+dump-mem: mem[0x90002044 +: 4] = 0x3F189A4D
+dump-mem: mem[0x90002048 +: 4] = 0x3FF87492
+dump-mem: mem[0x9000204C +: 4] = 0x3E229720
+dump-mem: mem[0x90002050 +: 4] = 0x3F9207DD
+dump-mem: mem[0x90002054 +: 4] = 0xBEC60D62
+dump-mem: mem[0x90002058 +: 4] = 0x3F1FF9A0
+dump-mem: mem[0x9000205C +: 4] = 0xBF870519
+dump-mem: mem[0x90002060 +: 4] = 0x3E749381
+dump-mem: mem[0x90002064 +: 4] = 0x3F8F27A3
+dump-mem: mem[0x90002068 +: 4] = 0x3D5C8BE6
+dump-mem: mem[0x9000206C +: 4] = 0x3F8BAC79
+dump-mem: mem[0x90002070 +: 4] = 0xBF800D7E
+dump-mem: mem[0x90002074 +: 4] = 0x3EA347F2
+dump-mem: mem[0x90002078 +: 4] = 0x3F8C4769
+dump-mem: mem[0x9000207C +: 4] = 0x3D6982D6
+dump-mem: mem[0x90002080 +: 4] = 0x3F8F5C22
+dump-mem: mem[0x90002084 +: 4] = 0xBF022BC7
+dump-mem: mem[0x90002088 +: 4] = 0x3F562311
+dump-mem: mem[0x9000208C +: 4] = 0x3F89672F
+dump-mem: mem[0x90002090 +: 4] = 0x3D7679D0
+dump-mem: mem[0x90002094 +: 4] = 0x3F930BCC
+dump-mem: mem[0x90002098 +: 4] = 0xBEE87924
+dump-mem: mem[0x9000209C +: 4] = 0x3F6AA22A
+dump-mem: mem[0x900020A0 +: 4] = 0xBE8254CC
+dump-mem: mem[0x900020A4 +: 4] = 0x3F00370C
+dump-mem: mem[0x900020A8 +: 4] = 0x3F96BB74
+dump-mem: mem[0x900020AC +: 4] = 0xBECC9AB8
+dump-mem: mem[0x900020B0 +: 4] = 0x3F7F2142
+dump-mem: mem[0x900020B4 +: 4] = 0xBE8DD5B2
+dump-mem: mem[0x900020B8 +: 4] = 0x3F01067B
+dump-mem: mem[0x900020BC +: 4] = 0x3FD26B1E
+dump-mem: mem[0x900020C0 +: 4] = 0x3DBD0EC9
+dump-mem: mem[0x900020C4 +: 4] = 0x3F89D02E
+dump-mem: mem[0x900020C8 +: 4] = 0xBE99569A
+dump-mem: mem[0x900020CC +: 4] = 0x3F01D5EB
+dump-mem: mem[0x900020D0 +: 4] = 0x3FD61AC6
+dump-mem: mem[0x900020D4 +: 4] = 0x3E16443C
+dump-mem: mem[0x900020D8 +: 4] = 0x3FCC0FBA
+dump-mem: mem[0x900020DC +: 4] = 0x3DECA1F8
+dump-mem: mem[0x900020E0 +: 4] = 0x3F02A55A
+dump-mem: mem[0x900020E4 +: 4] = 0xBF69BF99
+dump-mem: mem[0x900020E8 +: 4] = 0x3E4E0111
+dump-mem: mem[0x900020EC +: 4] = 0x3FD64F46
+dump-mem: mem[0x900020F0 +: 4] = 0x3DBE9E5C
+dump-mem: mem[0x900020F4 +: 4] = 0x3F7374C9
+dump-mem: mem[0x900020F8 +: 4] = 0xBEE4C08B
+dump-mem: mem[0x900020FC +: 4] = 0x3E82DEF3
+[RTL     info]@70775 Simulation finished in 70775 unit time
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: end at 71ns; walltime 22.946 s; speed 3.084 ns/s
+- Verilator: cpu 91.520 s on 4 threads; allocated 583 MB
+[RTL    debug]@70775 All snapshot process are cleared, OK

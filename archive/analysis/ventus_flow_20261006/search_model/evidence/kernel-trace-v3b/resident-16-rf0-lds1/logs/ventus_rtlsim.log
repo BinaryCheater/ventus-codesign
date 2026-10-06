@@ -1,0 +1,13 @@
+[RTL     info]@0 SNAPSHOT created, pid=3492857
+[RTL    trace]@20 Hardware reset ok
+[RTL    trace]@30 kernel 0 resident-16-rf0-lds1 activate
+[RTL    debug]@185 block0  dispatched to GPU (kernel0  resident-16-rf0-lds1 block0 )
+[RTL    debug]@5495 block0  finished (kernel0  resident-16-rf0-lds1 block0 )
+[RTL     info]@5495 kernel0  resident-16-rf0-lds1 finished
+[RTL    debug]@10000 
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL     info]@55495 Simulation finished in 55495 unit time
+[RTL    debug]@55495 All snapshot process are cleared, OK

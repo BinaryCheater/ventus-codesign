@@ -1,0 +1,1718 @@
+
+-- Executing script file `synth.ys' --
+
+1. Executing SLANG frontend.
+
+1.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7.$4'.
+Removing empty process `SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6.$4'.
+Removing empty process `SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5.$4'.
+Removing empty process `SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4.$4'.
+Removing empty process `SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3.$4'.
+Removing empty process `SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2.$4'.
+Removing empty process `SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1.$4'.
+Removing empty process `SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess.$4'.
+Found and cleaned up 1 empty switch in `\Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q.$11'.
+Found and cleaned up 1 empty switch in `\BankConflictArbiter$SharedMemory.BankConfArb.$908'.
+Found and cleaned up 1 empty switch in `\SharedMemory.$12'.
+Cleaned up 3 empty switches.
+
+1.2. Executing TRIBUF pass.
+
+1.3. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 4 switch rules as full_case in process $11 in module Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q.
+Marked 66 switch rules as full_case in process $908 in module BankConflictArbiter$SharedMemory.BankConfArb.
+Marked 3 switch rules as full_case in process $12 in module SharedMemory.
+Removed a total of 0 dead cases.
+
+1.4. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 16 redundant assignments.
+Promoted 0 assignments to connections.
+
+1.5. Executing PROC_INIT pass (extract init attributes).
+
+1.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~79 debug messages>
+
+1.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q.$11'.
+     1/6: $maybe_full$20
+     2/6: $deq_ptr_value$17
+     3/6: $enq_ptr_value$15
+     4/6: $maybe_full$23
+     5/6: $deq_ptr_value$22
+     6/6: $enq_ptr_value$21
+Creating decoders for process `\BankConflictArbiter$SharedMemory.BankConfArb.$908'.
+     1/98: $perLaneConflictReq_reg_31_AddrBundle_wordOffset1H$1135
+     2/98: $perLaneConflictReq_reg_31_AddrBundle_bankOffset$1134
+     3/98: $perLaneConflictReq_reg_31_bankIdx$1133
+     4/98: $perLaneConflictReq_reg_30_AddrBundle_wordOffset1H$1130
+     5/98: $perLaneConflictReq_reg_30_AddrBundle_bankOffset$1129
+     6/98: $perLaneConflictReq_reg_30_bankIdx$1128
+     7/98: $perLaneConflictReq_reg_29_AddrBundle_wordOffset1H$1125
+     8/98: $perLaneConflictReq_reg_29_AddrBundle_bankOffset$1124
+     9/98: $perLaneConflictReq_reg_29_bankIdx$1123
+    10/98: $perLaneConflictReq_reg_28_AddrBundle_wordOffset1H$1120
+    11/98: $perLaneConflictReq_reg_28_AddrBundle_bankOffset$1119
+    12/98: $perLaneConflictReq_reg_28_bankIdx$1118
+    13/98: $perLaneConflictReq_reg_27_AddrBundle_wordOffset1H$1115
+    14/98: $perLaneConflictReq_reg_27_AddrBundle_bankOffset$1114
+    15/98: $perLaneConflictReq_reg_27_bankIdx$1113
+    16/98: $perLaneConflictReq_reg_26_AddrBundle_wordOffset1H$1110
+    17/98: $perLaneConflictReq_reg_26_AddrBundle_bankOffset$1109
+    18/98: $perLaneConflictReq_reg_26_bankIdx$1108
+    19/98: $perLaneConflictReq_reg_25_AddrBundle_wordOffset1H$1105
+    20/98: $perLaneConflictReq_reg_25_AddrBundle_bankOffset$1104
+    21/98: $perLaneConflictReq_reg_25_bankIdx$1103
+    22/98: $perLaneConflictReq_reg_24_AddrBundle_wordOffset1H$1100
+    23/98: $perLaneConflictReq_reg_24_AddrBundle_bankOffset$1099
+    24/98: $perLaneConflictReq_reg_24_bankIdx$1098
+    25/98: $perLaneConflictReq_reg_23_AddrBundle_wordOffset1H$1095
+    26/98: $perLaneConflictReq_reg_23_AddrBundle_bankOffset$1094
+    27/98: $perLaneConflictReq_reg_23_bankIdx$1093
+    28/98: $perLaneConflictReq_reg_22_AddrBundle_wordOffset1H$1090
+    29/98: $perLaneConflictReq_reg_22_AddrBundle_bankOffset$1089
+    30/98: $perLaneConflictReq_reg_22_bankIdx$1088
+    31/98: $perLaneConflictReq_reg_21_AddrBundle_wordOffset1H$1085
+    32/98: $perLaneConflictReq_reg_21_AddrBundle_bankOffset$1084
+    33/98: $perLaneConflictReq_reg_21_bankIdx$1083
+    34/98: $perLaneConflictReq_reg_20_AddrBundle_wordOffset1H$1080
+    35/98: $perLaneConflictReq_reg_20_AddrBundle_bankOffset$1079
+    36/98: $perLaneConflictReq_reg_20_bankIdx$1078
+    37/98: $perLaneConflictReq_reg_19_AddrBundle_wordOffset1H$1075
+    38/98: $perLaneConflictReq_reg_19_AddrBundle_bankOffset$1074
+    39/98: $perLaneConflictReq_reg_19_bankIdx$1073
+    40/98: $perLaneConflictReq_reg_18_AddrBundle_wordOffset1H$1070
+    41/98: $perLaneConflictReq_reg_18_AddrBundle_bankOffset$1069
+    42/98: $perLaneConflictReq_reg_18_bankIdx$1068
+    43/98: $perLaneConflictReq_reg_17_AddrBundle_wordOffset1H$1065
+    44/98: $perLaneConflictReq_reg_17_AddrBundle_bankOffset$1064
+    45/98: $perLaneConflictReq_reg_17_bankIdx$1063
+    46/98: $perLaneConflictReq_reg_16_AddrBundle_wordOffset1H$1060
+    47/98: $perLaneConflictReq_reg_16_AddrBundle_bankOffset$1059
+    48/98: $perLaneConflictReq_reg_16_bankIdx$1058
+    49/98: $perLaneConflictReq_reg_15_AddrBundle_wordOffset1H$1055
+    50/98: $perLaneConflictReq_reg_15_AddrBundle_bankOffset$1054
+    51/98: $perLaneConflictReq_reg_15_bankIdx$1053
+    52/98: $perLaneConflictReq_reg_14_AddrBundle_wordOffset1H$1050
+    53/98: $perLaneConflictReq_reg_14_AddrBundle_bankOffset$1049
+    54/98: $perLaneConflictReq_reg_14_bankIdx$1048
+    55/98: $perLaneConflictReq_reg_13_AddrBundle_wordOffset1H$1045
+    56/98: $perLaneConflictReq_reg_13_AddrBundle_bankOffset$1044
+    57/98: $perLaneConflictReq_reg_13_bankIdx$1043
+    58/98: $perLaneConflictReq_reg_12_AddrBundle_wordOffset1H$1040
+    59/98: $perLaneConflictReq_reg_12_AddrBundle_bankOffset$1039
+    60/98: $perLaneConflictReq_reg_12_bankIdx$1038
+    61/98: $perLaneConflictReq_reg_11_AddrBundle_wordOffset1H$1035
+    62/98: $perLaneConflictReq_reg_11_AddrBundle_bankOffset$1034
+    63/98: $perLaneConflictReq_reg_11_bankIdx$1033
+    64/98: $perLaneConflictReq_reg_10_AddrBundle_wordOffset1H$1030
+    65/98: $perLaneConflictReq_reg_10_AddrBundle_bankOffset$1029
+    66/98: $perLaneConflictReq_reg_10_bankIdx$1028
+    67/98: $perLaneConflictReq_reg_9_AddrBundle_wordOffset1H$1025
+    68/98: $perLaneConflictReq_reg_9_AddrBundle_bankOffset$1024
+    69/98: $perLaneConflictReq_reg_9_bankIdx$1023
+    70/98: $perLaneConflictReq_reg_8_AddrBundle_wordOffset1H$1020
+    71/98: $perLaneConflictReq_reg_8_AddrBundle_bankOffset$1019
+    72/98: $perLaneConflictReq_reg_8_bankIdx$1018
+    73/98: $perLaneConflictReq_reg_7_AddrBundle_wordOffset1H$1015
+    74/98: $perLaneConflictReq_reg_7_AddrBundle_bankOffset$1014
+    75/98: $perLaneConflictReq_reg_7_bankIdx$1013
+    76/98: $perLaneConflictReq_reg_6_AddrBundle_wordOffset1H$1010
+    77/98: $perLaneConflictReq_reg_6_AddrBundle_bankOffset$1009
+    78/98: $perLaneConflictReq_reg_6_bankIdx$1008
+    79/98: $perLaneConflictReq_reg_5_AddrBundle_wordOffset1H$1005
+    80/98: $perLaneConflictReq_reg_5_AddrBundle_bankOffset$1004
+    81/98: $perLaneConflictReq_reg_5_bankIdx$1003
+    82/98: $perLaneConflictReq_reg_4_AddrBundle_wordOffset1H$1000
+    83/98: $perLaneConflictReq_reg_4_AddrBundle_bankOffset$999
+    84/98: $perLaneConflictReq_reg_4_bankIdx$998
+    85/98: $perLaneConflictReq_reg_3_AddrBundle_wordOffset1H$995
+    86/98: $perLaneConflictReq_reg_3_AddrBundle_bankOffset$994
+    87/98: $perLaneConflictReq_reg_3_bankIdx$993
+    88/98: $perLaneConflictReq_reg_2_AddrBundle_wordOffset1H$990
+    89/98: $perLaneConflictReq_reg_2_AddrBundle_bankOffset$989
+    90/98: $perLaneConflictReq_reg_2_bankIdx$988
+    91/98: $perLaneConflictReq_reg_1_AddrBundle_wordOffset1H$985
+    92/98: $perLaneConflictReq_reg_1_AddrBundle_bankOffset$984
+    93/98: $perLaneConflictReq_reg_1_bankIdx$983
+    94/98: $perLaneConflictReq_reg_0_AddrBundle_wordOffset1H$980
+    95/98: $perLaneConflictReq_reg_0_AddrBundle_bankOffset$979
+    96/98: $perLaneConflictReq_reg_0_bankIdx$978
+    97/98: $conflictReqIsW_reg$975
+    98/98: $bankConflict_reg$974
+Creating decoders for process `\SharedMemory.$12'.
+     1/55: $DataAccessesRRsp_DataAccess_io_w_req_valid_REG_7$76
+     2/55: $DataAccessesRRsp_DataAccess_io_w_req_valid_REG_6$75
+     3/55: $DataAccessesRRsp_DataAccess_io_w_req_valid_REG_5$74
+     4/55: $DataAccessesRRsp_DataAccess_io_w_req_valid_REG_4$73
+     5/55: $DataAccessesRRsp_DataAccess_io_w_req_valid_REG_3$72
+     6/55: $DataAccessesRRsp_DataAccess_io_w_req_valid_REG_2$71
+     7/55: $DataAccessesRRsp_DataAccess_io_w_req_valid_REG_1$70
+     8/55: $DataAccessesRRsp_DataAccess_io_w_req_valid_REG$69
+     9/55: $REG$68
+    10/55: $coreReqisValidRead_st1$67
+    11/55: $coreReqisValidRead_comb_REG$66
+    12/55: $coreReqisValidWrite_st1$65
+    13/55: $dataAccess_data_st2_7$55
+    14/55: $dataAccess_data_st2_6$54
+    15/55: $dataAccess_data_st2_5$53
+    16/55: $dataAccess_data_st2_4$52
+    17/55: $dataAccess_data_st2_3$51
+    18/55: $dataAccess_data_st2_2$50
+    19/55: $dataAccess_data_st2_1$49
+    20/55: $dataAccess_data_st2_0$48
+    21/55: $coreReq_st1_data_31$47
+    22/55: $coreReq_st1_data_30$46
+    23/55: $coreReq_st1_data_29$45
+    24/55: $coreReq_st1_data_28$44
+    25/55: $coreReq_st1_data_27$43
+    26/55: $coreReq_st1_data_26$42
+    27/55: $coreReq_st1_data_25$41
+    28/55: $coreReq_st1_data_24$40
+    29/55: $coreReq_st1_data_23$39
+    30/55: $coreReq_st1_data_22$38
+    31/55: $coreReq_st1_data_21$37
+    32/55: $coreReq_st1_data_20$36
+    33/55: $coreReq_st1_data_19$35
+    34/55: $coreReq_st1_data_18$34
+    35/55: $coreReq_st1_data_17$33
+    36/55: $coreReq_st1_data_16$32
+    37/55: $coreReq_st1_data_15$31
+    38/55: $coreReq_st1_data_14$30
+    39/55: $coreReq_st1_data_13$29
+    40/55: $coreReq_st1_data_12$28
+    41/55: $coreReq_st1_data_11$27
+    42/55: $coreReq_st1_data_10$26
+    43/55: $coreReq_st1_data_9$25
+    44/55: $coreReq_st1_data_8$24
+    45/55: $coreReq_st1_data_7$23
+    46/55: $coreReq_st1_data_6$22
+    47/55: $coreReq_st1_data_5$21
+    48/55: $coreReq_st1_data_4$20
+    49/55: $coreReq_st1_data_3$19
+    50/55: $coreReq_st1_data_2$18
+    51/55: $coreReq_st1_data_1$17
+    52/55: $coreReq_st1_data_0$16
+    53/55: $coreReq_st1_setIdx$15
+    54/55: $coreReq_st1_isWrite$14
+    55/55: $coreReq_st1_instrId$13
+
+1.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 7 empty switches in `\Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q.$11'.
+Removing empty process `Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q.$11'.
+Found and cleaned up 67 empty switches in `\BankConflictArbiter$SharedMemory.BankConfArb.$908'.
+Removing empty process `BankConflictArbiter$SharedMemory.BankConfArb.$908'.
+Found and cleaned up 5 empty switches in `\SharedMemory.$12'.
+Removing empty process `SharedMemory.$12'.
+Cleaned up 79 empty switches.
+
+1.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess.
+Optimizing module Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q.
+<suppressed ~1 debug messages>
+Optimizing module DataCrossbar_1$SharedMemory.DataCorssBarForRead.
+Optimizing module DataCrossbar$SharedMemory.DataCorssBarForWrite.
+Optimizing module BankConflictArbiter$SharedMemory.BankConfArb.
+Optimizing module SharedMemory.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \SharedMemory
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess
+Used module:     \Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q
+Used module:     \DataCrossbar_1$SharedMemory.DataCorssBarForRead
+Used module:     \DataCrossbar$SharedMemory.DataCorssBarForWrite
+Used module:     \BankConflictArbiter$SharedMemory.BankConfArb
+
+2.2. Analyzing design hierarchy..
+Top module:  \SharedMemory
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1
+Used module:     \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess
+Used module:     \Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q
+Used module:     \DataCrossbar_1$SharedMemory.DataCorssBarForRead
+Used module:     \DataCrossbar$SharedMemory.DataCorssBarForWrite
+Used module:     \BankConflictArbiter$SharedMemory.BankConfArb
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess.
+Optimizing module Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q.
+Optimizing module DataCrossbar_1$SharedMemory.DataCorssBarForRead.
+Optimizing module DataCrossbar$SharedMemory.DataCorssBarForWrite.
+Optimizing module BankConflictArbiter$SharedMemory.BankConfArb.
+Optimizing module SharedMemory.
+
+4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess.
+Optimizing module Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q.
+Optimizing module DataCrossbar_1$SharedMemory.DataCorssBarForRead.
+Optimizing module DataCrossbar$SharedMemory.DataCorssBarForWrite.
+Optimizing module BankConflictArbiter$SharedMemory.BankConfArb.
+Optimizing module SharedMemory.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess..
+Finding unused cells or wires in module \Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q..
+Finding unused cells or wires in module \DataCrossbar_1$SharedMemory.DataCorssBarForRead..
+Finding unused cells or wires in module \DataCrossbar$SharedMemory.DataCorssBarForWrite..
+Finding unused cells or wires in module \BankConflictArbiter$SharedMemory.BankConfArb..
+Finding unused cells or wires in module \SharedMemory..
+Removed 3 unused cells and 648 unused wires.
+<suppressed ~480 debug messages>
+
+6. Executing TECHMAP pass (map to technology primitives).
+
+6.1. Executing Verilog-2005 frontend: ${REMOTE_HOME}/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `${REMOTE_HOME}/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+6.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$constmap:2a0a6072ad0c7d86c44c1db79ad9db1c0e9a0353$paramod$07b7add2a98e6a8075092e1e89aa3751e6a000b0\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=2:B_SIGNED=0:A_SIGNED=0:B_WIDTH=2:A_WIDTH=2:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=2:B_SIGNED=0:A_SIGNED=0:B_WIDTH=2:A_WIDTH=2:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=2:B_SIGNED=0:A_SIGNED=0:B_WIDTH=2:A_WIDTH=2:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=3:B_SIGNED=0:A_SIGNED=0:B_WIDTH=3:A_WIDTH=3:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=3:B_SIGNED=0:A_SIGNED=0:B_WIDTH=3:A_WIDTH=3:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=3:B_SIGNED=0:A_SIGNED=0:B_WIDTH=3:A_WIDTH=3:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=4:B_SIGNED=0:A_SIGNED=0:B_WIDTH=4:A_WIDTH=4:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=4:B_SIGNED=0:A_SIGNED=0:B_WIDTH=4:A_WIDTH=4:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=4:B_SIGNED=0:A_SIGNED=0:B_WIDTH=4:A_WIDTH=4:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=5:B_SIGNED=0:A_SIGNED=0:B_WIDTH=5:A_WIDTH=5:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=5:B_SIGNED=0:A_SIGNED=0:B_WIDTH=5:A_WIDTH=5:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=5:B_SIGNED=0:A_SIGNED=0:B_WIDTH=5:A_WIDTH=5:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=6:B_SIGNED=0:A_SIGNED=0:B_WIDTH=6:A_WIDTH=6:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=6:B_SIGNED=0:A_SIGNED=0:B_WIDTH=6:A_WIDTH=6:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=6:B_SIGNED=0:A_SIGNED=0:B_WIDTH=6:A_WIDTH=6:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$7e708ae28ab761f11d0fb59d3ffc72f6a4baf5d9\_90_alu for cells of type $alu.
+Using template $paramod$78e969f2586efcf3a5b0b0440bcca0db83d5cca2\_90_alu for cells of type $alu.
+Using template $paramod$740b056ede97228d3eae64ea2fdc81f0a33e0fe7\_90_alu for cells of type $alu.
+Using template $paramod$b18e16801adf491a64caa0542270798e5d4ac6b6\_90_alu for cells of type $alu.
+Using template $paramod$00298f3f8094950cb9a5ff2fda48d0d8bde8806c\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000101 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000110 for cells of type $lcu.
+Using extmapper simplemap for cells of type $eq.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=5:B_SIGNED=0:A_SIGNED=0:B_WIDTH=5:A_WIDTH=5:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=5:B_SIGNED=0:A_SIGNED=0:B_WIDTH=5:A_WIDTH=5:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=5:B_SIGNED=0:A_SIGNED=0:B_WIDTH=5:A_WIDTH=5:394426c56d1a028ba8fdd5469b163e04011def47.
+No more expansions possible.
+<suppressed ~9493 debug messages>
+
+7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1.
+Optimizing module SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess.
+Optimizing module Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q.
+<suppressed ~114 debug messages>
+Optimizing module DataCrossbar_1$SharedMemory.DataCorssBarForRead.
+Optimizing module DataCrossbar$SharedMemory.DataCorssBarForWrite.
+Optimizing module BankConflictArbiter$SharedMemory.BankConfArb.
+<suppressed ~9384 debug messages>
+Optimizing module SharedMemory.
+<suppressed ~6 debug messages>
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1..
+Finding unused cells or wires in module \SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess..
+Finding unused cells or wires in module \Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q..
+Finding unused cells or wires in module \DataCrossbar_1$SharedMemory.DataCorssBarForRead..
+Finding unused cells or wires in module \DataCrossbar$SharedMemory.DataCorssBarForWrite..
+Finding unused cells or wires in module \BankConflictArbiter$SharedMemory.BankConfArb..
+Finding unused cells or wires in module \SharedMemory..
+Removed 470 unused cells and 11438 unused wires.
+<suppressed ~481 debug messages>
+
+9. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFFLQNx1_ASAP7_75t_R (inv, pins=3, area=0.29) is a direct match for cell type $_DFF_N_.
+  cell DFFHQNx1_ASAP7_75t_R (inv, pins=3, area=0.29) is a direct match for cell type $_DFF_P_.
+  cell DFFASRHQNx1_ASAP7_75t_R (inv, pins=5, area=0.38) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    \DFFLQNx1_ASAP7_75t_R _DFF_N_ (.CLK( C), .D( D), .QN(~Q));
+    \DFFHQNx1_ASAP7_75t_R _DFF_P_ (.CLK( C), .D( D), .QN(~Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    unmapped dff cell: $_DFF_PN0_
+    unmapped dff cell: $_DFF_PN1_
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFASRHQNx1_ASAP7_75t_R _DFFSR_PNN_ (.CLK( C), .D( D), .QN(~Q), .RESETN( R), .SETN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+9.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~8 debug messages>
+Mapping DFF cells in module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7':
+  mapped 61 $_DFF_P_ cells to \DFFHQNx1_ASAP7_75t_R cells.
+Mapping DFF cells in module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6':
+  mapped 61 $_DFF_P_ cells to \DFFHQNx1_ASAP7_75t_R cells.
+Mapping DFF cells in module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5':
+  mapped 61 $_DFF_P_ cells to \DFFHQNx1_ASAP7_75t_R cells.
+Mapping DFF cells in module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4':
+  mapped 61 $_DFF_P_ cells to \DFFHQNx1_ASAP7_75t_R cells.
+Mapping DFF cells in module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3':
+  mapped 61 $_DFF_P_ cells to \DFFHQNx1_ASAP7_75t_R cells.
+Mapping DFF cells in module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2':
+  mapped 61 $_DFF_P_ cells to \DFFHQNx1_ASAP7_75t_R cells.
+Mapping DFF cells in module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1':
+  mapped 61 $_DFF_P_ cells to \DFFHQNx1_ASAP7_75t_R cells.
+Mapping DFF cells in module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess':
+  mapped 61 $_DFF_P_ cells to \DFFHQNx1_ASAP7_75t_R cells.
+Mapping DFF cells in module `\Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q':
+  mapped 11 $_DFF_P_ cells to \DFFHQNx1_ASAP7_75t_R cells.
+Mapping DFF cells in module `\DataCrossbar_1$SharedMemory.DataCorssBarForRead':
+Mapping DFF cells in module `\DataCrossbar$SharedMemory.DataCorssBarForWrite':
+Mapping DFF cells in module `\BankConflictArbiter$SharedMemory.BankConfArb':
+  mapped 322 $_DFF_P_ cells to \DFFHQNx1_ASAP7_75t_R cells.
+Mapping DFF cells in module `\SharedMemory':
+  mapped 2195 $_DFF_P_ cells to \DFFHQNx1_ASAP7_75t_R cells.
+
+10. Executing ABC pass (technology mapping using ABC).
+
+10.1. Extracting gate netlist of module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.1.1. Executed ABC.
+Extracted 123 gates and 218 wires to a netlist network with 95 inputs and 33 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.1.2. Re-integrating ABC results.
+ABC RESULTS:   AND2x2_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND4x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND5x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI22xp33_ASAP7_75t_R cells:        5
+ABC RESULTS:   INVx1_ASAP7_75t_R cells:       15
+ABC RESULTS:   NAND4xp25_ASAP7_75t_R cells:        1
+ABC RESULTS:   NAND5xp2_ASAP7_75t_R cells:       33
+ABC RESULTS:   NOR3xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   NOR4xp25_ASAP7_75t_R cells:        4
+ABC RESULTS:   OA21x2_ASAP7_75t_R cells:       33
+ABC RESULTS:   OA22x2_ASAP7_75t_R cells:        3
+ABC RESULTS:   OAI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   XOR2xp5_ASAP7_75t_R cells:        3
+ABC RESULTS:        internal signals:       90
+ABC RESULTS:           input signals:       95
+ABC RESULTS:          output signals:       33
+Removing temp directory.
+
+10.2. Extracting gate netlist of module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.2.1. Executed ABC.
+Extracted 123 gates and 218 wires to a netlist network with 95 inputs and 33 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.2.2. Re-integrating ABC results.
+ABC RESULTS:   AND2x2_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND4x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND5x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI22xp33_ASAP7_75t_R cells:        5
+ABC RESULTS:   INVx1_ASAP7_75t_R cells:       15
+ABC RESULTS:   NAND4xp25_ASAP7_75t_R cells:        1
+ABC RESULTS:   NAND5xp2_ASAP7_75t_R cells:       33
+ABC RESULTS:   NOR3xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   NOR4xp25_ASAP7_75t_R cells:        4
+ABC RESULTS:   OA21x2_ASAP7_75t_R cells:       33
+ABC RESULTS:   OA22x2_ASAP7_75t_R cells:        3
+ABC RESULTS:   OAI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   XOR2xp5_ASAP7_75t_R cells:        3
+ABC RESULTS:        internal signals:       90
+ABC RESULTS:           input signals:       95
+ABC RESULTS:          output signals:       33
+Removing temp directory.
+
+10.3. Extracting gate netlist of module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.3.1. Executed ABC.
+Extracted 123 gates and 218 wires to a netlist network with 95 inputs and 33 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.3.2. Re-integrating ABC results.
+ABC RESULTS:   AND2x2_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND4x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND5x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI22xp33_ASAP7_75t_R cells:        5
+ABC RESULTS:   INVx1_ASAP7_75t_R cells:       15
+ABC RESULTS:   NAND4xp25_ASAP7_75t_R cells:        1
+ABC RESULTS:   NAND5xp2_ASAP7_75t_R cells:       33
+ABC RESULTS:   NOR3xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   NOR4xp25_ASAP7_75t_R cells:        4
+ABC RESULTS:   OA21x2_ASAP7_75t_R cells:       33
+ABC RESULTS:   OA22x2_ASAP7_75t_R cells:        3
+ABC RESULTS:   OAI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   XOR2xp5_ASAP7_75t_R cells:        3
+ABC RESULTS:        internal signals:       90
+ABC RESULTS:           input signals:       95
+ABC RESULTS:          output signals:       33
+Removing temp directory.
+
+10.4. Extracting gate netlist of module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.4.1. Executed ABC.
+Extracted 123 gates and 218 wires to a netlist network with 95 inputs and 33 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.4.2. Re-integrating ABC results.
+ABC RESULTS:   AND2x2_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND4x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND5x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI22xp33_ASAP7_75t_R cells:        5
+ABC RESULTS:   INVx1_ASAP7_75t_R cells:       15
+ABC RESULTS:   NAND4xp25_ASAP7_75t_R cells:        1
+ABC RESULTS:   NAND5xp2_ASAP7_75t_R cells:       33
+ABC RESULTS:   NOR3xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   NOR4xp25_ASAP7_75t_R cells:        4
+ABC RESULTS:   OA21x2_ASAP7_75t_R cells:       33
+ABC RESULTS:   OA22x2_ASAP7_75t_R cells:        3
+ABC RESULTS:   OAI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   XOR2xp5_ASAP7_75t_R cells:        3
+ABC RESULTS:        internal signals:       90
+ABC RESULTS:           input signals:       95
+ABC RESULTS:          output signals:       33
+Removing temp directory.
+
+10.5. Extracting gate netlist of module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.5.1. Executed ABC.
+Extracted 123 gates and 218 wires to a netlist network with 95 inputs and 33 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.5.2. Re-integrating ABC results.
+ABC RESULTS:   AND2x2_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND4x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND5x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI22xp33_ASAP7_75t_R cells:        5
+ABC RESULTS:   INVx1_ASAP7_75t_R cells:       15
+ABC RESULTS:   NAND4xp25_ASAP7_75t_R cells:        1
+ABC RESULTS:   NAND5xp2_ASAP7_75t_R cells:       33
+ABC RESULTS:   NOR3xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   NOR4xp25_ASAP7_75t_R cells:        4
+ABC RESULTS:   OA21x2_ASAP7_75t_R cells:       33
+ABC RESULTS:   OA22x2_ASAP7_75t_R cells:        3
+ABC RESULTS:   OAI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   XOR2xp5_ASAP7_75t_R cells:        3
+ABC RESULTS:        internal signals:       90
+ABC RESULTS:           input signals:       95
+ABC RESULTS:          output signals:       33
+Removing temp directory.
+
+10.6. Extracting gate netlist of module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.6.1. Executed ABC.
+Extracted 123 gates and 218 wires to a netlist network with 95 inputs and 33 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.6.2. Re-integrating ABC results.
+ABC RESULTS:   AND2x2_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND4x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND5x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI22xp33_ASAP7_75t_R cells:        5
+ABC RESULTS:   INVx1_ASAP7_75t_R cells:       15
+ABC RESULTS:   NAND4xp25_ASAP7_75t_R cells:        1
+ABC RESULTS:   NAND5xp2_ASAP7_75t_R cells:       33
+ABC RESULTS:   NOR3xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   NOR4xp25_ASAP7_75t_R cells:        4
+ABC RESULTS:   OA21x2_ASAP7_75t_R cells:       33
+ABC RESULTS:   OA22x2_ASAP7_75t_R cells:        3
+ABC RESULTS:   OAI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   XOR2xp5_ASAP7_75t_R cells:        3
+ABC RESULTS:        internal signals:       90
+ABC RESULTS:           input signals:       95
+ABC RESULTS:          output signals:       33
+Removing temp directory.
+
+10.7. Extracting gate netlist of module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.7.1. Executed ABC.
+Extracted 123 gates and 218 wires to a netlist network with 95 inputs and 33 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.7.2. Re-integrating ABC results.
+ABC RESULTS:   AND2x2_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND4x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND5x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI22xp33_ASAP7_75t_R cells:        5
+ABC RESULTS:   INVx1_ASAP7_75t_R cells:       15
+ABC RESULTS:   NAND4xp25_ASAP7_75t_R cells:        1
+ABC RESULTS:   NAND5xp2_ASAP7_75t_R cells:       33
+ABC RESULTS:   NOR3xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   NOR4xp25_ASAP7_75t_R cells:        4
+ABC RESULTS:   OA21x2_ASAP7_75t_R cells:       33
+ABC RESULTS:   OA22x2_ASAP7_75t_R cells:        3
+ABC RESULTS:   OAI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   XOR2xp5_ASAP7_75t_R cells:        3
+ABC RESULTS:        internal signals:       90
+ABC RESULTS:           input signals:       95
+ABC RESULTS:          output signals:       33
+Removing temp directory.
+
+10.8. Extracting gate netlist of module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.8.1. Executed ABC.
+Extracted 123 gates and 218 wires to a netlist network with 95 inputs and 33 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.8.2. Re-integrating ABC results.
+ABC RESULTS:   AND2x2_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND4x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AND5x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI22xp33_ASAP7_75t_R cells:        5
+ABC RESULTS:   INVx1_ASAP7_75t_R cells:       15
+ABC RESULTS:   NAND4xp25_ASAP7_75t_R cells:        1
+ABC RESULTS:   NAND5xp2_ASAP7_75t_R cells:       33
+ABC RESULTS:   NOR3xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   NOR4xp25_ASAP7_75t_R cells:        4
+ABC RESULTS:   OA21x2_ASAP7_75t_R cells:       33
+ABC RESULTS:   OA22x2_ASAP7_75t_R cells:        3
+ABC RESULTS:   OAI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   XOR2xp5_ASAP7_75t_R cells:        3
+ABC RESULTS:        internal signals:       90
+ABC RESULTS:           input signals:       95
+ABC RESULTS:          output signals:       33
+Removing temp directory.
+
+10.9. Extracting gate netlist of module `\Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+Replacing 11 occurrences of constant undef bits with constant zero bits
+
+10.9.1. Executed ABC.
+Extracted 112 gates and 128 wires to a netlist network with 14 inputs and 29 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.9.2. Re-integrating ABC results.
+ABC RESULTS:   AND2x2_ASAP7_75t_R cells:        1
+ABC RESULTS:   AO21x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI21xp33_ASAP7_75t_R cells:        6
+ABC RESULTS:   INVx1_ASAP7_75t_R cells:       12
+ABC RESULTS:   MAJIxp5_ASAP7_75t_R cells:        3
+ABC RESULTS:   NAND2xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   NOR2xp33_ASAP7_75t_R cells:        5
+ABC RESULTS:   NOR3xp33_ASAP7_75t_R cells:        7
+ABC RESULTS:   NOR4xp25_ASAP7_75t_R cells:        2
+ABC RESULTS:   NOR5xp2_ASAP7_75t_R cells:        1
+ABC RESULTS:   O2A1O1Ixp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   OA21x2_ASAP7_75t_R cells:        4
+ABC RESULTS:   OAI211xp5_ASAP7_75t_R cells:        1
+ABC RESULTS:   OAI21xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   OAI31xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   OR2x2_ASAP7_75t_R cells:        1
+ABC RESULTS:   OR5x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   XNOR2xp5_ASAP7_75t_R cells:        2
+ABC RESULTS:   XOR2xp5_ASAP7_75t_R cells:        7
+ABC RESULTS:        internal signals:       85
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:       29
+Removing temp directory.
+
+10.10. Extracting gate netlist of module `\DataCrossbar_1$SharedMemory.DataCorssBarForRead' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.10.1. Executed ABC.
+Extracted 15360 gates and 15873 wires to a netlist network with 512 inputs and 1024 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.10.2. Re-integrating ABC results.
+ABC RESULTS:   AOI22xp33_ASAP7_75t_R cells:     4096
+ABC RESULTS:   NAND4xp25_ASAP7_75t_R cells:     1024
+ABC RESULTS:        internal signals:    14337
+ABC RESULTS:           input signals:      512
+ABC RESULTS:          output signals:     1024
+Removing temp directory.
+
+10.11. Extracting gate netlist of module `\DataCrossbar$SharedMemory.DataCorssBarForWrite' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.11.1. Executed ABC.
+Extracted 16128 gates and 17409 wires to a netlist network with 1280 inputs and 256 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.11.2. Re-integrating ABC results.
+ABC RESULTS:   AND4x1_ASAP7_75t_R cells:      249
+ABC RESULTS:   AOI222xp33_ASAP7_75t_R cells:       35
+ABC RESULTS:   AOI22xp33_ASAP7_75t_R cells:     4040
+ABC RESULTS:   NAND2xp33_ASAP7_75t_R cells:        7
+ABC RESULTS:   NAND4xp25_ASAP7_75t_R cells:      505
+ABC RESULTS:   NAND5xp2_ASAP7_75t_R cells:      263
+ABC RESULTS:   OR3x1_ASAP7_75t_R cells:      256
+ABC RESULTS:        internal signals:    15873
+ABC RESULTS:           input signals:     1280
+ABC RESULTS:          output signals:      256
+Removing temp directory.
+
+10.12. Extracting gate netlist of module `\BankConflictArbiter$SharedMemory.BankConfArb' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.12.1. Executed ABC.
+Extracted 11062 gates and 11708 wires to a netlist network with 645 inputs and 916 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.12.2. Re-integrating ABC results.
+ABC RESULTS:   AND2x2_ASAP7_75t_R cells:       71
+ABC RESULTS:   AND3x1_ASAP7_75t_R cells:       94
+ABC RESULTS:   AND4x1_ASAP7_75t_R cells:      122
+ABC RESULTS:   AND5x1_ASAP7_75t_R cells:       10
+ABC RESULTS:   AO211x2_ASAP7_75t_R cells:        2
+ABC RESULTS:   AO21x1_ASAP7_75t_R cells:        4
+ABC RESULTS:   AO221x1_ASAP7_75t_R cells:        8
+ABC RESULTS:   AO222x2_ASAP7_75t_R cells:        6
+ABC RESULTS:   AO22x1_ASAP7_75t_R cells:       42
+ABC RESULTS:   AO32x1_ASAP7_75t_R cells:       10
+ABC RESULTS:   AOI211xp5_ASAP7_75t_R cells:       45
+ABC RESULTS:   AOI21xp33_ASAP7_75t_R cells:      324
+ABC RESULTS:   AOI221xp5_ASAP7_75t_R cells:      180
+ABC RESULTS:   AOI222xp33_ASAP7_75t_R cells:       82
+ABC RESULTS:   AOI22xp33_ASAP7_75t_R cells:      278
+ABC RESULTS:   AOI33xp33_ASAP7_75t_R cells:       10
+ABC RESULTS:   INVx1_ASAP7_75t_R cells:      308
+ABC RESULTS:   MAJIxp5_ASAP7_75t_R cells:        2
+ABC RESULTS:   NAND2xp33_ASAP7_75t_R cells:      538
+ABC RESULTS:   NAND3xp33_ASAP7_75t_R cells:      168
+ABC RESULTS:   NAND4xp25_ASAP7_75t_R cells:       88
+ABC RESULTS:   NAND5xp2_ASAP7_75t_R cells:       28
+ABC RESULTS:   NOR2xp33_ASAP7_75t_R cells:      461
+ABC RESULTS:   NOR3xp33_ASAP7_75t_R cells:      224
+ABC RESULTS:   NOR4xp25_ASAP7_75t_R cells:       78
+ABC RESULTS:   NOR5xp2_ASAP7_75t_R cells:       30
+ABC RESULTS:   OA211x2_ASAP7_75t_R cells:        4
+ABC RESULTS:   OA21x2_ASAP7_75t_R cells:      138
+ABC RESULTS:   OA22x2_ASAP7_75t_R cells:        3
+ABC RESULTS:   OA33x2_ASAP7_75t_R cells:        1
+ABC RESULTS:   OAI211xp5_ASAP7_75t_R cells:       81
+ABC RESULTS:   OAI21xp33_ASAP7_75t_R cells:      310
+ABC RESULTS:   OAI221xp5_ASAP7_75t_R cells:       72
+ABC RESULTS:   OAI222xp33_ASAP7_75t_R cells:        9
+ABC RESULTS:   OAI22xp33_ASAP7_75t_R cells:      139
+ABC RESULTS:   OAI311xp33_ASAP7_75t_R cells:        2
+ABC RESULTS:   OAI32xp33_ASAP7_75t_R cells:       11
+ABC RESULTS:   OAI33xp33_ASAP7_75t_R cells:        4
+ABC RESULTS:   OR2x2_ASAP7_75t_R cells:       67
+ABC RESULTS:   OR3x1_ASAP7_75t_R cells:       25
+ABC RESULTS:   OR4x1_ASAP7_75t_R cells:       32
+ABC RESULTS:   OR5x1_ASAP7_75t_R cells:       22
+ABC RESULTS:   XNOR2xp5_ASAP7_75t_R cells:      240
+ABC RESULTS:   XOR2xp5_ASAP7_75t_R cells:      116
+ABC RESULTS:          _const0_ cells:        1
+ABC RESULTS:        internal signals:    10147
+ABC RESULTS:           input signals:      645
+ABC RESULTS:          output signals:      916
+Removing temp directory.
+
+10.13. Extracting gate netlist of module `\SharedMemory' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl (1 files)
+
+10.13.1. Executed ABC.
+Extracted 3624 gates and 7132 wires to a netlist network with 3507 inputs and 3585 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Jun  3 2026 15:06:41)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f4fcd93b.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FAx1_ASAP7_75t_R").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 1000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.13.2. Re-integrating ABC results.
+ABC RESULTS:   AND4x1_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI211xp5_ASAP7_75t_R cells:        1
+ABC RESULTS:   AOI21xp33_ASAP7_75t_R cells:      265
+ABC RESULTS:   INVx1_ASAP7_75t_R cells:     2191
+ABC RESULTS:   NAND2xp33_ASAP7_75t_R cells:     1042
+ABC RESULTS:   NOR2xp33_ASAP7_75t_R cells:      273
+ABC RESULTS:   NOR3xp33_ASAP7_75t_R cells:        1
+ABC RESULTS:   O2A1O1Ixp33_ASAP7_75t_R cells:        2
+ABC RESULTS:   OAI21xp33_ASAP7_75t_R cells:     1119
+ABC RESULTS:        internal signals:       40
+ABC RESULTS:           input signals:     3507
+ABC RESULTS:          output signals:     3585
+Removing temp directory.
+Removing global temp directory.
+Removed 0 unused cells and 15375 unused wires.
+{
+   "creator": "Yosys 0.64+308 (git sha1 78e05dfb0, Release, Clang /usr/bin/clang++ 18.1.8)",
+   "invocation": "stat -json -liberty ${REMOTE_STORAGE_ROOT}/ventus-cost-components-v1-20261006/mapping.lib ",
+   "modules": {
+      "\\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7": {
+         "num_wires":         147,
+         "num_wire_bits":     259,
+         "num_pub_wires":     15,
+         "num_pub_wire_bits": 127,
+         "num_ports":         14,
+         "num_port_bits":     95,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         165,
+         "num_submodules":       0,
+         "area":              27.410400,
+         "sequential_area":    17.787600,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 1,
+            "AND4x1_ASAP7_75t_R": 1,
+            "AND5x1_ASAP7_75t_R": 1,
+            "AOI21xp33_ASAP7_75t_R": 1,
+            "AOI22xp33_ASAP7_75t_R": 5,
+            "DFFHQNx1_ASAP7_75t_R": 61,
+            "INVx1_ASAP7_75t_R": 15,
+            "NAND4xp25_ASAP7_75t_R": 1,
+            "NAND5xp2_ASAP7_75t_R": 33,
+            "NOR3xp33_ASAP7_75t_R": 1,
+            "NOR4xp25_ASAP7_75t_R": 4,
+            "OA21x2_ASAP7_75t_R": 33,
+            "OA22x2_ASAP7_75t_R": 3,
+            "OAI21xp33_ASAP7_75t_R": 1,
+            "XOR2xp5_ASAP7_75t_R": 3,
+            "array_4096x32": 1
+         }
+      },
+      "\\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6": {
+         "num_wires":         147,
+         "num_wire_bits":     259,
+         "num_pub_wires":     15,
+         "num_pub_wire_bits": 127,
+         "num_ports":         14,
+         "num_port_bits":     95,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         165,
+         "num_submodules":       0,
+         "area":              27.410400,
+         "sequential_area":    17.787600,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 1,
+            "AND4x1_ASAP7_75t_R": 1,
+            "AND5x1_ASAP7_75t_R": 1,
+            "AOI21xp33_ASAP7_75t_R": 1,
+            "AOI22xp33_ASAP7_75t_R": 5,
+            "DFFHQNx1_ASAP7_75t_R": 61,
+            "INVx1_ASAP7_75t_R": 15,
+            "NAND4xp25_ASAP7_75t_R": 1,
+            "NAND5xp2_ASAP7_75t_R": 33,
+            "NOR3xp33_ASAP7_75t_R": 1,
+            "NOR4xp25_ASAP7_75t_R": 4,
+            "OA21x2_ASAP7_75t_R": 33,
+            "OA22x2_ASAP7_75t_R": 3,
+            "OAI21xp33_ASAP7_75t_R": 1,
+            "XOR2xp5_ASAP7_75t_R": 3,
+            "array_4096x32": 1
+         }
+      },
+      "\\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5": {
+         "num_wires":         147,
+         "num_wire_bits":     259,
+         "num_pub_wires":     15,
+         "num_pub_wire_bits": 127,
+         "num_ports":         14,
+         "num_port_bits":     95,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         165,
+         "num_submodules":       0,
+         "area":              27.410400,
+         "sequential_area":    17.787600,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 1,
+            "AND4x1_ASAP7_75t_R": 1,
+            "AND5x1_ASAP7_75t_R": 1,
+            "AOI21xp33_ASAP7_75t_R": 1,
+            "AOI22xp33_ASAP7_75t_R": 5,
+            "DFFHQNx1_ASAP7_75t_R": 61,
+            "INVx1_ASAP7_75t_R": 15,
+            "NAND4xp25_ASAP7_75t_R": 1,
+            "NAND5xp2_ASAP7_75t_R": 33,
+            "NOR3xp33_ASAP7_75t_R": 1,
+            "NOR4xp25_ASAP7_75t_R": 4,
+            "OA21x2_ASAP7_75t_R": 33,
+            "OA22x2_ASAP7_75t_R": 3,
+            "OAI21xp33_ASAP7_75t_R": 1,
+            "XOR2xp5_ASAP7_75t_R": 3,
+            "array_4096x32": 1
+         }
+      },
+      "\\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4": {
+         "num_wires":         147,
+         "num_wire_bits":     259,
+         "num_pub_wires":     15,
+         "num_pub_wire_bits": 127,
+         "num_ports":         14,
+         "num_port_bits":     95,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         165,
+         "num_submodules":       0,
+         "area":              27.410400,
+         "sequential_area":    17.787600,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 1,
+            "AND4x1_ASAP7_75t_R": 1,
+            "AND5x1_ASAP7_75t_R": 1,
+            "AOI21xp33_ASAP7_75t_R": 1,
+            "AOI22xp33_ASAP7_75t_R": 5,
+            "DFFHQNx1_ASAP7_75t_R": 61,
+            "INVx1_ASAP7_75t_R": 15,
+            "NAND4xp25_ASAP7_75t_R": 1,
+            "NAND5xp2_ASAP7_75t_R": 33,
+            "NOR3xp33_ASAP7_75t_R": 1,
+            "NOR4xp25_ASAP7_75t_R": 4,
+            "OA21x2_ASAP7_75t_R": 33,
+            "OA22x2_ASAP7_75t_R": 3,
+            "OAI21xp33_ASAP7_75t_R": 1,
+            "XOR2xp5_ASAP7_75t_R": 3,
+            "array_4096x32": 1
+         }
+      },
+      "\\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3": {
+         "num_wires":         147,
+         "num_wire_bits":     259,
+         "num_pub_wires":     15,
+         "num_pub_wire_bits": 127,
+         "num_ports":         14,
+         "num_port_bits":     95,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         165,
+         "num_submodules":       0,
+         "area":              27.410400,
+         "sequential_area":    17.787600,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 1,
+            "AND4x1_ASAP7_75t_R": 1,
+            "AND5x1_ASAP7_75t_R": 1,
+            "AOI21xp33_ASAP7_75t_R": 1,
+            "AOI22xp33_ASAP7_75t_R": 5,
+            "DFFHQNx1_ASAP7_75t_R": 61,
+            "INVx1_ASAP7_75t_R": 15,
+            "NAND4xp25_ASAP7_75t_R": 1,
+            "NAND5xp2_ASAP7_75t_R": 33,
+            "NOR3xp33_ASAP7_75t_R": 1,
+            "NOR4xp25_ASAP7_75t_R": 4,
+            "OA21x2_ASAP7_75t_R": 33,
+            "OA22x2_ASAP7_75t_R": 3,
+            "OAI21xp33_ASAP7_75t_R": 1,
+            "XOR2xp5_ASAP7_75t_R": 3,
+            "array_4096x32": 1
+         }
+      },
+      "\\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2": {
+         "num_wires":         147,
+         "num_wire_bits":     259,
+         "num_pub_wires":     15,
+         "num_pub_wire_bits": 127,
+         "num_ports":         14,
+         "num_port_bits":     95,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         165,
+         "num_submodules":       0,
+         "area":              27.410400,
+         "sequential_area":    17.787600,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 1,
+            "AND4x1_ASAP7_75t_R": 1,
+            "AND5x1_ASAP7_75t_R": 1,
+            "AOI21xp33_ASAP7_75t_R": 1,
+            "AOI22xp33_ASAP7_75t_R": 5,
+            "DFFHQNx1_ASAP7_75t_R": 61,
+            "INVx1_ASAP7_75t_R": 15,
+            "NAND4xp25_ASAP7_75t_R": 1,
+            "NAND5xp2_ASAP7_75t_R": 33,
+            "NOR3xp33_ASAP7_75t_R": 1,
+            "NOR4xp25_ASAP7_75t_R": 4,
+            "OA21x2_ASAP7_75t_R": 33,
+            "OA22x2_ASAP7_75t_R": 3,
+            "OAI21xp33_ASAP7_75t_R": 1,
+            "XOR2xp5_ASAP7_75t_R": 3,
+            "array_4096x32": 1
+         }
+      },
+      "\\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1": {
+         "num_wires":         147,
+         "num_wire_bits":     259,
+         "num_pub_wires":     15,
+         "num_pub_wire_bits": 127,
+         "num_ports":         14,
+         "num_port_bits":     95,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         165,
+         "num_submodules":       0,
+         "area":              27.410400,
+         "sequential_area":    17.787600,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 1,
+            "AND4x1_ASAP7_75t_R": 1,
+            "AND5x1_ASAP7_75t_R": 1,
+            "AOI21xp33_ASAP7_75t_R": 1,
+            "AOI22xp33_ASAP7_75t_R": 5,
+            "DFFHQNx1_ASAP7_75t_R": 61,
+            "INVx1_ASAP7_75t_R": 15,
+            "NAND4xp25_ASAP7_75t_R": 1,
+            "NAND5xp2_ASAP7_75t_R": 33,
+            "NOR3xp33_ASAP7_75t_R": 1,
+            "NOR4xp25_ASAP7_75t_R": 4,
+            "OA21x2_ASAP7_75t_R": 33,
+            "OA22x2_ASAP7_75t_R": 3,
+            "OAI21xp33_ASAP7_75t_R": 1,
+            "XOR2xp5_ASAP7_75t_R": 3,
+            "array_4096x32": 1
+         }
+      },
+      "\\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess": {
+         "num_wires":         147,
+         "num_wire_bits":     259,
+         "num_pub_wires":     15,
+         "num_pub_wire_bits": 127,
+         "num_ports":         14,
+         "num_port_bits":     95,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         165,
+         "num_submodules":       0,
+         "area":              27.410400,
+         "sequential_area":    17.787600,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 1,
+            "AND4x1_ASAP7_75t_R": 1,
+            "AND5x1_ASAP7_75t_R": 1,
+            "AOI21xp33_ASAP7_75t_R": 1,
+            "AOI22xp33_ASAP7_75t_R": 5,
+            "DFFHQNx1_ASAP7_75t_R": 61,
+            "INVx1_ASAP7_75t_R": 15,
+            "NAND4xp25_ASAP7_75t_R": 1,
+            "NAND5xp2_ASAP7_75t_R": 33,
+            "NOR3xp33_ASAP7_75t_R": 1,
+            "NOR4xp25_ASAP7_75t_R": 4,
+            "OA21x2_ASAP7_75t_R": 33,
+            "OA22x2_ASAP7_75t_R": 3,
+            "OAI21xp33_ASAP7_75t_R": 1,
+            "XOR2xp5_ASAP7_75t_R": 3,
+            "array_4096x32": 1
+         }
+      },
+      "\\Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q": {
+         "num_wires":         193,
+         "num_wire_bits":     3253,
+         "num_pub_wires":     142,
+         "num_pub_wire_bits": 3202,
+         "num_ports":         138,
+         "num_port_bits":     2131,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         70,
+         "num_submodules":       0,
+         "area":              7.916940,
+         "sequential_area":    3.207600,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 1,
+            "AO21x1_ASAP7_75t_R": 1,
+            "AOI21xp33_ASAP7_75t_R": 6,
+            "DFFHQNx1_ASAP7_75t_R": 11,
+            "INVx1_ASAP7_75t_R": 12,
+            "MAJIxp5_ASAP7_75t_R": 3,
+            "NAND2xp33_ASAP7_75t_R": 1,
+            "NOR2xp33_ASAP7_75t_R": 5,
+            "NOR3xp33_ASAP7_75t_R": 7,
+            "NOR4xp25_ASAP7_75t_R": 2,
+            "NOR5xp2_ASAP7_75t_R": 1,
+            "O2A1O1Ixp33_ASAP7_75t_R": 1,
+            "OA21x2_ASAP7_75t_R": 4,
+            "OAI211xp5_ASAP7_75t_R": 1,
+            "OAI21xp33_ASAP7_75t_R": 1,
+            "OAI31xp33_ASAP7_75t_R": 1,
+            "OR2x2_ASAP7_75t_R": 1,
+            "OR5x1_ASAP7_75t_R": 1,
+            "XNOR2xp5_ASAP7_75t_R": 2,
+            "XOR2xp5_ASAP7_75t_R": 7,
+            "ram_32x1060": 1
+         }
+      },
+      "\\DataCrossbar_1$SharedMemory.DataCorssBarForRead": {
+         "num_wires":         4168,
+         "num_wire_bits":     5632,
+         "num_pub_wires":     72,
+         "num_pub_wire_bits": 1536,
+         "num_ports":         72,
+         "num_port_bits":     1536,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5120,
+         "num_submodules":       0,
+         "area":              447.897600,
+         "sequential_area":    0.000000,
+         "num_cells_by_type": {
+            "AOI22xp33_ASAP7_75t_R": 4096,
+            "NAND4xp25_ASAP7_75t_R": 1024
+         }
+      },
+      "\\DataCrossbar$SharedMemory.DataCorssBarForWrite": {
+         "num_wires":         5147,
+         "num_wire_bits":     6635,
+         "num_pub_wires":     48,
+         "num_pub_wire_bits": 1536,
+         "num_ports":         48,
+         "num_port_bits":     1536,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5355,
+         "num_submodules":       0,
+         "area":              477.757440,
+         "sequential_area":    0.000000,
+         "num_cells_by_type": {
+            "AND4x1_ASAP7_75t_R": 249,
+            "AOI222xp33_ASAP7_75t_R": 35,
+            "AOI22xp33_ASAP7_75t_R": 4040,
+            "NAND2xp33_ASAP7_75t_R": 7,
+            "NAND4xp25_ASAP7_75t_R": 505,
+            "NAND5xp2_ASAP7_75t_R": 263,
+            "OR3x1_ASAP7_75t_R": 256
+         }
+      },
+      "\\BankConflictArbiter$SharedMemory.BankConfArb": {
+         "num_wires":         4488,
+         "num_wire_bits":     5912,
+         "num_pub_wires":     271,
+         "num_pub_wire_bits": 1695,
+         "num_ports":         198,
+         "num_port_bits":     926,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         4811,
+         "num_submodules":       0,
+         "area":              464.008500,
+         "sequential_area":    93.895200,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 71,
+            "AND3x1_ASAP7_75t_R": 94,
+            "AND4x1_ASAP7_75t_R": 122,
+            "AND5x1_ASAP7_75t_R": 10,
+            "AO211x2_ASAP7_75t_R": 2,
+            "AO21x1_ASAP7_75t_R": 4,
+            "AO221x1_ASAP7_75t_R": 8,
+            "AO222x2_ASAP7_75t_R": 6,
+            "AO22x1_ASAP7_75t_R": 42,
+            "AO32x1_ASAP7_75t_R": 10,
+            "AOI211xp5_ASAP7_75t_R": 45,
+            "AOI21xp33_ASAP7_75t_R": 324,
+            "AOI221xp5_ASAP7_75t_R": 180,
+            "AOI222xp33_ASAP7_75t_R": 82,
+            "AOI22xp33_ASAP7_75t_R": 278,
+            "AOI33xp33_ASAP7_75t_R": 10,
+            "DFFHQNx1_ASAP7_75t_R": 322,
+            "INVx1_ASAP7_75t_R": 308,
+            "MAJIxp5_ASAP7_75t_R": 2,
+            "NAND2xp33_ASAP7_75t_R": 538,
+            "NAND3xp33_ASAP7_75t_R": 168,
+            "NAND4xp25_ASAP7_75t_R": 88,
+            "NAND5xp2_ASAP7_75t_R": 28,
+            "NOR2xp33_ASAP7_75t_R": 461,
+            "NOR3xp33_ASAP7_75t_R": 224,
+            "NOR4xp25_ASAP7_75t_R": 78,
+            "NOR5xp2_ASAP7_75t_R": 30,
+            "OA211x2_ASAP7_75t_R": 4,
+            "OA21x2_ASAP7_75t_R": 138,
+            "OA22x2_ASAP7_75t_R": 3,
+            "OA33x2_ASAP7_75t_R": 1,
+            "OAI211xp5_ASAP7_75t_R": 81,
+            "OAI21xp33_ASAP7_75t_R": 310,
+            "OAI221xp5_ASAP7_75t_R": 72,
+            "OAI222xp33_ASAP7_75t_R": 9,
+            "OAI22xp33_ASAP7_75t_R": 139,
+            "OAI311xp33_ASAP7_75t_R": 2,
+            "OAI32xp33_ASAP7_75t_R": 11,
+            "OAI33xp33_ASAP7_75t_R": 4,
+            "OR2x2_ASAP7_75t_R": 67,
+            "OR3x1_ASAP7_75t_R": 25,
+            "OR4x1_ASAP7_75t_R": 32,
+            "OR5x1_ASAP7_75t_R": 22,
+            "XNOR2xp5_ASAP7_75t_R": 240,
+            "XOR2xp5_ASAP7_75t_R": 116
+         }
+      },
+      "\\SharedMemory": {
+         "num_wires":         5411,
+         "num_wire_bits":     11658,
+         "num_pub_wires":     575,
+         "num_pub_wire_bits": 6750,
+         "num_ports":         203,
+         "num_port_bits":     2424,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         7090,
+         "num_submodules":       12,
+         "area":              2530.781820,
+         "sequential_area":    879.465600,
+         "num_cells_by_type": {
+            "AND4x1_ASAP7_75t_R": 1,
+            "AOI211xp5_ASAP7_75t_R": 1,
+            "AOI21xp33_ASAP7_75t_R": 265,
+            "DFFHQNx1_ASAP7_75t_R": 2195,
+            "INVx1_ASAP7_75t_R": 2191,
+            "NAND2xp33_ASAP7_75t_R": 1042,
+            "NOR2xp33_ASAP7_75t_R": 273,
+            "NOR3xp33_ASAP7_75t_R": 1,
+            "O2A1O1Ixp33_ASAP7_75t_R": 2,
+            "OAI21xp33_ASAP7_75t_R": 1119,
+            "BankConflictArbiter$SharedMemory.BankConfArb": 1,
+            "DataCrossbar$SharedMemory.DataCorssBarForWrite": 1,
+            "DataCrossbar_1$SharedMemory.DataCorssBarForRead": 1,
+            "Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         20583,
+         "num_wire_bits":     35162,
+         "num_pub_wires":     1228,
+         "num_pub_wire_bits": 15735,
+         "num_ports":         771,
+         "num_port_bits":     9313,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         23766,
+         "num_submodules":       12,
+         "area":              2530.781820,
+         "sequential_area":    879.465600,
+         "num_cells_by_type": {
+            "AND2x2_ASAP7_75t_R": 80,
+            "AND3x1_ASAP7_75t_R": 94,
+            "AND4x1_ASAP7_75t_R": 380,
+            "AND5x1_ASAP7_75t_R": 18,
+            "AO211x2_ASAP7_75t_R": 2,
+            "AO21x1_ASAP7_75t_R": 5,
+            "AO221x1_ASAP7_75t_R": 8,
+            "AO222x2_ASAP7_75t_R": 6,
+            "AO22x1_ASAP7_75t_R": 42,
+            "AO32x1_ASAP7_75t_R": 10,
+            "AOI211xp5_ASAP7_75t_R": 46,
+            "AOI21xp33_ASAP7_75t_R": 603,
+            "AOI221xp5_ASAP7_75t_R": 180,
+            "AOI222xp33_ASAP7_75t_R": 117,
+            "AOI22xp33_ASAP7_75t_R": 8454,
+            "AOI33xp33_ASAP7_75t_R": 10,
+            "DFFHQNx1_ASAP7_75t_R": 3016,
+            "INVx1_ASAP7_75t_R": 2631,
+            "MAJIxp5_ASAP7_75t_R": 5,
+            "NAND2xp33_ASAP7_75t_R": 1588,
+            "NAND3xp33_ASAP7_75t_R": 168,
+            "NAND4xp25_ASAP7_75t_R": 1625,
+            "NAND5xp2_ASAP7_75t_R": 555,
+            "NOR2xp33_ASAP7_75t_R": 739,
+            "NOR3xp33_ASAP7_75t_R": 240,
+            "NOR4xp25_ASAP7_75t_R": 112,
+            "NOR5xp2_ASAP7_75t_R": 31,
+            "O2A1O1Ixp33_ASAP7_75t_R": 3,
+            "OA211x2_ASAP7_75t_R": 4,
+            "OA21x2_ASAP7_75t_R": 406,
+            "OA22x2_ASAP7_75t_R": 27,
+            "OA33x2_ASAP7_75t_R": 1,
+            "OAI211xp5_ASAP7_75t_R": 82,
+            "OAI21xp33_ASAP7_75t_R": 1438,
+            "OAI221xp5_ASAP7_75t_R": 72,
+            "OAI222xp33_ASAP7_75t_R": 9,
+            "OAI22xp33_ASAP7_75t_R": 139,
+            "OAI311xp33_ASAP7_75t_R": 2,
+            "OAI31xp33_ASAP7_75t_R": 1,
+            "OAI32xp33_ASAP7_75t_R": 11,
+            "OAI33xp33_ASAP7_75t_R": 4,
+            "OR2x2_ASAP7_75t_R": 68,
+            "OR3x1_ASAP7_75t_R": 281,
+            "OR4x1_ASAP7_75t_R": 32,
+            "OR5x1_ASAP7_75t_R": 23,
+            "XNOR2xp5_ASAP7_75t_R": 242,
+            "XOR2xp5_ASAP7_75t_R": 147,
+            "array_4096x32": 8,
+            "ram_32x1060": 1,
+            "BankConflictArbiter$SharedMemory.BankConfArb": 1,
+            "DataCrossbar$SharedMemory.DataCorssBarForWrite": 1,
+            "DataCrossbar_1$SharedMemory.DataCorssBarForRead": 1,
+            "Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6": 1,
+            "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7": 1
+         }
+      }
+}
+
+11. Executing Verilog backend.
+
+11.1. Executing BMUXMAP pass.
+
+11.2. Executing DEMUXMAP pass.
+Dumping module `\BankConflictArbiter$SharedMemory.BankConfArb'.
+Dumping module `\DataCrossbar$SharedMemory.DataCorssBarForWrite'.
+Dumping module `\DataCrossbar_1$SharedMemory.DataCorssBarForRead'.
+Dumping module `\Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q'.
+Dumping module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess'.
+Dumping module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1'.
+Dumping module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2'.
+Dumping module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3'.
+Dumping module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4'.
+Dumping module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5'.
+Dumping module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6'.
+Dumping module `\SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7'.
+Dumping module `\SharedMemory'.
+
+End of script. Logfile hash: b8b05b5352, time: 22.79s, user: 7.90s, system: 0.41s, MEM: 191.04 MB peak
+Yosys 0.64+308 (git sha1 78e05dfb0, Release, Clang /usr/bin/clang++ 18.1.8)
+Time spent: 71% 1x abc (16 sec), 5% 16x opt_expr (1 sec), ...

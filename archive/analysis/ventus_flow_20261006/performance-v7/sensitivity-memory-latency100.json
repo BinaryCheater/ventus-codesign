@@ -1,0 +1,10 @@
+{
+  "spec": {
+    "layers": 1,
+    "prefill": 4,
+    "decode_steps": 1
+  },
+  "hardware": {
+    "memory_latency": 100
+  }
+}

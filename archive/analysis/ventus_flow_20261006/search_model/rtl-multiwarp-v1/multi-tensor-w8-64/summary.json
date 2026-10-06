@@ -1,0 +1,19 @@
+{
+  "name": "multi-tensor-w8-64",
+  "n": 64,
+  "family": "multi-tensor-w8",
+  "predicted_body_interval": null,
+  "input_sha256": {
+    "input.metadata": "f9e4155b4d1f98ac2f65cbcb715563ca7a99f4ff429b2d9c83c198020048ba1e",
+    "input.data": "d9749c3ca596cd41d0fc5ad93432b7691768d877c988429d40cc9585385cf66c"
+  },
+  "predicted_segment_cycles": 1030,
+  "warps": 8,
+  "returncode": 0,
+  "wall_seconds": 19.73115837702062,
+  "dispatch_to_finish_cycles": 1186,
+  "checked_words": 32,
+  "all_output_zero": true,
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+}

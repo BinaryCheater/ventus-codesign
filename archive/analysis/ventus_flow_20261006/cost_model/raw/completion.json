@@ -1,0 +1,77 @@
+[
+  {
+    "name": "sm-base",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}"
+  },
+  {
+    "name": "l2-base",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-v1c-20261006"
+  },
+  {
+    "name": "rf4",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-v1c-20261006"
+  },
+  {
+    "name": "rf8",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-components-v1-20261006"
+  },
+  {
+    "name": "gpu-fixed",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-fixed-v1-20261006"
+  },
+  {
+    "name": "tc-2-16-2",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-v1-20261006"
+  },
+  {
+    "name": "tc-2-4-2",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-v1-20261006"
+  },
+  {
+    "name": "tc-4-2-4",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-v1-20261006"
+  },
+  {
+    "name": "tc-4-4-4",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-v1-20261006"
+  },
+  {
+    "name": "tc-4-8-4",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-v1-20261006"
+  },
+  {
+    "name": "tc-8-4-4",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-v1-20261006"
+  },
+  {
+    "name": "lds-16-1024",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-components-v1-20261006"
+  },
+  {
+    "name": "lds-16-128",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-components-v1-20261006"
+  },
+  {
+    "name": "lds-32-1024",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-components-v1-20261006"
+  },
+  {
+    "name": "lds-8-1024",
+    "returncode": 0,
+    "raw_batch": "${REMOTE_STORAGE_ROOT}/ventus-cost-components-v1-20261006"
+  }
+]

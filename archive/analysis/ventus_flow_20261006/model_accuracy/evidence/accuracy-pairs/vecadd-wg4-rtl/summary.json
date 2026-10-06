@@ -1,0 +1,20 @@
+{
+  "case": "vecadd-wg4",
+  "backend": "rtl",
+  "family": "vecadd",
+  "n": 4,
+  "returncode": 0,
+  "wall_seconds": 43.62064207298681,
+  "first_dispatch_time": 185,
+  "kernel_finish_time": 88575,
+  "output_correct": true,
+  "checked_words": 128,
+  "warnings": [
+    "[RTL    error]@3360 PMEM page at 0x80003000 not allocated, read as all zero"
+  ],
+  "input_sha256": {
+    "input.metadata": "8dee58dec1a7f86c4c934e37fed93a8d6f2b3902fe3181469123a44bea6a0264",
+    "input.data": "945859a360311dc4fd1045621c8ae3c10e168077fabbb49e4ed2554f1ea5ae53"
+  },
+  "dispatch_to_finish_cycles": 8839.0
+}

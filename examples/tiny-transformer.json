@@ -1,0 +1,5 @@
+{
+  "spec": {"layers": 1, "width": 32, "heads": 2, "hidden": 64, "vocab": 32, "prefill": 4, "decode_steps": 1},
+  "hardware": {},
+  "software": {"warps": 2, "dispatch_tiles": 8}
+}

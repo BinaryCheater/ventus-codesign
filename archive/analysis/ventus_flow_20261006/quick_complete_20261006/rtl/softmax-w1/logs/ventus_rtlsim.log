@@ -1,0 +1,14 @@
+[RTL     info]@0 SNAPSHOT created, pid=674946
+[RTL    trace]@20 Hardware reset ok
+[RTL    trace]@30 kernel 0 softmax-w1 activate
+[RTL    debug]@5125 block0  dispatched to GPU (kernel0  softmax-w1 block0 )
+[RTL    debug]@10000 
+[RTL    debug]@19585 block0  finished (kernel0  softmax-w1 block0 )
+[RTL     info]@19585 kernel0  softmax-w1 finished
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL    debug]@60000 
+[RTL     info]@69585 Simulation finished in 69585 unit time
+[RTL    debug]@69585 All snapshot process are cleared, OK

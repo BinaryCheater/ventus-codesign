@@ -1,0 +1,13 @@
+[RTL     info]@0 SNAPSHOT created, pid=3438469
+[RTL    trace]@20 Hardware reset ok
+[RTL    trace]@30 kernel 0 global-stride0-16 activate
+[RTL    debug]@185 block0  dispatched to GPU (kernel0  global-stride0-16 block0 )
+[RTL    debug]@4645 block0  finished (kernel0  global-stride0-16 block0 )
+[RTL     info]@4645 kernel0  global-stride0-16 finished
+[RTL    debug]@10000 
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL     info]@54645 Simulation finished in 54645 unit time
+[RTL    debug]@54645 All snapshot process are cleared, OK

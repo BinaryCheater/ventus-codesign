@@ -1,0 +1,8 @@
+{
+  "name": "scalar_add-64",
+  "family": "scalar_add",
+  "n": 64,
+  "expected_words": [
+    64
+  ]
+}

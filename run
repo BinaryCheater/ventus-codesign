@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+# Dispatch to the machine selected by the ignored local.toml.
+set -eu
+VENTUS_PROJECT_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+cd "$VENTUS_PROJECT_ROOT"
+if [ -x .venv/bin/python ]; then
+    exec .venv/bin/python -m ventus_project run "$@"
+fi
+exec "${VENTUS_CONTROL_PYTHON:-python3}" -m ventus_project run "$@"

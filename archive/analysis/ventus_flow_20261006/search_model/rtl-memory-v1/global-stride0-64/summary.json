@@ -1,0 +1,19 @@
+{
+  "name": "global-stride0-64",
+  "n": 64,
+  "family": "global-stride0",
+  "predicted_body_interval": null,
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "107cac2cd2200eda646801c911adb7bc448483c64ba901a1004cb19c6f7e546c"
+  },
+  "predicted_segment_cycles": 776,
+  "expected_words": [],
+  "returncode": 0,
+  "wall_seconds": 18.78137730807066,
+  "dispatch_to_finish_cycles": 974,
+  "checked_words": 32,
+  "all_output_zero": false,
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+}

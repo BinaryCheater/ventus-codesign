@@ -1,0 +1,17 @@
+{
+  "name": "tensor-conflict-64",
+  "n": 64,
+  "family": "tensor-conflict",
+  "predicted_body_interval": 18,
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "0bc89398e3c65ddcd2183749a2138531733df81f72b61258c379e7a3014ff71b"
+  },
+  "returncode": 0,
+  "wall_seconds": 19.997568193008192,
+  "dispatch_to_finish_cycles": 1235,
+  "checked_words": 32,
+  "all_output_zero": true,
+  "warnings": [],
+  "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33"
+}

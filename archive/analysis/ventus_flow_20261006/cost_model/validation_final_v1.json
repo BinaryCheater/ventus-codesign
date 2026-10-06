@@ -1,0 +1,12 @@
+{
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "collection_scripts_ruff": "passed",
+  "pytest_passed": 561,
+  "pytest_seconds": 177.83,
+  "cost_tests_passed": 8,
+  "frozen_table_verify": "passed",
+  "library_hash_verify": "passed",
+  "supported_combinations": 384,
+  "scope": "current workspace regression, finite cost menu"
+}

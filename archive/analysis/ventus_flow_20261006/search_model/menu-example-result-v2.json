@@ -1,0 +1,74 @@
+{
+  "status": "HighsModelStatus.kOptimal",
+  "optimal": true,
+  "candidate": "two-read-ports",
+  "cycles": 67,
+  "objective": 67.0,
+  "objective_bound": 67.0,
+  "gap": 0.0,
+  "columns": 81,
+  "rows": 221,
+  "integer_choices": 2,
+  "hardware": {
+    "sms": 2,
+    "warps_per_sm": 8,
+    "blocks_per_sm": 8,
+    "threads": 32,
+    "rf_banks": 4,
+    "rf_read_ports": 2,
+    "rf_write_ports": 1,
+    "writeback_ports": 1,
+    "collectors": 8,
+    "vgpr_slots": 1024,
+    "sgpr_slots": 2048,
+    "tensor_m": 4,
+    "tensor_n": 8,
+    "tensor_k": 4,
+    "tensor_units": 1,
+    "lds_bytes": 131072,
+    "lds_banks": 32,
+    "lds_ports": 1,
+    "line_bytes": 128,
+    "l1_sets": 256,
+    "l1_ways": 2,
+    "l1_mshrs": 4,
+    "l1_subentries": 2,
+    "l1_write_entries": 4,
+    "l2_sets": 64,
+    "l2_ways": 16,
+    "l2_mshrs": 32,
+    "lsu_entries": 8,
+    "lsu_per_warp": 4,
+    "memory_channels": 1,
+    "memory_bytes_per_cycle": 128,
+    "memory_latency": 2
+  },
+  "rtl_unbinding_required": {
+    "rf_read_ports": {
+      "model": 2,
+      "rtl": 1
+    }
+  },
+  "resources": {
+    "storage_bytes": 802816,
+    "tensor_multipliers": 256
+  },
+  "counters": {
+    "tensor": 4
+  },
+  "scope": "Optimality is within the declared finite menu and compiled transaction timing model.",
+  "version": "ventus-source-events-v2",
+  "code_sha256": {
+    "__init__.py": "2e3d439837712121c9959593f8e07576cb58e9cd76d3bd5c499d2f9a06916f8e",
+    "__main__.py": "28584e5029ab83bb2f47d45455d2eb8bb017e4f6f44639f70a9c9ba86b2c6c59",
+    "coalescer.py": "68ef20fbab29abb4ccb02bd756252267a298dfb5d2ed87b43135d0d17ba2a34b",
+    "config.py": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "graph.py": "765aeb04bda71d3dbe32938599ab20c341a8ae352fd5981202fce26aec6b5508",
+    "ir.py": "0c611321b3508ce23acb8b39c6c463fc7fd93382f1a2eb94c121bf61f02c9fc0",
+    "mip.py": "0a0f576c7a49010d2f9062d3e600b053e41e3a79f668b789b9e2141c6ecc96fe",
+    "source.py": "302132797637f986b0f752599d5c1fb99383ed6f035752bb39fe73cd865511d9",
+    "timing.py": "c2a181d3969a0346fb86161cb33c081de4d0e0f92de6887cdfaad92c2cc71199",
+    "workloads.py": "df164d864bf62da1700ba4862e6cbabcf39264ba43594eac31d0eb0cdc2ac82d"
+  },
+  "input_sha256": "71bce7c4a3d448177d66b7ce4598bdb16522abdfc5ad450c4b178efab92cf5e6"
+}

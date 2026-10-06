@@ -1,0 +1,3310 @@
+{
+  "version": "ventus-source-events-v4",
+  "code_sha256": {
+    "__init__.py": "a9ffb79b59dc539b1eb49e40268bce4de172ffc549c17da20fc894da42f35636",
+    "__main__.py": "28584e5029ab83bb2f47d45455d2eb8bb017e4f6f44639f70a9c9ba86b2c6c59",
+    "coalescer.py": "68ef20fbab29abb4ccb02bd756252267a298dfb5d2ed87b43135d0d17ba2a34b",
+    "config.py": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "graph.py": "765aeb04bda71d3dbe32938599ab20c341a8ae352fd5981202fce26aec6b5508",
+    "ir.py": "40265280989aae3202bcc8bb99ba0da57e747422d799210b89f841d8efaa8e4d",
+    "mip.py": "0a0f576c7a49010d2f9062d3e600b053e41e3a79f668b789b9e2141c6ecc96fe",
+    "operators.py": "8aeada5c5cd01f82605b0af7ddbcb00a7ea6635324c12ad0def504cc9184da15",
+    "program.py": "56b8872910d9ddd1a648238dc5451b9bedea54f2d1951e58499e4fc9257d3304",
+    "source.py": "302132797637f986b0f752599d5c1fb99383ed6f035752bb39fe73cd865511d9",
+    "timing.py": "4030e68c455bd048c64a45a674d8ebe2c1954459870729977a271871db68f51d",
+    "workloads.py": "df164d864bf62da1700ba4862e6cbabcf39264ba43594eac31d0eb0cdc2ac82d"
+  },
+  "evidence_kind": "mechanism counterexamples; no new RTL timing observations",
+  "cache": {
+    "workload": {
+      "operations": [
+        {
+          "name": "tc0",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "tc1",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "tc2",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "tc3",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "tc4",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "tc5",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "tc6",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "tc7",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "tc8",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "tc9",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "slowA",
+          "kind": "load",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v1"
+          ],
+          "destination": "v4",
+          "addresses": [
+            2415919104
+          ],
+          "dependencies": []
+        },
+        {
+          "name": "fastB",
+          "kind": "load",
+          "block": 0,
+          "warp": 1,
+          "sources": [
+            "v10"
+          ],
+          "destination": "v4",
+          "addresses": [
+            2415919232
+          ],
+          "dependencies": []
+        },
+        {
+          "name": "fastA",
+          "kind": "load",
+          "block": 0,
+          "warp": 1,
+          "sources": [
+            "v10"
+          ],
+          "destination": "v5",
+          "addresses": [
+            2415919104
+          ],
+          "dependencies": [
+            "fastB"
+          ]
+        }
+      ],
+      "warps_per_block": 2,
+      "vgpr_per_warp": 64,
+      "sgpr_per_warp": 64,
+      "lds_per_block": 4096
+    },
+    "results": [
+      {
+        "hardware": {
+          "sms": 2,
+          "warps_per_sm": 8,
+          "blocks_per_sm": 8,
+          "threads": 32,
+          "rf_banks": 4,
+          "rf_read_ports": 1,
+          "rf_write_ports": 1,
+          "writeback_ports": 1,
+          "collectors": 8,
+          "vgpr_slots": 1024,
+          "sgpr_slots": 2048,
+          "tensor_m": 4,
+          "tensor_n": 8,
+          "tensor_k": 4,
+          "tensor_units": 1,
+          "lds_bytes": 131072,
+          "lds_banks": 32,
+          "lds_ports": 1,
+          "line_bytes": 128,
+          "l1_sets": 1,
+          "l1_ways": 1,
+          "l1_mshrs": 4,
+          "l1_subentries": 2,
+          "l1_write_entries": 4,
+          "l2_sets": 64,
+          "l2_ways": 16,
+          "l2_mshrs": 32,
+          "lsu_entries": 8,
+          "lsu_per_warp": 4,
+          "memory_channels": 1,
+          "memory_bytes_per_cycle": 128,
+          "memory_latency": 2
+        },
+        "cycles": 226,
+        "counters": {
+          "tensor": 10,
+          "l1_read_miss": 3,
+          "l2_miss": 2,
+          "memory_read_bytes": 256,
+          "load": 3,
+          "l2_hit": 1
+        },
+        "events": {
+          "slowA.collect": 160,
+          "slowA.operand0": 160,
+          "slowA.operands": 163,
+          "slowA.issue": 163,
+          "slowA.address": 163,
+          "slowA.line0": 166,
+          "slowA.address.release": 167,
+          "slowA.memory.done": 187,
+          "slowA.writeback": 187,
+          "fastB.collect": 51,
+          "fastB.operand0": 51,
+          "fastB.operands": 54,
+          "fastB.issue": 54,
+          "fastB.address": 167,
+          "fastB.line0": 170,
+          "l1.evict.wait": 214,
+          "fastB.address.release": 171,
+          "fastB.memory.done": 207,
+          "fastB.writeback": 207,
+          "fastA.collect": 208,
+          "fastA.operand0": 208,
+          "fastA.operands": 211,
+          "fastA.issue": 211,
+          "fastA.address": 211,
+          "fastA.line0": 214,
+          "fastA.address.release": 215,
+          "fastA.memory.done": 226,
+          "fastA.writeback": 226
+        },
+        "artificial_address_wait": 113
+      },
+      {
+        "hardware": {
+          "sms": 2,
+          "warps_per_sm": 8,
+          "blocks_per_sm": 8,
+          "threads": 32,
+          "rf_banks": 4,
+          "rf_read_ports": 1,
+          "rf_write_ports": 1,
+          "writeback_ports": 1,
+          "collectors": 8,
+          "vgpr_slots": 1024,
+          "sgpr_slots": 2048,
+          "tensor_m": 4,
+          "tensor_n": 8,
+          "tensor_k": 4,
+          "tensor_units": 1,
+          "lds_bytes": 131072,
+          "lds_banks": 32,
+          "lds_ports": 1,
+          "line_bytes": 128,
+          "l1_sets": 1,
+          "l1_ways": 2,
+          "l1_mshrs": 4,
+          "l1_subentries": 2,
+          "l1_write_entries": 4,
+          "l2_sets": 64,
+          "l2_ways": 16,
+          "l2_mshrs": 32,
+          "lsu_entries": 8,
+          "lsu_per_warp": 4,
+          "memory_channels": 1,
+          "memory_bytes_per_cycle": 128,
+          "memory_latency": 2
+        },
+        "cycles": 202,
+        "counters": {
+          "tensor": 10,
+          "l1_read_miss": 2,
+          "l2_miss": 2,
+          "memory_read_bytes": 256,
+          "load": 3,
+          "l1_hit": 1
+        },
+        "events": {
+          "slowA.collect": 160,
+          "slowA.operand0": 160,
+          "slowA.operands": 163,
+          "slowA.issue": 163,
+          "slowA.address": 163,
+          "slowA.line0": 166,
+          "slowA.address.release": 167,
+          "slowA.memory.done": 187,
+          "slowA.writeback": 187,
+          "fastB.collect": 51,
+          "fastB.operand0": 51,
+          "fastB.operands": 54,
+          "fastB.issue": 54,
+          "fastB.address": 167,
+          "fastB.line0": 170,
+          "fastB.address.release": 171,
+          "fastB.memory.done": 191,
+          "fastB.writeback": 191,
+          "fastA.collect": 192,
+          "fastA.operand0": 192,
+          "fastA.operands": 195,
+          "fastA.issue": 195,
+          "fastA.address": 195,
+          "fastA.line0": 198,
+          "fastA.address.release": 199,
+          "fastA.memory.done": 202,
+          "fastA.writeback": 202
+        },
+        "artificial_address_wait": 113
+      }
+    ],
+    "reason": "fastB issued at 54, but address blocked to 167 by the release of slowA which has not issued until 163; order imposed by IR traversal rather than online arrival"
+  },
+  "cta": {
+    "workload": {
+      "operations": [
+        {
+          "name": "b0.0",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.1",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.2",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.3",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.4",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.5",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.6",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.7",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.8",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.9",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.10",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.11",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.12",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.13",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.14",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.15",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.16",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.17",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.18",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.19",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.20",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.21",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.22",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.23",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.24",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.25",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.26",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.27",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.28",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.29",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.30",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.31",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.32",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.33",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.34",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.35",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.36",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.37",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.38",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.39",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.40",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.41",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.42",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.43",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.44",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.45",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.46",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.47",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.48",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.49",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.50",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.51",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.52",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.53",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.54",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.55",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.56",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.57",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.58",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.59",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.60",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.61",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.62",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.63",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.64",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.65",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.66",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.67",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.68",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.69",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.70",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.71",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.72",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.73",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.74",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.75",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.76",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.77",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.78",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.79",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.80",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.81",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.82",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.83",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.84",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.85",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.86",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.87",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.88",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.89",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.90",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.91",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.92",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.93",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.94",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.95",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.96",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.97",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.98",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b0.99",
+          "kind": "tensor",
+          "block": 0,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b1.0",
+          "kind": "tensor",
+          "block": 1,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.0",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.1",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.2",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.3",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.4",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.5",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.6",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.7",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.8",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.9",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.10",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.11",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.12",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.13",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.14",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.15",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.16",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.17",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.18",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.19",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.20",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.21",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.22",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.23",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.24",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.25",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.26",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.27",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.28",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.29",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.30",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.31",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.32",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.33",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.34",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.35",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.36",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.37",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.38",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.39",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.40",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.41",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.42",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.43",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.44",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.45",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.46",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.47",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.48",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.49",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.50",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.51",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.52",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.53",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.54",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.55",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.56",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.57",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.58",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.59",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.60",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.61",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.62",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.63",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.64",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.65",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.66",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.67",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.68",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.69",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.70",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.71",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.72",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.73",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.74",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.75",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.76",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.77",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.78",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.79",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.80",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.81",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.82",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.83",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.84",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.85",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.86",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.87",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.88",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.89",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.90",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.91",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.92",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.93",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.94",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.95",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.96",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.97",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.98",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        },
+        {
+          "name": "b2.99",
+          "kind": "tensor",
+          "block": 2,
+          "warp": 0,
+          "sources": [
+            "v2",
+            "v3",
+            "v1"
+          ],
+          "destination": "v1",
+          "addresses": [],
+          "dependencies": []
+        }
+      ],
+      "warps_per_block": 1,
+      "vgpr_per_warp": 64,
+      "sgpr_per_warp": 64,
+      "lds_per_block": 0
+    },
+    "results": [
+      {
+        "hardware": {
+          "sms": 1,
+          "warps_per_sm": 8,
+          "blocks_per_sm": 1,
+          "threads": 32,
+          "rf_banks": 4,
+          "rf_read_ports": 1,
+          "rf_write_ports": 1,
+          "writeback_ports": 1,
+          "collectors": 8,
+          "vgpr_slots": 1024,
+          "sgpr_slots": 2048,
+          "tensor_m": 4,
+          "tensor_n": 8,
+          "tensor_k": 4,
+          "tensor_units": 1,
+          "lds_bytes": 131072,
+          "lds_banks": 32,
+          "lds_ports": 1,
+          "line_bytes": 128,
+          "l1_sets": 256,
+          "l1_ways": 2,
+          "l1_mshrs": 4,
+          "l1_subentries": 2,
+          "l1_write_entries": 4,
+          "l2_sets": 64,
+          "l2_ways": 16,
+          "l2_mshrs": 32,
+          "lsu_entries": 8,
+          "lsu_per_warp": 4,
+          "memory_channels": 1,
+          "memory_bytes_per_cycle": 128,
+          "memory_latency": 2
+        },
+        "cycles": 3213,
+        "block2_first_collect": 1614,
+        "block1_end": 1614
+      },
+      {
+        "hardware": {
+          "sms": 2,
+          "warps_per_sm": 8,
+          "blocks_per_sm": 1,
+          "threads": 32,
+          "rf_banks": 4,
+          "rf_read_ports": 1,
+          "rf_write_ports": 1,
+          "writeback_ports": 1,
+          "collectors": 8,
+          "vgpr_slots": 1024,
+          "sgpr_slots": 2048,
+          "tensor_m": 4,
+          "tensor_n": 8,
+          "tensor_k": 4,
+          "tensor_units": 1,
+          "lds_bytes": 131072,
+          "lds_banks": 32,
+          "lds_ports": 1,
+          "line_bytes": 128,
+          "l1_sets": 256,
+          "l1_ways": 2,
+          "l1_mshrs": 4,
+          "l1_subentries": 2,
+          "l1_write_entries": 4,
+          "l2_sets": 64,
+          "l2_ways": 16,
+          "l2_mshrs": 32,
+          "lsu_entries": 8,
+          "lsu_per_warp": 4,
+          "memory_channels": 1,
+          "memory_bytes_per_cycle": 128,
+          "memory_latency": 2
+        },
+        "cycles": 3198,
+        "block2_first_collect": 1599,
+        "block1_end": 15
+      },
+      {
+        "hardware": {
+          "sms": 3,
+          "warps_per_sm": 8,
+          "blocks_per_sm": 1,
+          "threads": 32,
+          "rf_banks": 4,
+          "rf_read_ports": 1,
+          "rf_write_ports": 1,
+          "writeback_ports": 1,
+          "collectors": 8,
+          "vgpr_slots": 1024,
+          "sgpr_slots": 2048,
+          "tensor_m": 4,
+          "tensor_n": 8,
+          "tensor_k": 4,
+          "tensor_units": 1,
+          "lds_bytes": 131072,
+          "lds_banks": 32,
+          "lds_ports": 1,
+          "line_bytes": 128,
+          "l1_sets": 256,
+          "l1_ways": 2,
+          "l1_mshrs": 4,
+          "l1_subentries": 2,
+          "l1_write_entries": 4,
+          "l2_sets": 64,
+          "l2_ways": 16,
+          "l2_mshrs": 32,
+          "lsu_entries": 8,
+          "lsu_per_warp": 4,
+          "memory_channels": 1,
+          "memory_bytes_per_cycle": 128,
+          "memory_latency": 2
+        },
+        "cycles": 1599,
+        "block2_first_collect": 0,
+        "block1_end": 15
+      }
+    ],
+    "reason": "all cohort blocks must finish before a free SM may accept the next block; allocator.scala scans available CU and deallocation is per CU, no all-SM barrier exists"
+  }
+}

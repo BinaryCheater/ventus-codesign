@@ -1,0 +1,54 @@
+[RTL     info]@0 SNAPSHOT created, pid=3357393
+[RTL    trace]@20 Hardware reset ok
+[RTL    trace]@30 kernel 0 vecadd-lds96k activate
+[RTL    debug]@185 block0  dispatched to GPU (kernel0  vecadd-lds96k block0 )
+[RTL    debug]@195 block1  dispatched to GPU (kernel0  vecadd-lds96k block1 )
+[RTL    debug]@205 block2  dispatched to GPU (kernel0  vecadd-lds96k block2 )
+[RTL    debug]@215 block3  dispatched to GPU (kernel0  vecadd-lds96k block3 )
+[RTL    debug]@225 block4  dispatched to GPU (kernel0  vecadd-lds96k block4 )
+[RTL    debug]@235 block5  dispatched to GPU (kernel0  vecadd-lds96k block5 )
+[RTL    debug]@245 block6  dispatched to GPU (kernel0  vecadd-lds96k block6 )
+[RTL    debug]@255 block7  dispatched to GPU (kernel0  vecadd-lds96k block7 )
+[RTL    error]@3280 PMEM page at 0x80003000 not allocated, read as all zero
+[RTL    debug]@10000 
+[RTL    debug]@10945 block0  finished (kernel0  vecadd-lds96k block0 )
+[RTL    debug]@10965 block1  finished (kernel0  vecadd-lds96k block1 )
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL    debug]@60000 
+[RTL    debug]@70000 
+[RTL    debug]@80000 
+[RTL    debug]@89635 block6  finished (kernel0  vecadd-lds96k block6 )
+[RTL    debug]@90000 
+[RTL    debug]@90715 block7  finished (kernel0  vecadd-lds96k block7 )
+[RTL    debug]@100000 
+[RTL    debug]@110000 
+[RTL    debug]@120000 
+[RTL    debug]@130000 
+[RTL    debug]@140000 
+[RTL    debug]@150000 
+[RTL    debug]@160000 
+[RTL    debug]@170000 
+[RTL    debug]@178685 block2  finished (kernel0  vecadd-lds96k block2 )
+[RTL    debug]@179945 block5  finished (kernel0  vecadd-lds96k block5 )
+[RTL    debug]@180000 
+[RTL    debug]@190000 
+[RTL    debug]@200000 
+[RTL    debug]@210000 
+[RTL    debug]@220000 
+[RTL    debug]@230000 
+[RTL    debug]@240000 
+[RTL    debug]@250000 
+[RTL    debug]@260000 
+[RTL    debug]@267795 block4  finished (kernel0  vecadd-lds96k block4 )
+[RTL    debug]@269055 block3  finished (kernel0  vecadd-lds96k block3 )
+[RTL     info]@269055 kernel0  vecadd-lds96k finished
+[RTL    debug]@270000 
+[RTL    debug]@280000 
+[RTL    debug]@290000 
+[RTL    debug]@300000 
+[RTL    debug]@310000 
+[RTL     info]@319055 Simulation finished in 319055 unit time
+[RTL    debug]@319055 All snapshot process are cleared, OK

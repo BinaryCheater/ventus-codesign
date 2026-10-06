@@ -1,0 +1,560 @@
+{
+  "version": "ventus-source-events-v4",
+  "scope": "Component RTL contracts, not new full-chip GEMM/FFN or all-parameter accuracy",
+  "code_sha256": {
+    "__init__.py": "a9ffb79b59dc539b1eb49e40268bce4de172ffc549c17da20fc894da42f35636",
+    "__main__.py": "28584e5029ab83bb2f47d45455d2eb8bb017e4f6f44639f70a9c9ba86b2c6c59",
+    "coalescer.py": "68ef20fbab29abb4ccb02bd756252267a298dfb5d2ed87b43135d0d17ba2a34b",
+    "config.py": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "graph.py": "765aeb04bda71d3dbe32938599ab20c341a8ae352fd5981202fce26aec6b5508",
+    "ir.py": "40265280989aae3202bcc8bb99ba0da57e747422d799210b89f841d8efaa8e4d",
+    "mip.py": "0a0f576c7a49010d2f9062d3e600b053e41e3a79f668b789b9e2141c6ecc96fe",
+    "operators.py": "8aeada5c5cd01f82605b0af7ddbcb00a7ea6635324c12ad0def504cc9184da15",
+    "program.py": "56b8872910d9ddd1a648238dc5451b9bedea54f2d1951e58499e4fc9257d3304",
+    "source.py": "302132797637f986b0f752599d5c1fb99383ed6f035752bb39fe73cd865511d9",
+    "timing.py": "4030e68c455bd048c64a45a674d8ebe2c1954459870729977a271871db68f51d",
+    "workloads.py": "df164d864bf62da1700ba4862e6cbabcf39264ba43594eac31d0eb0cdc2ac82d"
+  },
+  "source_sha256": {
+    "BankConflictArbiter.original.scala": "48152c7669e907a9866dcffe15dcdb9c857fe8de481e5bde58789086b30c0ef2",
+    "BankConflictArbiter.scala": "373b66eb66fcd360291b253f08e083c296fd183899b76195dbd774b75642b4d9",
+    "EmitPrimitive.scala": "68cdbac99824d083959f4489b99affb629a7a3acf68e04fd792cf700567b1e4d",
+    "ShareMem.original.scala": "2404e17fe75dabdac20416f62628ed2409051a3a4d769b7077dce92df7fec700",
+    "ShareMem.scala": "e9d3bce6bc82b5e1b1c7cd31b23af0cb3b16cddc8188d46b6f3006de0c4f3392",
+    "ShareMemParameters.original.scala": "89143346612bf6ec940f83c6aaa4cad92e34333a212e7211c846eb02a58640db",
+    "ShareMemParameters.scala": "fdffe577c7dca698c8e06f6a20af63d48e8fb3f19574d2630dd4e2716a16cf82",
+    "lds_harness.cpp": "d45d5d404ca317be9e831fa3e2757185ab20cca81fedfc296a09560caf21b16d",
+    "parameters.original.scala": "71dbd95411c7c28c63345cdb5de61394353aec479e05db513744af2d9edbbee0",
+    "parameters.scala": "a468c51d7b4f349fea3ad633d23f199f4b7f55c71474846dced6c172350939a7",
+    "pre_run_predictions.json": "632d8669183363d3f11486e547de2e59788bd04c13bf5597075c76a46f7f2acd",
+    "primitive-unbinding.patch": "2c6b9a804e0f85a6c4f57c6a5deb80472f8508c2f0c3ed1d061e2239ea0131ee",
+    "results.json": "c2deebbbf98c6013ac61a6e4a3c9a2fc4f2d17f797f8467eb003178259ab585f",
+    "tensor_harness.cpp": "5d1c28dd4d2454c54ef29f23e523f9c483922a15cbe32019c5de1af3f6479c34"
+  },
+  "results": [
+    {
+      "name": "tc-4-8-4",
+      "kind": "tensor",
+      "shape": [
+        4,
+        8,
+        4
+      ],
+      "predicted_latency": 12,
+      "rtl_latency": 12,
+      "initiation_interval": 1,
+      "flops_per_instruction": 256,
+      "instructions": 128,
+      "bit_exact": true,
+      "stalled_latency_range": [
+        12,
+        22
+      ],
+      "stalled_input_stalls": 10
+    },
+    {
+      "name": "tc-4-4-4",
+      "kind": "tensor",
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "predicted_latency": 10,
+      "rtl_latency": 10,
+      "initiation_interval": 1,
+      "flops_per_instruction": 128,
+      "instructions": 128,
+      "bit_exact": true,
+      "stalled_latency_range": [
+        10,
+        19
+      ],
+      "stalled_input_stalls": 10
+    },
+    {
+      "name": "tc-2-16-2",
+      "kind": "tensor",
+      "shape": [
+        2,
+        16,
+        2
+      ],
+      "predicted_latency": 14,
+      "rtl_latency": 14,
+      "initiation_interval": 1,
+      "flops_per_instruction": 128,
+      "instructions": 128,
+      "bit_exact": true,
+      "stalled_latency_range": [
+        14,
+        27
+      ],
+      "stalled_input_stalls": 8
+    },
+    {
+      "name": "tc-8-4-4",
+      "kind": "tensor",
+      "shape": [
+        8,
+        4,
+        4
+      ],
+      "predicted_latency": 10,
+      "rtl_latency": 10,
+      "initiation_interval": 1,
+      "flops_per_instruction": 256,
+      "instructions": 128,
+      "bit_exact": true,
+      "stalled_latency_range": [
+        10,
+        19
+      ],
+      "stalled_input_stalls": 10
+    },
+    {
+      "name": "tc-2-4-2",
+      "kind": "tensor",
+      "shape": [
+        2,
+        4,
+        2
+      ],
+      "predicted_latency": 10,
+      "rtl_latency": 10,
+      "initiation_interval": 1,
+      "flops_per_instruction": 32,
+      "instructions": 128,
+      "bit_exact": true,
+      "stalled_latency_range": [
+        10,
+        19
+      ],
+      "stalled_input_stalls": 10
+    },
+    {
+      "name": "tc-4-2-4",
+      "kind": "tensor",
+      "shape": [
+        4,
+        2,
+        4
+      ],
+      "predicted_latency": 8,
+      "rtl_latency": 8,
+      "initiation_interval": 1,
+      "flops_per_instruction": 64,
+      "instructions": 128,
+      "bit_exact": true,
+      "stalled_latency_range": [
+        8,
+        16
+      ],
+      "stalled_input_stalls": 11
+    },
+    {
+      "name": "lds-32-1024",
+      "kind": "lds",
+      "banks": 32,
+      "capacity_bytes": 131072,
+      "cases": [
+        {
+          "stride": 1,
+          "write": 1,
+          "predicted_rounds": 1,
+          "rtl_rounds": 1,
+          "predicted_last_latency": 3,
+          "rtl_last_latency": 3,
+          "bit_exact": true
+        },
+        {
+          "stride": 1,
+          "write": 0,
+          "predicted_rounds": 1,
+          "rtl_rounds": 1,
+          "predicted_last_latency": 3,
+          "rtl_last_latency": 3,
+          "bit_exact": true
+        },
+        {
+          "stride": 2,
+          "write": 1,
+          "predicted_rounds": 2,
+          "rtl_rounds": 2,
+          "predicted_last_latency": 4,
+          "rtl_last_latency": 4,
+          "bit_exact": true
+        },
+        {
+          "stride": 2,
+          "write": 0,
+          "predicted_rounds": 2,
+          "rtl_rounds": 2,
+          "predicted_last_latency": 4,
+          "rtl_last_latency": 4,
+          "bit_exact": true
+        },
+        {
+          "stride": 4,
+          "write": 1,
+          "predicted_rounds": 4,
+          "rtl_rounds": 4,
+          "predicted_last_latency": 6,
+          "rtl_last_latency": 6,
+          "bit_exact": true
+        },
+        {
+          "stride": 4,
+          "write": 0,
+          "predicted_rounds": 4,
+          "rtl_rounds": 4,
+          "predicted_last_latency": 6,
+          "rtl_last_latency": 6,
+          "bit_exact": true
+        },
+        {
+          "stride": 8,
+          "write": 1,
+          "predicted_rounds": 8,
+          "rtl_rounds": 8,
+          "predicted_last_latency": 10,
+          "rtl_last_latency": 10,
+          "bit_exact": true
+        },
+        {
+          "stride": 8,
+          "write": 0,
+          "predicted_rounds": 8,
+          "rtl_rounds": 8,
+          "predicted_last_latency": 10,
+          "rtl_last_latency": 10,
+          "bit_exact": true
+        },
+        {
+          "stride": 32,
+          "write": 1,
+          "predicted_rounds": 32,
+          "rtl_rounds": 32,
+          "predicted_last_latency": 34,
+          "rtl_last_latency": 34,
+          "bit_exact": true
+        },
+        {
+          "stride": 32,
+          "write": 0,
+          "predicted_rounds": 32,
+          "rtl_rounds": 32,
+          "predicted_last_latency": 34,
+          "rtl_last_latency": 34,
+          "bit_exact": true
+        }
+      ],
+      "capacity_boundary_tested": false
+    },
+    {
+      "name": "lds-16-1024",
+      "kind": "lds",
+      "banks": 16,
+      "capacity_bytes": 131072,
+      "cases": [
+        {
+          "stride": 1,
+          "write": 1,
+          "predicted_rounds": 2,
+          "rtl_rounds": 2,
+          "predicted_last_latency": 4,
+          "rtl_last_latency": 4,
+          "bit_exact": true
+        },
+        {
+          "stride": 1,
+          "write": 0,
+          "predicted_rounds": 2,
+          "rtl_rounds": 2,
+          "predicted_last_latency": 4,
+          "rtl_last_latency": 4,
+          "bit_exact": true
+        },
+        {
+          "stride": 2,
+          "write": 1,
+          "predicted_rounds": 4,
+          "rtl_rounds": 4,
+          "predicted_last_latency": 6,
+          "rtl_last_latency": 6,
+          "bit_exact": true
+        },
+        {
+          "stride": 2,
+          "write": 0,
+          "predicted_rounds": 4,
+          "rtl_rounds": 4,
+          "predicted_last_latency": 6,
+          "rtl_last_latency": 6,
+          "bit_exact": true
+        },
+        {
+          "stride": 4,
+          "write": 1,
+          "predicted_rounds": 8,
+          "rtl_rounds": 8,
+          "predicted_last_latency": 10,
+          "rtl_last_latency": 10,
+          "bit_exact": true
+        },
+        {
+          "stride": 4,
+          "write": 0,
+          "predicted_rounds": 8,
+          "rtl_rounds": 8,
+          "predicted_last_latency": 10,
+          "rtl_last_latency": 10,
+          "bit_exact": true
+        },
+        {
+          "stride": 8,
+          "write": 1,
+          "predicted_rounds": 16,
+          "rtl_rounds": 16,
+          "predicted_last_latency": 18,
+          "rtl_last_latency": 18,
+          "bit_exact": true
+        },
+        {
+          "stride": 8,
+          "write": 0,
+          "predicted_rounds": 16,
+          "rtl_rounds": 16,
+          "predicted_last_latency": 18,
+          "rtl_last_latency": 18,
+          "bit_exact": true
+        },
+        {
+          "stride": 32,
+          "write": 1,
+          "predicted_rounds": 32,
+          "rtl_rounds": 32,
+          "predicted_last_latency": 34,
+          "rtl_last_latency": 34,
+          "bit_exact": true
+        },
+        {
+          "stride": 32,
+          "write": 0,
+          "predicted_rounds": 32,
+          "rtl_rounds": 32,
+          "predicted_last_latency": 34,
+          "rtl_last_latency": 34,
+          "bit_exact": true
+        }
+      ],
+      "capacity_boundary_tested": false
+    },
+    {
+      "name": "lds-8-1024",
+      "kind": "lds",
+      "banks": 8,
+      "capacity_bytes": 131072,
+      "cases": [
+        {
+          "stride": 1,
+          "write": 1,
+          "predicted_rounds": 4,
+          "rtl_rounds": 4,
+          "predicted_last_latency": 6,
+          "rtl_last_latency": 6,
+          "bit_exact": true
+        },
+        {
+          "stride": 1,
+          "write": 0,
+          "predicted_rounds": 4,
+          "rtl_rounds": 4,
+          "predicted_last_latency": 6,
+          "rtl_last_latency": 6,
+          "bit_exact": true
+        },
+        {
+          "stride": 2,
+          "write": 1,
+          "predicted_rounds": 8,
+          "rtl_rounds": 8,
+          "predicted_last_latency": 10,
+          "rtl_last_latency": 10,
+          "bit_exact": true
+        },
+        {
+          "stride": 2,
+          "write": 0,
+          "predicted_rounds": 8,
+          "rtl_rounds": 8,
+          "predicted_last_latency": 10,
+          "rtl_last_latency": 10,
+          "bit_exact": true
+        },
+        {
+          "stride": 4,
+          "write": 1,
+          "predicted_rounds": 16,
+          "rtl_rounds": 16,
+          "predicted_last_latency": 18,
+          "rtl_last_latency": 18,
+          "bit_exact": true
+        },
+        {
+          "stride": 4,
+          "write": 0,
+          "predicted_rounds": 16,
+          "rtl_rounds": 16,
+          "predicted_last_latency": 18,
+          "rtl_last_latency": 18,
+          "bit_exact": true
+        },
+        {
+          "stride": 8,
+          "write": 1,
+          "predicted_rounds": 32,
+          "rtl_rounds": 32,
+          "predicted_last_latency": 34,
+          "rtl_last_latency": 34,
+          "bit_exact": true
+        },
+        {
+          "stride": 8,
+          "write": 0,
+          "predicted_rounds": 32,
+          "rtl_rounds": 32,
+          "predicted_last_latency": 34,
+          "rtl_last_latency": 34,
+          "bit_exact": true
+        },
+        {
+          "stride": 32,
+          "write": 1,
+          "predicted_rounds": 32,
+          "rtl_rounds": 32,
+          "predicted_last_latency": 34,
+          "rtl_last_latency": 34,
+          "bit_exact": true
+        },
+        {
+          "stride": 32,
+          "write": 0,
+          "predicted_rounds": 32,
+          "rtl_rounds": 32,
+          "predicted_last_latency": 34,
+          "rtl_last_latency": 34,
+          "bit_exact": true
+        }
+      ],
+      "capacity_boundary_tested": false
+    },
+    {
+      "name": "lds-16-128",
+      "kind": "lds",
+      "banks": 16,
+      "capacity_bytes": 16384,
+      "cases": [
+        {
+          "stride": 1,
+          "write": 1,
+          "predicted_rounds": 2,
+          "rtl_rounds": 2,
+          "predicted_last_latency": 4,
+          "rtl_last_latency": 4,
+          "bit_exact": true
+        },
+        {
+          "stride": 1,
+          "write": 0,
+          "predicted_rounds": 2,
+          "rtl_rounds": 2,
+          "predicted_last_latency": 4,
+          "rtl_last_latency": 4,
+          "bit_exact": true
+        },
+        {
+          "stride": 2,
+          "write": 1,
+          "predicted_rounds": 4,
+          "rtl_rounds": 4,
+          "predicted_last_latency": 6,
+          "rtl_last_latency": 6,
+          "bit_exact": true
+        },
+        {
+          "stride": 2,
+          "write": 0,
+          "predicted_rounds": 4,
+          "rtl_rounds": 4,
+          "predicted_last_latency": 6,
+          "rtl_last_latency": 6,
+          "bit_exact": true
+        },
+        {
+          "stride": 4,
+          "write": 1,
+          "predicted_rounds": 8,
+          "rtl_rounds": 8,
+          "predicted_last_latency": 10,
+          "rtl_last_latency": 10,
+          "bit_exact": true
+        },
+        {
+          "stride": 4,
+          "write": 0,
+          "predicted_rounds": 8,
+          "rtl_rounds": 8,
+          "predicted_last_latency": 10,
+          "rtl_last_latency": 10,
+          "bit_exact": true
+        },
+        {
+          "stride": 8,
+          "write": 1,
+          "predicted_rounds": 16,
+          "rtl_rounds": 16,
+          "predicted_last_latency": 18,
+          "rtl_last_latency": 18,
+          "bit_exact": true
+        },
+        {
+          "stride": 8,
+          "write": 0,
+          "predicted_rounds": 16,
+          "rtl_rounds": 16,
+          "predicted_last_latency": 18,
+          "rtl_last_latency": 18,
+          "bit_exact": true
+        },
+        {
+          "stride": 32,
+          "write": 1,
+          "predicted_rounds": 32,
+          "rtl_rounds": 32,
+          "predicted_last_latency": 34,
+          "rtl_last_latency": 34,
+          "bit_exact": true
+        },
+        {
+          "stride": 32,
+          "write": 0,
+          "predicted_rounds": 32,
+          "rtl_rounds": 32,
+          "predicted_last_latency": 34,
+          "rtl_last_latency": 34,
+          "bit_exact": true
+        }
+      ],
+      "capacity_boundary_tested": false
+    }
+  ],
+  "tensor_instructions": 768,
+  "lds_transactions": 40,
+  "verified_timing_error_cycles": 0,
+  "limitations": [
+    "Tensor output backpressure tested for data/order; v4 does not implement full elastic pipeline/queue blocking.",
+    "LDS tests use one line at set 0; no capacity pressure or coalescer/MSHR integration.",
+    "No new port replication, cache pressure, or ready-aware multi-warp/CTA timing validation."
+  ]
+}

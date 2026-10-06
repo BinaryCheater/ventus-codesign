@@ -1,0 +1,18 @@
+{
+  "case": "vector_add-192",
+  "backend": "rtl",
+  "family": "vector_add",
+  "n": 192,
+  "returncode": 0,
+  "wall_seconds": 19.593742458964698,
+  "first_dispatch_time": 185,
+  "kernel_finish_time": 10725,
+  "output_correct": true,
+  "checked_words": 32,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "b52fe568e98b19cd02d5b66a84c95d0cdd61d89d50eed48905e4311e53534ad3"
+  },
+  "dispatch_to_finish_cycles": 1054.0
+}

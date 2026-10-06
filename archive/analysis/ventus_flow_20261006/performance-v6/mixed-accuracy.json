@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "name": "mixed-w1",
+      "prediction": 287,
+      "rtl_cycles": 287,
+      "error_percent": 0.0,
+      "original_reference_matches": false,
+      "corrected_reference_matches": true,
+      "zero_sign_reference_corrections": 5,
+      "collector_stream_matches": true,
+      "wall_seconds": 19.694332067971118,
+      "returncode": 0
+    },
+    {
+      "name": "fma-w1",
+      "prediction": 191,
+      "rtl_cycles": 191,
+      "error_percent": 0.0,
+      "original_reference_matches": false,
+      "corrected_reference_matches": true,
+      "zero_sign_reference_corrections": 5,
+      "collector_stream_matches": true,
+      "wall_seconds": 18.483839912107214,
+      "returncode": 0
+    },
+    {
+      "name": "mixed-w2",
+      "prediction": 305,
+      "rtl_cycles": 306,
+      "error_percent": -0.32679738562091387,
+      "original_reference_matches": false,
+      "corrected_reference_matches": true,
+      "zero_sign_reference_corrections": 10,
+      "collector_stream_matches": true,
+      "wall_seconds": 18.793922671000473,
+      "returncode": 0
+    },
+    {
+      "name": "fma-w2",
+      "prediction": 196,
+      "rtl_cycles": 199,
+      "error_percent": -1.5075376884422065,
+      "original_reference_matches": false,
+      "corrected_reference_matches": true,
+      "zero_sign_reference_corrections": 10,
+      "collector_stream_matches": true,
+      "wall_seconds": 19.24174760992173,
+      "returncode": 0
+    }
+  ],
+  "reference_correction": "RNE fused accumulation of negative-zero product into +0 yields +0; frozen original reference retained"
+}

@@ -1,0 +1,18 @@
+{
+  "case": "vector_add-16",
+  "backend": "systemc",
+  "family": "vector_add",
+  "n": 16,
+  "returncode": 0,
+  "wall_seconds": 0.07151374395471066,
+  "first_dispatch_time": 15,
+  "kernel_finish_time": 1685,
+  "output_correct": true,
+  "checked_words": 32,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "68a2e6018289bdb73f4fd3da86955ce2c7e18dc3bff6021485f8c6fdc3711638"
+  },
+  "dispatch_to_finish_cycles": 167.0
+}

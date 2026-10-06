@@ -1,0 +1,8 @@
+{
+  "name": "tc-4-8-4",
+  "top": "vTCexe",
+  "source": "${REMOTE_FLOW_ROOT}/primitive-parameters-v4/tc-4-8-4/vTCexe.v",
+  "rtl_sha256": "10febc5ab4257fe7a4645602c05ee787c5ecdc45675911134ecc96b8690da285",
+  "logic_rtl_sha256": "10febc5ab4257fe7a4645602c05ee787c5ecdc45675911134ecc96b8690da285",
+  "memory_modules": {}
+}

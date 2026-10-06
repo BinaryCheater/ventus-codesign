@@ -1,0 +1,52 @@
+[RTL     info]@0 SNAPSHOT created, pid=308242
+[RTL    trace]@20 Hardware reset ok
+[2026-10-06 20:47:54.060] [trace] kernel0 P›ô=c[ data loaded from file
+[RTL    trace]@30 kernel 0 layernorm-d32-s1-c0 activate
+[RTL    debug]@5125 block0  dispatched to GPU (kernel0  layernorm-d32-s1-c0 block0 )
+[RTL    error]@7180 PMEM page at 0x6fffff80 not allocated, read as all zero
+[RTL    error]@7190 PMEM page at 0x70000000 not allocated, read as all zero
+[RTL    debug]@10000 
+[RTL    debug]@17475 block0  finished (kernel0  layernorm-d32-s1-c0 block0 )
+[RTL     info]@17475 kernel0  layernorm-d32-s1-c0 finished
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL    debug]@60000 
+dump-mem: mem[0x90002000 +: 4] = 0x7FC00000
+dump-mem: mem[0x90002004 +: 4] = 0x7F800000
+dump-mem: mem[0x90002008 +: 4] = 0x3EC00000
+dump-mem: mem[0x9000200C +: 4] = 0x3EE00000
+dump-mem: mem[0x90002010 +: 4] = 0x3F000000
+dump-mem: mem[0x90002014 +: 4] = 0x3F100000
+dump-mem: mem[0x90002018 +: 4] = 0x3F200000
+dump-mem: mem[0x9000201C +: 4] = 0x3E800000
+dump-mem: mem[0x90002020 +: 4] = 0x3EA00000
+dump-mem: mem[0x90002024 +: 4] = 0x7FC00000
+dump-mem: mem[0x90002028 +: 4] = 0x7F800000
+dump-mem: mem[0x9000202C +: 4] = 0x7F800000
+dump-mem: mem[0x90002030 +: 4] = 0x7FC00000
+dump-mem: mem[0x90002034 +: 4] = 0x7F800000
+dump-mem: mem[0x90002038 +: 4] = 0x7F800000
+dump-mem: mem[0x9000203C +: 4] = 0x7F800000
+dump-mem: mem[0x90002040 +: 4] = 0x7FC00000
+dump-mem: mem[0x90002044 +: 4] = 0x7F800000
+dump-mem: mem[0x90002048 +: 4] = 0x7F800000
+dump-mem: mem[0x9000204C +: 4] = 0x7F800000
+dump-mem: mem[0x90002050 +: 4] = 0x7F800000
+dump-mem: mem[0x90002054 +: 4] = 0x7F800000
+dump-mem: mem[0x90002058 +: 4] = 0x7F800000
+dump-mem: mem[0x9000205C +: 4] = 0x7F800000
+dump-mem: mem[0x90002060 +: 4] = 0x7F800000
+dump-mem: mem[0x90002064 +: 4] = 0x7F800000
+dump-mem: mem[0x90002068 +: 4] = 0x7F800000
+dump-mem: mem[0x9000206C +: 4] = 0x7F800000
+dump-mem: mem[0x90002070 +: 4] = 0x7F800000
+dump-mem: mem[0x90002074 +: 4] = 0x7F800000
+dump-mem: mem[0x90002078 +: 4] = 0x7F800000
+dump-mem: mem[0x9000207C +: 4] = 0x7F800000
+[RTL     info]@67475 Simulation finished in 67475 unit time
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: end at 67ns; walltime 20.861 s; speed 3.234 ns/s
+- Verilator: cpu 83.173 s on 4 threads; allocated 583 MB
+[RTL    debug]@67475 All snapshot process are cleared, OK

@@ -1,0 +1,411 @@
+{
+  "version": "ventus-source-events-v4",
+  "code_sha256": {
+    "__init__.py": "a9ffb79b59dc539b1eb49e40268bce4de172ffc549c17da20fc894da42f35636",
+    "__main__.py": "28584e5029ab83bb2f47d45455d2eb8bb017e4f6f44639f70a9c9ba86b2c6c59",
+    "coalescer.py": "68ef20fbab29abb4ccb02bd756252267a298dfb5d2ed87b43135d0d17ba2a34b",
+    "config.py": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "graph.py": "765aeb04bda71d3dbe32938599ab20c341a8ae352fd5981202fce26aec6b5508",
+    "ir.py": "40265280989aae3202bcc8bb99ba0da57e747422d799210b89f841d8efaa8e4d",
+    "mip.py": "0a0f576c7a49010d2f9062d3e600b053e41e3a79f668b789b9e2141c6ecc96fe",
+    "operators.py": "8aeada5c5cd01f82605b0af7ddbcb00a7ea6635324c12ad0def504cc9184da15",
+    "program.py": "56b8872910d9ddd1a648238dc5451b9bedea54f2d1951e58499e4fc9257d3304",
+    "source.py": "302132797637f986b0f752599d5c1fb99383ed6f035752bb39fe73cd865511d9",
+    "timing.py": "4030e68c455bd048c64a45a674d8ebe2c1954459870729977a271871db68f51d",
+    "workloads.py": "df164d864bf62da1700ba4862e6cbabcf39264ba43594eac31d0eb0cdc2ac82d"
+  },
+  "results": [
+    {
+      "name": "epilogue-d16-h4-lds-r0-s1",
+      "batch": "operators-probes-v4",
+      "config": {
+        "kind": "epilogue",
+        "depth": 16,
+        "hidden": 4,
+        "seed": 1,
+        "intermediate": "lds"
+      },
+      "stages": [
+        {
+          "name": "first_gemm_tile0",
+          "predicted": 163,
+          "rtl": 163,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile0",
+          "predicted": 212,
+          "rtl": 212,
+          "error_cycles": 0
+        }
+      ],
+      "predicted_compute": 212,
+      "rtl_compute": 212,
+      "predicted_visible": 250,
+      "rtl_visible": 250,
+      "compute_error_pct": 0.0,
+      "visible_error_pct": 0.0,
+      "output_bit_exact": true,
+      "instruction_count": 40,
+      "rtl_host_dispatch_to_finish": 267,
+      "evidence_sha256": "4735ba97653395a94d0cb39daea58fa84e389462ab9cfb2e7c82ab46b852b9ce",
+      "trace_sha256": "655a7d262a882ecab654df7ff0c7a804ac7e24f57e88a28070e8d01b2485781e",
+      "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33",
+      "rtl_library_sha256": "1a21bb8a9c3c6715492c4c53fddd92bf6e10d5af661c34c78a204beb29e7feb7"
+    },
+    {
+      "name": "epilogue-d32-h4-lds-r0-s2",
+      "batch": "operators-probes-v4",
+      "config": {
+        "kind": "epilogue",
+        "depth": 32,
+        "hidden": 4,
+        "seed": 2,
+        "intermediate": "lds"
+      },
+      "stages": [
+        {
+          "name": "first_gemm_tile0",
+          "predicted": 315,
+          "rtl": 315,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile0",
+          "predicted": 364,
+          "rtl": 364,
+          "error_cycles": 0
+        }
+      ],
+      "predicted_compute": 364,
+      "rtl_compute": 364,
+      "predicted_visible": 402,
+      "rtl_visible": 402,
+      "compute_error_pct": 0.0,
+      "visible_error_pct": 0.0,
+      "output_bit_exact": true,
+      "instruction_count": 66,
+      "rtl_host_dispatch_to_finish": 419,
+      "evidence_sha256": "92c95cf00104b86c265c02678bb9999ad47df9862b48b0cd8ce6b1f9185a7ce3",
+      "trace_sha256": "a199f62d2df409d4f27ea06b956eab0a2051b065b087cd5f7ed6b438e3ffdc96",
+      "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33",
+      "rtl_library_sha256": "1a21bb8a9c3c6715492c4c53fddd92bf6e10d5af661c34c78a204beb29e7feb7"
+    },
+    {
+      "name": "ffn-d8-h8-lds-r0-s1",
+      "batch": "operators-probes-v4",
+      "config": {
+        "kind": "ffn",
+        "depth": 8,
+        "hidden": 8,
+        "seed": 1,
+        "intermediate": "lds"
+      },
+      "stages": [
+        {
+          "name": "first_gemm_tile0",
+          "predicted": 87,
+          "rtl": 87,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile0",
+          "predicted": 136,
+          "rtl": 136,
+          "error_cycles": 0
+        },
+        {
+          "name": "first_gemm_tile1",
+          "predicted": 266,
+          "rtl": 266,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile1",
+          "predicted": 315,
+          "rtl": 315,
+          "error_cycles": 0
+        },
+        {
+          "name": "second_gemm",
+          "predicted": 465,
+          "rtl": 465,
+          "error_cycles": 0
+        },
+        {
+          "name": "second_bias",
+          "predicted": 508,
+          "rtl": 509,
+          "error_cycles": -1
+        }
+      ],
+      "predicted_compute": 508,
+      "rtl_compute": 509,
+      "predicted_visible": 546,
+      "rtl_visible": 545,
+      "compute_error_pct": -0.19646365422396617,
+      "visible_error_pct": 0.18348623853210455,
+      "output_bit_exact": true,
+      "instruction_count": 95,
+      "rtl_host_dispatch_to_finish": 562,
+      "evidence_sha256": "d37dadd953de1ce452fc65aae7d6dbf3b733822dd49789649acc2f7228738790",
+      "trace_sha256": "f1a5ef1009435298ef51d2d7c06676d0f39ae84b1f1b052730b2657e614ba83c",
+      "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33",
+      "rtl_library_sha256": "1a21bb8a9c3c6715492c4c53fddd92bf6e10d5af661c34c78a204beb29e7feb7"
+    },
+    {
+      "name": "ffn-d8-h8-global-r0-s1",
+      "batch": "operators-probes-v4",
+      "config": {
+        "kind": "ffn",
+        "depth": 8,
+        "hidden": 8,
+        "seed": 1,
+        "intermediate": "global"
+      },
+      "stages": [
+        {
+          "name": "first_gemm_tile0",
+          "predicted": 87,
+          "rtl": 87,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile0",
+          "predicted": 136,
+          "rtl": 136,
+          "error_cycles": 0
+        },
+        {
+          "name": "first_gemm_tile1",
+          "predicted": 271,
+          "rtl": 271,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile1",
+          "predicted": 320,
+          "rtl": 320,
+          "error_cycles": 0
+        },
+        {
+          "name": "second_gemm",
+          "predicted": 475,
+          "rtl": 475,
+          "error_cycles": 0
+        },
+        {
+          "name": "second_bias",
+          "predicted": 518,
+          "rtl": 519,
+          "error_cycles": -1
+        }
+      ],
+      "predicted_compute": 518,
+      "rtl_compute": 519,
+      "predicted_visible": 556,
+      "rtl_visible": 555,
+      "compute_error_pct": -0.19267822736031004,
+      "visible_error_pct": 0.18018018018017834,
+      "output_bit_exact": true,
+      "instruction_count": 97,
+      "rtl_host_dispatch_to_finish": 572,
+      "evidence_sha256": "9fc98ad130e29abbe3a9b45d2bd0cd9d415804e5e7e1c4af358a147a4ab1afdd",
+      "trace_sha256": "0f01cc6ed2d7d0d125d89a213bd17461baf6a12661c591098cbfa9f798f3666b",
+      "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33",
+      "rtl_library_sha256": "1a21bb8a9c3c6715492c4c53fddd92bf6e10d5af661c34c78a204beb29e7feb7"
+    },
+    {
+      "name": "ffn-d16-h16-lds-r1-s1",
+      "batch": "operators-probes-v4",
+      "config": {
+        "kind": "ffn",
+        "depth": 16,
+        "hidden": 16,
+        "residual": true,
+        "seed": 1,
+        "intermediate": "lds"
+      },
+      "stages": [
+        {
+          "name": "first_gemm_tile0",
+          "predicted": 163,
+          "rtl": 163,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile0",
+          "predicted": 212,
+          "rtl": 212,
+          "error_cycles": 0
+        },
+        {
+          "name": "first_gemm_tile1",
+          "predicted": 418,
+          "rtl": 418,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile1",
+          "predicted": 467,
+          "rtl": 467,
+          "error_cycles": 0
+        },
+        {
+          "name": "first_gemm_tile2",
+          "predicted": 678,
+          "rtl": 678,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile2",
+          "predicted": 727,
+          "rtl": 727,
+          "error_cycles": 0
+        },
+        {
+          "name": "first_gemm_tile3",
+          "predicted": 938,
+          "rtl": 938,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile3",
+          "predicted": 987,
+          "rtl": 987,
+          "error_cycles": 0
+        },
+        {
+          "name": "second_gemm",
+          "predicted": 1233,
+          "rtl": 1233,
+          "error_cycles": 0
+        },
+        {
+          "name": "second_bias",
+          "predicted": 1276,
+          "rtl": 1277,
+          "error_cycles": -1
+        },
+        {
+          "name": "residual",
+          "predicted": 1329,
+          "rtl": 1329,
+          "error_cycles": 0
+        }
+      ],
+      "predicted_compute": 1329,
+      "rtl_compute": 1329,
+      "predicted_visible": 1367,
+      "rtl_visible": 1365,
+      "compute_error_pct": 0.0,
+      "visible_error_pct": 0.146520146520146,
+      "output_bit_exact": true,
+      "instruction_count": 238,
+      "rtl_host_dispatch_to_finish": 1382,
+      "evidence_sha256": "c8a1b1bd3229b65b7482af648deaeae064de54ec7836a37c2e5ecf703ab0d3a6",
+      "trace_sha256": "85d25bc190d0292c811d5c858c0c226af3f804a01b1ca7af2f5017cd65c3c7cc",
+      "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33",
+      "rtl_library_sha256": "1a21bb8a9c3c6715492c4c53fddd92bf6e10d5af661c34c78a204beb29e7feb7"
+    },
+    {
+      "name": "ffn-d16-h16-global-r1-s1",
+      "batch": "operators-probes-v4",
+      "config": {
+        "kind": "ffn",
+        "depth": 16,
+        "hidden": 16,
+        "residual": true,
+        "seed": 1,
+        "intermediate": "global"
+      },
+      "stages": [
+        {
+          "name": "first_gemm_tile0",
+          "predicted": 163,
+          "rtl": 163,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile0",
+          "predicted": 212,
+          "rtl": 212,
+          "error_cycles": 0
+        },
+        {
+          "name": "first_gemm_tile1",
+          "predicted": 423,
+          "rtl": 423,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile1",
+          "predicted": 472,
+          "rtl": 472,
+          "error_cycles": 0
+        },
+        {
+          "name": "first_gemm_tile2",
+          "predicted": 683,
+          "rtl": 683,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile2",
+          "predicted": 732,
+          "rtl": 732,
+          "error_cycles": 0
+        },
+        {
+          "name": "first_gemm_tile3",
+          "predicted": 943,
+          "rtl": 943,
+          "error_cycles": 0
+        },
+        {
+          "name": "relu_tile3",
+          "predicted": 992,
+          "rtl": 992,
+          "error_cycles": 0
+        },
+        {
+          "name": "second_gemm",
+          "predicted": 1243,
+          "rtl": 1245,
+          "error_cycles": -2
+        },
+        {
+          "name": "second_bias",
+          "predicted": 1286,
+          "rtl": 1289,
+          "error_cycles": -3
+        },
+        {
+          "name": "residual",
+          "predicted": 1339,
+          "rtl": 1341,
+          "error_cycles": -2
+        }
+      ],
+      "predicted_compute": 1339,
+      "rtl_compute": 1341,
+      "predicted_visible": 1377,
+      "rtl_visible": 1377,
+      "compute_error_pct": -0.1491424310216205,
+      "visible_error_pct": 0.0,
+      "output_bit_exact": true,
+      "instruction_count": 240,
+      "rtl_host_dispatch_to_finish": 1394,
+      "evidence_sha256": "21a91f5f7bbf2f00b4cf3c44d03e2b4d629b4055dd40a44c1724fc576a8ade52",
+      "trace_sha256": "dcc8a575c585b91854c640fbb597c34830131cfde61a604476ae5c91d2c3340f",
+      "rtl_binary_sha256": "8cf5b29a0bf9e225ccb821d3801c7067df438e24a70d2c7c7aaec02a67106f33",
+      "rtl_library_sha256": "1a21bb8a9c3c6715492c4c53fddd92bf6e10d5af661c34c78a204beb29e7feb7"
+    }
+  ],
+  "max_compute_error_pct": 0.19646365422396617,
+  "max_visible_error_pct": 0.18348623853210455,
+  "mean_visible_error_pct": 0.08503109420540482,
+  "evaluation_seconds": 0.015025832923129201,
+  "initial_state": "SRAM reset finished; I/data caches cold; host launch gated to cycle 512",
+  "timing_window": "first collector admission -> final arithmetic writeback / final output memory acceptance"
+}

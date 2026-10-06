@@ -1,0 +1,50 @@
+[RTL     info]@0 SNAPSHOT created, pid=313788
+[RTL    trace]@20 Hardware reset ok
+[2026-10-06 20:49:29.647] [trace] kernel0 ă#ז[ data loaded from file
+[RTL    trace]@30 kernel 0 layernorm-d32-s1-c0 activate
+[RTL    debug]@5125 block0  dispatched to GPU (kernel0  layernorm-d32-s1-c0 block0 )
+[RTL    debug]@10000 
+[RTL    debug]@18605 block0  finished (kernel0  layernorm-d32-s1-c0 block0 )
+[RTL     info]@18605 kernel0  layernorm-d32-s1-c0 finished
+[RTL    debug]@20000 
+[RTL    debug]@30000 
+[RTL    debug]@40000 
+[RTL    debug]@50000 
+[RTL    debug]@60000 
+dump-mem: mem[0x90002000 +: 4] = 0xBE7A9F12
+dump-mem: mem[0x90002004 +: 4] = 0x3F13901E
+dump-mem: mem[0x90002008 +: 4] = 0xBF5226A6
+dump-mem: mem[0x9000200C +: 4] = 0x3E8E1E23
+dump-mem: mem[0x90002010 +: 4] = 0x3FDD4F8F
+dump-mem: mem[0x90002014 +: 4] = 0x3E2CA398
+dump-mem: mem[0x90002018 +: 4] = 0x3F81EA7A
+dump-mem: mem[0x9000201C +: 4] = 0xBF4B6DA7
+dump-mem: mem[0x90002020 +: 4] = 0x3EA87878
+dump-mem: mem[0x90002024 +: 4] = 0x3FE72039
+dump-mem: mem[0x90002028 +: 4] = 0x3E13E642
+dump-mem: mem[0x9000202C +: 4] = 0x3F820CE4
+dump-mem: mem[0x90002030 +: 4] = 0xBEA9694D
+dump-mem: mem[0x90002034 +: 4] = 0x3F516966
+dump-mem: mem[0x90002038 +: 4] = 0x3FF0F0E4
+dump-mem: mem[0x9000203C +: 4] = 0x3DF651D8
+dump-mem: mem[0x90002040 +: 4] = 0x3F822F4E
+dump-mem: mem[0x90002044 +: 4] = 0xBE9BF74E
+dump-mem: mem[0x90002048 +: 4] = 0x3F5E9691
+dump-mem: mem[0x9000204C +: 4] = 0xBF8419C4
+dump-mem: mem[0x90002050 +: 4] = 0x3F089AE6
+dump-mem: mem[0x90002054 +: 4] = 0x3F8251B9
+dump-mem: mem[0x90002058 +: 4] = 0xBE8E854E
+dump-mem: mem[0x9000205C +: 4] = 0x3F6BC3BB
+dump-mem: mem[0x90002060 +: 4] = 0xBF749234
+dump-mem: mem[0x90002064 +: 4] = 0x3F026B90
+dump-mem: mem[0x90002068 +: 4] = 0x3FBA7424
+dump-mem: mem[0x9000206C +: 4] = 0x3E3DD963
+dump-mem: mem[0x90002070 +: 4] = 0x3F78F0E6
+dump-mem: mem[0x90002074 +: 4] = 0xBF60F0DE
+dump-mem: mem[0x90002078 +: 4] = 0x3EF87875
+dump-mem: mem[0x9000207C +: 4] = 0x3FBA968E
+[RTL     info]@68605 Simulation finished in 68605 unit time
+- S i m u l a t i o n   R e p o r t: Verilator 5.049 devel
+- Verilator: end at 69ns; walltime 22.526 s; speed 3.046 ns/s
+- Verilator: cpu 89.853 s on 4 threads; allocated 583 MB
+[RTL    debug]@68605 All snapshot process are cleared, OK

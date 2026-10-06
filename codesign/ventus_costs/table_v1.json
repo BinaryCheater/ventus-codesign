@@ -1,0 +1,4460 @@
+{
+  "target": {
+    "version": "ventus-synthesis-cost-v1",
+    "library": "ASAP7 7.5T RVT TT",
+    "pvt": "TT, 0.7V, library nominal temperature",
+    "area_unit": "liberty_area_unit",
+    "area_conversion": null,
+    "abc_delay_target_ps": 1000,
+    "timing_feasible": null,
+    "flow": "native optimized Tensor; coarse slang mapping for other components",
+    "storage": "blackboxed generated memory leaves; bits separate",
+    "libraries_sha256": {
+      "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_AO_RVT_TT_nldm_211120.lib": "b1ece108c0a2acd8d01c05cee6daee2834425037b1d9aad625d6f1dd640f1940",
+      "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib": "a4ceb32e418e1aac8667e28fbd8e9e46baf520180be4db075598a4d7c681a56e",
+      "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_OA_RVT_TT_nldm_211120.lib": "6529c6c72465cd133dfbfb03952327ab2774bb6aa4be866d78fd7bc6c58c9f6f",
+      "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib": "57a0b403485b99ebd676942af4673ac086b86c7c75fbdc3e5c0038501dd22ba3",
+      "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib": "fa92e6ab1481810602811b1eea54bc016a341f11fb5188d7512c026599adf038"
+    },
+    "mapping_lib_sha256": "5dc93b393b29986630963a6ff6e54a77eb937beb510127fc9f8d1238f89d38dd",
+    "script_sha256": "a3ea00ff351e82710f091e098976029e0c6acf63a600ae052837685ba7d02d3f",
+    "tools": "Yosys 0.64+308 (git sha1 78e05dfb0, Release, Clang /usr/bin/clang++ 18.1.8)",
+    "integration_scope": "shared GPU fixed logic + standalone SM replication; estimated",
+    "hardware_contract_sha256": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+    "collection_scripts_sha256": {
+      "coarse": "a3ea00ff351e82710f091e098976029e0c6acf63a600ae052837685ba7d02d3f",
+      "native": "c1bbdaa08c852d844db6fbeae07a9522b23daa926a777dc7f5df1c64168eafda"
+    }
+  },
+  "baseline_hardware": {
+    "sms": 2,
+    "warps_per_sm": 8,
+    "blocks_per_sm": 8,
+    "threads": 32,
+    "rf_banks": 4,
+    "rf_read_ports": 1,
+    "rf_write_ports": 1,
+    "writeback_ports": 1,
+    "collectors": 8,
+    "vgpr_slots": 1024,
+    "sgpr_slots": 2048,
+    "tensor_m": 4,
+    "tensor_n": 8,
+    "tensor_k": 4,
+    "tensor_units": 1,
+    "lds_bytes": 131072,
+    "lds_banks": 32,
+    "lds_ports": 1,
+    "line_bytes": 128,
+    "l1_sets": 256,
+    "l1_ways": 2,
+    "l1_mshrs": 4,
+    "l1_subentries": 2,
+    "l1_write_entries": 4,
+    "l2_sets": 64,
+    "l2_ways": 16,
+    "l2_mshrs": 32,
+    "lsu_entries": 8,
+    "lsu_per_warp": 4,
+    "memory_channels": 1,
+    "memory_bytes_per_cycle": 128,
+    "memory_latency": 2
+  },
+  "points": {
+    "sm-base": {
+      "flow": "coarse-slang-deduplicated-then-proc",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 317497.30218,
+      "sequential_area": 62604.4788,
+      "memory_bits": 3424026,
+      "memories": {
+        "ram_wid_16x3": {
+          "instances": 1,
+          "bits": 48,
+          "arrays": [
+            [
+              "2",
+              "Memory",
+              "15"
+            ]
+          ],
+          "source_sha256": "9ea49f7072f7648f8d4fae57310be876848ebc5f99a91e327d57ab1b49c9db65"
+        },
+        "array_256x34": {
+          "instances": 2,
+          "bits": 8704,
+          "arrays": [
+            [
+              "33",
+              "Memory",
+              "255"
+            ]
+          ],
+          "source_sha256": "231ecb852acd3f247df9ad0c50f56a4988031e782e3923c81d894a7dd2039da0"
+        },
+        "array_256x20": {
+          "instances": 1,
+          "bits": 5120,
+          "arrays": [
+            [
+              "19",
+              "Memory",
+              "255"
+            ]
+          ],
+          "source_sha256": "b22739d06f71079f43623a34c3928802dd6424d37ad8fabdda1fa17dcc31f357"
+        },
+        "array_256x256": {
+          "instances": 1,
+          "bits": 65536,
+          "arrays": [
+            [
+              "255",
+              "Memory",
+              "255"
+            ]
+          ],
+          "source_sha256": "7ee1a8c780327d149600106f5a141b2769bb895e7c0ae1655e75c23adf3c26bf"
+        },
+        "ram_2x1040": {
+          "instances": 1,
+          "bits": 2080,
+          "arrays": [
+            [
+              "1039",
+              "Memory",
+              "1"
+            ]
+          ],
+          "source_sha256": "f7a3509f9270284477e6b04ef09872d6849f2df6b1ba653529eb408d5697dd3c"
+        },
+        "ram_32x1059": {
+          "instances": 2,
+          "bits": 33888,
+          "arrays": [
+            [
+              "1058",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "b4ff01ba6ae10a487b010c37f41632483165b8fa472f1933b522df9a1e4e710e"
+        },
+        "ram_8x32": {
+          "instances": 1,
+          "bits": 256,
+          "arrays": [
+            [
+              "31",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "5ae2c52278fdf928d9224ab5b59b398e9c10f49e42da9484148e8cf244e36c9c"
+        },
+        "ram_8x1300": {
+          "instances": 1,
+          "bits": 10400,
+          "arrays": [
+            [
+              "1299",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "02fe920c17dc4e8988f091b2c3e4a97799e4c98ce3b7be7066a117836f8a741d"
+        },
+        "array_512x32": {
+          "instances": 32,
+          "bits": 16384,
+          "arrays": [
+            [
+              "31",
+              "Memory",
+              "511"
+            ]
+          ],
+          "source_sha256": "ffdf84c59bd9fdefc9e6080208110943ac3a690139bf160a718fe747aae976ab"
+        },
+        "ram_2x1029": {
+          "instances": 1,
+          "bits": 2058,
+          "arrays": [
+            [
+              "1028",
+              "Memory",
+              "1"
+            ]
+          ],
+          "source_sha256": "436e83887120c48a9a328c07e2383a55929ba9ab99ecfeae977d72d0f94ccbe6"
+        },
+        "array_256x2048": {
+          "instances": 1,
+          "bits": 524288,
+          "arrays": [
+            [
+              "2047",
+              "Memory",
+              "255"
+            ]
+          ],
+          "source_sha256": "e06e398f3c83571cbafb3dd5e88820004704fc94fd6b767b9553b82b42e63c0a"
+        },
+        "array_1024x32": {
+          "instances": 32,
+          "bits": 32768,
+          "arrays": [
+            [
+              "31",
+              "Memory",
+              "1023"
+            ]
+          ],
+          "source_sha256": "ec2c440bff2bf5746fdd968bd4c750b3488bab14a0f25dbaa7036cd06b3c1e44"
+        },
+        "ram_2x2": {
+          "instances": 8,
+          "bits": 4,
+          "arrays": [
+            [
+              "1",
+              "Memory",
+              "1"
+            ]
+          ],
+          "source_sha256": "f87d7aa20b4cdf0d8d81c2e2a278a16d4d6f939aba4cf3f75a734c20e13a5727"
+        },
+        "ram_2x456": {
+          "instances": 8,
+          "bits": 912,
+          "arrays": [
+            [
+              "455",
+              "Memory",
+              "1"
+            ]
+          ],
+          "source_sha256": "1a964bbc3f4d7aaed9db710776722cdd4fa15a636724caf9d1430a6c78e7f427"
+        },
+        "data_8x1024": {
+          "instances": 1,
+          "bits": 8192,
+          "arrays": [
+            [
+              "1023",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "8110227119e1d6d2099a3db959f8a1571f1ceb6986f139f4f1366b5f0b45f393"
+        },
+        "tag_8x248": {
+          "instances": 1,
+          "bits": 1984,
+          "arrays": [
+            [
+              "247",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "1a1a507fd5833ee35ae65dd518ad577e87c0cc28e05e2c074a8c8a2ff39465b2"
+        },
+        "stack_mem_32x96": {
+          "instances": 8,
+          "bits": 3072,
+          "arrays": [
+            [
+              "95",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "7ec02196800e2f88338ee4b8ee0dd1132506d04817127501deee9b183b2fec8b"
+        },
+        "regs_256x1024": {
+          "instances": 4,
+          "bits": 262144,
+          "arrays": [
+            [
+              "1023",
+              "Memory",
+              "255"
+            ]
+          ],
+          "source_sha256": "1a255f45b1a99582351ddbc9b9bbb2cc8fde8b461018d202a1cc9650c9898860"
+        },
+        "regs_1_512x32": {
+          "instances": 4,
+          "bits": 16384,
+          "arrays": [
+            [
+              "31",
+              "Memory",
+              "511"
+            ]
+          ],
+          "source_sha256": "b97462c04eb5ed6852c6c657473c47eb5ffd2d4f25cef57188d086fd21e33642"
+        }
+      },
+      "rtl_sha256": "9eb262d75b8d1d96fe4ffde0f3d451409dbd8b12ee3990b34638984ed5864c17",
+      "statistics_sha256": "bf4ee8104b2949a4384fb5e09b026a601319844d5dcad423eb7458da791c08c0",
+      "synthesis_script_sha256": "9e6653a3b8fb58267808bd84686b0988b4b08ac24fff0334c88bd33e39d3013c",
+      "manifest_sha256": "bbc3021dd14384d14b9c67ebb0e682492e533fab5e49ecd3c07cbc99ca373628",
+      "mapped_sha256": "f036a90faa3f498fcab2a0d366da99db8a014e000f6d85fa1fcd7cd3fe8e9792",
+      "modules": {
+        "warp_scheduler$SM_wrapper.pipe.warp_sche": {
+          "logic_area": 483.89562,
+          "sequential_area": 161.838,
+          "memory_bits": 0
+        },
+        "vTCexe$SM_wrapper.pipe.tensorcore": {
+          "logic_area": 109920.0051,
+          "sequential_area": 16261.074,
+          "memory_bits": 0
+        },
+        "vMULv2$SM_wrapper.pipe.mul": {
+          "logic_area": 28745.2719,
+          "sequential_area": 9212.8104,
+          "memory_bits": 0
+        },
+        "vALUv2$SM_wrapper.pipe.valu": {
+          "logic_area": 4417.5213,
+          "sequential_area": 343.2132,
+          "memory_bits": 0
+        },
+        "tagChecker$SM_wrapper.dcache.TagAccess.iTagChecker": {
+          "logic_area": 5.64246,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "pipe_Anon$SM_wrapper.pipe.exe_dataV": {
+          "logic_area": 0,
+          "sequential_area": 0,
+          "memory_bits": 0
+        },
+        "pipe$SM_wrapper.pipe": {
+          "logic_area": 284456.4561,
+          "sequential_area": 54470.88,
+          "memory_bits": 1156192
+        },
+        "operandCollector$SM_wrapper.pipe.operand_collector": {
+          "logic_area": 54041.54274,
+          "sequential_area": 9129.996,
+          "memory_bits": 1114112
+        },
+        "operandArbiter$SM_wrapper.pipe.operand_collector.Arbiter": {
+          "logic_area": 384.79536,
+          "sequential_area": 11.664,
+          "memory_bits": 0
+        },
+        "minIdxTree$SM_wrapper.dcache.TagAccess.Replacement.minTimeChooser": {
+          "logic_area": 1.80792,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "instDemux$SM_wrapper.pipe.operand_collector.Demux": {
+          "logic_area": 260.13636,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ibuffer2issue$SM_wrapper.pipe.ibuffer2issue": {
+          "logic_area": 407.511,
+          "sequential_area": 1.7496,
+          "memory_bits": 0
+        },
+        "getEntryStatusRsp$SM_wrapper.dcache.MshrAccess.subentryStatusForRsp": {
+          "logic_area": 0.26244,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "getEntryStatusReq_1$SM_wrapper.dcache.MshrAccess.entryStatus": {
+          "logic_area": 0.5832,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "getEntryStatusReq$SM_wrapper.dcache.MshrAccess.subentryStatus": {
+          "logic_area": 0.2187,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "getEntryStatus$SM_wrapper.icache.mshrAccess.entryStatus": {
+          "logic_area": 1.00602,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "getDataAccessBankEn$SM_wrapper.dcache.getBankEn": {
+          "logic_area": 254.2752,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "genDataMapSameWord$SM_wrapper.dcache.remapDataPerWord": {
+          "logic_area": 2772.18288,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "genDataMapPerByte$SM_wrapper.dcache.genData": {
+          "logic_area": 445.40442,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "genControl$SM_wrapper.dcache.genCtrl": {
+          "logic_area": 1.10808,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "crossBar$SM_wrapper.pipe.operand_collector.crossBar": {
+          "logic_area": 17091.17172,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "collectorUnit$SM_wrapper.pipe.operand_collector.collectorUnit": {
+          "logic_area": 3595.69044,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "branch_join_stack$SM_wrapper.pipe.simt_stack.branch_join_stack": {
+          "logic_area": 18.48744,
+          "sequential_area": 3.2076,
+          "memory_bits": 3072
+        },
+        "branch_join$SM_wrapper.pipe.simt_stack": {
+          "logic_area": 622.566,
+          "sequential_area": 192.1644,
+          "memory_bits": 24576
+        },
+        "Writeback$SM_wrapper.pipe.wb": {
+          "logic_area": 786.86802,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "VectorFPU$SM_wrapper.pipe.fpu.fpu": {
+          "logic_area": 54584.9685,
+          "sequential_area": 10576.332,
+          "memory_bits": 0
+        },
+        "TininessRounder$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.addPipe.s2.far_path_tininess_rounder": {
+          "logic_area": 6.61932,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TensorCoreFP32$SM_wrapper.pipe.tensorcore.tensor": {
+          "logic_area": 109354.24278,
+          "sequential_area": 15928.3584,
+          "memory_bits": 0
+        },
+        "TCMulPipe_8$SM_wrapper.pipe.tensorcore.tensor.TCArray_1.muls_0": {
+          "logic_area": 531.54306,
+          "sequential_area": 71.1504,
+          "memory_bits": 0
+        },
+        "TCMulPipe_1$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.muls_1": {
+          "logic_area": 499.9482,
+          "sequential_area": 50.7384,
+          "memory_bits": 0
+        },
+        "TCMulPipe$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.muls_0": {
+          "logic_area": 603.85986,
+          "sequential_area": 117.8064,
+          "memory_bits": 0
+        },
+        "TCDotProduct_1$SM_wrapper.pipe.tensorcore.tensor.TCArray_1": {
+          "logic_area": 6809.55984,
+          "sequential_area": 979.4844,
+          "memory_bits": 0
+        },
+        "TCDotProduct$SM_wrapper.pipe.tensorcore.tensor.TCArray_0": {
+          "logic_area": 7210.84518,
+          "sequential_area": 1236.0924,
+          "memory_bits": 0
+        },
+        "TCAddPipe_8$SM_wrapper.pipe.tensorcore.tensor.TCArray_1.adds_0_0": {
+          "logic_area": 361.05912,
+          "sequential_area": 78.1488,
+          "memory_bits": 0
+        },
+        "TCAddPipe_1$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.adds_0_1": {
+          "logic_area": 329.42052,
+          "sequential_area": 57.7368,
+          "memory_bits": 0
+        },
+        "TCAddPipe$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.adds_0_0": {
+          "logic_area": 433.37592,
+          "sequential_area": 124.8048,
+          "memory_bits": 0
+        },
+        "SrtTable$SM_wrapper.pipe.sfu.FloatDivSqrt.fracDivSqrt.table_0": {
+          "logic_area": 7.49412,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "SlowDown$SM_wrapper.pipe.ibuffer.slowDownArray_0": {
+          "logic_area": 240.77412,
+          "sequential_area": 133.5528,
+          "memory_bits": 0
+        },
+        "ShiftRightJam_64$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.adds_0_0.s1.far_path_mods_0.shiftRightJam": {
+          "logic_area": 20.39742,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ShiftRightJam_1$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FPToInt.F2ICore.s2.shiftRightJam": {
+          "logic_area": 19.3185,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ShiftRightJam$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.addPipe.s1.far_path_mods_0.shiftRightJam": {
+          "logic_area": 45.3438,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ShiftBoard$SM_wrapper.pipe.lsu.ShiftBoard": {
+          "logic_area": 2.71188,
+          "sequential_area": 1.1664,
+          "memory_bits": 0
+        },
+        "SharedMemory$SM_wrapper.sharedmem": {
+          "logic_area": 7685.7012,
+          "sequential_area": 1896.5664,
+          "memory_bits": 1082464
+        },
+        "Scoreboard$SM_wrapper.pipe.Scoreboard": {
+          "logic_area": 513.7992,
+          "sequential_area": 150.174,
+          "memory_bits": 0
+        },
+        "ScalarFPU_1$SM_wrapper.pipe.fpu.fpu.FPUArray_30": {
+          "logic_area": 1676.65626,
+          "sequential_area": 314.928,
+          "memory_bits": 0
+        },
+        "ScalarFPU_1$SM_wrapper.pipe.fpu.fpu.FPUArray_29": {
+          "logic_area": 1676.65626,
+          "sequential_area": 314.928,
+          "memory_bits": 0
+        },
+        "ScalarFPU_1$SM_wrapper.pipe.fpu.fpu.FPUArray_1": {
+          "logic_area": 1676.65626,
+          "sequential_area": 314.928,
+          "memory_bits": 0
+        },
+        "ScalarFPU$SM_wrapper.pipe.fpu.fpu.FPUArray_0": {
+          "logic_area": 2608.62444,
+          "sequential_area": 813.564,
+          "memory_bits": 0
+        },
+        "ScalarALU$SM_wrapper.pipe.alu.alu": {
+          "logic_area": 95.7906,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "SRAMTemplate_5$SM_wrapper.dcache.DataAccessesRRsp_DataAccess": {
+          "logic_area": 112.30974,
+          "sequential_area": 81.3564,
+          "memory_bits": 16384
+        },
+        "SRAMTemplate_4$SM_wrapper.dcache.TagAccess.dirtyMaskAccess": {
+          "logic_area": 285.8409,
+          "sequential_area": 157.7556,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate_37$SM_wrapper.sharedmem.DataAccessesRRsp_DataAccess": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate_3$SM_wrapper.dcache.TagAccess.timeAccess": {
+          "logic_area": 26.98758,
+          "sequential_area": 17.496,
+          "memory_bits": 5120
+        },
+        "SRAMTemplate_2$SM_wrapper.dcache.TagAccess.tagBodyAccess": {
+          "logic_area": 40.73652,
+          "sequential_area": 25.6608,
+          "memory_bits": 8704
+        },
+        "SRAMTemplate_1$SM_wrapper.icache.dataAccess": {
+          "logic_area": 244.944,
+          "sequential_area": 42.8652,
+          "memory_bits": 524288
+        },
+        "SRAMTemplate$SM_wrapper.icache.tagAccess.tagBodyAccess": {
+          "logic_area": 80.05878,
+          "sequential_area": 53.0712,
+          "memory_bits": 8704
+        },
+        "SM_wrapper": {
+          "logic_area": 317497.30218,
+          "sequential_area": 62604.4788,
+          "memory_bits": 3424026
+        },
+        "SFUexe$SM_wrapper.pipe.sfu": {
+          "logic_area": 8654.57136,
+          "sequential_area": 3078.1296,
+          "memory_bits": 0
+        },
+        "RoundingUnit_6$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FPToInt.F2ICore.s2.rpath_rounder": {
+          "logic_area": 5.6862,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RoundingUnit_256$SM_wrapper.pipe.sfu.FloatDivSqrt.rounding": {
+          "logic_area": 5.64246,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RoundingUnit$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.addPipe.s2.far_path_rounder": {
+          "logic_area": 6.54642,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ReplacementUnit_ICache$SM_wrapper.icache.tagAccess.Replacement": {
+          "logic_area": 1.93914,
+          "sequential_area": 1.1664,
+          "memory_bits": 0
+        },
+        "ReplacementUnit$SM_wrapper.dcache.TagAccess.Replacement": {
+          "logic_area": 3.8637,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RegFileBank$SM_wrapper.pipe.operand_collector.RegFileBank": {
+          "logic_area": 15.20694,
+          "sequential_area": 9.6228,
+          "memory_bits": 16384
+        },
+        "RRArbiter_9$SM_wrapper.pipe.operand_collector.issueUnit.arb_v": {
+          "logic_area": 2847.89682,
+          "sequential_area": 0.8748,
+          "memory_bits": 0
+        },
+        "RRArbiter_11$SM_wrapper.pipe.ibuffer2issue.rrarbit_v": {
+          "logic_area": 200.66454,
+          "sequential_area": 0.8748,
+          "memory_bits": 0
+        },
+        "RRArbiter_1$SM_wrapper.pipe.operand_collector.Arbiter.bankArbiterScalar_0": {
+          "logic_area": 45.03762,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "Queue8_WshrMemReq$SM_wrapper.dcache.memReq_Q": {
+          "logic_area": 4.60728,
+          "sequential_area": 2.0412,
+          "memory_bits": 10400
+        },
+        "Queue8_Vec32_Bool$SM_wrapper.dcache.coreReqMask_Q": {
+          "logic_area": 4.374,
+          "sequential_area": 2.0412,
+          "memory_bits": 256
+        },
+        "Queue32_ShareMemCoreRsp$SM_wrapper.sharedmem.coreRsp_Q": {
+          "logic_area": 8.26686,
+          "sequential_area": 3.2076,
+          "memory_bits": 33888
+        },
+        "Queue32_DCacheCoreRsp$SM_wrapper.dcache.coreRsp_Q": {
+          "logic_area": 6.94008,
+          "sequential_area": 3.2076,
+          "memory_bits": 33888
+        },
+        "Queue2_Vec2_CtrlSigs$SM_wrapper.pipe.ibuffer.Queue2_Vec2_CtrlSigs": {
+          "logic_area": 2.34738,
+          "sequential_area": 0.8748,
+          "memory_bits": 912
+        },
+        "Queue2_Vec2_Bool$SM_wrapper.pipe.ibuffer.Queue2_Vec2_Bool": {
+          "logic_area": 2.1141,
+          "sequential_area": 0.8748,
+          "memory_bits": 4
+        },
+        "Queue2_ICacheMemRsp$SM_wrapper.icache.memRsp_Q": {
+          "logic_area": 2.14326,
+          "sequential_area": 0.8748,
+          "memory_bits": 2058
+        },
+        "Queue2_DCacheMemRsp$SM_wrapper.dcache.memRsp_Q": {
+          "logic_area": 2.24532,
+          "sequential_area": 0.8748,
+          "memory_bits": 2080
+        },
+        "Queue1_vec_alu_bus2$SM_wrapper.pipe.valu.result2simt": {
+          "logic_area": 17.99172,
+          "sequential_area": 10.4976,
+          "memory_bits": 0
+        },
+        "Queue1_vExeData_1$SM_wrapper.pipe.sfu.data_buffer_q": {
+          "logic_area": 1046.58156,
+          "sequential_area": 634.23,
+          "memory_bits": 0
+        },
+        "Queue1_vExeData$SM_wrapper.pipe.lsu.InputFIFO": {
+          "logic_area": 1615.69728,
+          "sequential_area": 950.3244,
+          "memory_bits": 0
+        },
+        "Queue1_tagCheckerResult$SM_wrapper.dcache.TagAccess.cachehit_hold": {
+          "logic_area": 1.9683,
+          "sequential_area": 1.1664,
+          "memory_bits": 0
+        },
+        "Queue1_simtExeData$SM_wrapper.pipe.simt_stack.branch_ctl_buf_q": {
+          "logic_area": 100.98108,
+          "sequential_area": 50.4468,
+          "memory_bits": 0
+        },
+        "Queue1_WriteVecCtrl2$SM_wrapper.pipe.mul.result_v": {
+          "logic_area": 565.76232,
+          "sequential_area": 332.7156,
+          "memory_bits": 0
+        },
+        "Queue1_WriteVecCtrl$SM_wrapper.pipe.sfu.result_v": {
+          "logic_area": 565.76232,
+          "sequential_area": 332.7156,
+          "memory_bits": 0
+        },
+        "Queue1_WriteScalarCtrl$SM_wrapper.pipe.alu.result": {
+          "logic_area": 58.14504,
+          "sequential_area": 34.1172,
+          "memory_bits": 0
+        },
+        "Queue1_Vec32_UInt32$SM_wrapper.dcache.coreRsp_st2_coreRsp_data": {
+          "logic_area": 508.1859,
+          "sequential_area": 298.89,
+          "memory_bits": 0
+        },
+        "Queue1_UInt32$SM_wrapper.pipe.simt_stack.PC_reconv_buf_q": {
+          "logic_area": 19.21644,
+          "sequential_area": 9.6228,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput_1$SM_wrapper.pipe.tensorcore.tensor.TCArray_1.fifo": {
+          "logic_area": 16.46082,
+          "sequential_area": 9.6228,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.fifo": {
+          "logic_area": 56.16216,
+          "sequential_area": 32.9508,
+          "memory_bits": 0
+        },
+        "Queue1_SRAMBundleA$SM_wrapper.dcache.TagAccess.probeReadBuf_q": {
+          "logic_area": 0.46656,
+          "sequential_area": 0.2916,
+          "memory_bits": 0
+        },
+        "Queue1_MulToAddIO_1$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FMA.mulToAddFIFO": {
+          "logic_area": 47.61828,
+          "sequential_area": 27.9936,
+          "memory_bits": 0
+        },
+        "Queue1_MulToAddIO$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.mulToAddFIFO": {
+          "logic_area": 47.61828,
+          "sequential_area": 27.9936,
+          "memory_bits": 0
+        },
+        "Queue1_MSHRpipe1Reg$SM_wrapper.dcache.MshrAccess.MSHR_st1": {
+          "logic_area": 3.54294,
+          "sequential_area": 2.0412,
+          "memory_bits": 0
+        },
+        "Queue1_MSHRmissRspOut$SM_wrapper.dcache.MshrAccess.missRspOut_st1": {
+          "logic_area": 173.15208,
+          "sequential_area": 101.7684,
+          "memory_bits": 0
+        },
+        "Queue1_FPUOutput_2$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FMA.addFIFO": {
+          "logic_area": 16.50456,
+          "sequential_area": 9.6228,
+          "memory_bits": 0
+        },
+        "Queue1_FPUOutput$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.addFIFO": {
+          "logic_area": 73.01664,
+          "sequential_area": 42.8652,
+          "memory_bits": 0
+        },
+        "Queue1_FPUInput_1$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FMA.inToAddFIFO": {
+          "logic_area": 33.73812,
+          "sequential_area": 19.8288,
+          "memory_bits": 0
+        },
+        "Queue1_FPUInput$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.inToAddFIFO": {
+          "logic_area": 33.73812,
+          "sequential_area": 19.8288,
+          "memory_bits": 0
+        },
+        "Queue1_DCacheCoreRsp_d$SM_wrapper.dcache.coreRsp_st2": {
+          "logic_area": 526.06098,
+          "sequential_area": 309.3876,
+          "memory_bits": 0
+        },
+        "Queue1_DCacheCoreReq$SM_wrapper.dcache.coreReq_Q": {
+          "logic_area": 715.96548,
+          "sequential_area": 421.0704,
+          "memory_bits": 0
+        },
+        "Queue1_DCacheControl$SM_wrapper.dcache.coreReqControl_st1_Q": {
+          "logic_area": 3.04722,
+          "sequential_area": 1.7496,
+          "memory_bits": 0
+        },
+        "Queue1_BranchCtrl_1$SM_wrapper.pipe.simt_stack.fetch_ctl_buf": {
+          "logic_area": 63.65628,
+          "sequential_area": 31.7844,
+          "memory_bits": 0
+        },
+        "Queue1_BranchCtrl$SM_wrapper.pipe.alu.result_br": {
+          "logic_area": 54.17928,
+          "sequential_area": 31.7844,
+          "memory_bits": 0
+        },
+        "Queue1_Bool$SM_wrapper.dcache.coreRsp_st2_valid_from_coreReq_Reg": {
+          "logic_area": 1.04976,
+          "sequential_area": 0.5832,
+          "memory_bits": 0
+        },
+        "Queue1_ArbiterIO_2$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FMA.toAddArbiterFIFO_0": {
+          "logic_area": 2.12868,
+          "sequential_area": 1.1664,
+          "memory_bits": 0
+        },
+        "Queue1_ArbiterIO$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.toAddArbiterFIFO_0": {
+          "logic_area": 58.64076,
+          "sequential_area": 34.4088,
+          "memory_bits": 0
+        },
+        "Queue16_warpRspData$SM_wrapper.cta2warp.CTArsp_fifo_q": {
+          "logic_area": 6.00696,
+          "sequential_area": 2.6244,
+          "memory_bits": 48
+        },
+        "PCcontrol$SM_wrapper.pipe.warp_sche.PCcontrol": {
+          "logic_area": 25.61706,
+          "sequential_area": 9.9144,
+          "memory_bits": 0
+        },
+        "OnTheFlyConv$SM_wrapper.pipe.sfu.FloatDivSqrt.fracDivSqrt.conv": {
+          "logic_area": 138.53916,
+          "sequential_area": 69.6924,
+          "memory_bits": 0
+        },
+        "NearPath_64$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.adds_0_0.s1.near_path_mods_0": {
+          "logic_area": 49.44078,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NearPath$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.addPipe.s1.near_path_mods_0": {
+          "logic_area": 101.0394,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NaiveMultiplier$SM_wrapper.pipe.fpu.fpu.FPUArray_29.FMA.mulPipe.multiplier": {
+          "logic_area": 331.3305,
+          "sequential_area": 14.58,
+          "memory_bits": 0
+        },
+        "NaiveMultiplier$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.mulPipe.multiplier": {
+          "logic_area": 331.3305,
+          "sequential_area": 14.58,
+          "memory_bits": 0
+        },
+        "MSHRv2$SM_wrapper.pipe.lsu.Coalscer": {
+          "logic_area": 870.7176,
+          "sequential_area": 149.8824,
+          "memory_bits": 10176
+        },
+        "MSHR_1$SM_wrapper.dcache.MshrAccess": {
+          "logic_area": 1594.81872,
+          "sequential_area": 890.838,
+          "memory_bits": 0
+        },
+        "MSHR$SM_wrapper.icache.mshrAccess": {
+          "logic_area": 119.38104,
+          "sequential_area": 35.8668,
+          "memory_bits": 0
+        },
+        "LZA_96$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.adds_0_0.s1.near_path_mods_0.lza_ab": {
+          "logic_area": 7.69824,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "LZA_2$SM_wrapper.pipe.fpu.fpu.FPUArray_0.IntToFP.I2FCore_1.lza": {
+          "logic_area": 8.26686,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "LZA$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.addPipe.s1.near_path_mods_0.lza_ab": {
+          "logic_area": 15.39648,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "LSUexe$SM_wrapper.pipe.lsu": {
+          "logic_area": 11778.56964,
+          "sequential_area": 2056.6548,
+          "memory_bits": 10176
+        },
+        "LSU2WB$SM_wrapper.pipe.lsu2wb": {
+          "logic_area": 0.48114,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "L1TagAccess_ICache$SM_wrapper.icache.tagAccess": {
+          "logic_area": 400.19184,
+          "sequential_area": 205.8696,
+          "memory_bits": 8704
+        },
+        "L1TagAccess$SM_wrapper.dcache.TagAccess": {
+          "logic_area": 1943.13492,
+          "sequential_area": 531.0036,
+          "memory_bits": 79360
+        },
+        "L1Cache2L2Arbiter$SM_wrapper.l1Cache2L2Arb": {
+          "logic_area": 138.32046,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Issue$SM_wrapper.pipe.issueV": {
+          "logic_area": 2.916,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "IntToFP_prenorm$SM_wrapper.pipe.fpu.fpu.FPUArray_0.IntToFP.I2FCore_1": {
+          "logic_area": 120.38706,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "IntToFP_postnorm$SM_wrapper.pipe.fpu.fpu.FPUArray_0.IntToFP.I2FCore_2": {
+          "logic_area": 9.37494,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "IntToFP_1$SM_wrapper.pipe.fpu.fpu.FPUArray_1.IntToFP": {
+          "logic_area": 188.85474,
+          "sequential_area": 32.076,
+          "memory_bits": 0
+        },
+        "IntToFP$SM_wrapper.pipe.fpu.fpu.FPUArray_0.IntToFP": {
+          "logic_area": 291.99366,
+          "sequential_area": 98.5608,
+          "memory_bits": 0
+        },
+        "IntDivMod$SM_wrapper.pipe.sfu.IntDivMod": {
+          "logic_area": 333.35712,
+          "sequential_area": 88.3548,
+          "memory_bits": 0
+        },
+        "InstructionCache$SM_wrapper.icache": {
+          "logic_area": 1203.92892,
+          "sequential_area": 338.256,
+          "memory_bits": 535050
+        },
+        "InstrDecodeV2$SM_wrapper.pipe.control": {
+          "logic_area": 232.87176,
+          "sequential_area": 37.3248,
+          "memory_bits": 0
+        },
+        "InstrBufferV2$SM_wrapper.pipe.ibuffer": {
+          "logic_area": 2281.79916,
+          "sequential_area": 1082.4192,
+          "memory_bits": 7328
+        },
+        "ImmGen$SM_wrapper.pipe.operand_collector.collectorUnit.imm": {
+          "logic_area": 9.50616,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FracDivSqrt$SM_wrapper.pipe.sfu.FloatDivSqrt.fracDivSqrt": {
+          "logic_area": 251.03844,
+          "sequential_area": 99.4356,
+          "memory_bits": 0
+        },
+        "FloatRegFileBank$SM_wrapper.pipe.operand_collector.FloatRegFileBank": {
+          "logic_area": 434.64438,
+          "sequential_area": 298.89,
+          "memory_bits": 262144
+        },
+        "FloatDivSqrt$SM_wrapper.pipe.sfu.FloatDivSqrt": {
+          "logic_area": 401.83938,
+          "sequential_area": 132.678,
+          "memory_bits": 0
+        },
+        "FarPath_32$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.adds_0_0.s1.far_path_mods_0": {
+          "logic_area": 31.60944,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FarPath$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.addPipe.s1.far_path_mods_0": {
+          "logic_area": 64.74978,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FPUexe$SM_wrapper.pipe.fpu": {
+          "logic_area": 55241.44758,
+          "sequential_area": 10576.332,
+          "memory_bits": 0
+        },
+        "FPToInt_s2$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FPToInt.F2ICore.s2": {
+          "logic_area": 74.24136,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FPToInt_s1$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FPToInt.F2ICore.s1": {
+          "logic_area": 4.34484,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FPToInt_3$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FPToInt": {
+          "logic_area": 130.0536,
+          "sequential_area": 30.618,
+          "memory_bits": 0
+        },
+        "FPToInt_1$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FPToInt": {
+          "logic_area": 233.14878,
+          "sequential_area": 97.1028,
+          "memory_bits": 0
+        },
+        "FPToInt$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FPToInt.F2ICore": {
+          "logic_area": 78.5862,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FPMV_1$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FPMV": {
+          "logic_area": 34.6275,
+          "sequential_area": 20.1204,
+          "memory_bits": 0
+        },
+        "FPMV$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FPMV": {
+          "logic_area": 137.69352,
+          "sequential_area": 86.6052,
+          "memory_bits": 0
+        },
+        "FMUL_s3$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.mulPipe.s3": {
+          "logic_area": 26.92926,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s2$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.mulPipe.s2": {
+          "logic_area": 56.00178,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s1$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.mulPipe.s1": {
+          "logic_area": 25.74828,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMULPipe_1$SM_wrapper.pipe.fpu.fpu.FPUArray_29.FMA.mulPipe": {
+          "logic_area": 534.44448,
+          "sequential_area": 72.9,
+          "memory_bits": 0
+        },
+        "FMULPipe_1$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FMA.mulPipe": {
+          "logic_area": 534.44448,
+          "sequential_area": 72.9,
+          "memory_bits": 0
+        },
+        "FMULPipe$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.mulPipe": {
+          "logic_area": 637.53966,
+          "sequential_area": 139.3848,
+          "memory_bits": 0
+        },
+        "FMA_1$SM_wrapper.pipe.fpu.fpu.FPUArray_30.FMA": {
+          "logic_area": 1182.77334,
+          "sequential_area": 201.4956,
+          "memory_bits": 0
+        },
+        "FMA_1$SM_wrapper.pipe.fpu.fpu.FPUArray_29.FMA": {
+          "logic_area": 1182.77334,
+          "sequential_area": 201.4956,
+          "memory_bits": 0
+        },
+        "FMA_1$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FMA": {
+          "logic_area": 1182.77334,
+          "sequential_area": 201.4956,
+          "memory_bits": 0
+        },
+        "FMA$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA": {
+          "logic_area": 1605.19968,
+          "sequential_area": 434.1924,
+          "memory_bits": 0
+        },
+        "FCMP_3$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FCMP": {
+          "logic_area": 75.33486,
+          "sequential_area": 30.618,
+          "memory_bits": 0
+        },
+        "FCMP_1$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FCMP": {
+          "logic_area": 178.50294,
+          "sequential_area": 97.1028,
+          "memory_bits": 0
+        },
+        "FCMP$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FCMP.FCMPCore": {
+          "logic_area": 17.75844,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s2_32$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.adds_0_0.s2": {
+          "logic_area": 78.62994,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s2$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.addPipe.s2": {
+          "logic_area": 107.22132,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s1_32$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.adds_0_0.s1": {
+          "logic_area": 156.31218,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s1$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.addPipe.s1": {
+          "logic_area": 305.99046,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FADDPipe_1$SM_wrapper.pipe.fpu.fpu.FPUArray_30.FMA.addPipe": {
+          "logic_area": 522.4014,
+          "sequential_area": 59.1948,
+          "memory_bits": 0
+        },
+        "FADDPipe_1$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FMA.addPipe": {
+          "logic_area": 522.4014,
+          "sequential_area": 59.1948,
+          "memory_bits": 0
+        },
+        "FADDPipe$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.addPipe": {
+          "logic_area": 575.58924,
+          "sequential_area": 92.4372,
+          "memory_bits": 0
+        },
+        "DualIssueIO$SM_wrapper.pipe.operand_collector.issueUnit": {
+          "logic_area": 5701.97556,
+          "sequential_area": 1.7496,
+          "memory_bits": 0
+        },
+        "DataCrossbar$SM_wrapper.sharedmem.DataCorssBarForRead": {
+          "logic_area": 1911.02976,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "DataCache$SM_wrapper.dcache": {
+          "logic_area": 23968.25154,
+          "sequential_area": 5878.656,
+          "memory_bits": 650272
+        },
+        "DCacheWSHR$SM_wrapper.dcache.WshrAccess": {
+          "logic_area": 68.05944,
+          "sequential_area": 32.6592,
+          "memory_bits": 0
+        },
+        "Classify$SM_wrapper.pipe.sfu.FloatDivSqrt.classify_a": {
+          "logic_area": 1.6767,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CTA2warp$SM_wrapper.cta2warp": {
+          "logic_area": 42.60276,
+          "sequential_area": 18.954,
+          "memory_bits": 48
+        },
+        "CSRexe$SM_wrapper.pipe.csrfile": {
+          "logic_area": 2176.03584,
+          "sequential_area": 1069.8804,
+          "memory_bits": 0
+        },
+        "CSRFile$SM_wrapper.pipe.csrfile.CSRFile": {
+          "logic_area": 246.35826,
+          "sequential_area": 129.4704,
+          "memory_bits": 0
+        },
+        "CSA3_2$SM_wrapper.pipe.mul.ArrayMultiplier.mulDataModule.c53.CSA3_2": {
+          "logic_area": 0.39366,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CSA32$SM_wrapper.pipe.sfu.FloatDivSqrt.fracDivSqrt.csa": {
+          "logic_area": 12.59712,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ_3$SM_wrapper.pipe.fpu.fpu.FPUArray_0.IntToFP.I2FCore_1.neg_lzc_clz": {
+          "logic_area": 8.00442,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ_168$SM_wrapper.pipe.tensorcore.tensor.TCArray_0.adds_0_0.s1.near_path_mods_0.lzc_clz": {
+          "logic_area": 3.12012,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ_1$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.addPipe.s1.near_path_mods_0.lzc_clz": {
+          "logic_area": 6.3423,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.mulPipe.s1.lzc_clz": {
+          "logic_area": 6.40062,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "C53$SM_wrapper.pipe.mul.ArrayMultiplier.mulDataModule.c53": {
+          "logic_area": 0.78732,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "C32$SM_wrapper.pipe.mul.ArrayMultiplier.mulDataModule.c32": {
+          "logic_area": 0.39366,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "C22$SM_wrapper.pipe.mul.ArrayMultiplier.mulDataModule.c22": {
+          "logic_area": 0.2187,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Branch_back$SM_wrapper.pipe.branch_back": {
+          "logic_area": 19.08522,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "BankConflictArbiter$SM_wrapper.sharedmem.BankConfArb": {
+          "logic_area": 1331.82468,
+          "sequential_area": 93.8952,
+          "memory_bits": 0
+        },
+        "ArrayMultiplier$SM_wrapper.pipe.mul.ArrayMultiplier_26": {
+          "logic_area": 867.2184,
+          "sequential_area": 276.4368,
+          "memory_bits": 0
+        },
+        "ArrayMultiplier$SM_wrapper.pipe.mul.ArrayMultiplier": {
+          "logic_area": 868.90968,
+          "sequential_area": 276.4368,
+          "memory_bits": 0
+        },
+        "ArrayMulDataModule$SM_wrapper.pipe.mul.ArrayMultiplier.mulDataModule": {
+          "logic_area": 690.11514,
+          "sequential_area": 187.4988,
+          "memory_bits": 0
+        },
+        "Arbiter6_WriteVecCtrl$SM_wrapper.pipe.wb.arbiter_v": {
+          "logic_area": 715.30938,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter6_WriteScalarCtrl$SM_wrapper.pipe.wb.arbiter_x": {
+          "logic_area": 71.55864,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter5_FPUOutput_1$SM_wrapper.pipe.fpu.fpu.FPUArray_1.outArbiter": {
+          "logic_area": 34.00056,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter5_FPUOutput$SM_wrapper.pipe.fpu.fpu.FPUArray_0.outArbiter": {
+          "logic_area": 83.71836,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter3_WshrMemReq$SM_wrapper.dcache.MemReqArb": {
+          "logic_area": 219.37068,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter3_SRAMBundleAW$SM_wrapper.dcache.TagAccess.dirtyMaskWriteArb": {
+          "logic_area": 24.39234,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter3_SRAMBundleA$SM_wrapper.dcache.TagAccess.dirtyMaskArb": {
+          "logic_area": 2.4057,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter2_UInt32$SM_wrapper.pipe.sfu.Arbiter2_UInt32": {
+          "logic_area": 5.78826,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter2_SRAMBundleAW$SM_wrapper.dcache.TagAccess.timeAccessWArb": {
+          "logic_area": 5.33628,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter2_L1CacheMemReq$SM_wrapper.l1Cache2L2Arb.memReqArb": {
+          "logic_area": 137.95596,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter2_FPUOutput_1$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FMA.toOutArbiter": {
+          "logic_area": 5.78826,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter2_FPUOutput$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.toOutArbiter": {
+          "logic_area": 25.7337,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter2_DCacheCoreRsp_np$SM_wrapper.pipe.lsu.rspArbiter": {
+          "logic_area": 185.47218,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter2_BranchCtrl$SM_wrapper.pipe.branch_back.arbiter": {
+          "logic_area": 19.08522,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter2_ArbiterIO_1$SM_wrapper.pipe.fpu.fpu.FPUArray_1.FMA.toAddArbiter": {
+          "logic_area": 0.71442,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Arbiter2_ArbiterIO$SM_wrapper.pipe.fpu.fpu.FPUArray_0.FMA.toAddArbiter": {
+          "logic_area": 20.65986,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "AddrCalculate$SM_wrapper.pipe.lsu.AddrCalc": {
+          "logic_area": 9081.82368,
+          "sequential_area": 947.1168,
+          "memory_bits": 0
+        },
+        "ALUexe$SM_wrapper.pipe.alu": {
+          "logic_area": 208.74186,
+          "sequential_area": 65.9016,
+          "memory_bits": 0
+        }
+      }
+    },
+    "l2-base": {
+      "flow": "coarse-slang",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 59067.7353,
+      "sequential_area": 25000.326,
+      "memory_bits": 1153112,
+      "memories": {
+        "array_1024x1024": {
+          "instances": 1,
+          "bits": 1048576,
+          "arrays": [
+            [
+              "1023",
+              "Memory",
+              "1023"
+            ]
+          ],
+          "source_sha256": "66733c4895dd6ef0c453e59d233b688510809cdc5727cc6d1a29c023c3803f97"
+        },
+        "array_64x304": {
+          "instances": 1,
+          "bits": 19456,
+          "arrays": [
+            [
+              "303",
+              "Memory",
+              "63"
+            ]
+          ],
+          "source_sha256": "7f097f7b1d7719ca5d92e9d55352de21bca4c31c0ff4b16a223e61e1d6932a67"
+        },
+        "data_32x1176": {
+          "instances": 1,
+          "bits": 37632,
+          "arrays": [
+            [
+              "1175",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "5a2b43e8b06e867c68f318391d92040477791738b8bb5e539e9409a7287caffe"
+        },
+        "head_32x5": {
+          "instances": 2,
+          "bits": 160,
+          "arrays": [
+            [
+              "4",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "0b952a68d33feae68422000e632eec36cf41d6bcc73de74425a9f23c8f17f955"
+        },
+        "next_32x5": {
+          "instances": 2,
+          "bits": 160,
+          "arrays": [
+            [
+              "4",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "2b86b3f58a8478e12a1a5675152aa87ca9918823feb99a9e22e2a0bc9d601768"
+        },
+        "tail_32x5": {
+          "instances": 2,
+          "bits": 160,
+          "arrays": [
+            [
+              "4",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "51326550949bfa16cece424fb432f078ad95813419c0835c6f2efd987e13a9b8"
+        },
+        "ram_8x1203": {
+          "instances": 1,
+          "bits": 9624,
+          "arrays": [
+            [
+              "1202",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "2d7c62fff6268158eddf4640d016d72cd69f5900812ccaf0faef08cccb8f94df"
+        },
+        "data_32x1152": {
+          "instances": 1,
+          "bits": 36864,
+          "arrays": [
+            [
+              "1151",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "498c2f0bcbd8249b104c0bec3ad92651b37c698b4605d443bd88e3d55dd7ac12"
+        }
+      },
+      "rtl_sha256": "9eb262d75b8d1d96fe4ffde0f3d451409dbd8b12ee3990b34638984ed5864c17",
+      "statistics_sha256": "f95eb5de7647fc82922af4eb81f67cc2b7a3d4da689622d15cba6824f41ba8ff",
+      "synthesis_script_sha256": "4c5c93e899c2653ab896d030b8667e42173eceb8ca6885afed21162b48a77bc7",
+      "manifest_sha256": "ef1bcc8c0b90b440de1063c8105b54103b46d96f457953de30e39dde41367e21",
+      "mapped_sha256": "dd17e855581c9920e5cf65299eaa9a61cd0931c8125ce2c19cb9f900b4de06b5",
+      "modules": {
+        "SRAMTemplate_139$Scheduler.bankedStore.cc_banks": {
+          "logic_area": 3240.43416,
+          "sequential_area": 2432.2356,
+          "memory_bits": 1048576
+        },
+        "SRAMTemplate_138$Scheduler.directory.cc_dir": {
+          "logic_area": 359.26578,
+          "sequential_area": 188.082,
+          "memory_bits": 19456
+        },
+        "ListBuffer$Scheduler.sinkA.putbuffer": {
+          "logic_area": 53.15868,
+          "sequential_area": 18.6624,
+          "memory_bits": 37344
+        },
+        "Queue1_DirectoryResult_lite_victim$Scheduler.dir_result_buffer": {
+          "logic_area": 599.1651,
+          "sequential_area": 363.042,
+          "memory_bits": 0
+        },
+        "Queue8_FullRequest$Scheduler.write_buffer": {
+          "logic_area": 214.95294,
+          "sequential_area": 2.0412,
+          "memory_bits": 9624
+        },
+        "MSHR_4$Scheduler.mshrs_31": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_30": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_29": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_28": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_27": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_26": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_25": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_24": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_23": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_22": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_21": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_20": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_19": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_18": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_17": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_16": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_15": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_14": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_13": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_12": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_11": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_10": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_9": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_8": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_7": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_6": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_5": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_4": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_3": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_2": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_1": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$Scheduler.mshrs_0": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "ListBuffer_1$Scheduler.requests": {
+          "logic_area": 53.15868,
+          "sequential_area": 18.6624,
+          "memory_bits": 38112
+        },
+        "BankedStore$Scheduler.bankedStore": {
+          "logic_area": 3432.67146,
+          "sequential_area": 2432.2356,
+          "memory_bits": 1048576
+        },
+        "Directory_test$Scheduler.directory": {
+          "logic_area": 2861.71866,
+          "sequential_area": 1204.308,
+          "memory_bits": 19456
+        },
+        "SinkD$Scheduler.sinkD": {
+          "logic_area": 350.19702,
+          "sequential_area": 304.4304,
+          "memory_bits": 0
+        },
+        "SinkA$Scheduler.sinkA": {
+          "logic_area": 83.835,
+          "sequential_area": 27.9936,
+          "memory_bits": 37344
+        },
+        "SourceD$Scheduler.sourceD": {
+          "logic_area": 1870.58484,
+          "sequential_area": 1051.8012,
+          "memory_bits": 0
+        },
+        "SourceA$Scheduler.sourceA": {
+          "logic_area": 0,
+          "sequential_area": 0,
+          "memory_bits": 0
+        },
+        "Scheduler": {
+          "logic_area": 59067.7353,
+          "sequential_area": 25000.326,
+          "memory_bits": 1153112
+        }
+      }
+    },
+    "rf4": {
+      "flow": "coarse-slang",
+      "sgpr_address_ports": {
+        "read_bits": 8,
+        "write_bits": 8
+      },
+      "excluded_subsystems": [],
+      "logic_area": 52617.92238,
+      "sequential_area": 9129.996,
+      "memory_bits": 1114112,
+      "memories": {
+        "regs_256x1024": {
+          "instances": 4,
+          "bits": 262144,
+          "arrays": [
+            [
+              "1023",
+              "Memory",
+              "255"
+            ]
+          ],
+          "source_sha256": "1a255f45b1a99582351ddbc9b9bbb2cc8fde8b461018d202a1cc9650c9898860"
+        },
+        "regs_1_512x32": {
+          "instances": 4,
+          "bits": 16384,
+          "arrays": [
+            [
+              "31",
+              "Memory",
+              "511"
+            ]
+          ],
+          "source_sha256": "b97462c04eb5ed6852c6c657473c47eb5ffd2d4f25cef57188d086fd21e33642"
+        }
+      },
+      "rtl_sha256": "3f9ee59d250cf5cf5b2a9cb6263229e3b723fb357a547edd8cab61822de28e7a",
+      "statistics_sha256": "99d6c8180e43c567c3ab7d84a55dee4625a2685425b6cd01b8d2b790a81bb8d8",
+      "synthesis_script_sha256": "d6ac5a399b42a927f731fa2efdd5be66e98e61c9b77733df78d5532b4ef12681",
+      "manifest_sha256": "158349615cb4bdef62f0c89e1b8df848849bd78ee5a3324a21c08559981e3c0f",
+      "mapped_sha256": "adcd92ae973c0ffe39061a8be7e406b78f748f6674750b008f5ac488fc4a269f",
+      "modules": {
+        "RRArbiter_8$operandCollector.issueUnit.arb_v": {
+          "logic_area": 2869.60644,
+          "sequential_area": 0.8748,
+          "memory_bits": 0
+        },
+        "RRArbiter_8$operandCollector.issueUnit.arb_x": {
+          "logic_area": 2869.60644,
+          "sequential_area": 0.8748,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_3": {
+          "logic_area": 44.43984,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_2": {
+          "logic_area": 44.43984,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_1": {
+          "logic_area": 44.43984,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_0": {
+          "logic_area": 44.43984,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_3": {
+          "logic_area": 44.43984,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_2": {
+          "logic_area": 44.43984,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_1": {
+          "logic_area": 44.43984,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_0": {
+          "logic_area": 44.43984,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_7.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_6.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_5.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_4.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_3.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_2.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_1.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "DualIssueIO$operandCollector.issueUnit": {
+          "logic_area": 5745.3948,
+          "sequential_area": 1.7496,
+          "memory_bits": 0
+        },
+        "instDemux$operandCollector.Demux": {
+          "logic_area": 283.42062,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "crossBar$operandCollector.crossBar": {
+          "logic_area": 17091.17172,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RegFileBank$operandCollector.RegFileBank_3": {
+          "logic_area": 15.20694,
+          "sequential_area": 9.6228,
+          "memory_bits": 16384
+        },
+        "RegFileBank$operandCollector.RegFileBank_2": {
+          "logic_area": 15.20694,
+          "sequential_area": 9.6228,
+          "memory_bits": 16384
+        },
+        "RegFileBank$operandCollector.RegFileBank_1": {
+          "logic_area": 15.20694,
+          "sequential_area": 9.6228,
+          "memory_bits": 16384
+        },
+        "RegFileBank$operandCollector.RegFileBank": {
+          "logic_area": 15.20694,
+          "sequential_area": 9.6228,
+          "memory_bits": 16384
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank_3": {
+          "logic_area": 434.64438,
+          "sequential_area": 298.89,
+          "memory_bits": 262144
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank_2": {
+          "logic_area": 434.64438,
+          "sequential_area": 298.89,
+          "memory_bits": 262144
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank_1": {
+          "logic_area": 434.64438,
+          "sequential_area": 298.89,
+          "memory_bits": 262144
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank": {
+          "logic_area": 434.64438,
+          "sequential_area": 298.89,
+          "memory_bits": 262144
+        },
+        "operandArbiter$operandCollector.Arbiter": {
+          "logic_area": 380.538,
+          "sequential_area": 11.664,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_7": {
+          "logic_area": 3409.92666,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_6": {
+          "logic_area": 3409.92666,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_5": {
+          "logic_area": 3409.92666,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_4": {
+          "logic_area": 3409.92666,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_3": {
+          "logic_area": 3409.92666,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_2": {
+          "logic_area": 3409.92666,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_1": {
+          "logic_area": 3409.92666,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit": {
+          "logic_area": 3409.92666,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "operandCollector": {
+          "logic_area": 52617.92238,
+          "sequential_area": 9129.996,
+          "memory_bits": 1114112
+        }
+      }
+    },
+    "rf8": {
+      "flow": "coarse-slang",
+      "sgpr_address_ports": {
+        "read_bits": 7,
+        "write_bits": 7
+      },
+      "excluded_subsystems": [],
+      "logic_area": 70858.1439,
+      "sequential_area": 10389.708,
+      "memory_bits": 1114112,
+      "memories": {
+        "regs_128x1024": {
+          "instances": 8,
+          "bits": 131072,
+          "arrays": [
+            [
+              "1023",
+              "Memory",
+              "127"
+            ]
+          ],
+          "source_sha256": "25f032b7e6b5968b88237083d0d7ab007347814f58eb2c8e74d457565c8c7ac0"
+        },
+        "regs_1_256x32": {
+          "instances": 8,
+          "bits": 8192,
+          "arrays": [
+            [
+              "31",
+              "Memory",
+              "255"
+            ]
+          ],
+          "source_sha256": "6e986f51287317f8a6ca8f652e60f9f34d20bced431824debe8d06cfb18a5e89"
+        }
+      },
+      "rtl_sha256": "5fb7bb2c22b92bcd24a6cc88b7b31cf8def037f98320c83fe0fb65c2748920b2",
+      "statistics_sha256": "21cafdf55fec596dd8bcb8d7225bdf8f012daadede8ce2b7f0fa636f9afd73a2",
+      "synthesis_script_sha256": "f1ecd613cd4f5f993c4fae0b0f64f3db0826574e959b5e7140fd3c748cf01f4d",
+      "manifest_sha256": "2b8049e93cf0b7327b410eac256e89dd586f65631c96a38f1508e4f60fea6cac",
+      "mapped_sha256": "d6c90433efb0e98b0ceeaa912426852001073dc8607f2806bc72268ac35b6697",
+      "modules": {
+        "RRArbiter_16$operandCollector.issueUnit.arb_v": {
+          "logic_area": 2869.60644,
+          "sequential_area": 0.8748,
+          "memory_bits": 0
+        },
+        "RRArbiter_16$operandCollector.issueUnit.arb_x": {
+          "logic_area": 2869.60644,
+          "sequential_area": 0.8748,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_7": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_6": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_5": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_4": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_3": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_2": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_1": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterVector_0": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_7": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_6": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_5": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_4": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_3": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_2": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_1": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "RRArbiter$operandCollector.Arbiter.bankArbiterScalar_0": {
+          "logic_area": 43.62336,
+          "sequential_area": 1.458,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_7.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_6.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_5.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_4.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_3.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_2.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit_1.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ImmGen$operandCollector.collectorUnit.imm": {
+          "logic_area": 9.59364,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "DualIssueIO$operandCollector.issueUnit": {
+          "logic_area": 5745.3948,
+          "sequential_area": 1.7496,
+          "memory_bits": 0
+        },
+        "instDemux$operandCollector.Demux": {
+          "logic_area": 283.42062,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "crossBar$operandCollector.crossBar": {
+          "logic_area": 33723.20466,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RegFileBank$operandCollector.RegFileBank_7": {
+          "logic_area": 15.06114,
+          "sequential_area": 9.6228,
+          "memory_bits": 8192
+        },
+        "RegFileBank$operandCollector.RegFileBank_6": {
+          "logic_area": 15.06114,
+          "sequential_area": 9.6228,
+          "memory_bits": 8192
+        },
+        "RegFileBank$operandCollector.RegFileBank_5": {
+          "logic_area": 15.06114,
+          "sequential_area": 9.6228,
+          "memory_bits": 8192
+        },
+        "RegFileBank$operandCollector.RegFileBank_4": {
+          "logic_area": 15.06114,
+          "sequential_area": 9.6228,
+          "memory_bits": 8192
+        },
+        "RegFileBank$operandCollector.RegFileBank_3": {
+          "logic_area": 15.06114,
+          "sequential_area": 9.6228,
+          "memory_bits": 8192
+        },
+        "RegFileBank$operandCollector.RegFileBank_2": {
+          "logic_area": 15.06114,
+          "sequential_area": 9.6228,
+          "memory_bits": 8192
+        },
+        "RegFileBank$operandCollector.RegFileBank_1": {
+          "logic_area": 15.06114,
+          "sequential_area": 9.6228,
+          "memory_bits": 8192
+        },
+        "RegFileBank$operandCollector.RegFileBank": {
+          "logic_area": 15.06114,
+          "sequential_area": 9.6228,
+          "memory_bits": 8192
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank_7": {
+          "logic_area": 434.49858,
+          "sequential_area": 298.89,
+          "memory_bits": 131072
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank_6": {
+          "logic_area": 434.49858,
+          "sequential_area": 298.89,
+          "memory_bits": 131072
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank_5": {
+          "logic_area": 434.49858,
+          "sequential_area": 298.89,
+          "memory_bits": 131072
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank_4": {
+          "logic_area": 434.49858,
+          "sequential_area": 298.89,
+          "memory_bits": 131072
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank_3": {
+          "logic_area": 434.49858,
+          "sequential_area": 298.89,
+          "memory_bits": 131072
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank_2": {
+          "logic_area": 434.49858,
+          "sequential_area": 298.89,
+          "memory_bits": 131072
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank_1": {
+          "logic_area": 434.49858,
+          "sequential_area": 298.89,
+          "memory_bits": 131072
+        },
+        "FloatRegFileBank$operandCollector.FloatRegFileBank": {
+          "logic_area": 434.49858,
+          "sequential_area": 298.89,
+          "memory_bits": 131072
+        },
+        "operandArbiter$operandCollector.Arbiter": {
+          "logic_area": 746.26272,
+          "sequential_area": 23.328,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_7": {
+          "logic_area": 3338.76168,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_6": {
+          "logic_area": 3338.76168,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_5": {
+          "logic_area": 3338.76168,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_4": {
+          "logic_area": 3338.76168,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_3": {
+          "logic_area": 3338.76168,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_2": {
+          "logic_area": 3338.76168,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit_1": {
+          "logic_area": 3338.76168,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "collectorUnit$operandCollector.collectorUnit": {
+          "logic_area": 3338.76168,
+          "sequential_area": 983.5668,
+          "memory_bits": 0
+        },
+        "operandCollector": {
+          "logic_area": 70858.1439,
+          "sequential_area": 10389.708,
+          "memory_bits": 1114112
+        }
+      }
+    },
+    "gpu-fixed": {
+      "flow": "coarse-slang",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [
+        "SM_wrapper",
+        "SM_wrapper_1"
+      ],
+      "logic_area": 61683.81012,
+      "sequential_area": 26015.9688,
+      "memory_bits": 1160918,
+      "memories": {
+        "wf_gather_cnt_16x4": {
+          "instances": 1,
+          "bits": 64,
+          "arrays": [
+            [
+              "3",
+              "Memory",
+              "15"
+            ]
+          ],
+          "source_sha256": "3db9703aa64a2469d93544fa2a82d6f03ff2f4af1dbab08d4f62abba321e0661"
+        },
+        "wf_gather_ram_16x39": {
+          "instances": 1,
+          "bits": 624,
+          "arrays": [
+            [
+              "38",
+              "Memory",
+              "15"
+            ]
+          ],
+          "source_sha256": "da6cf1f1e696944395ce898fe88d1ddfebe8207c16a26cd194e301668176bd41"
+        },
+        "ram_2x257": {
+          "instances": 1,
+          "bits": 514,
+          "arrays": [
+            [
+              "256",
+              "Memory",
+              "1"
+            ]
+          ],
+          "source_sha256": "9419a450fd0d8ad92572a002c56d911dfaa8959f46f3f14abce8062c1476adf9"
+        },
+        "ram_2x8": {
+          "instances": 1,
+          "bits": 16,
+          "arrays": [
+            [
+              "7",
+              "Memory",
+              "1"
+            ]
+          ],
+          "source_sha256": "357306d83c0f8098857d5494c5c5afa907d86172f275ad5b4a6cbfebad0a57ac"
+        },
+        "addr_8x17": {
+          "instances": 4,
+          "bits": 136,
+          "arrays": [
+            [
+              "16",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "e3c656ca9642af6585948aae45dbaae978d54294f0a13b130d8573f2c1e65f3f"
+        },
+        "mem_8x3": {
+          "instances": 12,
+          "bits": 24,
+          "arrays": [
+            [
+              "2",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "8a33fcba8b8ddfa6df4ddf4a9108cda9acb3311aa3162e392d89194372eeed95"
+        },
+        "addr_8x11": {
+          "instances": 4,
+          "bits": 88,
+          "arrays": [
+            [
+              "10",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "8950fe0b194ade615d82e84a2dd4d38ef9fef184bb27314af8ee1ee2cd0083ca"
+        },
+        "addr_8x10": {
+          "instances": 4,
+          "bits": 80,
+          "arrays": [
+            [
+              "9",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "a628cf2b4eb00400df618f95b1df63bb4a1516cd6e127779cb37118779227c71"
+        },
+        "wgram1_8x77": {
+          "instances": 1,
+          "bits": 616,
+          "arrays": [
+            [
+              "76",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "0c4f142488b079d084284a043959b04c1e753e58ba2292c12ccf4bdd6ca780b3"
+        },
+        "wgram2_8x241": {
+          "instances": 1,
+          "bits": 1928,
+          "arrays": [
+            [
+              "240",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "ec86bc87ce5ef985799c9758c6f91f93c239c93dfe1af2961526540c8080f642"
+        },
+        "ram_2x1270": {
+          "instances": 1,
+          "bits": 2540,
+          "arrays": [
+            [
+              "1269",
+              "Memory",
+              "1"
+            ]
+          ],
+          "source_sha256": "17693b8c36d80479631c2474534b14e161806ec4982331a780ccecbb05cc4841"
+        },
+        "array_1024x1024": {
+          "instances": 1,
+          "bits": 1048576,
+          "arrays": [
+            [
+              "1023",
+              "Memory",
+              "1023"
+            ]
+          ],
+          "source_sha256": "66733c4895dd6ef0c453e59d233b688510809cdc5727cc6d1a29c023c3803f97"
+        },
+        "array_64x304": {
+          "instances": 1,
+          "bits": 19456,
+          "arrays": [
+            [
+              "303",
+              "Memory",
+              "63"
+            ]
+          ],
+          "source_sha256": "7f097f7b1d7719ca5d92e9d55352de21bca4c31c0ff4b16a223e61e1d6932a67"
+        },
+        "data_32x1176": {
+          "instances": 1,
+          "bits": 37632,
+          "arrays": [
+            [
+              "1175",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "5a2b43e8b06e867c68f318391d92040477791738b8bb5e539e9409a7287caffe"
+        },
+        "head_32x5": {
+          "instances": 2,
+          "bits": 160,
+          "arrays": [
+            [
+              "4",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "0b952a68d33feae68422000e632eec36cf41d6bcc73de74425a9f23c8f17f955"
+        },
+        "next_32x5": {
+          "instances": 2,
+          "bits": 160,
+          "arrays": [
+            [
+              "4",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "2b86b3f58a8478e12a1a5675152aa87ca9918823feb99a9e22e2a0bc9d601768"
+        },
+        "tail_32x5": {
+          "instances": 2,
+          "bits": 160,
+          "arrays": [
+            [
+              "4",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "51326550949bfa16cece424fb432f078ad95813419c0835c6f2efd987e13a9b8"
+        },
+        "ram_8x1203": {
+          "instances": 1,
+          "bits": 9624,
+          "arrays": [
+            [
+              "1202",
+              "Memory",
+              "7"
+            ]
+          ],
+          "source_sha256": "2d7c62fff6268158eddf4640d016d72cd69f5900812ccaf0faef08cccb8f94df"
+        },
+        "data_32x1152": {
+          "instances": 1,
+          "bits": 36864,
+          "arrays": [
+            [
+              "1151",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "498c2f0bcbd8249b104c0bec3ad92651b37c698b4605d443bd88e3d55dd7ac12"
+        }
+      },
+      "rtl_sha256": "0b7363650c1af87e7d7fea1e1a3a106c02fa05c9e04b3a9540bca1ea7bfa7b90",
+      "statistics_sha256": "b537508d67e29375771cdcb34fbb0266dfc3f7c0a3319e8871dee0753cd29e80",
+      "synthesis_script_sha256": "6210a6361ce24be8d25d780911213244274fe1c49b1176ac283ade08e5c7fc90",
+      "manifest_sha256": "bdc495e4ce2c107ff9ba95e0941858df7ee3e2a59c9f74cbe804361bc296d896",
+      "mapped_sha256": "e5cc213763849e86fdc8dd331561874d9cff0fce28e0b8dc2ae19eda268d4e2f",
+      "modules": {
+        "sort3_4$GPU.cta.cta_sche.resource_table_inst.handler_vgpr_1.result_tmp_inst": {
+          "logic_area": 12.59712,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "sort3_4$GPU.cta.cta_sche.resource_table_inst.handler_vgpr_0.result_tmp_inst": {
+          "logic_area": 12.59712,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "sort3_2$GPU.cta.cta_sche.resource_table_inst.handler_sgpr_1.result_tmp_inst": {
+          "logic_area": 14.4342,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "sort3_2$GPU.cta.cta_sche.resource_table_inst.handler_sgpr_0.result_tmp_inst": {
+          "logic_area": 14.4342,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "sort3$GPU.cta.cta_sche.resource_table_inst.handler_lds_1.result_tmp_inst": {
+          "logic_area": 21.5055,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "sort3$GPU.cta.cta_sche.resource_table_inst.handler_lds_0.result_tmp_inst": {
+          "logic_area": 21.5055,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RRArbiter$GPU.cta.cta_sche.cu_interface_inst.arb_inst": {
+          "logic_area": 2.09952,
+          "sequential_area": 0.2916,
+          "memory_bits": 0
+        },
+        "Queue2_cta_data$GPU.cta.cta_sche.cu_interface_inst.fifo": {
+          "logic_area": 2.24532,
+          "sequential_area": 0.8748,
+          "memory_bits": 514
+        },
+        "Queue1_5_Anon_2$GPU.cta.cta_sche.resource_table_inst.baseaddr_vgpr_reg_q": {
+          "logic_area": 25.25256,
+          "sequential_area": 12.5388,
+          "memory_bits": 0
+        },
+        "Queue1_5_Anon_1$GPU.cta.cta_sche.resource_table_inst.baseaddr_sgpr_reg_q": {
+          "logic_area": 25.83576,
+          "sequential_area": 12.8304,
+          "memory_bits": 0
+        },
+        "Queue1_5_Anon$GPU.cta.cta_sche.resource_table_inst.baseaddr_lds_reg_q": {
+          "logic_area": 29.33496,
+          "sequential_area": 14.58,
+          "memory_bits": 0
+        },
+        "Queue2_io_rt2dealloc$GPU.cta.cta_sche.resource_table_inst.slot_dealloc": {
+          "logic_area": 2.27448,
+          "sequential_area": 0.8748,
+          "memory_bits": 16
+        },
+        "DecoupledIO_1_to_3_1$GPU.cta.cta_sche.resource_table_inst.dealloc_decoupledio": {
+          "logic_area": 2.6973,
+          "sequential_area": 0.8748,
+          "memory_bits": 0
+        },
+        "DecoupledIO_1_to_3$GPU.cta.cta_sche.resource_table_inst.alloc_decoupledio": {
+          "logic_area": 1.76418,
+          "sequential_area": 0.8748,
+          "memory_bits": 0
+        },
+        "resource_table_ram_4$GPU.cta.cta_sche.resource_table_inst.rtram_vgpr_1_0": {
+          "logic_area": 146.87892,
+          "sequential_area": 79.8984,
+          "memory_bits": 208
+        },
+        "resource_table_ram_4$GPU.cta.cta_sche.resource_table_inst.rtram_vgpr_0_0": {
+          "logic_area": 146.87892,
+          "sequential_area": 79.8984,
+          "memory_bits": 208
+        },
+        "resource_table_ram_2$GPU.cta.cta_sche.resource_table_inst.rtram_sgpr_1_0": {
+          "logic_area": 146.87892,
+          "sequential_area": 79.8984,
+          "memory_bits": 224
+        },
+        "resource_table_ram_2$GPU.cta.cta_sche.resource_table_inst.rtram_sgpr_0_0": {
+          "logic_area": 146.87892,
+          "sequential_area": 79.8984,
+          "memory_bits": 224
+        },
+        "resource_table_ram$GPU.cta.cta_sche.resource_table_inst.rtram_lds_1_0": {
+          "logic_area": 146.87892,
+          "sequential_area": 79.8984,
+          "memory_bits": 320
+        },
+        "resource_table_ram$GPU.cta.cta_sche.resource_table_inst.rtram_lds_0_0": {
+          "logic_area": 146.87892,
+          "sequential_area": 79.8984,
+          "memory_bits": 320
+        },
+        "resource_table_handler_4$GPU.cta.cta_sche.resource_table_inst.handler_vgpr_1": {
+          "logic_area": 121.11606,
+          "sequential_area": 39.366,
+          "memory_bits": 0
+        },
+        "resource_table_handler_4$GPU.cta.cta_sche.resource_table_inst.handler_vgpr_0": {
+          "logic_area": 121.11606,
+          "sequential_area": 39.366,
+          "memory_bits": 0
+        },
+        "resource_table_handler_2$GPU.cta.cta_sche.resource_table_inst.handler_sgpr_1": {
+          "logic_area": 130.54932,
+          "sequential_area": 40.824,
+          "memory_bits": 0
+        },
+        "resource_table_handler_2$GPU.cta.cta_sche.resource_table_inst.handler_sgpr_0": {
+          "logic_area": 130.54932,
+          "sequential_area": 40.824,
+          "memory_bits": 0
+        },
+        "resource_table_handler$GPU.cta.cta_sche.resource_table_inst.handler_lds_1": {
+          "logic_area": 168.88014,
+          "sequential_area": 49.572,
+          "memory_bits": 0
+        },
+        "resource_table_handler$GPU.cta.cta_sche.resource_table_inst.handler_lds_0": {
+          "logic_area": 168.88014,
+          "sequential_area": 49.572,
+          "memory_bits": 0
+        },
+        "Queue1_io_alloc2cuinterface$GPU.cta.cta_sche.allocator_inst.cuinterface_buf": {
+          "logic_area": 21.95748,
+          "sequential_area": 12.8304,
+          "memory_bits": 0
+        },
+        "rtcache_writer_2$GPU.cta.cta_sche.allocator_inst.writer_vgpr": {
+          "logic_area": 13.93848,
+          "sequential_area": 0.2916,
+          "memory_bits": 0
+        },
+        "rtcache_writer_1$GPU.cta.cta_sche.allocator_inst.writer_sgpr": {
+          "logic_area": 15.2361,
+          "sequential_area": 0.2916,
+          "memory_bits": 0
+        },
+        "rtcache_writer$GPU.cta.cta_sche.allocator_inst.writer_lds": {
+          "logic_area": 23.44464,
+          "sequential_area": 0.2916,
+          "memory_bits": 0
+        },
+        "RRPriorityEncoder$GPU.cta.cta_sche.wg_buffer_inst.wgram1_rd_next_inst": {
+          "logic_area": 8.47098,
+          "sequential_area": 0.8748,
+          "memory_bits": 0
+        },
+        "RRPriorityEncoder$GPU.cta.cta_sche.wg_buffer_inst.wgram_wr_next_inst": {
+          "logic_area": 8.47098,
+          "sequential_area": 0.8748,
+          "memory_bits": 0
+        },
+        "SRAMTemplate_139$GPU.Scheduler.bankedStore.cc_banks": {
+          "logic_area": 3240.43416,
+          "sequential_area": 2432.2356,
+          "memory_bits": 1048576
+        },
+        "SRAMTemplate_138$GPU.Scheduler.directory.cc_dir": {
+          "logic_area": 359.26578,
+          "sequential_area": 188.082,
+          "memory_bits": 19456
+        },
+        "ListBuffer$GPU.Scheduler.sinkA.putbuffer": {
+          "logic_area": 53.15868,
+          "sequential_area": 18.6624,
+          "memory_bits": 37344
+        },
+        "cu_interface$GPU.cta.cta_sche.cu_interface_inst": {
+          "logic_area": 82.55196,
+          "sequential_area": 33.2424,
+          "memory_bits": 1202
+        },
+        "resource_table_top$GPU.cta.cta_sche.resource_table_inst": {
+          "logic_area": 1853.43876,
+          "sequential_area": 781.7796,
+          "memory_bits": 1520
+        },
+        "allocator$GPU.cta.cta_sche.allocator_inst": {
+          "logic_area": 250.49898,
+          "sequential_area": 99.4356,
+          "memory_bits": 0
+        },
+        "wg_buffer$GPU.cta.cta_sche.wg_buffer_inst": {
+          "logic_area": 178.8966,
+          "sequential_area": 100.3104,
+          "memory_bits": 2544
+        },
+        "Arbiter1_TLBundleA_lite$GPU.cluster2L2Arbiter.memReqArb": {
+          "logic_area": 0,
+          "sequential_area": 0,
+          "memory_bits": 0
+        },
+        "Arbiter1_TLBundleD_lite_plus$GPU.l2Distribute.memRspArb": {
+          "logic_area": 0,
+          "sequential_area": 0,
+          "memory_bits": 0
+        },
+        "Queue2_TLBundleA_lite$GPU.SM2clusterArbiter.memReqBuf": {
+          "logic_area": 2.24532,
+          "sequential_area": 0.8748,
+          "memory_bits": 2540
+        },
+        "Arbiter2_TLBundleA_lite$GPU.SM2clusterArbiter.memReqArb": {
+          "logic_area": 222.38874,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "Queue1_DirectoryResult_lite_victim$GPU.Scheduler.dir_result_buffer": {
+          "logic_area": 599.1651,
+          "sequential_area": 363.042,
+          "memory_bits": 0
+        },
+        "Queue8_FullRequest$GPU.Scheduler.write_buffer": {
+          "logic_area": 214.95294,
+          "sequential_area": 2.0412,
+          "memory_bits": 9624
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_31": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_30": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_29": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_28": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_27": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_26": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_25": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_24": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_23": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_22": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_21": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_20": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_19": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_18": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_17": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_16": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_15": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_14": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_13": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_12": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_11": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_10": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_9": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_8": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_7": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_6": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_5": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_4": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_3": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_2": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_1": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "MSHR_4$GPU.Scheduler.mshrs_0": {
+          "logic_area": 1248.38334,
+          "sequential_area": 612.0684,
+          "memory_bits": 0
+        },
+        "ListBuffer_1$GPU.Scheduler.requests": {
+          "logic_area": 53.15868,
+          "sequential_area": 18.6624,
+          "memory_bits": 38112
+        },
+        "BankedStore$GPU.Scheduler.bankedStore": {
+          "logic_area": 3432.67146,
+          "sequential_area": 2432.2356,
+          "memory_bits": 1048576
+        },
+        "Directory_test$GPU.Scheduler.directory": {
+          "logic_area": 2887.23366,
+          "sequential_area": 1204.308,
+          "memory_bits": 19456
+        },
+        "SinkD$GPU.Scheduler.sinkD": {
+          "logic_area": 350.19702,
+          "sequential_area": 304.4304,
+          "memory_bits": 0
+        },
+        "SinkA$GPU.Scheduler.sinkA": {
+          "logic_area": 83.835,
+          "sequential_area": 27.9936,
+          "memory_bits": 37344
+        },
+        "SourceD$GPU.Scheduler.sourceD": {
+          "logic_area": 1870.58484,
+          "sequential_area": 1051.8012,
+          "memory_bits": 0
+        },
+        "SourceA$GPU.Scheduler.sourceA": {
+          "logic_area": 0,
+          "sequential_area": 0,
+          "memory_bits": 0
+        },
+        "cta_scheduler_top$GPU.cta.cta_sche": {
+          "logic_area": 2365.56126,
+          "sequential_area": 1014.768,
+          "memory_bits": 5266
+        },
+        "cluster2L2Arbiter$GPU.cluster2L2Arbiter": {
+          "logic_area": 0,
+          "sequential_area": 0,
+          "memory_bits": 0
+        },
+        "l2Distribute$GPU.l2Distribute": {
+          "logic_area": 0,
+          "sequential_area": 0,
+          "memory_bits": 0
+        },
+        "SM2clusterArbiter$GPU.SM2clusterArbiter": {
+          "logic_area": 224.99856,
+          "sequential_area": 0.8748,
+          "memory_bits": 2540
+        },
+        "Scheduler$GPU.Scheduler": {
+          "logic_area": 59093.2503,
+          "sequential_area": 25000.326,
+          "memory_bits": 1153112
+        },
+        "CTAinterface$GPU.cta": {
+          "logic_area": 2365.56126,
+          "sequential_area": 1014.768,
+          "memory_bits": 5266
+        },
+        "GPU": {
+          "logic_area": 61683.81012,
+          "sequential_area": 26015.9688,
+          "memory_bits": 1160918
+        }
+      }
+    },
+    "tc-2-16-2": {
+      "flow": "native-synth",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 51009.92334,
+      "sequential_area": 7761.5172,
+      "memory_bits": 0,
+      "memories": {},
+      "rtl_sha256": "ba38c300ada0947604bea6ca8014487dcb1e15ea4f39ca121164442bb5383c12",
+      "statistics_sha256": "a987a28c069bb7db617318df5832b7976a070b6be5d789d0a912543313eabc7c",
+      "synthesis_script_sha256": "70084c60e765914d30f139842fde636a54ce74135493d8a799a09aeef2edb3b8",
+      "manifest_sha256": "fb934ac6de8ce88bedc5edc121a60430dd70090572c2431655cc9c2392977cba",
+      "mapped_sha256": "bcf13b0d2131c6cc0acd4bcf137b3dfd836c91349bdb5d4c7f3544763f6d9e9d",
+      "modules": {
+        "vTCexe": {
+          "logic_area": 51009.92334,
+          "sequential_area": 7761.5172,
+          "memory_bits": 0
+        },
+        "Queue1_WriteVecCtrl": {
+          "logic_area": 105.73416,
+          "sequential_area": 62.1108,
+          "memory_bits": 0
+        },
+        "TensorCoreFP32": {
+          "logic_area": 50904.18918,
+          "sequential_area": 7699.4064,
+          "memory_bits": 0
+        },
+        "TCDotProduct_1": {
+          "logic_area": 12607.64676,
+          "sequential_area": 1849.0356,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput_1": {
+          "logic_area": 16.46082,
+          "sequential_area": 9.6228,
+          "memory_bits": 0
+        },
+        "TCAddPipe_16": {
+          "logic_area": 346.7124,
+          "sequential_area": 78.1488,
+          "memory_bits": 0
+        },
+        "TCMulPipe_16": {
+          "logic_area": 491.60844,
+          "sequential_area": 69.984,
+          "memory_bits": 0
+        },
+        "TCDotProduct": {
+          "logic_area": 13081.2489,
+          "sequential_area": 2152.2996,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput": {
+          "logic_area": 56.16216,
+          "sequential_area": 32.9508,
+          "memory_bits": 0
+        },
+        "TCAddPipe_1": {
+          "logic_area": 315.0738,
+          "sequential_area": 57.7368,
+          "memory_bits": 0
+        },
+        "TCAddPipe": {
+          "logic_area": 419.0292,
+          "sequential_area": 124.8048,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s2": {
+          "logic_area": 73.97892,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s1": {
+          "logic_area": 146.61648,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NearPath": {
+          "logic_area": 44.20656,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ_16": {
+          "logic_area": 3.12012,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "LZA": {
+          "logic_area": 7.69824,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FarPath": {
+          "logic_area": 32.5134,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ShiftRightJam": {
+          "logic_area": 21.34512,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TCMulPipe_1": {
+          "logic_area": 460.01358,
+          "sequential_area": 49.572,
+          "memory_bits": 0
+        },
+        "TCMulPipe": {
+          "logic_area": 563.92524,
+          "sequential_area": 116.64,
+          "memory_bits": 0
+        },
+        "FMUL_s3": {
+          "logic_area": 13.06368,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TininessRounder": {
+          "logic_area": 5.55498,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RoundingUnit": {
+          "logic_area": 5.48208,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s2": {
+          "logic_area": 58.27626,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s1": {
+          "logic_area": 27.01674,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ": {
+          "logic_area": 6.42978,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NaiveMultiplier": {
+          "logic_area": 303.61392,
+          "sequential_area": 14.58,
+          "memory_bits": 0
+        }
+      }
+    },
+    "tc-2-4-2": {
+      "flow": "native-synth",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 13407.81174,
+      "sequential_area": 2354.0868,
+      "memory_bits": 0,
+      "memories": {},
+      "rtl_sha256": "ca873d7cd6ff77d60e0f5a73d2d5b281da6952ba76039c1ba63931d7378cd2ee",
+      "statistics_sha256": "c557ad8b36d790785016ab0248501407efaad8bfa9f2f27525101065769996b8",
+      "synthesis_script_sha256": "70084c60e765914d30f139842fde636a54ce74135493d8a799a09aeef2edb3b8",
+      "manifest_sha256": "847d54024974d1ac846ddd430bc6f78eb667db2139efba90254294259baa6bf8",
+      "mapped_sha256": "b1b095d13158f9cfdf3acce17becfc5e926c10933cb77bdce055d9ca1ca036d7",
+      "modules": {
+        "vTCexe": {
+          "logic_area": 13407.81174,
+          "sequential_area": 2354.0868,
+          "memory_bits": 0
+        },
+        "Queue1_WriteVecCtrl": {
+          "logic_area": 105.73416,
+          "sequential_area": 62.1108,
+          "memory_bits": 0
+        },
+        "TensorCoreFP32": {
+          "logic_area": 13302.07758,
+          "sequential_area": 2291.976,
+          "memory_bits": 0
+        },
+        "TCDotProduct_1": {
+          "logic_area": 3243.27726,
+          "sequential_area": 520.506,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput_1": {
+          "logic_area": 16.46082,
+          "sequential_area": 9.6228,
+          "memory_bits": 0
+        },
+        "TCAddPipe_4": {
+          "logic_area": 346.7124,
+          "sequential_area": 78.1488,
+          "memory_bits": 0
+        },
+        "TCMulPipe_4": {
+          "logic_area": 491.60844,
+          "sequential_area": 69.984,
+          "memory_bits": 0
+        },
+        "TCDotProduct": {
+          "logic_area": 3572.2458,
+          "sequential_area": 730.458,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput": {
+          "logic_area": 56.16216,
+          "sequential_area": 32.9508,
+          "memory_bits": 0
+        },
+        "TCAddPipe_1": {
+          "logic_area": 315.03006,
+          "sequential_area": 57.7368,
+          "memory_bits": 0
+        },
+        "TCAddPipe": {
+          "logic_area": 419.0292,
+          "sequential_area": 124.8048,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s2": {
+          "logic_area": 73.97892,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s1": {
+          "logic_area": 146.61648,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NearPath": {
+          "logic_area": 44.20656,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ_4": {
+          "logic_area": 3.12012,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "LZA": {
+          "logic_area": 7.69824,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FarPath": {
+          "logic_area": 32.5134,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ShiftRightJam": {
+          "logic_area": 21.34512,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TCMulPipe_1": {
+          "logic_area": 460.01358,
+          "sequential_area": 49.572,
+          "memory_bits": 0
+        },
+        "TCMulPipe": {
+          "logic_area": 563.92524,
+          "sequential_area": 116.64,
+          "memory_bits": 0
+        },
+        "FMUL_s3": {
+          "logic_area": 13.06368,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TininessRounder": {
+          "logic_area": 5.55498,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RoundingUnit": {
+          "logic_area": 5.48208,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s2": {
+          "logic_area": 58.27626,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s1": {
+          "logic_area": 27.01674,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ": {
+          "logic_area": 6.42978,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NaiveMultiplier": {
+          "logic_area": 303.61392,
+          "sequential_area": 14.58,
+          "memory_bits": 0
+        }
+      }
+    },
+    "tc-4-2-4": {
+      "flow": "native-synth",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 27136.16478,
+      "sequential_area": 4905.0036,
+      "memory_bits": 0,
+      "memories": {},
+      "rtl_sha256": "207ebea69b075d6226254bb5519846dc5d158e828c806a71cd4de5dfe7fbbd25",
+      "statistics_sha256": "94d9944ab4edf9f6e833eeac1188bb6b04fc77f36ea0b93c6c8144895f3bdcf0",
+      "synthesis_script_sha256": "70084c60e765914d30f139842fde636a54ce74135493d8a799a09aeef2edb3b8",
+      "manifest_sha256": "dd29aa2903b9b5a14341685f8f6c78f1260814c8b639c913be54d382294138f6",
+      "mapped_sha256": "87864744297cf309522d3fdfea5dbeb01ecf9f12027d6cd8a15cbf07576ffc3a",
+      "modules": {
+        "vTCexe": {
+          "logic_area": 27136.16478,
+          "sequential_area": 4905.0036,
+          "memory_bits": 0
+        },
+        "Queue1_WriteVecCtrl": {
+          "logic_area": 296.09064,
+          "sequential_area": 174.0852,
+          "memory_bits": 0
+        },
+        "TensorCoreFP32": {
+          "logic_area": 26840.07414,
+          "sequential_area": 4730.9184,
+          "memory_bits": 0
+        },
+        "TCDotProduct_1": {
+          "logic_area": 1661.4639,
+          "sequential_area": 285.4764,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput_1": {
+          "logic_area": 16.46082,
+          "sequential_area": 9.6228,
+          "memory_bits": 0
+        },
+        "TCAddPipe_2": {
+          "logic_area": 346.7124,
+          "sequential_area": 78.1488,
+          "memory_bits": 0
+        },
+        "TCMulPipe_2": {
+          "logic_area": 491.60844,
+          "sequential_area": 69.984,
+          "memory_bits": 0
+        },
+        "TCDotProduct": {
+          "logic_area": 1918.11564,
+          "sequential_area": 448.7724,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput": {
+          "logic_area": 56.16216,
+          "sequential_area": 32.9508,
+          "memory_bits": 0
+        },
+        "TCAddPipe": {
+          "logic_area": 419.0292,
+          "sequential_area": 124.8048,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s2": {
+          "logic_area": 73.97892,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s1": {
+          "logic_area": 146.61648,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NearPath": {
+          "logic_area": 44.20656,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ_2": {
+          "logic_area": 3.12012,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "LZA": {
+          "logic_area": 7.69824,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FarPath": {
+          "logic_area": 32.5134,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ShiftRightJam": {
+          "logic_area": 21.34512,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TCMulPipe_1": {
+          "logic_area": 459.96984,
+          "sequential_area": 49.572,
+          "memory_bits": 0
+        },
+        "TCMulPipe": {
+          "logic_area": 563.92524,
+          "sequential_area": 116.64,
+          "memory_bits": 0
+        },
+        "FMUL_s3": {
+          "logic_area": 13.06368,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TininessRounder": {
+          "logic_area": 5.55498,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RoundingUnit": {
+          "logic_area": 5.48208,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s2": {
+          "logic_area": 58.27626,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s1": {
+          "logic_area": 27.01674,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ": {
+          "logic_area": 6.42978,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NaiveMultiplier": {
+          "logic_area": 303.61392,
+          "sequential_area": 14.58,
+          "memory_bits": 0
+        }
+      }
+    },
+    "tc-4-4-4": {
+      "flow": "native-synth",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 52517.49534,
+      "sequential_area": 8712.1332,
+      "memory_bits": 0,
+      "memories": {},
+      "rtl_sha256": "4a3671e61e825337ebe6d862337d1ab08749ae2c6ad4134e8f52717133cafc78",
+      "statistics_sha256": "7e103d47d6802aa4bd51b1547a61f5ae506199048ba39a3a33942265a039ae0c",
+      "synthesis_script_sha256": "70084c60e765914d30f139842fde636a54ce74135493d8a799a09aeef2edb3b8",
+      "manifest_sha256": "db4e9e1165bc5b2021107740c400b869cb62c5061630aa5ca56119987a817d95",
+      "mapped_sha256": "1ec2de288ae7b3571317a00a8896b9e28719e1824ee3897097a36623d850c655",
+      "modules": {
+        "vTCexe": {
+          "logic_area": 52517.49534,
+          "sequential_area": 8712.1332,
+          "memory_bits": 0
+        },
+        "Queue1_WriteVecCtrl": {
+          "logic_area": 296.09064,
+          "sequential_area": 174.0852,
+          "memory_bits": 0
+        },
+        "TensorCoreFP32": {
+          "logic_area": 52221.4047,
+          "sequential_area": 8538.048,
+          "memory_bits": 0
+        },
+        "TCDotProduct_1": {
+          "logic_area": 3243.27726,
+          "sequential_area": 520.506,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput_1": {
+          "logic_area": 16.46082,
+          "sequential_area": 9.6228,
+          "memory_bits": 0
+        },
+        "TCAddPipe_4": {
+          "logic_area": 346.7124,
+          "sequential_area": 78.1488,
+          "memory_bits": 0
+        },
+        "TCMulPipe_4": {
+          "logic_area": 491.60844,
+          "sequential_area": 69.984,
+          "memory_bits": 0
+        },
+        "TCDotProduct": {
+          "logic_area": 3572.2458,
+          "sequential_area": 730.458,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput": {
+          "logic_area": 56.16216,
+          "sequential_area": 32.9508,
+          "memory_bits": 0
+        },
+        "TCAddPipe_1": {
+          "logic_area": 315.03006,
+          "sequential_area": 57.7368,
+          "memory_bits": 0
+        },
+        "TCAddPipe": {
+          "logic_area": 419.0292,
+          "sequential_area": 124.8048,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s2": {
+          "logic_area": 73.97892,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s1": {
+          "logic_area": 146.61648,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NearPath": {
+          "logic_area": 44.20656,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ_4": {
+          "logic_area": 3.12012,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "LZA": {
+          "logic_area": 7.69824,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FarPath": {
+          "logic_area": 32.5134,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ShiftRightJam": {
+          "logic_area": 21.34512,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TCMulPipe_1": {
+          "logic_area": 460.01358,
+          "sequential_area": 49.572,
+          "memory_bits": 0
+        },
+        "TCMulPipe": {
+          "logic_area": 563.92524,
+          "sequential_area": 116.64,
+          "memory_bits": 0
+        },
+        "FMUL_s3": {
+          "logic_area": 13.06368,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TininessRounder": {
+          "logic_area": 5.55498,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RoundingUnit": {
+          "logic_area": 5.48208,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s2": {
+          "logic_area": 58.27626,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s1": {
+          "logic_area": 27.01674,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ": {
+          "logic_area": 6.42978,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NaiveMultiplier": {
+          "logic_area": 303.61392,
+          "sequential_area": 14.58,
+          "memory_bits": 0
+        }
+      }
+    },
+    "tc-4-8-4": {
+      "flow": "native-synth",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 102702.3219,
+      "sequential_area": 15953.1444,
+      "memory_bits": 0,
+      "memories": {},
+      "rtl_sha256": "10febc5ab4257fe7a4645602c05ee787c5ecdc45675911134ecc96b8690da285",
+      "statistics_sha256": "6c3427e6274c2053a5ee355ab54474ef5539fb09fe5d55f9c19bd66549ca752a",
+      "synthesis_script_sha256": "70084c60e765914d30f139842fde636a54ce74135493d8a799a09aeef2edb3b8",
+      "manifest_sha256": "a2428fd8d00df2f6dcf5083f06a9b2cf53218bd37e55e78dbeca19e77b2bd300",
+      "mapped_sha256": "1e95315cfb211a5fac5af18bd9427357b3180081d197a18817054eeeb7947d44",
+      "modules": {
+        "vTCexe": {
+          "logic_area": 102702.3219,
+          "sequential_area": 15953.1444,
+          "memory_bits": 0
+        },
+        "Queue1_WriteVecCtrl": {
+          "logic_area": 296.09064,
+          "sequential_area": 174.0852,
+          "memory_bits": 0
+        },
+        "TensorCoreFP32": {
+          "logic_area": 102406.23126,
+          "sequential_area": 15779.0592,
+          "memory_bits": 0
+        },
+        "TCDotProduct_1": {
+          "logic_area": 6375.30912,
+          "sequential_area": 970.1532,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput_1": {
+          "logic_area": 16.46082,
+          "sequential_area": 9.6228,
+          "memory_bits": 0
+        },
+        "TCAddPipe_8": {
+          "logic_area": 346.7124,
+          "sequential_area": 78.1488,
+          "memory_bits": 0
+        },
+        "TCMulPipe_8": {
+          "logic_area": 491.60844,
+          "sequential_area": 69.984,
+          "memory_bits": 0
+        },
+        "TCDotProduct": {
+          "logic_area": 6776.59446,
+          "sequential_area": 1226.7612,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput": {
+          "logic_area": 56.16216,
+          "sequential_area": 32.9508,
+          "memory_bits": 0
+        },
+        "TCAddPipe_1": {
+          "logic_area": 315.0738,
+          "sequential_area": 57.7368,
+          "memory_bits": 0
+        },
+        "TCAddPipe": {
+          "logic_area": 419.0292,
+          "sequential_area": 124.8048,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s2": {
+          "logic_area": 73.97892,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s1": {
+          "logic_area": 146.61648,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NearPath": {
+          "logic_area": 44.20656,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ_8": {
+          "logic_area": 3.12012,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "LZA": {
+          "logic_area": 7.69824,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FarPath": {
+          "logic_area": 32.5134,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ShiftRightJam": {
+          "logic_area": 21.34512,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TCMulPipe_1": {
+          "logic_area": 460.01358,
+          "sequential_area": 49.572,
+          "memory_bits": 0
+        },
+        "TCMulPipe": {
+          "logic_area": 563.92524,
+          "sequential_area": 116.64,
+          "memory_bits": 0
+        },
+        "FMUL_s3": {
+          "logic_area": 13.06368,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TininessRounder": {
+          "logic_area": 5.55498,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RoundingUnit": {
+          "logic_area": 5.48208,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s2": {
+          "logic_area": 58.27626,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s1": {
+          "logic_area": 27.01674,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ": {
+          "logic_area": 6.42978,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NaiveMultiplier": {
+          "logic_area": 303.61392,
+          "sequential_area": 14.58,
+          "memory_bits": 0
+        }
+      }
+    },
+    "tc-8-4-4": {
+      "flow": "native-synth",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 104663.74014,
+      "sequential_area": 17189.5284,
+      "memory_bits": 0,
+      "memories": {},
+      "rtl_sha256": "7275f0b662fbbc247146876107b295bfd259894fe255ff28ab1ba0f53b1f88c6",
+      "statistics_sha256": "ddb790f7d033e8c76525cb20f775a018786eb5e454cfa40c92729b624f61829b",
+      "synthesis_script_sha256": "70084c60e765914d30f139842fde636a54ce74135493d8a799a09aeef2edb3b8",
+      "manifest_sha256": "50c9b7f962735ae04b37928040c7a262bf1b4e2cd8310f0ba1e1b0f142c9c846",
+      "mapped_sha256": "22971d88c396cf8f2c1b876f9df67664b11c3a61d0809a57c1301cdef879fac1",
+      "modules": {
+        "vTCexe": {
+          "logic_area": 104663.74014,
+          "sequential_area": 17189.5284,
+          "memory_bits": 0
+        },
+        "Queue1_WriteVecCtrl": {
+          "logic_area": 549.89928,
+          "sequential_area": 323.3844,
+          "memory_bits": 0
+        },
+        "TensorCoreFP32": {
+          "logic_area": 104113.84086,
+          "sequential_area": 16866.144,
+          "memory_bits": 0
+        },
+        "TCDotProduct_1": {
+          "logic_area": 3243.27726,
+          "sequential_area": 520.506,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput_1": {
+          "logic_area": 16.46082,
+          "sequential_area": 9.6228,
+          "memory_bits": 0
+        },
+        "TCAddPipe_4": {
+          "logic_area": 346.7124,
+          "sequential_area": 78.1488,
+          "memory_bits": 0
+        },
+        "TCMulPipe_4": {
+          "logic_area": 491.60844,
+          "sequential_area": 69.984,
+          "memory_bits": 0
+        },
+        "TCDotProduct": {
+          "logic_area": 3572.2458,
+          "sequential_area": 730.458,
+          "memory_bits": 0
+        },
+        "Queue1_TCDotProductOutput": {
+          "logic_area": 56.16216,
+          "sequential_area": 32.9508,
+          "memory_bits": 0
+        },
+        "TCAddPipe_1": {
+          "logic_area": 315.03006,
+          "sequential_area": 57.7368,
+          "memory_bits": 0
+        },
+        "TCAddPipe": {
+          "logic_area": 419.0292,
+          "sequential_area": 124.8048,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s2": {
+          "logic_area": 73.97892,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FCMA_ADD_s1": {
+          "logic_area": 146.61648,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NearPath": {
+          "logic_area": 44.20656,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ_4": {
+          "logic_area": 3.12012,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "LZA": {
+          "logic_area": 7.69824,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FarPath": {
+          "logic_area": 32.5134,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "ShiftRightJam": {
+          "logic_area": 21.34512,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TCMulPipe_1": {
+          "logic_area": 460.01358,
+          "sequential_area": 49.572,
+          "memory_bits": 0
+        },
+        "TCMulPipe": {
+          "logic_area": 563.92524,
+          "sequential_area": 116.64,
+          "memory_bits": 0
+        },
+        "FMUL_s3": {
+          "logic_area": 13.06368,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "TininessRounder": {
+          "logic_area": 5.55498,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "RoundingUnit": {
+          "logic_area": 5.48208,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s2": {
+          "logic_area": 58.27626,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "FMUL_s1": {
+          "logic_area": 27.01674,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "CLZ": {
+          "logic_area": 6.42978,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "NaiveMultiplier": {
+          "logic_area": 303.61392,
+          "sequential_area": 14.58,
+          "memory_bits": 0
+        }
+      }
+    },
+    "lds-16-1024": {
+      "flow": "coarse-slang",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 4381.0713,
+      "sequential_area": 1322.6976,
+      "memory_bits": 1082496,
+      "memories": {
+        "ram_32x1060": {
+          "instances": 1,
+          "bits": 33920,
+          "arrays": [
+            [
+              "1059",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "8d1be098c6ca88e0ae46744378462016ee46de16d1c1073a094f240457e9570a"
+        },
+        "array_2048x32": {
+          "instances": 16,
+          "bits": 65536,
+          "arrays": [
+            [
+              "31",
+              "Memory",
+              "2047"
+            ]
+          ],
+          "source_sha256": "7b3720ca4da01906c71d72fa701f180f153e22b8b61890b29d2dbae799a0bd23"
+        }
+      },
+      "rtl_sha256": "595cfac0441d52b8c9062cc6dd56d510adf322980010e4ba72d5e9a8a1cbed90",
+      "statistics_sha256": "a4f40395129bf2fa916ef9e81d2c4ca311d4292c5585e53d62e486696e115502",
+      "synthesis_script_sha256": "5c79ac1b0e418ab124e1ea404cd4e3af53a4497428dc0d6323d7c39a9b6f679b",
+      "manifest_sha256": "3d6218037718a68289c918b5bb8183733d1f7260a88ed6129863de79bb00dcdd",
+      "mapped_sha256": "3ea55db6d51fd4c40babe363ac83732ad8147aa1fa6dc45bcbe960e12604d2fb",
+      "modules": {
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_15": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_14": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_13": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_12": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_11": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_10": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_9": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_8": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess": {
+          "logic_area": 26.49186,
+          "sequential_area": 17.2044,
+          "memory_bits": 65536
+        },
+        "Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q": {
+          "logic_area": 7.91694,
+          "sequential_area": 3.2076,
+          "memory_bits": 33920
+        },
+        "DataCrossbar_1$SharedMemory.DataCorssBarForRead": {
+          "logic_area": 970.4448,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "DataCrossbar$SharedMemory.DataCorssBarForWrite": {
+          "logic_area": 955.51488,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "BankConflictArbiter$SharedMemory.BankConfArb": {
+          "logic_area": 711.66438,
+          "sequential_area": 93.8952,
+          "memory_bits": 0
+        },
+        "SharedMemory": {
+          "logic_area": 4381.0713,
+          "sequential_area": 1322.6976,
+          "memory_bits": 1082496
+        }
+      }
+    },
+    "lds-16-128": {
+      "flow": "coarse-slang",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 4311.32058,
+      "sequential_area": 1293.8292,
+      "memory_bits": 164992,
+      "memories": {
+        "ram_32x1060": {
+          "instances": 1,
+          "bits": 33920,
+          "arrays": [
+            [
+              "1059",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "8d1be098c6ca88e0ae46744378462016ee46de16d1c1073a094f240457e9570a"
+        },
+        "array_256x32": {
+          "instances": 16,
+          "bits": 8192,
+          "arrays": [
+            [
+              "31",
+              "Memory",
+              "255"
+            ]
+          ],
+          "source_sha256": "1fde1923edb9baa666ce95167dbba533306814483ec3568129049cd23281d1cf"
+        }
+      },
+      "rtl_sha256": "86e82a7a7a6e942e2764875a0233d47ba0e1cd37d2d748e783c493997d5894c0",
+      "statistics_sha256": "43b42347d1fef0cd55a84a54acc1c0a2d63f77eb0b0027ca19df3dcebb5e1f54",
+      "synthesis_script_sha256": "5c79ac1b0e418ab124e1ea404cd4e3af53a4497428dc0d6323d7c39a9b6f679b",
+      "manifest_sha256": "7f0a722e9b6859d635474a4966b02e68396635c334b2811d0563a247bd2a858f",
+      "mapped_sha256": "8aa7e8e53f65ecb95d8dd4491d45561f2482b0a5e859f1adec9b5256cb02a710",
+      "modules": {
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_15": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_14": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_13": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_12": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_11": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_10": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_9": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_8": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess": {
+          "logic_area": 22.43862,
+          "sequential_area": 15.4548,
+          "memory_bits": 8192
+        },
+        "Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q": {
+          "logic_area": 7.91694,
+          "sequential_area": 3.2076,
+          "memory_bits": 33920
+        },
+        "DataCrossbar_1$SharedMemory.DataCorssBarForRead": {
+          "logic_area": 970.4448,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "DataCrossbar$SharedMemory.DataCorssBarForWrite": {
+          "logic_area": 955.51488,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "BankConflictArbiter$SharedMemory.BankConfArb": {
+          "logic_area": 711.66438,
+          "sequential_area": 93.8952,
+          "memory_bits": 0
+        },
+        "SharedMemory": {
+          "logic_area": 4311.32058,
+          "sequential_area": 1293.8292,
+          "memory_bits": 164992
+        }
+      }
+    },
+    "lds-32-1024": {
+      "flow": "coarse-slang",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 7899.5169,
+      "sequential_area": 2195.1648,
+      "memory_bits": 1082496,
+      "memories": {
+        "ram_32x1060": {
+          "instances": 1,
+          "bits": 33920,
+          "arrays": [
+            [
+              "1059",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "8d1be098c6ca88e0ae46744378462016ee46de16d1c1073a094f240457e9570a"
+        },
+        "array_1024x32": {
+          "instances": 32,
+          "bits": 32768,
+          "arrays": [
+            [
+              "31",
+              "Memory",
+              "1023"
+            ]
+          ],
+          "source_sha256": "ec2c440bff2bf5746fdd968bd4c750b3488bab14a0f25dbaa7036cd06b3c1e44"
+        }
+      },
+      "rtl_sha256": "d4b1975f1775f86fa542f9b94a8f951561bb99a7c86e7664ec5f8e32ff15429f",
+      "statistics_sha256": "66a5659b2cb282547d8e55d82ea97e96dc67a7bf9a179f9ae6f437e769937ee9",
+      "synthesis_script_sha256": "5c79ac1b0e418ab124e1ea404cd4e3af53a4497428dc0d6323d7c39a9b6f679b",
+      "manifest_sha256": "24541ba1819e76e1785a8b6b2c5145bb70a1befaaa2446318825f1685857a2fd",
+      "mapped_sha256": "e03d31c6c21809567e26015bbfc189271ad395069bfd33a51661ff1321ed9476",
+      "modules": {
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_31": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_30": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_29": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_28": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_27": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_26": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_25": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_24": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_23": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_22": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_21": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_20": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_19": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_18": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_17": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_16": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_15": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_14": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_13": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_12": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_11": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_10": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_9": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_8": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess": {
+          "logic_area": 23.9112,
+          "sequential_area": 16.6212,
+          "memory_bits": 32768
+        },
+        "Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q": {
+          "logic_area": 8.10648,
+          "sequential_area": 3.2076,
+          "memory_bits": 33920
+        },
+        "DataCrossbar$SharedMemory.DataCorssBarForRead": {
+          "logic_area": 1911.02976,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "DataCrossbar$SharedMemory.DataCorssBarForWrite": {
+          "logic_area": 1911.02976,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "BankConflictArbiter$SharedMemory.BankConfArb": {
+          "logic_area": 1202.4126,
+          "sequential_area": 93.8952,
+          "memory_bits": 0
+        },
+        "SharedMemory": {
+          "logic_area": 7899.5169,
+          "sequential_area": 2195.1648,
+          "memory_bits": 1082496
+        }
+      }
+    },
+    "lds-8-1024": {
+      "flow": "coarse-slang",
+      "sgpr_address_ports": null,
+      "excluded_subsystems": [],
+      "logic_area": 2530.78182,
+      "sequential_area": 879.4656,
+      "memory_bits": 1082496,
+      "memories": {
+        "ram_32x1060": {
+          "instances": 1,
+          "bits": 33920,
+          "arrays": [
+            [
+              "1059",
+              "Memory",
+              "31"
+            ]
+          ],
+          "source_sha256": "8d1be098c6ca88e0ae46744378462016ee46de16d1c1073a094f240457e9570a"
+        },
+        "array_4096x32": {
+          "instances": 8,
+          "bits": 131072,
+          "arrays": [
+            [
+              "31",
+              "Memory",
+              "4095"
+            ]
+          ],
+          "source_sha256": "2b88ad0515502fa30dbeec53e51559b616e5a656dd6309eeee80f23b151053e8"
+        }
+      },
+      "rtl_sha256": "12e72ab371f55410531432d135a6d4e2a778db2ae54525354a3d5d44c0ff4afd",
+      "statistics_sha256": "84689729bdb3b81f64dee94d6b03ffeaafaa217198457acf778c35abb6fee852",
+      "synthesis_script_sha256": "5c79ac1b0e418ab124e1ea404cd4e3af53a4497428dc0d6323d7c39a9b6f679b",
+      "manifest_sha256": "edd2ce91bb97817864305fb04b803dca064c08348e174c765d9d5e31964a7f35",
+      "mapped_sha256": "d22b194e07e1325cf8e7d29ef7b61c2a5eb9d9143314dcf69939687db6c36730",
+      "modules": {
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_7": {
+          "logic_area": 27.4104,
+          "sequential_area": 17.7876,
+          "memory_bits": 131072
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_6": {
+          "logic_area": 27.4104,
+          "sequential_area": 17.7876,
+          "memory_bits": 131072
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_5": {
+          "logic_area": 27.4104,
+          "sequential_area": 17.7876,
+          "memory_bits": 131072
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_4": {
+          "logic_area": 27.4104,
+          "sequential_area": 17.7876,
+          "memory_bits": 131072
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_3": {
+          "logic_area": 27.4104,
+          "sequential_area": 17.7876,
+          "memory_bits": 131072
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_2": {
+          "logic_area": 27.4104,
+          "sequential_area": 17.7876,
+          "memory_bits": 131072
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess_1": {
+          "logic_area": 27.4104,
+          "sequential_area": 17.7876,
+          "memory_bits": 131072
+        },
+        "SRAMTemplate$SharedMemory.DataAccessesRRsp_DataAccess": {
+          "logic_area": 27.4104,
+          "sequential_area": 17.7876,
+          "memory_bits": 131072
+        },
+        "Queue32_ShareMemCoreRsp$SharedMemory.coreRsp_Q": {
+          "logic_area": 7.91694,
+          "sequential_area": 3.2076,
+          "memory_bits": 33920
+        },
+        "DataCrossbar_1$SharedMemory.DataCorssBarForRead": {
+          "logic_area": 447.8976,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "DataCrossbar$SharedMemory.DataCorssBarForWrite": {
+          "logic_area": 477.75744,
+          "sequential_area": 0.0,
+          "memory_bits": 0
+        },
+        "BankConflictArbiter$SharedMemory.BankConfArb": {
+          "logic_area": 464.0085,
+          "sequential_area": 93.8952,
+          "memory_bits": 0
+        },
+        "SharedMemory": {
+          "logic_area": 2530.78182,
+          "sequential_area": 879.4656,
+          "memory_bits": 1082496
+        }
+      }
+    }
+  },
+  "builder_sha256": "4196de369842db0585445818a547eee71bfb0698e47e81b1a7046abd3c880e8c"
+}

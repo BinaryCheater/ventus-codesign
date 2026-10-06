@@ -1,0 +1,8 @@
+{
+  "name": "repeat_load-64",
+  "family": "repeat_load",
+  "n": 64,
+  "expected_words": [
+    0
+  ]
+}

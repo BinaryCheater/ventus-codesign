@@ -1,0 +1,17 @@
+{
+  "case": "vmv-i-probe",
+  "backend": "systemc",
+  "family": "vector_add",
+  "n": 16,
+  "returncode": -6,
+  "wall_seconds": 1.593158902018331,
+  "first_dispatch_time": 15,
+  "kernel_finish_time": null,
+  "output_correct": false,
+  "checked_words": 0,
+  "warnings": [],
+  "input_sha256": {
+    "input.metadata": "f72aae7ff510e20753a60d168b81ecc6240b79c140890d6f5e98006936c4471d",
+    "input.data": "2b2faf171faf2958b81ea5e5bea90ced687226da3bec2cd3571c08c65da6595a"
+  }
+}

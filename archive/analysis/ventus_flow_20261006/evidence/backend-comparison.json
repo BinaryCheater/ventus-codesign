@@ -1,0 +1,43 @@
+{
+  "testcase": "vecadd_32b8w8t",
+  "same_metadata_sha256": "7ea0ac988995608a9c36d5d4bec7afe10e211bbb39abe113426722e073789b2d",
+  "same_data_sha256": "945859a360311dc4fd1045621c8ae3c10e168077fabbb49e4ed2554f1ea5ae53",
+  "observations": [
+    {
+      "backend": "SystemC",
+      "ddr_timing_enabled": true,
+      "checked_output_words": 1024,
+      "first_warp_receive_ns": 15,
+      "kernel_finish_ns": 701095,
+      "clock_period_ns": 10,
+      "elapsed_cycles_between_recorded_events": 70108.0,
+      "wall_seconds": 5.01,
+      "log_sha256": "2ad710b36a6040faa0df90291db4ea636d39e035dc533381ef5aed3fe9b41929"
+    },
+    {
+      "backend": "SystemC",
+      "ddr_timing_enabled": false,
+      "checked_output_words": 1024,
+      "first_warp_receive_ns": 15,
+      "kernel_finish_ns": 53035,
+      "clock_period_ns": 10,
+      "elapsed_cycles_between_recorded_events": 5302.0,
+      "wall_seconds": 0.82,
+      "log_sha256": "b79a032819a8edd22fa196791dbae82c390f142e56cfc44486829514d9fecc53"
+    },
+    {
+      "backend": "RTL",
+      "external_memory": "RTL simplified wrapper, no DDR timing",
+      "first_wg_dispatch_time_unit": 185,
+      "kernel_finish_time_unit": 1177445,
+      "clock_period_simulation_time_unit": 10,
+      "elapsed_cycles_between_recorded_events": 117726.0,
+      "checked_output_words": 1024,
+      "wall_seconds": 385.25,
+      "wall_measurement_context": "SystemC dependency compilation ran concurrently."
+    }
+  ],
+  "comparison_limit": "First-warp receive and RTL host-WG dispatch are distinct events; pipelines, caches, resource limits and external-memory service are not aligned. These are observed cycle differences, not a calibrated accuracy error or stable speedup benchmark.",
+  "cyclesim_library_sha256": "2285395f6bddf755e4fd94bb5b0138b3cbe52e84fe8c06c687fd36ed53db92eb",
+  "cyclesim_test_driver_sha256": "9384bef6819f7bc38b08d4f53742a5636d843fe05be45c2e31009e0384660a5a"
+}
