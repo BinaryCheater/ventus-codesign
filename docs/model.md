@@ -85,3 +85,45 @@ snapshot. Mechanism fidelity and remaining approximations appear in its output.
 Detailed historical variable surveys are under
 `archive/analysis/ventus_variable_audit_20261003/`; their source-description counts
 are separate from the live model's explicit design fields.
+
+## Structural cost factorization (2026-10-07)
+
+Cost v2 exposes the 27 choices of the internal task guide. Each local factor has
+binary variables z[g,o], sum_o z[g,o]=1. Global one-hot y[p,v] represents each
+hardware field value; sum_{o: o[p]=v} z[g,o]=y[p,v] for every factor containing p.
+SM replication is included in local coefficients and linked globally, avoiding
+continuous products. Residency choices enforce blocks<=warps and Tensor choices
+enforce pairwise lane packing. Area and bit budgets are sum_{g,o} A[g,o]z[g,o]<=A0
+and sum_{g,o} B[g,o]z[g,o]<=B0. Shared overhead is counted in residency and the fixed
+SM remainder has its own factor. This is an exact linear representation of the
+v2 approximation. Program occupancy, instruction shapes and performance need their
+own couplings. See [cost model](cost-model.md).
+
+
+## Compiled instructions and Rust execution
+
+[The native program contract](instruction-programs.md) adds actual Ventus ELF
+inputs, control/address execution and compact instruction ABI v9. Instructions
+retain grouped register reads/writes, access width, SIMT active mask, warp identity
+and resources; the timing core receives no operator/model names. Compatibility
+with compact v7/v8 inputs is retained. Per-warp interleaving is computed anew for
+each hardware configuration rather than replaying a stored global schedule.
+
+The v7 calibrated FP32 paths remain separate from the explicit extended-ISA
+target. BF16/FP16/TF32 MMA share configured Tensor units, grouped scoreboard and
+RF/writeback service; conversion, packed arithmetic, shuffle and SFU have declared
+latencies. New defaults are structural assumptions, not another RTL measurement
+or a SystemC fit. Integer multiply/divide currently retain the basic scalar/vector
+timing classes; dedicated unit latency is an accuracy gap.
+
+Resident instructions and live state are recycled. Idle jumps and pipeline ring
+advancement preserve elastic capacity/backpressure. Per-line merge history is
+discarded only after L1 eviction has waited for the old fill. Fenced checkpoints
+retain caches, replacement state, cumulative counters and cycle offset, and reject
+program/hardware/target/runtime changes. No per-layer timing multiplication is used.
+
+## Unified experiment area policy
+
+The active experiment uses [baseline v1](baseline_cn.md) and [one total-area constraint](area-budget.md). Local coefficients become `(A + 0.0426177978515625*B)/1e6`; their sum must not exceed the baseline 1.1039550819992285 mm². No separate total-bit cap is added. Occupancy/capacity and shared-field consistency remain. The old dual-budget derivation above describes historical v2. Precision target constants are fixed; no extra precision-switch penalty is introduced.
+
+Current search choices are frozen in [search-space-v2](../examples/search-space-v2.json). Cost target v2.1 expands SM and register capacities; instruction timing mechanisms are unchanged. [Compiled probes](evidence/search-expansion-20261007/README.md) confirm that smaller register pools affect admission and cycles without recompiling kernels.

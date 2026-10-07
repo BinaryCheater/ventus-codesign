@@ -1,0 +1,75 @@
+{
+  "version": "ventus-project-baseline-v1",
+  "hardware_file": "examples/baseline-hardware-v1.json",
+  "area_policy_file": "examples/unified-area-policy-v1.json",
+  "description": "Pinned Ventus default structure with fixed modeled BF16/FP16/TF32 capability and experiment memory target",
+  "instruction_target": {
+    "packed_latency": 3,
+    "conversion_latency": 2,
+    "sfu_latency": 4,
+    "mma_pipeline_latency": 14,
+    "multiply_packing": 2,
+    "fmul_latency": 3,
+    "compare_latency": 2,
+    "shuffle_latency": 1
+  },
+  "precision_modes": [
+    "bf16",
+    "fp16",
+    "tf32"
+  ],
+  "precision_cost_assumption": "FP32 Tensor envelope plus 10% Tensor logic per non-FP32 mode; fixed across candidates, scales with Tensor organization",
+  "software_baseline": {
+    "qwen": {
+      "bundle": "tests/fixtures/compiled-transformer/bundle.json",
+      "mapping": "packed64",
+      "status": "compiled device variants, not unmodified official PyTorch"
+    },
+    "gpt2": {
+      "status": "full compiled launcher pending; freeze software before transfer comparison"
+    },
+    "pythia": {
+      "status": "full compiled launcher pending; prefill only"
+    }
+  },
+  "scenarios": {
+    "qwen": [
+      "prefill-128",
+      "prefill-512",
+      "decode-context128-steps16",
+      "decode-context512-steps16"
+    ],
+    "gpt2": [
+      "prefill-128",
+      "prefill-512",
+      "decode-context128-steps16",
+      "decode-context512-steps16"
+    ],
+    "pythia": [
+      "prefill-128",
+      "prefill-512"
+    ]
+  },
+  "initial_state": {
+    "batch": 1,
+    "prefill": "cold caches; weights/input in external memory; empty KV",
+    "decode": "cold caches; initial KV in external memory; preserve state over 16 steps"
+  },
+  "budget_total_area_mm2": 1.1039550819992285,
+  "frequency_hz": null,
+  "primary_metric": "simulated device cycles",
+  "baseline_performance_status": "128 scenarios measured in baseline-run-20261007; 512 extrapolated from measured prefixes at user request",
+  "sha256": {
+    "examples/baseline-hardware-v1.json": "226838b6744d15424374cf43425c046e85ff00329cfc024f89f70b34d1f979ee",
+    "examples/unified-area-policy-v1.json": "7587da00a0f589ce4f1066ff55f1e41c99994667165abb49d186a26a37538ba6",
+    "tests/fixtures/compiled-transformer/bundle.json": "c3cd385d91e7e82d5fb8eb464c93d4fc9c6848b37b72e90f9f9b839294858bbc",
+    "examples/models/qwen2.5-0.5b-instruct.config.json": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+    "examples/search-space-v1.json": "2efc00472dae362d32d5103991df1d07ce5cbc78a83a3d92ab43e39ad86ff9d9",
+    "tests/fixtures/compiled-transformer/generic.elf": "5ad53bb9cd0c33023086232205ec8ac79417a27022a6e9e9627868529b55a32c",
+    "tests/fixtures/compiled-transformer/mma.elf": "837a3dfb28a1f15917de5b6578d8daa0de518d7cab2d65d3e72d0cc0f4020d55",
+    "tests/fixtures/compiled-transformer/packed.elf": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+    "tests/fixtures/compiled-transformer/reuse.elf": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610",
+    "examples/baseline-512-estimates-v1.json": "b82edbd54d2d41c69c3b5df817d0b4e13f8268be940c228577bd9aa8ebba97da"
+  },
+  "search_space_file": "examples/search-space-v1.json"
+}

@@ -79,3 +79,11 @@ The current standalone implementation is documented by this project's English do
 
 Read-only reproduction commands are in [validation.md](validation.md). Use the
 manifest to check export integrity; never overwrite historical evidence.
+
+## Default physical baseline and active experiment
+
+[Physical collection](evidence/default-physical-baseline-20261007/README.md) contains
+202 standard-cell area checks, public SRAM macro abstracts and the default
+storage inventory. The [frozen project baseline](baseline_cn.md) adopts a
+versioned uniform-storage-density approximation through [the area policy](area-budget.md);
+this adds no physical measurement to the preserved collection.

@@ -13,10 +13,12 @@ from .transformer import Software, TransformerSpec, census, execute_transformer,
 
 
 def code_hashes():
+    from .rust import source_hash
+
     return {
         p.name: hashlib.sha256(p.read_bytes()).hexdigest()
         for p in sorted(Path(__file__).parent.glob("*.py"))
-    }
+    } | {"rust_core": source_hash()}
 
 
 def run(

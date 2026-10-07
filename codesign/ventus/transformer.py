@@ -577,7 +577,12 @@ def census(program):
 def execute_transformer(program, *, mode="summary", time_budget=60):
     if not isinstance(time_budget, (int, float)) or not 0 < time_budget < float("inf"):
         raise ValueError("time_budget must be finite and positive")
-    session = TimingSession(program.hardware, mode=mode)
+    if mode == "rust":
+        from .rust import RustSession
+
+        session = RustSession(program.hardware)
+    else:
+        session = TimingSession(program.hardware, mode=mode)
     begin = perf_counter()
     stages, instructions, request_bytes = [], 0, 0
     completed = True
@@ -606,15 +611,19 @@ def execute_transformer(program, *, mode="summary", time_budget=60):
         )
         if not completed:
             break
+    if mode == "rust":
+        session.close()
     return {
         "completed": completed,
         "cycles": session.cycles if completed else None,
         "partial_cycles": session.cycles,
         "host_seconds": perf_counter() - begin,
         "instructions": instructions,
-        "events": session.events,
-        "peak_batch_events": session.peak_batch_events,
+        "events": getattr(session, "events", None),
+        "peak_batch_events": getattr(session, "peak_batch_events", None),
         "requested_bytes": request_bytes,
+        "host_ticks": getattr(session, "host_ticks", None),
+        "idle_cycles_skipped": getattr(session, "idle_skipped", None),
         "counters": session.counters,
         "stages": stages,
         "mode": mode,

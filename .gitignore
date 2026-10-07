@@ -10,3 +10,6 @@ __pycache__/
 .ruff_cache/
 *.egg-info/
 .DS_Store
+
+# Native build outputs belong to ignored results/.rust.
+/codesign/ventus/rust_core/target/

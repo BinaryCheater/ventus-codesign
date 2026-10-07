@@ -67,3 +67,51 @@ Fresh hardware checks should target a changed parameter's realization and likely
 bottleneck before claiming optimization gain. Retain failures and intervals.
 
 The packaging verification outcome is recorded in `docs/extraction-checks.json`.
+
+## Structural cost v2 checks (2026-10-07)
+
+`tests/test_ventus_structural_costs.py` checks all 27 fields, baseline partition,
+replicated-port storage, immutable targets, precision capabilities, random legal
+factor reconstruction, sensitivity and actual HiGHS feasible/infeasible budgets.
+It preserves the strict v1 rejection tests. The new evidence directory
+`docs/evidence/cost-structural-v2-final-20261007/` records source/table hashes, fit
+residuals and leave-one-out errors. These errors concern FP32 component shapes,
+not an error guarantee for the wider architecture or precision implementation.
+
+
+## Native compiled-program regressions
+
+`tests/test_ventus_rust.py` compares the native executor with the Python detailed
+path across mixed streams, shared pipelines, Tensor shapes, RF ports, cache and
+LDS constraints, including barriers. `tests/test_ventus_instruction_program.py`
+compares two real compiled vector-add implementations with expanded/native/Python
+execution and repeated-dispatch cache state, and validates hashed-journal recovery.
+`tests/test_ventus_compiled_precision.py` checks actual official BF16/FP16/TF32
+MMA encodings, grouped A/B/C reads and eight destination writes, masked tails and
+two-/four-byte traffic. It checks full Qwen dimensions, bias/weight tying, GQA
+aliases, KV append bytes and cross-dispatch dependencies. Small complete compiled
+programs check all declared address ranges and fast/per-cycle native equivalence
+under several hardware configurations. Full-task receipts independently check
+dynamic MMA counts against launch shapes.
+
+[Native program execution and remaining accuracy gaps](instruction-programs.md)
+are explicit. These comparisons validate executor semantics and program coverage;
+they do not extend the existing local FP32 RTL error bound to full BF16 Qwen.
+No fresh RTL or SystemC simulations were run for this delivery.
+
+## Unified baseline validation
+
+`tests/test_ventus_unified_area.py` checks frozen config hashes and instruction
+targets, default structure, area arithmetic, explicit external-memory projection,
+unsupported configurations, and an actual MIP storage/compute exchange. The latter
+selects more physical storage than the baseline under the same total-area budget,
+ensuring no hidden legacy bit cap remains. It tests the area interface, not full
+network optimality. Query `./run costs --model unified-v2 --hardware
+examples/baseline-hardware-v1.json` through the configured execution wrapper.
+Historical v1/v2 receipts remain unchanged.
+
+## Frozen baseline execution and range audit
+
+[Two completed Qwen runs and two 512 extrapolations](evidence/baseline-run-20261007/README.md) use the frozen hardware and program settings. [Range checks](evidence/baseline-range-audit-20261007/README.md) exercise every legal option on a compiled GEMM, record conditional changes, and prove 8-SM cost infeasibility within the current menu/budget. Probe inactivity is not a global performance proof. `./run --local baseline --out results/prepare-check-new --prepare-only` validates hashes and generates both default scenarios without executing them.
+
+Expanded-domain validation (2026-10-07): [cost minima and compiled register-capacity probes](evidence/search-expansion-20261007/README.md), with version/hash compatibility, fixed 3-SM MIP decode and shared-ELF timing regressions in `tests/test_ventus_search_expansion.py`. Full suite: 220 passed; Ruff check and format check passed. This validates model behavior, not new RTL configurations.

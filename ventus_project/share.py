@@ -22,10 +22,11 @@ ITEMS = (
     "docs",
     "examples",
     "prompts",
+    "patches",
     "archive",
     "vendor",
 )
-EXCLUDED = {".git", ".venv", "__pycache__", ".pytest_cache", ".ruff_cache", ".DS_Store"}
+EXCLUDED = {".git", ".venv", "__pycache__", ".pytest_cache", ".ruff_cache", ".DS_Store", "target"}
 GENERIC_PRIVATE = re.compile(rb"/Users/[A-Za-z0-9_.-]+|/home/[A-Za-z0-9_.-]+")
 
 

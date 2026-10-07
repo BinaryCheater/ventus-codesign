@@ -95,3 +95,22 @@ concern host throughput, not GPU timing-model accuracy. Power settings were left
 unchanged. Interpreter, core placement and solver platform differences can also
 affect runtime. Use `./run --local ...` for an explicit local override, while
 keeping the private profile's default remote execution.
+
+
+## Compiled instruction programs
+
+Install Rust (`rustup` and a stable toolchain) on the selected execution machine.
+The dependency-free native library builds in release mode into ignored
+`results/.rust/`, keyed by source hash; ordinary timing/cost commands still need
+only the existing Python environment. No RTL or SystemC build is required.
+
+[Compiled program commands](instruction-programs.md) cover the checked-in
+official-compiler bundle, fresh kernel compilation, full Qwen scenarios, hardware
+JSON overrides and complete fenced-state recovery. `./run` keeps its private
+profile default; the local measurements use `./run --local` explicitly.
+
+## Standalone experiment baseline
+
+Use the [complete baseline](baseline_cn.md), not historical defaults. `./run costs --model unified-v2 --hardware examples/baseline-hardware-v1.json` checks its unified area. Pass that same hardware file to instruction runs; the private execution default remains unchanged. The [overall manifest](../examples/project-baseline-v2.json) freezes precision timings and the Qwen software mapping. It is a reference manifest, not an instruction-program input.
+
+Run the two measured 128-token baseline scenarios with `./run baseline --out results/baseline-001 --jobs 1 --budget 7200`; add `--local` before `baseline` for an explicit local run. `--prepare-only` checks inputs and prepares selected scenarios without simulation.

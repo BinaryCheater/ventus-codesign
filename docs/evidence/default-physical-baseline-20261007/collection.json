@@ -1,0 +1,1343 @@
+{
+  "version": "default-physical-collection-v1",
+  "ventus_commit": "681172541a8a34ffb43c483a19c075acbc11a4eb",
+  "orfs_commit": "9b26ff8ff651fc0b696f7ef20a356865ca6068bb",
+  "default": {
+    "sms": 2,
+    "warps_per_sm": 8,
+    "blocks_per_sm": 8,
+    "threads": 32,
+    "rf_banks": 4,
+    "rf_read_ports": 1,
+    "rf_write_ports": 1,
+    "writeback_ports": 1,
+    "collectors": 8,
+    "vgpr_slots": 1024,
+    "sgpr_slots": 2048,
+    "tensor_m": 4,
+    "tensor_n": 8,
+    "tensor_k": 4,
+    "tensor_units": 1,
+    "lds_bytes": 131072,
+    "lds_banks": 32,
+    "lds_ports": 1,
+    "line_bytes": 128,
+    "l1_sets": 256,
+    "l1_ways": 2,
+    "l1_mshrs": 4,
+    "l1_subentries": 2,
+    "l1_write_entries": 4,
+    "l2_sets": 64,
+    "l2_ways": 16,
+    "l2_mshrs": 32,
+    "lsu_entries": 8,
+    "lsu_per_warp": 4,
+    "memory_channels": 1,
+    "memory_bytes_per_cycle": 128,
+    "memory_latency": 2
+  },
+  "logic_area_um2": 696678.41448,
+  "memory_bits": 8008970,
+  "checked_standard_cells": [
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "A2O1A1Ixp33_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "A2O1A1O1Ixp25_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO211x2_ASAP7_75t_R",
+      "lib_area": 0.23328,
+      "lef_area_um2": 0.23328000000000002
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO21x1_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO21x2_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO221x1_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO221x2_ASAP7_75t_R",
+      "lib_area": 0.16038,
+      "lef_area_um2": 0.16038
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO222x2_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO22x1_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO22x2_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO31x2_ASAP7_75t_R",
+      "lib_area": 0.23328,
+      "lef_area_um2": 0.23328000000000002
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO322x2_ASAP7_75t_R",
+      "lib_area": 0.2187,
+      "lef_area_um2": 0.21870000000000003
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO32x1_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO32x2_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO331x1_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO331x2_ASAP7_75t_R",
+      "lib_area": 0.16038,
+      "lef_area_um2": 0.16038
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO332x1_ASAP7_75t_R",
+      "lib_area": 0.16038,
+      "lef_area_um2": 0.16038
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO332x2_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO333x1_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO333x2_ASAP7_75t_R",
+      "lib_area": 0.18954,
+      "lef_area_um2": 0.18954000000000001
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AO33x2_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI211x1_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI211xp5_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI21x1_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI21xp33_ASAP7_75t_R",
+      "lib_area": 0.0729,
+      "lef_area_um2": 0.0729
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI21xp5_ASAP7_75t_R",
+      "lib_area": 0.0729,
+      "lef_area_um2": 0.0729
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI221x1_ASAP7_75t_R",
+      "lib_area": 0.20412,
+      "lef_area_um2": 0.20412000000000002
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI221xp5_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI222xp33_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI22x1_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI22xp33_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI22xp5_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI311xp33_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI31xp33_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI31xp67_ASAP7_75t_R",
+      "lib_area": 0.18954,
+      "lef_area_um2": 0.18954000000000001
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI321xp33_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI322xp5_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI32xp33_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI331xp33_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI332xp33_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI333xp33_ASAP7_75t_R",
+      "lib_area": 0.16038,
+      "lef_area_um2": 0.16038
+    },
+    {
+      "library": "asap7sc7p5t_AO_RVT_TT_nldm_211120.lib",
+      "cell": "AOI33xp33_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx10_ASAP7_75t_R",
+      "lib_area": 0.20412,
+      "lef_area_um2": 0.20412000000000002
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx12_ASAP7_75t_R",
+      "lib_area": 0.23328,
+      "lef_area_um2": 0.23328000000000002
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx12f_ASAP7_75t_R",
+      "lib_area": 0.26244,
+      "lef_area_um2": 0.26244
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx16f_ASAP7_75t_R",
+      "lib_area": 0.32076,
+      "lef_area_um2": 0.32076
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx24_ASAP7_75t_R",
+      "lib_area": 0.4374,
+      "lef_area_um2": 0.43740000000000007
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx2_ASAP7_75t_R",
+      "lib_area": 0.0729,
+      "lef_area_um2": 0.0729
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx3_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx4_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx4f_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx5_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx6f_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "BUFx8_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "CKINVDCx10_ASAP7_75t_R",
+      "lib_area": 0.34992,
+      "lef_area_um2": 0.34992
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "CKINVDCx11_ASAP7_75t_R",
+      "lib_area": 0.37908,
+      "lef_area_um2": 0.37908000000000003
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "CKINVDCx12_ASAP7_75t_R",
+      "lib_area": 0.37908,
+      "lef_area_um2": 0.37908000000000003
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "CKINVDCx14_ASAP7_75t_R",
+      "lib_area": 0.40824,
+      "lef_area_um2": 0.40824000000000005
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "CKINVDCx16_ASAP7_75t_R",
+      "lib_area": 0.4374,
+      "lef_area_um2": 0.43740000000000007
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "CKINVDCx20_ASAP7_75t_R",
+      "lib_area": 0.55404,
+      "lef_area_um2": 0.5540400000000001
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "CKINVDCx5p33_ASAP7_75t_R",
+      "lib_area": 0.32076,
+      "lef_area_um2": 0.32076
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "CKINVDCx6p67_ASAP7_75t_R",
+      "lib_area": 0.34992,
+      "lef_area_um2": 0.34992
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "CKINVDCx8_ASAP7_75t_R",
+      "lib_area": 0.32076,
+      "lef_area_um2": 0.32076
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "CKINVDCx9p33_ASAP7_75t_R",
+      "lib_area": 0.40824,
+      "lef_area_um2": 0.40824000000000005
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "HB1xp67_ASAP7_75t_R",
+      "lib_area": 0.05832,
+      "lef_area_um2": 0.058320000000000004
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "HB2xp67_ASAP7_75t_R",
+      "lib_area": 0.0729,
+      "lef_area_um2": 0.0729
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "HB3xp67_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "HB4xp67_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "INVx11_ASAP7_75t_R",
+      "lib_area": 0.18954,
+      "lef_area_um2": 0.18954000000000001
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "INVx13_ASAP7_75t_R",
+      "lib_area": 0.2187,
+      "lef_area_um2": 0.21870000000000003
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "INVx1_ASAP7_75t_R",
+      "lib_area": 0.04374,
+      "lef_area_um2": 0.04374
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "INVx2_ASAP7_75t_R",
+      "lib_area": 0.05832,
+      "lef_area_um2": 0.058320000000000004
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "INVx3_ASAP7_75t_R",
+      "lib_area": 0.0729,
+      "lef_area_um2": 0.0729
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "INVx4_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "INVx5_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "INVx6_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "INVx8_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "INVxp33_ASAP7_75t_R",
+      "lib_area": 0.04374,
+      "lef_area_um2": 0.04374
+    },
+    {
+      "library": "asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib",
+      "cell": "INVxp67_ASAP7_75t_R",
+      "lib_area": 0.04374,
+      "lef_area_um2": 0.04374
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "O2A1O1Ixp33_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "O2A1O1Ixp5_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA211x2_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA21x2_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA221x2_ASAP7_75t_R",
+      "lib_area": 0.23328,
+      "lef_area_um2": 0.23328000000000002
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA222x2_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA22x2_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA31x2_ASAP7_75t_R",
+      "lib_area": 0.2187,
+      "lef_area_um2": 0.21870000000000003
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA331x1_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA331x2_ASAP7_75t_R",
+      "lib_area": 0.16038,
+      "lef_area_um2": 0.16038
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA332x1_ASAP7_75t_R",
+      "lib_area": 0.16038,
+      "lef_area_um2": 0.16038
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA332x2_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA333x1_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA333x2_ASAP7_75t_R",
+      "lib_area": 0.18954,
+      "lef_area_um2": 0.18954000000000001
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OA33x2_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI211xp5_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI21x1_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI21xp33_ASAP7_75t_R",
+      "lib_area": 0.0729,
+      "lef_area_um2": 0.0729
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI21xp5_ASAP7_75t_R",
+      "lib_area": 0.0729,
+      "lef_area_um2": 0.0729
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI221xp5_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI222xp33_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI22x1_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI22xp33_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI22xp5_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI311xp33_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI31xp33_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI31xp67_ASAP7_75t_R",
+      "lib_area": 0.18954,
+      "lef_area_um2": 0.18954000000000001
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI321xp33_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI322xp33_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI32xp33_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI331xp33_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI332xp33_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI333xp33_ASAP7_75t_R",
+      "lib_area": 0.16038,
+      "lef_area_um2": 0.16038
+    },
+    {
+      "library": "asap7sc7p5t_OA_RVT_TT_nldm_211120.lib",
+      "cell": "OAI33xp33_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DFFASRHQNx1_ASAP7_75t_R",
+      "lib_area": 0.37908,
+      "lef_area_um2": 0.37908000000000003
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DFFHQNx1_ASAP7_75t_R",
+      "lib_area": 0.2916,
+      "lef_area_um2": 0.2916
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DFFHQNx2_ASAP7_75t_R",
+      "lib_area": 0.30618,
+      "lef_area_um2": 0.30618
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DFFHQNx3_ASAP7_75t_R",
+      "lib_area": 0.32076,
+      "lef_area_um2": 0.32076
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DFFHQx4_ASAP7_75t_R",
+      "lib_area": 0.3645,
+      "lef_area_um2": 0.36450000000000005
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DFFLQNx1_ASAP7_75t_R",
+      "lib_area": 0.2916,
+      "lef_area_um2": 0.2916
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DFFLQNx2_ASAP7_75t_R",
+      "lib_area": 0.30618,
+      "lef_area_um2": 0.30618
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DFFLQNx3_ASAP7_75t_R",
+      "lib_area": 0.32076,
+      "lef_area_um2": 0.32076
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DFFLQx4_ASAP7_75t_R",
+      "lib_area": 0.3645,
+      "lef_area_um2": 0.36450000000000005
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DHLx1_ASAP7_75t_R",
+      "lib_area": 0.2187,
+      "lef_area_um2": 0.21870000000000003
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DHLx2_ASAP7_75t_R",
+      "lib_area": 0.23328,
+      "lef_area_um2": 0.23328000000000002
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DHLx3_ASAP7_75t_R",
+      "lib_area": 0.24786,
+      "lef_area_um2": 0.24786000000000002
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DLLx1_ASAP7_75t_R",
+      "lib_area": 0.2187,
+      "lef_area_um2": 0.21870000000000003
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DLLx2_ASAP7_75t_R",
+      "lib_area": 0.23328,
+      "lef_area_um2": 0.23328000000000002
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "DLLx3_ASAP7_75t_R",
+      "lib_area": 0.24786,
+      "lef_area_um2": 0.24786000000000002
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "ICGx1_ASAP7_75t_R",
+      "lib_area": 0.26244,
+      "lef_area_um2": 0.26244
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "ICGx2_ASAP7_75t_R",
+      "lib_area": 0.27702,
+      "lef_area_um2": 0.27702000000000004
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "ICGx2p67DC_ASAP7_75t_R",
+      "lib_area": 0.69984,
+      "lef_area_um2": 0.69984
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "ICGx3_ASAP7_75t_R",
+      "lib_area": 0.2916,
+      "lef_area_um2": 0.2916
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "ICGx4DC_ASAP7_75t_R",
+      "lib_area": 0.69984,
+      "lef_area_um2": 0.69984
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "ICGx4_ASAP7_75t_R",
+      "lib_area": 0.30618,
+      "lef_area_um2": 0.30618
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "ICGx5_ASAP7_75t_R",
+      "lib_area": 0.32076,
+      "lef_area_um2": 0.32076
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "ICGx5p33DC_ASAP7_75t_R",
+      "lib_area": 0.69984,
+      "lef_area_um2": 0.69984
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "ICGx6p67DC_ASAP7_75t_R",
+      "lib_area": 0.69984,
+      "lef_area_um2": 0.69984
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "ICGx8DC_ASAP7_75t_R",
+      "lib_area": 0.69984,
+      "lef_area_um2": 0.69984
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "SDFHx1_ASAP7_75t_R",
+      "lib_area": 0.3645,
+      "lef_area_um2": 0.36450000000000005
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "SDFHx2_ASAP7_75t_R",
+      "lib_area": 0.37908,
+      "lef_area_um2": 0.37908000000000003
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "SDFHx3_ASAP7_75t_R",
+      "lib_area": 0.39366,
+      "lef_area_um2": 0.39366
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "SDFHx4_ASAP7_75t_R",
+      "lib_area": 0.45198,
+      "lef_area_um2": 0.45198
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "SDFLx1_ASAP7_75t_R",
+      "lib_area": 0.3645,
+      "lef_area_um2": 0.36450000000000005
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "SDFLx2_ASAP7_75t_R",
+      "lib_area": 0.37908,
+      "lef_area_um2": 0.37908000000000003
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "SDFLx3_ASAP7_75t_R",
+      "lib_area": 0.39366,
+      "lef_area_um2": 0.39366
+    },
+    {
+      "library": "asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib",
+      "cell": "SDFLx4_ASAP7_75t_R",
+      "lib_area": 0.45198,
+      "lef_area_um2": 0.45198
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "AND2x2_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "AND2x4_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "AND2x6_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "AND3x1_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "AND3x2_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "AND3x4_ASAP7_75t_R",
+      "lib_area": 0.20412,
+      "lef_area_um2": 0.20412000000000002
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "AND4x1_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "AND4x2_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "AND5x1_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "AND5x2_ASAP7_75t_R",
+      "lib_area": 0.2916,
+      "lef_area_um2": 0.2916
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "FAx1_ASAP7_75t_R",
+      "lib_area": 0.20412,
+      "lef_area_um2": 0.20412000000000002
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "HAxp5_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "MAJIxp5_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "MAJx2_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "MAJx3_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND2x1_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND2x1p5_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND2x2_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND2xp33_ASAP7_75t_R",
+      "lib_area": 0.05832,
+      "lef_area_um2": 0.058320000000000004
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND2xp5_ASAP7_75t_R",
+      "lib_area": 0.05832,
+      "lef_area_um2": 0.058320000000000004
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND2xp67_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND3x1_ASAP7_75t_R",
+      "lib_area": 0.16038,
+      "lef_area_um2": 0.16038
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND3x2_ASAP7_75t_R",
+      "lib_area": 0.2916,
+      "lef_area_um2": 0.2916
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND3xp33_ASAP7_75t_R",
+      "lib_area": 0.0729,
+      "lef_area_um2": 0.0729
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND4xp25_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND4xp75_ASAP7_75t_R",
+      "lib_area": 0.20412,
+      "lef_area_um2": 0.20412000000000002
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NAND5xp2_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NOR2x1_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NOR2x1p5_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NOR2x2_ASAP7_75t_R",
+      "lib_area": 0.1458,
+      "lef_area_um2": 0.1458
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NOR2xp33_ASAP7_75t_R",
+      "lib_area": 0.05832,
+      "lef_area_um2": 0.058320000000000004
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NOR2xp67_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NOR3x1_ASAP7_75t_R",
+      "lib_area": 0.16038,
+      "lef_area_um2": 0.16038
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NOR3x2_ASAP7_75t_R",
+      "lib_area": 0.2916,
+      "lef_area_um2": 0.2916
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NOR3xp33_ASAP7_75t_R",
+      "lib_area": 0.0729,
+      "lef_area_um2": 0.0729
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NOR4xp25_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NOR4xp75_ASAP7_75t_R",
+      "lib_area": 0.20412,
+      "lef_area_um2": 0.20412000000000002
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "NOR5xp2_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "OR2x2_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "OR2x4_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "OR2x6_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "OR3x1_ASAP7_75t_R",
+      "lib_area": 0.08748,
+      "lef_area_um2": 0.08748
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "OR3x2_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "OR3x4_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "OR4x1_ASAP7_75t_R",
+      "lib_area": 0.10206,
+      "lef_area_um2": 0.10206000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "OR4x2_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "OR5x1_ASAP7_75t_R",
+      "lib_area": 0.11664,
+      "lef_area_um2": 0.11664000000000001
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "OR5x2_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "TIEHIx1_ASAP7_75t_R",
+      "lib_area": 0.04374,
+      "lef_area_um2": 0.04374
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "TIELOx1_ASAP7_75t_R",
+      "lib_area": 0.04374,
+      "lef_area_um2": 0.04374
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "XNOR2x1_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "XNOR2x2_ASAP7_75t_R",
+      "lib_area": 0.16038,
+      "lef_area_um2": 0.16038
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "XNOR2xp5_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "XOR2x1_ASAP7_75t_R",
+      "lib_area": 0.17496,
+      "lef_area_um2": 0.17496
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "XOR2x2_ASAP7_75t_R",
+      "lib_area": 0.16038,
+      "lef_area_um2": 0.16038
+    },
+    {
+      "library": "asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib",
+      "cell": "XOR2xp5_ASAP7_75t_R",
+      "lib_area": 0.13122,
+      "lef_area_um2": 0.13122
+    }
+  ],
+  "public_macro_points": [
+    {
+      "name": "fakeram7_128x64",
+      "width_um": 16.72,
+      "height_um": 21.6,
+      "area_um2": 361.152,
+      "properties": {
+        "width": "64",
+        "depth": "128",
+        "banks": "2"
+      },
+      "kind": "FakeRAM abstract, not silicon-characterized SRAM"
+    },
+    {
+      "name": "fakeram7_256x256",
+      "width_um": 33.25,
+      "height_um": 84.0,
+      "area_um2": 2793.0,
+      "properties": {
+        "width": "256",
+        "depth": "256",
+        "banks": "1"
+      },
+      "kind": "FakeRAM abstract, not silicon-characterized SRAM"
+    },
+    {
+      "name": "fakeram7_256x32",
+      "width_um": 8.36,
+      "height_um": 42.0,
+      "area_um2": 351.12,
+      "properties": {
+        "width": "32",
+        "depth": "256",
+        "banks": "2"
+      },
+      "kind": "FakeRAM abstract, not silicon-characterized SRAM"
+    },
+    {
+      "name": "fakeram7_64x256",
+      "width_um": 33.25,
+      "height_um": 46.8,
+      "area_um2": 1556.1,
+      "properties": {
+        "width": "256",
+        "depth": "64",
+        "banks": "1"
+      },
+      "kind": "FakeRAM abstract, not silicon-characterized SRAM"
+    }
+  ],
+  "illustrative_capacity_only_estimate": {
+    "macro": "fakeram7_256x256",
+    "area_um2_per_bit": 0.0426177978515625,
+    "storage_area_mm2": 0.3413246644592285,
+    "default_fp32_logic_plus_storage_mm2": 1.0380030789392285,
+    "derived_multi_precision_logic_plus_storage_mm2": 1.1039550819992285,
+    "status": "illustration only, not bank/port-mapped area or an approved search budget",
+    "missing": [
+      "per-leaf macro mapping/padding",
+      "port compatibility and replication",
+      "small memories implemented with flops and muxes",
+      "floorplan whitespace, routing, CTS, PHY and IO"
+    ]
+  },
+  "frequency": {
+    "full_chip_fmax_hz": null,
+    "abc_target_ps": 1000,
+    "scalar_alu_only_arrival_ps": 972.3774,
+    "note": "existing ideal virtual-clock ALU STA; excludes full-chip and SRAM paths"
+  },
+  "hashes": {
+    "codesign/ventus_costs/table_v1.json": "5990e97468f1a646e9093db21d6756bcce650c191d701d076a4924f64b9782d3",
+    "vendor/ventus-gpgpu/ventus/src/top/parameters.scala": "71dbd95411c7c28c63345cdb5de61394353aec479e05db513744af2d9edbbee0",
+    "archive/analysis/ventus_flow_20261006/cost_model/raw/libraries/asap7sc7p5t_AO_RVT_TT_nldm_211120.lib": "b1ece108c0a2acd8d01c05cee6daee2834425037b1d9aad625d6f1dd640f1940",
+    "archive/analysis/ventus_flow_20261006/cost_model/raw/libraries/asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib": "a4ceb32e418e1aac8667e28fbd8e9e46baf520180be4db075598a4d7c681a56e",
+    "archive/analysis/ventus_flow_20261006/cost_model/raw/libraries/asap7sc7p5t_OA_RVT_TT_nldm_211120.lib": "6529c6c72465cd133dfbfb03952327ab2774bb6aa4be866d78fd7bc6c58c9f6f",
+    "archive/analysis/ventus_flow_20261006/cost_model/raw/libraries/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib": "57a0b403485b99ebd676942af4673ac086b86c7c75fbdc3e5c0038501dd22ba3",
+    "archive/analysis/ventus_flow_20261006/cost_model/raw/libraries/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib": "fa92e6ab1481810602811b1eea54bc016a341f11fb5188d7512c026599adf038",
+    "docs/evidence/default-physical-baseline-20261007/source/LICENSE_BUILD_RUN_SCRIPTS": "fae0db7a4c00c3125f037e5818e8cd0c8aa5c67fff2e8c558312068e9f2d1592",
+    "docs/evidence/default-physical-baseline-20261007/source/asap7sc7p5t_28_R_1x_220121a.lef": "4eb73f825720d95eba4da455c7b2e7a28e444e88e9d8595d13492cf5eecfc0d1",
+    "docs/evidence/default-physical-baseline-20261007/source/fakeram.cfg": "11aeb381d13a63f5996568094af792502fbe98881947b4865bb4834817150825",
+    "docs/evidence/default-physical-baseline-20261007/source/fakeram7_128x64.lef": "c0eb0741b9e8587012fda3218d41489082556ae1766d6077da05bf05448d6abe",
+    "docs/evidence/default-physical-baseline-20261007/source/fakeram7_256x256.lef": "211ca160caf1ee713df0398e8612f7bf3c4e3fbfda0f270b7a8b5537150e5415",
+    "docs/evidence/default-physical-baseline-20261007/source/fakeram7_256x256.lib": "2f4fe804148f3f0ee75b8112a7050f89d456ab22abeff6446abea894f760da06",
+    "docs/evidence/default-physical-baseline-20261007/source/fakeram7_256x256.v": "a8700a858c4f75052318df55d14478492e0b69ccbaf34d6f26df424a92b418cd",
+    "docs/evidence/default-physical-baseline-20261007/source/fakeram7_256x32.lef": "3f4443f6fe38d0a391f48f13c77d53d0b593123bd7c80e958a3b5ba5f111cd14",
+    "docs/evidence/default-physical-baseline-20261007/source/fakeram7_64x256.lef": "4bf9c3c42db578f3c2477d962b0684378d929f3795ef026adf10ec3f9496e11a"
+  }
+}

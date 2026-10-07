@@ -1,0 +1,626 @@
+{
+  "version": "ventus-structural-cost-v2",
+  "baseline": {
+    "version": "ventus-structural-cost-v2",
+    "status": "estimated",
+    "hardware": {
+      "sms": 2,
+      "warps_per_sm": 8,
+      "blocks_per_sm": 8,
+      "threads": 32,
+      "rf_banks": 4,
+      "rf_read_ports": 1,
+      "rf_write_ports": 1,
+      "writeback_ports": 1,
+      "collectors": 8,
+      "vgpr_slots": 1024,
+      "sgpr_slots": 2048,
+      "tensor_m": 4,
+      "tensor_n": 8,
+      "tensor_k": 4,
+      "tensor_units": 1,
+      "lds_bytes": 131072,
+      "lds_banks": 32,
+      "lds_ports": 1,
+      "line_bytes": 128,
+      "l1_sets": 256,
+      "l1_ways": 2,
+      "l1_mshrs": 4,
+      "l1_subentries": 2,
+      "l1_write_entries": 4,
+      "l2_sets": 64,
+      "l2_ways": 16,
+      "l2_mshrs": 32,
+      "lsu_entries": 8,
+      "lsu_per_warp": 4,
+      "memory_channels": 1,
+      "memory_bytes_per_cycle": 128,
+      "memory_latency": 2
+    },
+    "target": {
+      "version": "ventus-structural-cost-v2",
+      "technology": {
+        "area_unit": "liberty_area_unit",
+        "libraries_sha256": {
+          "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_AO_RVT_TT_nldm_211120.lib": "b1ece108c0a2acd8d01c05cee6daee2834425037b1d9aad625d6f1dd640f1940",
+          "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib": "a4ceb32e418e1aac8667e28fbd8e9e46baf520180be4db075598a4d7c681a56e",
+          "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_OA_RVT_TT_nldm_211120.lib": "6529c6c72465cd133dfbfb03952327ab2774bb6aa4be866d78fd7bc6c58c9f6f",
+          "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib": "57a0b403485b99ebd676942af4673ac086b86c7c75fbdc3e5c0038501dd22ba3",
+          "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib": "fa92e6ab1481810602811b1eea54bc016a341f11fb5188d7512c026599adf038"
+        },
+        "mapping_lib_sha256": "5dc93b393b29986630963a6ff6e54a77eb937beb510127fc9f8d1238f89d38dd"
+      },
+      "calibration_table_sha256": "5990e97468f1a646e9093db21d6756bcce650c191d701d076a4924f64b9782d3",
+      "precisions": [
+        "bf16",
+        "fp16",
+        "tf32"
+      ],
+      "component_scales": {},
+      "assumptions": {
+        "memory_ports": "R*W coherent single-read/single-write replicas; broadcast writes, conflict/replay for multiwrite; arbitration charged in logic; concurrency not validated",
+        "rf_capacity_logic_fraction": 0.15,
+        "lds_capacity_logic_fraction": 0.1,
+        "tensor_extra_unit_dispatch_fraction": 0.08,
+        "precision_conversion_fraction_per_mode": 0.1,
+        "precision_implementation": "shared FP32 datapath envelope plus conversion/control allowance for each non-FP32 mode; no precision-width area discount or throughput claim",
+        "l1_logic_fractions": {
+          "fixed": 0.2,
+          "array": 0.4,
+          "miss": 0.25,
+          "write": 0.15
+        },
+        "l2_logic_fractions": {
+          "fixed": 0.1,
+          "array": 0.2,
+          "miss": 0.7
+        },
+        "lsu_logic_fractions": {
+          "fixed": 0.4,
+          "entries": 0.3,
+          "outstanding": 0.3
+        },
+        "residency_logic_fractions": {
+          "warps": 0.8,
+          "blocks": 0.2
+        },
+        "shared_logic_fractions": {
+          "fixed": 0.3,
+          "sms": 0.4,
+          "residency": 0.3
+        }
+      },
+      "fixed": {
+        "threads": 32,
+        "line_bytes": 128,
+        "memory_channels": 1,
+        "memory_bytes_per_cycle": 128,
+        "memory_latency": 2
+      },
+      "frequency_validated": false
+    },
+    "logic_area": 762630.41754,
+    "memory_bits": 8008970,
+    "area_unit": "liberty_area_unit",
+    "storage_area": null,
+    "timing_feasible": null,
+    "energy": null,
+    "energy_status": "unmodeled",
+    "unsupported_reasons": [],
+    "rtl_unbinding_required": {},
+    "provenance": {
+      "calibration_table_sha256": "5990e97468f1a646e9093db21d6756bcce650c191d701d076a4924f64b9782d3",
+      "model_sha256": "29f2d899a71ef3dfda5989b9c54c8a57d4976cde063c3409eedb69c6cf253157",
+      "hardware_contract_sha256": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+      "target_sha256": "6d3243b2960da7d9d31249bc94b2a9084dcc65b114b5ad85bfb8965be8c86261"
+    },
+    "implementation_status": "Ventus-derived structural assumption; changed ports/queues/precision require RTL work",
+    "missing": [
+      "SRAM macro area and physical peripheral implementation",
+      "placement/routing, clock/pads",
+      "timing and energy",
+      "low-precision RTL calibration",
+      "cross-component integration and expanded queue/residency calibration"
+    ],
+    "sgpr_addressability": {
+      "reserved_slots": 2048,
+      "derived_required_address_bits": 9,
+      "scope": "v2 assumes repaired full bank addressing; sampled v1 ports cover only 1024 total slots"
+    },
+    "memory_replication": {
+      "rf": 1,
+      "lds": 1
+    },
+    "components": {
+      "rf": {
+        "logic_area": 54828.41076,
+        "memory_bits": 1114112,
+        "instances": 2
+      },
+      "tensor": {
+        "logic_area": 142896.00663,
+        "memory_bits": 0,
+        "instances": 2
+      },
+      "lds": {
+        "logic_area": 7685.7012,
+        "memory_bits": 1082464,
+        "instances": 2
+      },
+      "l1": {
+        "logic_area": 23968.25154,
+        "memory_bits": 650272,
+        "instances": 2
+      },
+      "lsu": {
+        "logic_area": 11778.56964,
+        "memory_bits": 10176,
+        "instances": 2
+      },
+      "residency": {
+        "logic_area": 9717.29298,
+        "memory_bits": 31952,
+        "instances": 2
+      },
+      "l2": {
+        "logic_area": 59093.2503,
+        "memory_bits": 1153112,
+        "instances": 1
+      },
+      "sm_fixed": {
+        "logic_area": 99599.07096000001,
+        "memory_bits": 535050,
+        "instances": 2
+      },
+      "shared": {
+        "logic_area": 2590.559820000002,
+        "memory_bits": 7806,
+        "instances": 1
+      }
+    },
+    "component_basis": {
+      "rf": "RF4/RF8 measured bank slope; assumed collector/port/capacity factors",
+      "tensor": "six measured shapes; nonnegative structural fit otherwise; FP32 envelope for precision",
+      "lds": "measured bank interpolation; assumed capacity/port factors",
+      "l1": "measured DataCache/tag/queue anchor; assumed association and miss/write scaling",
+      "l2": "measured fixed-top L2/array/tag/queue anchor; assumed association and MSHR scaling",
+      "residency": "disjoint measured warp/control subtrees; assumed warp/block scaling",
+      "lsu": "measured LSU subtree; assumed entry and per-warp outstanding scaling",
+      "shared": "fixed-top remainder with assumed dispatch/residency scaling",
+      "sm_fixed": "measured residual SM logic and fixed instruction memory"
+    }
+  },
+  "candidate": {
+    "hardware": {
+      "sms": 4,
+      "warps_per_sm": 4,
+      "blocks_per_sm": 2,
+      "threads": 32,
+      "rf_banks": 4,
+      "rf_read_ports": 1,
+      "rf_write_ports": 1,
+      "writeback_ports": 1,
+      "collectors": 4,
+      "vgpr_slots": 512,
+      "sgpr_slots": 1024,
+      "tensor_m": 2,
+      "tensor_n": 2,
+      "tensor_k": 2,
+      "tensor_units": 1,
+      "lds_bytes": 16384,
+      "lds_banks": 8,
+      "lds_ports": 1,
+      "line_bytes": 128,
+      "l1_sets": 64,
+      "l1_ways": 1,
+      "l1_mshrs": 2,
+      "l1_subentries": 1,
+      "l1_write_entries": 2,
+      "l2_sets": 32,
+      "l2_ways": 4,
+      "l2_mshrs": 8,
+      "lsu_entries": 4,
+      "lsu_per_warp": 1,
+      "memory_channels": 1,
+      "memory_bytes_per_cycle": 128,
+      "memory_latency": 2
+    },
+    "cost": {
+      "version": "ventus-structural-cost-v2",
+      "status": "estimated",
+      "hardware": {
+        "sms": 4,
+        "warps_per_sm": 4,
+        "blocks_per_sm": 2,
+        "threads": 32,
+        "rf_banks": 4,
+        "rf_read_ports": 1,
+        "rf_write_ports": 1,
+        "writeback_ports": 1,
+        "collectors": 4,
+        "vgpr_slots": 512,
+        "sgpr_slots": 1024,
+        "tensor_m": 2,
+        "tensor_n": 2,
+        "tensor_k": 2,
+        "tensor_units": 1,
+        "lds_bytes": 16384,
+        "lds_banks": 8,
+        "lds_ports": 1,
+        "line_bytes": 128,
+        "l1_sets": 64,
+        "l1_ways": 1,
+        "l1_mshrs": 2,
+        "l1_subentries": 1,
+        "l1_write_entries": 2,
+        "l2_sets": 32,
+        "l2_ways": 4,
+        "l2_mshrs": 8,
+        "lsu_entries": 4,
+        "lsu_per_warp": 1,
+        "memory_channels": 1,
+        "memory_bytes_per_cycle": 128,
+        "memory_latency": 2
+      },
+      "target": {
+        "version": "ventus-structural-cost-v2",
+        "technology": {
+          "area_unit": "liberty_area_unit",
+          "libraries_sha256": {
+            "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_AO_RVT_TT_nldm_211120.lib": "b1ece108c0a2acd8d01c05cee6daee2834425037b1d9aad625d6f1dd640f1940",
+            "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_INVBUF_RVT_TT_nldm_220122.lib": "a4ceb32e418e1aac8667e28fbd8e9e46baf520180be4db075598a4d7c681a56e",
+            "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_OA_RVT_TT_nldm_211120.lib": "6529c6c72465cd133dfbfb03952327ab2774bb6aa4be866d78fd7bc6c58c9f6f",
+            "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.lib": "57a0b403485b99ebd676942af4673ac086b86c7c75fbdc3e5c0038501dd22ba3",
+            "${REMOTE_LIBERTY_ROOT}/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.lib": "fa92e6ab1481810602811b1eea54bc016a341f11fb5188d7512c026599adf038"
+          },
+          "mapping_lib_sha256": "5dc93b393b29986630963a6ff6e54a77eb937beb510127fc9f8d1238f89d38dd"
+        },
+        "calibration_table_sha256": "5990e97468f1a646e9093db21d6756bcce650c191d701d076a4924f64b9782d3",
+        "precisions": [
+          "bf16",
+          "fp16",
+          "tf32"
+        ],
+        "component_scales": {},
+        "assumptions": {
+          "memory_ports": "R*W coherent single-read/single-write replicas; broadcast writes, conflict/replay for multiwrite; arbitration charged in logic; concurrency not validated",
+          "rf_capacity_logic_fraction": 0.15,
+          "lds_capacity_logic_fraction": 0.1,
+          "tensor_extra_unit_dispatch_fraction": 0.08,
+          "precision_conversion_fraction_per_mode": 0.1,
+          "precision_implementation": "shared FP32 datapath envelope plus conversion/control allowance for each non-FP32 mode; no precision-width area discount or throughput claim",
+          "l1_logic_fractions": {
+            "fixed": 0.2,
+            "array": 0.4,
+            "miss": 0.25,
+            "write": 0.15
+          },
+          "l2_logic_fractions": {
+            "fixed": 0.1,
+            "array": 0.2,
+            "miss": 0.7
+          },
+          "lsu_logic_fractions": {
+            "fixed": 0.4,
+            "entries": 0.3,
+            "outstanding": 0.3
+          },
+          "residency_logic_fractions": {
+            "warps": 0.8,
+            "blocks": 0.2
+          },
+          "shared_logic_fractions": {
+            "fixed": 0.3,
+            "sms": 0.4,
+            "residency": 0.3
+          }
+        },
+        "fixed": {
+          "threads": 32,
+          "line_bytes": 128,
+          "memory_channels": 1,
+          "memory_bytes_per_cycle": 128,
+          "memory_latency": 2
+        },
+        "frequency_validated": false
+      },
+      "logic_area": 726706.669801551,
+      "memory_bits": 5688782,
+      "area_unit": "liberty_area_unit",
+      "storage_area": null,
+      "timing_feasible": null,
+      "energy": null,
+      "energy_status": "unmodeled",
+      "unsupported_reasons": [],
+      "rtl_unbinding_required": {
+        "lds_banks": {
+          "model": 8,
+          "rtl": 32
+        },
+        "tensor_m": {
+          "model": 2,
+          "rtl": 4
+        },
+        "tensor_n": {
+          "model": 2,
+          "rtl": 8
+        },
+        "tensor_k": {
+          "model": 2,
+          "rtl": 4
+        }
+      },
+      "provenance": {
+        "calibration_table_sha256": "5990e97468f1a646e9093db21d6756bcce650c191d701d076a4924f64b9782d3",
+        "model_sha256": "29f2d899a71ef3dfda5989b9c54c8a57d4976cde063c3409eedb69c6cf253157",
+        "hardware_contract_sha256": "2f116280be41351801eeba0ad479944a0bc5c263bd0f14b60543aafd3da31c41",
+        "target_sha256": "6d3243b2960da7d9d31249bc94b2a9084dcc65b114b5ad85bfb8965be8c86261"
+      },
+      "implementation_status": "Ventus-derived structural assumption; changed ports/queues/precision require RTL work",
+      "missing": [
+        "SRAM macro area and physical peripheral implementation",
+        "placement/routing, clock/pads",
+        "timing and energy",
+        "low-precision RTL calibration",
+        "cross-component integration and expanded queue/residency calibration"
+      ],
+      "sgpr_addressability": {
+        "reserved_slots": 1024,
+        "derived_required_address_bits": 8,
+        "scope": "v2 assumes repaired full bank addressing; sampled v1 ports cover only 1024 total slots"
+      },
+      "memory_replication": {
+        "rf": 1,
+        "lds": 1
+      },
+      "components": {
+        "rf": {
+          "logic_area": 34233.488968275,
+          "memory_bits": 557056,
+          "instances": 4
+        },
+        "tensor": {
+          "logic_area": 18507.975010744187,
+          "memory_bits": 0,
+          "instances": 4
+        },
+        "lds": {
+          "logic_area": 2114.2315845,
+          "memory_bits": 164960,
+          "instances": 4
+        },
+        "l1": {
+          "logic_area": 10486.110048750003,
+          "memory_bits": 108337,
+          "instances": 4
+        },
+        "lsu": {
+          "logic_area": 6919.9096635000005,
+          "memory_bits": 636,
+          "instances": 4
+        },
+        "residency": {
+          "logic_area": 4372.781841,
+          "memory_bits": 15976,
+          "instances": 4
+        },
+        "l2": {
+          "logic_area": 18339.9057329742,
+          "memory_bits": 154868,
+          "instances": 1
+        },
+        "sm_fixed": {
+          "logic_area": 99599.07096000001,
+          "memory_bits": 535050,
+          "instances": 4
+        },
+        "shared": {
+          "logic_area": 3432.4917615000036,
+          "memory_bits": 5854,
+          "instances": 1
+        }
+      },
+      "component_basis": {
+        "rf": "RF4/RF8 measured bank slope; assumed collector/port/capacity factors",
+        "tensor": "six measured shapes; nonnegative structural fit otherwise; FP32 envelope for precision",
+        "lds": "measured bank interpolation; assumed capacity/port factors",
+        "l1": "measured DataCache/tag/queue anchor; assumed association and miss/write scaling",
+        "l2": "measured fixed-top L2/array/tag/queue anchor; assumed association and MSHR scaling",
+        "residency": "disjoint measured warp/control subtrees; assumed warp/block scaling",
+        "lsu": "measured LSU subtree; assumed entry and per-warp outstanding scaling",
+        "shared": "fixed-top remainder with assumed dispatch/residency scaling",
+        "sm_fixed": "measured residual SM logic and fixed instruction memory"
+      }
+    }
+  },
+  "solver": {
+    "status": "HighsModelStatus.kOptimal",
+    "optimal": true,
+    "objective": -4.0,
+    "objective_bound": -4.0,
+    "gap": 0.0,
+    "columns": 6476,
+    "rows": 156
+  },
+  "scope": "all 27 hardware choices; maximize SM count under cost-only budgets; no program/performance objective or physical optimality claim",
+  "coefficient_count": 6388,
+  "tensor_fit_coefficients": [
+    786.1290017441862,
+    116.38432255814013,
+    264.6513502325533
+  ],
+  "tensor_shape_checks": [
+    {
+      "point": "tc-2-16-2",
+      "measured": 51009.92334,
+      "fit_relative_error": 0.0006375506953081469,
+      "leave_one_out_relative_error": 0.0012440274911825874
+    },
+    {
+      "point": "tc-2-4-2",
+      "measured": 13407.81174,
+      "fit_relative_error": -0.007425452680759936,
+      "leave_one_out_relative_error": -0.013927222233216265
+    },
+    {
+      "point": "tc-4-2-4",
+      "measured": 27136.16478,
+      "fit_relative_error": 0.005408420392734541,
+      "leave_one_out_relative_error": 0.010775076921431167
+    },
+    {
+      "point": "tc-4-4-4",
+      "measured": 52517.49534,
+      "fit_relative_error": -0.0014935730788659157,
+      "leave_one_out_relative_error": -0.0018550824761313356
+    },
+    {
+      "point": "tc-4-8-4",
+      "measured": 102702.3219,
+      "fit_relative_error": 0.00047701778803348156,
+      "leave_one_out_relative_error": 0.001262262454488155
+    },
+    {
+      "point": "tc-8-4-4",
+      "measured": 104663.74014,
+      "fit_relative_error": -0.0004803788263621519,
+      "leave_one_out_relative_error": -0.0017832767942666339
+    }
+  ],
+  "sensitivity": [
+    {
+      "group": "rf",
+      "scale": 0.75,
+      "target_sha256": "1f199888be6d5261cda487070f0558fe861d8bb9e6e84a48eaadb7cbc33d9a6e",
+      "baseline_area": 735216.21216,
+      "candidate_area": 692473.180833276,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "rf",
+      "scale": 1.25,
+      "target_sha256": "b603b5a891a1a7be07d736f099e87b1b8b033d52df064aed2d3ba707dce1a2ce",
+      "baseline_area": 790044.62292,
+      "candidate_area": 760940.158769826,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "tensor",
+      "scale": 0.75,
+      "target_sha256": "8c3bd52ee5bbf7976013fa471943d1712db0edacf1dbc1df192c86b087fe2dc3",
+      "baseline_area": 691182.4142250001,
+      "candidate_area": 708198.6947908069,
+      "candidate_bits": 5688782,
+      "feasible": false
+    },
+    {
+      "group": "tensor",
+      "scale": 1.25,
+      "target_sha256": "b08940dc85876ed5706900a462a181d474d33281b9ecab8b35691e555563db24",
+      "baseline_area": 834078.420855,
+      "candidate_area": 745214.6448122952,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "l1",
+      "scale": 0.75,
+      "target_sha256": "f9461419f34e75735d71e06dd9fefd6b075cb54be7ce6eecbe130979f5dc185b",
+      "baseline_area": 750646.29177,
+      "candidate_area": 716220.559752801,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "l1",
+      "scale": 1.25,
+      "target_sha256": "223658101f7fc2d2921dd71a95e9a14302b0625ca0158a42514461c28411c624",
+      "baseline_area": 774614.54331,
+      "candidate_area": 737192.779850301,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "l2",
+      "scale": 0.75,
+      "target_sha256": "9b2fcc46ee83e5f77b8b5f959d381613cd750d2ba078da497164b2fafb5b38c8",
+      "baseline_area": 747857.104965,
+      "candidate_area": 722121.6933683074,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "l2",
+      "scale": 1.25,
+      "target_sha256": "bf084649c00cafb62293b2d0ae14fb1864cd249916d3f1aae63d8440799dfa1c",
+      "baseline_area": 777403.730115,
+      "candidate_area": 731291.6462347945,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "residency",
+      "scale": 0.75,
+      "target_sha256": "d8543eccc3af70000cfa839afd183a3dcffc69b9d5a0c320a4a92b212a28c8ec",
+      "baseline_area": 757771.77105,
+      "candidate_area": 722333.887960551,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "residency",
+      "scale": 1.25,
+      "target_sha256": "8ded5cc087daad455c8b5c532481624a969747b3d78cc68d00811dc0b7d86c23",
+      "baseline_area": 767489.06403,
+      "candidate_area": 731079.451642551,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "lsu",
+      "scale": 0.75,
+      "target_sha256": "0d8c06d293c093c1299e7df968efb59146c154acb4c6d8cb69b48098efb0e94a",
+      "baseline_area": 756741.13272,
+      "candidate_area": 719786.760138051,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "lsu",
+      "scale": 1.25,
+      "target_sha256": "b553d44c4dc85ef0a48b73397dfb3a3fea6f9bd6f487ba9b5cc09da7c269a5b6",
+      "baseline_area": 768519.70236,
+      "candidate_area": 733626.5794650511,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "shared",
+      "scale": 0.75,
+      "target_sha256": "102a5557d26843e5ff2618247473ee07aa2c8abf580dc94f42cf54bd803ce8d8",
+      "baseline_area": 761982.777585,
+      "candidate_area": 725848.546861176,
+      "candidate_bits": 5688782,
+      "feasible": true
+    },
+    {
+      "group": "shared",
+      "scale": 1.25,
+      "target_sha256": "0db0ff45c0f4fe96d4fff182792d869930b78266da99db5f5880b0bd3f63c121",
+      "baseline_area": 763278.057495,
+      "candidate_area": 727564.792741926,
+      "candidate_bits": 5688782,
+      "feasible": true
+    }
+  ],
+  "source_hashes": {
+    "structural.py": "29f2d899a71ef3dfda5989b9c54c8a57d4976cde063c3409eedb69c6cf253157",
+    "check_v2.py": "08c792695b8632945180327375a60c4f5383bba13381cf9222bc2f48d63c17c1",
+    "table_v1.json": "5990e97468f1a646e9093db21d6756bcce650c191d701d076a4924f64b9782d3",
+    "structural_mip.py": "6fa18dcdb39f75c000280646629b01791e90f563b41c52a82336c025b1cd69d3"
+  },
+  "coefficients_sha256": "6d966003985189aaf604872cd65b0eb58768e4d564fbc56403ada4295a1fd72c",
+  "new_synthesis_runs": 0
+}

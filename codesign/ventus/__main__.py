@@ -152,19 +152,84 @@ def main():
     p = sub.add_parser("extract")
     p.add_argument("--rtl-root", type=Path, required=True)
     p.add_argument("--out", type=Path, required=True)
+    p = sub.add_parser("compile-model-kernels")
+    p.add_argument("--official-kernels", type=Path, required=True)
+    p.add_argument("--compiler-root", type=Path, required=True)
+    p.add_argument("--llvm-source", type=Path, required=True)
+    p.add_argument("--out", type=Path, required=True)
+    p = sub.add_parser("prepare-qwen")
+    p.add_argument("--bundle", type=Path, required=True)
+    p.add_argument("--phase", choices=["prefill", "decode"], required=True)
+    p.add_argument("--context", type=int, required=True)
+    p.add_argument("--steps", type=int, default=16)
+    p.add_argument("--small", action="store_true")
+    p.add_argument("--mapping", choices=["scalar", "packed", "packed64"], default="packed")
+    p.add_argument("--out", type=Path, required=True)
+    p = sub.add_parser("compile-kernel")
+    p.add_argument("--source", type=Path, required=True)
+    p.add_argument("--kernel", required=True)
+    p.add_argument("--compiler-root", type=Path, required=True)
+    p.add_argument("--llvm-source", type=Path, required=True)
+    p.add_argument("--out", type=Path, required=True)
+    p.add_argument("--optimization", choices=["O1", "O2", "O3"], default="O1")
+    p = sub.add_parser("instructions")
+    p.add_argument("--input", type=Path, required=True)
+    p.add_argument("--out", type=Path, required=True)
+    p.add_argument("--budget", type=float, default=60)
+    p.add_argument("--resume", type=Path)
+    p.add_argument("--hardware", type=Path)
     p = sub.add_parser("transformer")
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--preset", choices=["small", "gpt2"], default="small")
     p.add_argument("--prefill", type=int, default=16)
     p.add_argument("--decode-steps", type=int, default=2)
-    p.add_argument("--mode", choices=["summary", "detailed", "census"], default="summary")
+    p.add_argument("--mode", choices=["summary", "detailed", "census", "rust"], default="summary")
     p.add_argument("--budget", type=float, default=60)
     p.add_argument("--input", type=Path)
     p = sub.add_parser("verify-transformer")
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--budget", type=float, help="Additional host replay budget in seconds")
     args = parser.parse_args()
-    if args.command == "transformer":
+    if args.command == "compile-model-kernels":
+        from .model_program import build_bundle
+
+        build_bundle(args.official_kernels, args.compiler_root, args.llvm_source, args.out)
+        return
+    if args.command == "prepare-qwen":
+        from .model_program import qwen_manifest
+
+        qwen_manifest(
+            args.bundle,
+            args.out,
+            phase=args.phase,
+            context=args.context,
+            steps=args.steps,
+            small=args.small,
+            mapping=args.mapping,
+        )
+        return
+    if args.command == "compile-kernel":
+        from .compiler import compile_kernel
+
+        compile_kernel(
+            args.source,
+            args.kernel,
+            args.compiler_root,
+            args.llvm_source,
+            args.out,
+            optimization=args.optimization,
+        )
+    elif args.command == "instructions":
+        from .instruction_cli import run as run_instructions
+
+        run_instructions(
+            args.input,
+            args.out,
+            budget=args.budget,
+            resume=args.resume,
+            hardware_path=args.hardware,
+        )
+    elif args.command == "transformer":
         from .transformer_cli import run
 
         run(

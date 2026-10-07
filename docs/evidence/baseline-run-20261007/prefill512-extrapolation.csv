@@ -1,0 +1,1566 @@
+name,cycles,method
+prefill.embedding,825772,observed dispatch
+prefill.layer00.norm1,521250,observed dispatch
+prefill.layer00.q.pack_activation,278526,observed dispatch
+prefill.layer00.q,6266960,observed dispatch
+prefill.layer00.k.pack_activation,279232,observed dispatch
+prefill.layer00.k,757035,observed dispatch
+prefill.layer00.v.pack_activation,279180,observed dispatch
+prefill.layer00.v,757980,observed dispatch
+prefill.layer00.rope_q,837531,observed dispatch
+prefill.layer00.rope_k_append,122995,observed dispatch
+prefill.layer00.v_append,160090,observed dispatch
+prefill.layer00.head00.qk,1828911,observed dispatch
+prefill.layer00.head00.softmax,490403,observed dispatch
+prefill.layer00.head00.pv,911802,observed dispatch
+prefill.layer00.head01.qk,1825862,observed dispatch
+prefill.layer00.head01.softmax,489835,observed dispatch
+prefill.layer00.head01.pv,910662,observed dispatch
+prefill.layer00.head02.qk,1824407,observed dispatch
+prefill.layer00.head02.softmax,492451,observed dispatch
+prefill.layer00.head02.pv,913229,observed dispatch
+prefill.layer00.head03.qk,1830750,observed dispatch
+prefill.layer00.head03.softmax,486127,observed dispatch
+prefill.layer00.head03.pv,910489,observed dispatch
+prefill.layer00.head04.qk,1833062,observed dispatch
+prefill.layer00.head04.softmax,489859,observed dispatch
+prefill.layer00.head04.pv,913420,observed dispatch
+prefill.layer00.head05.qk,1829380,observed dispatch
+prefill.layer00.head05.softmax,486527,observed dispatch
+prefill.layer00.head05.pv,913265,observed dispatch
+prefill.layer00.head06.qk,1830985,observed dispatch
+prefill.layer00.head06.softmax,486535,observed dispatch
+prefill.layer00.head06.pv,911910,observed dispatch
+prefill.layer00.head07.qk,1832448,observed dispatch
+prefill.layer00.head07.softmax,485849,observed dispatch
+prefill.layer00.head07.pv,914866,observed dispatch
+prefill.layer00.head08.qk,1830110,observed dispatch
+prefill.layer00.head08.softmax,486612,observed dispatch
+prefill.layer00.head08.pv,911429,observed dispatch
+prefill.layer00.head09.qk,1823442,observed dispatch
+prefill.layer00.head09.softmax,486370,observed dispatch
+prefill.layer00.head09.pv,912532,observed dispatch
+prefill.layer00.head10.qk,1825836,observed dispatch
+prefill.layer00.head10.softmax,488853,observed dispatch
+prefill.layer00.head10.pv,913627,observed dispatch
+prefill.layer00.head11.qk,1832716,observed dispatch
+prefill.layer00.head11.softmax,488689,observed dispatch
+prefill.layer00.head11.pv,911974,observed dispatch
+prefill.layer00.head12.qk,1833959,observed dispatch
+prefill.layer00.head12.softmax,485520,observed dispatch
+prefill.layer00.head12.pv,913081,observed dispatch
+prefill.layer00.head13.qk,1831239,observed dispatch
+prefill.layer00.head13.softmax,483918,observed dispatch
+prefill.layer00.head13.pv,912363,observed dispatch
+prefill.layer00.join_heads,955283,observed dispatch
+prefill.layer00.o.pack_activation,278526,observed dispatch
+prefill.layer00.o,6300701,observed dispatch
+prefill.layer00.attention_residual,727502,observed dispatch
+prefill.layer00.norm2,513343,observed dispatch
+prefill.layer00.gate.pack_activation,278526,observed dispatch
+prefill.layer00.gate,31736001,observed dispatch
+prefill.layer00.up.pack_activation,277455,observed dispatch
+prefill.layer00.up,31759230,observed dispatch
+prefill.layer00.swiglu,3215017,observed dispatch
+prefill.layer00.down.pack_activation,1502998,observed dispatch
+prefill.layer00.down,21547155,observed dispatch
+prefill.layer00.ffn_residual,727502,observed dispatch
+prefill.layer01.norm1,508612,observed dispatch
+prefill.layer01.q.pack_activation,277772,observed dispatch
+prefill.layer01.q,6224153,observed dispatch
+prefill.layer01.k.pack_activation,279232,observed dispatch
+prefill.layer01.k,757915,observed dispatch
+prefill.layer01.v.pack_activation,279232,observed dispatch
+prefill.layer01.v,759813,observed dispatch
+prefill.layer01.rope_q,837877,observed dispatch
+prefill.layer01.rope_k_append,122996,observed dispatch
+prefill.layer01.v_append,160090,observed dispatch
+prefill.layer01.head00.qk,1828911,observed dispatch
+prefill.layer01.head00.softmax,490403,observed dispatch
+prefill.layer01.head00.pv,911802,observed dispatch
+prefill.layer01.head01.qk,1825862,observed dispatch
+prefill.layer01.head01.softmax,489835,observed dispatch
+prefill.layer01.head01.pv,910662,observed dispatch
+prefill.layer01.head02.qk,1824407,observed dispatch
+prefill.layer01.head02.softmax,492451,observed dispatch
+prefill.layer01.head02.pv,913229,observed dispatch
+prefill.layer01.head03.qk,1830750,observed dispatch
+prefill.layer01.head03.softmax,486127,observed dispatch
+prefill.layer01.head03.pv,910489,observed dispatch
+prefill.layer01.head04.qk,1833062,observed dispatch
+prefill.layer01.head04.softmax,489859,observed dispatch
+prefill.layer01.head04.pv,913420,observed dispatch
+prefill.layer01.head05.qk,1829380,observed dispatch
+prefill.layer01.head05.softmax,486527,observed dispatch
+prefill.layer01.head05.pv,913265,observed dispatch
+prefill.layer01.head06.qk,1830985,observed dispatch
+prefill.layer01.head06.softmax,486535,observed dispatch
+prefill.layer01.head06.pv,911910,observed dispatch
+prefill.layer01.head07.qk,1832448,observed dispatch
+prefill.layer01.head07.softmax,485849,observed dispatch
+prefill.layer01.head07.pv,914866,observed dispatch
+prefill.layer01.head08.qk,1830110,observed dispatch
+prefill.layer01.head08.softmax,486612,observed dispatch
+prefill.layer01.head08.pv,911429,observed dispatch
+prefill.layer01.head09.qk,1823442,observed dispatch
+prefill.layer01.head09.softmax,486370,observed dispatch
+prefill.layer01.head09.pv,912532,observed dispatch
+prefill.layer01.head10.qk,1825836,observed dispatch
+prefill.layer01.head10.softmax,488853,observed dispatch
+prefill.layer01.head10.pv,913627,observed dispatch
+prefill.layer01.head11.qk,1832716,observed dispatch
+prefill.layer01.head11.softmax,488689,observed dispatch
+prefill.layer01.head11.pv,911974,observed dispatch
+prefill.layer01.head12.qk,1833959,observed dispatch
+prefill.layer01.head12.softmax,485520,observed dispatch
+prefill.layer01.head12.pv,913081,observed dispatch
+prefill.layer01.head13.qk,1831239,observed dispatch
+prefill.layer01.head13.softmax,483918,observed dispatch
+prefill.layer01.head13.pv,912363,observed dispatch
+prefill.layer01.join_heads,955283,observed dispatch
+prefill.layer01.o.pack_activation,278526,observed dispatch
+prefill.layer01.o,6259036,observed dispatch
+prefill.layer01.attention_residual,723092,observed dispatch
+prefill.layer01.norm2,520327,observed dispatch
+prefill.layer01.gate.pack_activation,278201,observed dispatch
+prefill.layer01.gate,33354008,observed dispatch
+prefill.layer01.up.pack_activation,279232,observed dispatch
+prefill.layer01.up,32643524,observed dispatch
+prefill.layer01.swiglu,3217614,observed dispatch
+prefill.layer01.down.pack_activation,1502998,observed dispatch
+prefill.layer01.down,21185002,observed dispatch
+prefill.layer01.ffn_residual,733791,observed dispatch
+prefill.layer02.norm1,512171,observed dispatch
+prefill.layer02.q.pack_activation,278201,observed dispatch
+prefill.layer02.q,6291949,observed dispatch
+prefill.layer02.k.pack_activation,279232,observed dispatch
+prefill.layer02.k,757753,observed dispatch
+prefill.layer02.v.pack_activation,279232,observed dispatch
+prefill.layer02.v,755178,observed dispatch
+prefill.layer02.rope_q,839951,observed dispatch
+prefill.layer02.rope_k_append,122996,observed dispatch
+prefill.layer02.v_append,160090,observed dispatch
+prefill.layer02.head00.qk,1828911,observed dispatch
+prefill.layer02.head00.softmax,490403,observed dispatch
+prefill.layer02.head00.pv,911802,observed dispatch
+prefill.layer02.head01.qk,1825862,observed dispatch
+prefill.layer02.head01.softmax,489835,observed dispatch
+prefill.layer02.head01.pv,910662,observed dispatch
+prefill.layer02.head02.qk,1824407,observed dispatch
+prefill.layer02.head02.softmax,492451,observed dispatch
+prefill.layer02.head02.pv,913229,observed dispatch
+prefill.layer02.head03.qk,1830750,observed dispatch
+prefill.layer02.head03.softmax,486127,observed dispatch
+prefill.layer02.head03.pv,910489,observed dispatch
+prefill.layer02.head04.qk,1833062,observed dispatch
+prefill.layer02.head04.softmax,489859,observed dispatch
+prefill.layer02.head04.pv,913420,observed dispatch
+prefill.layer02.head05.qk,1829380,observed dispatch
+prefill.layer02.head05.softmax,486527,observed dispatch
+prefill.layer02.head05.pv,913265,observed dispatch
+prefill.layer02.head06.qk,1830985,observed dispatch
+prefill.layer02.head06.softmax,486535,observed dispatch
+prefill.layer02.head06.pv,911910,observed dispatch
+prefill.layer02.head07.qk,1832448,observed dispatch
+prefill.layer02.head07.softmax,485849,observed dispatch
+prefill.layer02.head07.pv,914866,observed dispatch
+prefill.layer02.head08.qk,1830110,observed dispatch
+prefill.layer02.head08.softmax,486612,observed dispatch
+prefill.layer02.head08.pv,911429,observed dispatch
+prefill.layer02.head09.qk,1823442,observed dispatch
+prefill.layer02.head09.softmax,486370,observed dispatch
+prefill.layer02.head09.pv,912532,observed dispatch
+prefill.layer02.head10.qk,1825836,observed dispatch
+prefill.layer02.head10.softmax,488853,observed dispatch
+prefill.layer02.head10.pv,913627,observed dispatch
+prefill.layer02.head11.qk,1832716,observed dispatch
+prefill.layer02.head11.softmax,488689,observed dispatch
+prefill.layer02.head11.pv,911974,observed dispatch
+prefill.layer02.head12.qk,1833959,observed dispatch
+prefill.layer02.head12.softmax,485520,observed dispatch
+prefill.layer02.head12.pv,913081,observed dispatch
+prefill.layer02.head13.qk,1831239,observed dispatch
+prefill.layer02.head13.softmax,483918,observed dispatch
+prefill.layer02.head13.pv,912363,observed dispatch
+prefill.layer02.join_heads,955283,observed dispatch
+prefill.layer02.o.pack_activation,278526,observed dispatch
+prefill.layer02.o,6283840,observed dispatch
+prefill.layer02.attention_residual,724955,observed dispatch
+prefill.layer02.norm2,507024,observed dispatch
+prefill.layer02.gate.pack_activation,278526,observed dispatch
+prefill.layer02.gate,30292209,observed dispatch
+prefill.layer02.up.pack_activation,279232,observed dispatch
+prefill.layer02.up,32762983,observed dispatch
+prefill.layer02.swiglu,3212538,observed dispatch
+prefill.layer02.down.pack_activation,1502998,observed dispatch
+prefill.layer02.down,21447968,observed dispatch
+prefill.layer02.ffn_residual,719856,observed dispatch
+prefill.layer03.norm1,522262,observed dispatch
+prefill.layer03.q.pack_activation,278526,observed dispatch
+prefill.layer03.q,6285337,observed dispatch
+prefill.layer03.k.pack_activation,279232,observed dispatch
+prefill.layer03.k,758155,observed dispatch
+prefill.layer03.v.pack_activation,279232,observed dispatch
+prefill.layer03.v,751819,observed dispatch
+prefill.layer03.rope_q,837033,observed dispatch
+prefill.layer03.rope_k_append,122995,observed dispatch
+prefill.layer03.v_append,160090,observed dispatch
+prefill.layer03.head00.qk,1828124,observed dispatch
+prefill.layer03.head00.softmax,487395,observed dispatch
+prefill.layer03.head00.pv,911967,observed dispatch
+prefill.layer03.head01.qk,1824994,observed dispatch
+prefill.layer03.head01.softmax,489548,observed dispatch
+prefill.layer03.head01.pv,912313,observed dispatch
+prefill.layer03.head02.qk,1824790,observed dispatch
+prefill.layer03.head02.softmax,486812,observed dispatch
+prefill.layer03.head02.pv,913420,observed dispatch
+prefill.layer03.head03.qk,1829380,observed dispatch
+prefill.layer03.head03.softmax,486527,observed dispatch
+prefill.layer03.head03.pv,913265,observed dispatch
+prefill.layer03.head04.qk,1830985,observed dispatch
+prefill.layer03.head04.softmax,486535,observed dispatch
+prefill.layer03.head04.pv,911910,observed dispatch
+prefill.layer03.head05.qk,1832448,observed dispatch
+prefill.layer03.head05.softmax,485849,observed dispatch
+prefill.layer03.head05.pv,914866,observed dispatch
+prefill.layer03.head06.qk,1830110,observed dispatch
+prefill.layer03.head06.softmax,486612,observed dispatch
+prefill.layer03.head06.pv,911429,observed dispatch
+prefill.layer03.head07.qk,1823442,observed dispatch
+prefill.layer03.head07.softmax,486370,observed dispatch
+prefill.layer03.head07.pv,912532,observed dispatch
+prefill.layer03.head08.qk,1825836,observed dispatch
+prefill.layer03.head08.softmax,488853,observed dispatch
+prefill.layer03.head08.pv,913627,observed dispatch
+prefill.layer03.head09.qk,1832716,observed dispatch
+prefill.layer03.head09.softmax,488689,observed dispatch
+prefill.layer03.head09.pv,911974,observed dispatch
+prefill.layer03.head10.qk,1833959,observed dispatch
+prefill.layer03.head10.softmax,485520,observed dispatch
+prefill.layer03.head10.pv,913081,observed dispatch
+prefill.layer03.head11.qk,1831239,observed dispatch
+prefill.layer03.head11.softmax,483918,observed dispatch
+prefill.layer03.head11.pv,912363,observed dispatch
+prefill.layer03.head12.qk,1824790,observed dispatch
+prefill.layer03.head12.softmax,486812,observed dispatch
+prefill.layer03.head12.pv,913420,observed dispatch
+prefill.layer03.head13.qk,1829380,observed dispatch
+prefill.layer03.head13.softmax,486527,observed dispatch
+prefill.layer03.head13.pv,913265,observed dispatch
+prefill.layer03.join_heads,958227,observed dispatch
+prefill.layer03.o.pack_activation,278526,observed dispatch
+prefill.layer03.o,6262715,observed dispatch
+prefill.layer03.attention_residual,721515,observed dispatch
+prefill.layer03.norm2,515880,observed dispatch
+prefill.layer03.gate.pack_activation,277892,observed dispatch
+prefill.layer03.gate,31446445,observed dispatch
+prefill.layer03.up.pack_activation,279246,observed dispatch
+prefill.layer03.up,32527090,observed dispatch
+prefill.layer03.swiglu,3212993,observed dispatch
+prefill.layer03.down.pack_activation,1502998,observed dispatch
+prefill.layer03.down,22175140,observed dispatch
+prefill.layer03.ffn_residual,721515,observed dispatch
+prefill.layer04.norm1,524870,observed dispatch
+prefill.layer04.q.pack_activation,278508,observed dispatch
+prefill.layer04.q,6257752,observed dispatch
+prefill.layer04.k.pack_activation,279232,observed dispatch
+prefill.layer04.k,752207,observed dispatch
+prefill.layer04.v.pack_activation,279232,observed dispatch
+prefill.layer04.v,756711,observed dispatch
+prefill.layer04.rope_q,834353,observed dispatch
+prefill.layer04.rope_k_append,122372,observed dispatch
+prefill.layer04.v_append,160090,observed dispatch
+prefill.layer04.head00.qk,1828911,observed dispatch
+prefill.layer04.head00.softmax,490403,observed dispatch
+prefill.layer04.head00.pv,911802,observed dispatch
+prefill.layer04.head01.qk,1825862,observed dispatch
+prefill.layer04.head01.softmax,489835,observed dispatch
+prefill.layer04.head01.pv,910662,observed dispatch
+prefill.layer04.head02.qk,1824407,observed dispatch
+prefill.layer04.head02.softmax,492451,observed dispatch
+prefill.layer04.head02.pv,913229,observed dispatch
+prefill.layer04.head03.qk,1830750,observed dispatch
+prefill.layer04.head03.softmax,486127,observed dispatch
+prefill.layer04.head03.pv,910489,observed dispatch
+prefill.layer04.head04.qk,1833062,observed dispatch
+prefill.layer04.head04.softmax,489859,observed dispatch
+prefill.layer04.head04.pv,913420,observed dispatch
+prefill.layer04.head05.qk,1829380,observed dispatch
+prefill.layer04.head05.softmax,486527,observed dispatch
+prefill.layer04.head05.pv,913265,observed dispatch
+prefill.layer04.head06.qk,1830985,observed dispatch
+prefill.layer04.head06.softmax,486535,observed dispatch
+prefill.layer04.head06.pv,911910,observed dispatch
+prefill.layer04.head07.qk,1832448,observed dispatch
+prefill.layer04.head07.softmax,485849,observed dispatch
+prefill.layer04.head07.pv,914866,observed dispatch
+prefill.layer04.head08.qk,1830110,observed dispatch
+prefill.layer04.head08.softmax,486612,observed dispatch
+prefill.layer04.head08.pv,911429,observed dispatch
+prefill.layer04.head09.qk,1823442,observed dispatch
+prefill.layer04.head09.softmax,486370,observed dispatch
+prefill.layer04.head09.pv,912532,observed dispatch
+prefill.layer04.head10.qk,1825836,observed dispatch
+prefill.layer04.head10.softmax,488853,observed dispatch
+prefill.layer04.head10.pv,913627,observed dispatch
+prefill.layer04.head11.qk,1832716,observed dispatch
+prefill.layer04.head11.softmax,488689,observed dispatch
+prefill.layer04.head11.pv,911974,observed dispatch
+prefill.layer04.head12.qk,1833959,observed dispatch
+prefill.layer04.head12.softmax,485520,observed dispatch
+prefill.layer04.head12.pv,913081,observed dispatch
+prefill.layer04.head13.qk,1831239,observed dispatch
+prefill.layer04.head13.softmax,483918,observed dispatch
+prefill.layer04.head13.pv,912363,observed dispatch
+prefill.layer04.join_heads,955283,observed dispatch
+prefill.layer04.o.pack_activation,278526,observed dispatch
+prefill.layer04.o,6228294,observed dispatch
+prefill.layer04.attention_residual,723896,observed dispatch
+prefill.layer04.norm2,511882,observed dispatch
+prefill.layer04.gate.pack_activation,278560,observed dispatch
+prefill.layer04.gate,31939272,observed dispatch
+prefill.layer04.up.pack_activation,279232,observed dispatch
+prefill.layer04.up,32644333,observed dispatch
+prefill.layer04.swiglu,3223346,observed dispatch
+prefill.layer04.down.pack_activation,1502998,observed dispatch
+prefill.layer04.down,21658268,observed dispatch
+prefill.layer04.ffn_residual,722403,observed dispatch
+prefill.layer05.norm1,516725,observed dispatch
+prefill.layer05.q.pack_activation,278526,observed dispatch
+prefill.layer05.q,6319033,observed dispatch
+prefill.layer05.k.pack_activation,279027,observed dispatch
+prefill.layer05.k,764035,observed dispatch
+prefill.layer05.v.pack_activation,277455,observed dispatch
+prefill.layer05.v,756542,observed dispatch
+prefill.layer05.rope_q,838126,observed dispatch
+prefill.layer05.rope_k_append,122372,observed dispatch
+prefill.layer05.v_append,160090,observed dispatch
+prefill.layer05.head00.qk,1824790,observed dispatch
+prefill.layer05.head00.softmax,486812,observed dispatch
+prefill.layer05.head00.pv,913420,observed dispatch
+prefill.layer05.head01.qk,1829380,observed dispatch
+prefill.layer05.head01.softmax,486527,observed dispatch
+prefill.layer05.head01.pv,913265,observed dispatch
+prefill.layer05.head02.qk,1830985,observed dispatch
+prefill.layer05.head02.softmax,486535,observed dispatch
+prefill.layer05.head02.pv,911910,observed dispatch
+prefill.layer05.head03.qk,1832448,observed dispatch
+prefill.layer05.head03.softmax,485849,observed dispatch
+prefill.layer05.head03.pv,914866,observed dispatch
+prefill.layer05.head04.qk,1830110,observed dispatch
+prefill.layer05.head04.softmax,486612,observed dispatch
+prefill.layer05.head04.pv,911429,observed dispatch
+prefill.layer05.head05.qk,1823442,observed dispatch
+prefill.layer05.head05.softmax,486370,observed dispatch
+prefill.layer05.head05.pv,912532,observed dispatch
+prefill.layer05.head06.qk,1825836,observed dispatch
+prefill.layer05.head06.softmax,488853,observed dispatch
+prefill.layer05.head06.pv,913627,observed dispatch
+prefill.layer05.head07.qk,1832716,observed dispatch
+prefill.layer05.head07.softmax,488689,observed dispatch
+prefill.layer05.head07.pv,911974,observed dispatch
+prefill.layer05.head08.qk,1833959,observed dispatch
+prefill.layer05.head08.softmax,485520,observed dispatch
+prefill.layer05.head08.pv,913081,observed dispatch
+prefill.layer05.head09.qk,1831239,observed dispatch
+prefill.layer05.head09.softmax,483918,observed dispatch
+prefill.layer05.head09.pv,912363,observed dispatch
+prefill.layer05.head10.qk,1824790,observed dispatch
+prefill.layer05.head10.softmax,486812,observed dispatch
+prefill.layer05.head10.pv,913420,observed dispatch
+prefill.layer05.head11.qk,1829380,observed dispatch
+prefill.layer05.head11.softmax,486527,observed dispatch
+prefill.layer05.head11.pv,913265,observed dispatch
+prefill.layer05.head12.qk,1830985,observed dispatch
+prefill.layer05.head12.softmax,486535,observed dispatch
+prefill.layer05.head12.pv,911910,observed dispatch
+prefill.layer05.head13.qk,1832448,observed dispatch
+prefill.layer05.head13.softmax,485849,observed dispatch
+prefill.layer05.head13.pv,914866,observed dispatch
+prefill.layer05.join_heads,952505,observed dispatch
+prefill.layer05.o.pack_activation,278526,observed dispatch
+prefill.layer05.o,6319088,observed dispatch
+prefill.layer05.attention_residual,719780,observed dispatch
+prefill.layer05.norm2,508671,observed dispatch
+prefill.layer05.gate.pack_activation,277239,observed dispatch
+prefill.layer05.gate,32760071,observed dispatch
+prefill.layer05.up.pack_activation,279232,observed dispatch
+prefill.layer05.up,32337947,observed dispatch
+prefill.layer05.swiglu,3207749,observed dispatch
+prefill.layer05.down.pack_activation,1502998,observed dispatch
+prefill.layer05.down,20946828,observed dispatch
+prefill.layer05.ffn_residual,725809,observed dispatch
+prefill.layer06.norm1,523348,observed dispatch
+prefill.layer06.q.pack_activation,278526,observed dispatch
+prefill.layer06.q,6288537,observed dispatch
+prefill.layer06.k.pack_activation,279232,observed dispatch
+prefill.layer06.k,761648,observed dispatch
+prefill.layer06.v.pack_activation,274896,observed dispatch
+prefill.layer06.v,759575,observed dispatch
+prefill.layer06.rope_q,837041,observed dispatch
+prefill.layer06.rope_k_append,122995,observed dispatch
+prefill.layer06.v_append,160090,observed dispatch
+prefill.layer06.head00.qk,1832140,observed dispatch
+prefill.layer06.head00.softmax,485502,observed dispatch
+prefill.layer06.head00.pv,912241,observed dispatch
+prefill.layer06.head01.qk,1827325,observed dispatch
+prefill.layer06.head01.softmax,486877,observed dispatch
+prefill.layer06.head01.pv,911659,observed dispatch
+prefill.layer06.head02.qk,1824059,observed dispatch
+prefill.layer06.head02.softmax,489392,observed dispatch
+prefill.layer06.head02.pv,913752,observed dispatch
+prefill.layer06.head03.qk,1827439,observed dispatch
+prefill.layer06.head03.softmax,484119,observed dispatch
+prefill.layer06.head03.pv,912311,observed dispatch
+prefill.layer06.head04.qk,1825407,observed dispatch
+prefill.layer06.head04.softmax,487908,observed dispatch
+prefill.layer06.head04.pv,912311,observed dispatch
+prefill.layer06.head05.qk,1825407,observed dispatch
+prefill.layer06.head05.softmax,487908,observed dispatch
+prefill.layer06.head05.pv,912311,observed dispatch
+prefill.layer06.head06.qk,1825407,observed dispatch
+prefill.layer06.head06.softmax,487908,observed dispatch
+prefill.layer06.head06.pv,912311,observed dispatch
+prefill.layer06.head07.qk,1825407,observed dispatch
+prefill.layer06.head07.softmax,487908,observed dispatch
+prefill.layer06.head07.pv,912311,observed dispatch
+prefill.layer06.head08.qk,1825407,observed dispatch
+prefill.layer06.head08.softmax,487908,observed dispatch
+prefill.layer06.head08.pv,912311,observed dispatch
+prefill.layer06.head09.qk,1825407,observed dispatch
+prefill.layer06.head09.softmax,487908,observed dispatch
+prefill.layer06.head09.pv,912311,observed dispatch
+prefill.layer06.head10.qk,1825407,observed dispatch
+prefill.layer06.head10.softmax,487908,observed dispatch
+prefill.layer06.head10.pv,912311,observed dispatch
+prefill.layer06.head11.qk,1825407,observed dispatch
+prefill.layer06.head11.softmax,487908,observed dispatch
+prefill.layer06.head11.pv,912311,observed dispatch
+prefill.layer06.head12.qk,1825407,observed dispatch
+prefill.layer06.head12.softmax,487908,observed dispatch
+prefill.layer06.head12.pv,912311,observed dispatch
+prefill.layer06.head13.qk,1825407,observed dispatch
+prefill.layer06.head13.softmax,487908,observed dispatch
+prefill.layer06.head13.pv,912311,observed dispatch
+prefill.layer06.join_heads,958013,observed dispatch
+prefill.layer06.o.pack_activation,277772,observed dispatch
+prefill.layer06.o,6275047,observed dispatch
+prefill.layer06.attention_residual,720220,observed dispatch
+prefill.layer06.norm2,518219,observed dispatch
+prefill.layer06.gate.pack_activation,277772,observed dispatch
+prefill.layer06.gate,32200861,observed dispatch
+prefill.layer06.up.pack_activation,279027,observed dispatch
+prefill.layer06.up,32253936,observed dispatch
+prefill.layer06.swiglu,3200600,observed dispatch
+prefill.layer06.down.pack_activation,1502998,observed dispatch
+prefill.layer06.down,21478254,observed dispatch
+prefill.layer06.ffn_residual,720613,observed dispatch
+prefill.layer07.norm1,511563,observed dispatch
+prefill.layer07.q.pack_activation,278526,observed dispatch
+prefill.layer07.q,6322187,observed dispatch
+prefill.layer07.k.pack_activation,279232,observed dispatch
+prefill.layer07.k,763775,observed dispatch
+prefill.layer07.v.pack_activation,279289,observed dispatch
+prefill.layer07.v,750554,observed dispatch
+prefill.layer07.rope_q,838126,observed dispatch
+prefill.layer07.rope_k_append,122372,observed dispatch
+prefill.layer07.v_append,160090,observed dispatch
+prefill.layer07.head00.qk,1824790,observed dispatch
+prefill.layer07.head00.softmax,486812,observed dispatch
+prefill.layer07.head00.pv,913420,observed dispatch
+prefill.layer07.head01.qk,1829380,observed dispatch
+prefill.layer07.head01.softmax,486527,observed dispatch
+prefill.layer07.head01.pv,913265,observed dispatch
+prefill.layer07.head02.qk,1830985,observed dispatch
+prefill.layer07.head02.softmax,486535,observed dispatch
+prefill.layer07.head02.pv,911910,observed dispatch
+prefill.layer07.head03.qk,1832448,observed dispatch
+prefill.layer07.head03.softmax,485849,observed dispatch
+prefill.layer07.head03.pv,914866,observed dispatch
+prefill.layer07.head04.qk,1830110,observed dispatch
+prefill.layer07.head04.softmax,486612,observed dispatch
+prefill.layer07.head04.pv,911429,observed dispatch
+prefill.layer07.head05.qk,1823442,observed dispatch
+prefill.layer07.head05.softmax,486370,observed dispatch
+prefill.layer07.head05.pv,912532,observed dispatch
+prefill.layer07.head06.qk,1825836,observed dispatch
+prefill.layer07.head06.softmax,488853,observed dispatch
+prefill.layer07.head06.pv,913627,observed dispatch
+prefill.layer07.head07.qk,1832716,observed dispatch
+prefill.layer07.head07.softmax,488689,observed dispatch
+prefill.layer07.head07.pv,911974,observed dispatch
+prefill.layer07.head08.qk,1833959,observed dispatch
+prefill.layer07.head08.softmax,485520,observed dispatch
+prefill.layer07.head08.pv,913081,observed dispatch
+prefill.layer07.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer07.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer08.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer09.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer10.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer11.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer12.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer13.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer14.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer15.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer16.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer17.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer18.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer19.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer20.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer21.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer22.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.norm1,521250,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.q.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.q,6285337,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.k.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.k,757915,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.v.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.v,756711,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.rope_q,837531,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.rope_k_append,122995,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.v_append,160090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head00.qk,1828911,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head00.softmax,490403,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head00.pv,911802,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head01.qk,1825862,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head01.softmax,489835,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head01.pv,910662,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head02.qk,1824407,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head02.softmax,492451,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head02.pv,913229,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head03.qk,1830750,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head03.softmax,486127,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head03.pv,910489,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head04.qk,1833062,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head04.softmax,489859,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head04.pv,913420,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head05.qk,1829380,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head05.softmax,486527,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head05.pv,913265,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head06.qk,1830985,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head06.softmax,486535,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head06.pv,911910,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head07.qk,1832448,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head07.softmax,485849,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head07.pv,914866,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head08.qk,1830110,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head08.softmax,486612,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head08.pv,911429,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head09.qk,1823442,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head09.softmax,486370,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head09.pv,912532,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head10.qk,1825836,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head10.softmax,488853,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head10.pv,913627,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head11.qk,1832716,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head11.softmax,488689,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head11.pv,911974,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head12.qk,1833959,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head12.softmax,485520,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head12.pv,913081,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head13.qk,1831239,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head13.softmax,483918,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.head13.pv,912363,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.join_heads,955283,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.o.pack_activation,278526,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.o,6275047,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.attention_residual,723092,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.norm2,513343,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.gate.pack_activation,278201,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.gate,31939272,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.up.pack_activation,279232,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.up,32527090,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.swiglu,3212993,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.down.pack_activation,1502998,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.down,21478254,median same-stage cycles from complete 512 layers 0..6
+prefill.layer23.ffn_residual,722403,median same-stage cycles from complete 512 layers 0..6
+prefill.final_norm,550504,128 tail estimate x4; last-position LM head unchanged
+prefill.lm_head.pack_activation,8751,128 tail estimate x1; last-position LM head unchanged
+prefill.lm_head,38528175,128 tail estimate x1; last-position LM head unchanged
+prefill.logits_cast,255774,128 tail estimate x1; last-position LM head unchanged

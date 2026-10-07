@@ -1,0 +1,31 @@
+{
+  "schema": "ventus-dispatches-v1",
+  "hardware": {
+    "memory_channels": 1,
+    "memory_bytes_per_cycle": 64,
+    "memory_latency": 100
+  },
+  "dispatches": [
+    {
+      "name": "vecadd",
+      "elf": "../tests/fixtures/compiled-vecadd/pairs.elf",
+      "elf_sha256": "beab3687a47382dab7977f94449570b151f236d9ec3ceea2f4f24d78aec911f8",
+      "kernel": "vecadd_f32_pairs",
+      "arguments": [
+        2415919104,
+        2415923200,
+        2415927296
+      ],
+      "global_size": [
+        64,
+        1,
+        1
+      ],
+      "local_size": [
+        32,
+        1,
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "compiler": {
+    "url": "https://github.com/THU-DSP-LAB/llvm-project",
+    "commit": "97df137e687669f9acf4bfd734779f52f2878614",
+    "patch": "patches/llvm-initialize-divergence.patch",
+    "optimization": "O1"
+  },
+  "official_kernel": {
+    "url": "https://github.com/THU-DSP-LAB/ventus-pytorch",
+    "commit": "2b0e0cffbd4a46add6ec5f89bea665ce233c6b17",
+    "path": "aten/src/ATen/ventus/kernels/src/vecadd_f32.cl"
+  },
+  "software_variant": "examples/kernels/vecadd_f32_pairs.cl",
+  "elf_sha256": {
+    "single.elf": "b061043c4348616c3ec4887c10480163ea7893f8ebf7fa4ef56a7d19c83ad33c",
+    "pairs.elf": "beab3687a47382dab7977f94449570b151f236d9ec3ceea2f4f24d78aec911f8"
+  }
+}

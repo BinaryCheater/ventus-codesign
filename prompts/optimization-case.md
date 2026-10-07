@@ -1,21 +1,19 @@
-# Build a reproducible optimization case
+# Implement the standalone Ventus optimization case
 
-Read the English project docs, existing finite-menu event MILP and cost wrapper.
-Use local.toml for the default execution machine and let AI prepare its environment.
+Read docs/baseline_cn.md, docs/project_tasks_cn.md and docs/area-budget.md. They
+fully define the experiment; no other conversation is required. Honor local.toml.
+Use Qwen prefill 128/512 and decode-context128/512 for 16 steps, packed64 reference
+software, the frozen baseline hardware, and the unified total-area constraint.
+All participants complete the three objectives and five optimization controls.
+GPT-2/Pythia are optional transfer extensions until their launchers are complete.
 
-Fix a small Transformer semantic workload (start from examples/tiny-transformer.json).
-Construct a cost-supported hardware menu and meaningful software warp/dispatch
-choices. Regenerate each concrete instruction graph/address map; preserve the
-mathematical work. Implement the missing complete-Transformer experiment wrapper.
-
-Optimize latency under logic-area and separate memory-bit budgets. Distinguish
-the candidate-selection formulation from a structural MILP; record status, bound,
-gap and exactly which finite space supports an optimality claim. Compare with
-exhaustive enumeration, a strong fixed-hardware software baseline and a fixed-
-software hardware baseline. Verify selected candidates independently in the fast
-executor, then use targeted RTL to test ranking on changed mechanisms.
-
-Report a compact tradeoff table/Pareto plot, runtime, feasible/unsupported points,
-model uncertainty and realized versus hypothetical hardware changes. Preserve
-versions and original hashes; never overwrite saved results. Do not label modeled
-cycles as hardware measurements or local kernel accuracy as full-network accuracy.
+Keep multi-precision modes and timing assumptions fixed. Use the 27 hardware
+fields within supported ranges and actual compiled-program capabilities; do not
+introduce multi-warp/block software mappings into the currently single-warp/block
+ELF frontend. Construct MIP resource/software couplings and use representative
+kernels/subgraphs to screen candidates before full-network final evaluations.
+Use add_unified_area_constraints and decode_unified_solution, not the historical
+dual-budget adapter defaults. Record solver status, gap, actual evaluation costs
+and the finite/model scope of optimality. Preserve failures and source/config hashes.
+No per-candidate RTL or new multi-precision circuitry is required. Do not claim
+physical chip area, timing closure or measured full-network accuracy.

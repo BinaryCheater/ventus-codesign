@@ -1,0 +1,62 @@
+{
+  "version": "ventus-baseline-512-estimates-v1",
+  "hardware_sha256": "226838b6744d15424374cf43425c046e85ff00329cfc024f89f70b34d1f979ee",
+  "precision_target": {
+    "packed_latency": 3,
+    "conversion_latency": 2,
+    "sfu_latency": 4,
+    "mma_pipeline_latency": 14,
+    "multiply_packing": 2,
+    "fmul_latency": 3,
+    "compare_latency": 2,
+    "shuffle_latency": 1
+  },
+  "mapping": "packed64",
+  "status": "extrapolation requested by user; no completed 512 simulation claimed",
+  "prefill512": {
+    "estimated_cycles": 3787836632,
+    "observed_dispatches": 493,
+    "total_dispatches": 1565,
+    "complete_layers": 7,
+    "method": "preserve observed prefix; extrapolate matching kernel stages across layers; final RMS scales 128 by 4, last-token LM head and other tail copied from 128",
+    "limitations": "later layer/cache variation and tail approximation; not an error bound"
+  },
+  "decode512": {
+    "estimated_cycles_16_steps": 2894095806,
+    "estimated_mean_cycles_per_step": 180880987.875,
+    "complete_steps": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "measured_step_cycles": [
+      180529855,
+      180970580,
+      180446766,
+      180627177,
+      180638234,
+      180754274,
+      180812577,
+      180933326,
+      180984574
+    ],
+    "forecast_step_cycles": [
+      180942528,
+      180980659,
+      181018790,
+      181056920,
+      181095051,
+      181133182,
+      181171313
+    ],
+    "slope_cycles_per_step": 38130.928571436154,
+    "method": "preserve 9 complete measured steps; linear fit on steps1..8 extrapolates remaining7; partial step9 not counted twice",
+    "limitations": "cache transitions or nonlinear context effects may change later steps; not an error bound"
+  }
+}

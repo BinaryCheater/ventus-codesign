@@ -1,0 +1,1279 @@
+{
+  "source_sha256": "637daf01855ae0d93a53bf289594ee62ea95d7c75cf6a64c4e9934d9bf321487",
+  "runtime_sha256": "f51f29889913e1b05123b731fd4579f7852b2b2c740abf8ae2cbe10989009a20",
+  "shape": [
+    128,
+    256,
+    256
+  ],
+  "hardware_base": {
+    "sms": 2,
+    "warps_per_sm": 8,
+    "blocks_per_sm": 8,
+    "threads": 32,
+    "rf_banks": 4,
+    "rf_read_ports": 1,
+    "rf_write_ports": 1,
+    "writeback_ports": 1,
+    "collectors": 8,
+    "vgpr_slots": 1024,
+    "sgpr_slots": 2048,
+    "tensor_m": 4,
+    "tensor_n": 8,
+    "tensor_k": 4,
+    "tensor_units": 1,
+    "lds_bytes": 131072,
+    "lds_banks": 32,
+    "lds_ports": 1,
+    "line_bytes": 128,
+    "l1_sets": 256,
+    "l1_ways": 2,
+    "l1_mshrs": 4,
+    "l1_subentries": 2,
+    "l1_write_entries": 4,
+    "l2_sets": 64,
+    "l2_ways": 16,
+    "l2_mshrs": 32,
+    "lsu_entries": 8,
+    "lsu_per_warp": 4,
+    "memory_channels": 1,
+    "memory_bytes_per_cycle": 64,
+    "memory_latency": 100
+  },
+  "instruction_target": {
+    "packed_latency": 3,
+    "conversion_latency": 2,
+    "sfu_latency": 4,
+    "mma_pipeline_latency": 14,
+    "multiply_packing": 2,
+    "fmul_latency": 3,
+    "compare_latency": 2,
+    "shuffle_latency": 1
+  },
+  "rows": [
+    {
+      "variant": "packed",
+      "changes": {},
+      "program_sha256": "a9af70608059ef67932cbe23b09d7c2aa7ceb4988409bd039fa853731eb962a3",
+      "resources": {
+        "elf_sha256": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+        "compiler_resources": {
+          "pack_a_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 12,
+            "sgpr": 12,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 24,
+            "pds_stack": 0
+          },
+          "mma_packed_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 33,
+            "sgpr": 11,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 40,
+            "pds_stack": 40
+          }
+        },
+        "launch_resources": {
+          "vgpr": 33,
+          "sgpr": 11,
+          "lds": 128
+        },
+        "blocks": 128,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 306273,
+      "cycles": 306273,
+      "instructions": 105344,
+      "requested_bytes": 3356672,
+      "host_ticks": 305582,
+      "idle_skipped": 315,
+      "counters": {
+        "scalar": 28672,
+        "vector": 43392,
+        "load": 19712,
+        "store": 10496,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1595008,
+        "memory_write_bytes": 971136,
+        "l2_hit": 3568,
+        "l2_miss": 12461,
+        "l1_merge": 98,
+        "l1_hit": 12673,
+        "l1_write_miss": 6693,
+        "l1_read_miss": 9336,
+        "lds_rounds": 2432,
+        "writeback_stall_cycles": 25334,
+        "execution_input_stall_cycles": 3536
+      }
+    },
+    {
+      "variant": "packed",
+      "changes": {
+        "tensor_n": 4
+      },
+      "program_sha256": "a9af70608059ef67932cbe23b09d7c2aa7ceb4988409bd039fa853731eb962a3",
+      "resources": {
+        "elf_sha256": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+        "compiler_resources": {
+          "pack_a_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 12,
+            "sgpr": 12,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 24,
+            "pds_stack": 0
+          },
+          "mma_packed_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 33,
+            "sgpr": 11,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 40,
+            "pds_stack": 40
+          }
+        },
+        "launch_resources": {
+          "vgpr": 33,
+          "sgpr": 11,
+          "lds": 128
+        },
+        "blocks": 128,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 308012,
+      "cycles": 308012,
+      "instructions": 105344,
+      "requested_bytes": 3356672,
+      "host_ticks": 307410,
+      "idle_skipped": 222,
+      "counters": {
+        "scalar": 28672,
+        "vector": 43392,
+        "load": 19712,
+        "store": 10496,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1591808,
+        "memory_write_bytes": 967936,
+        "l2_hit": 3580,
+        "l2_miss": 12436,
+        "l1_merge": 150,
+        "l1_hit": 12634,
+        "l1_write_miss": 6666,
+        "l1_read_miss": 9350,
+        "lds_rounds": 2432,
+        "writeback_stall_cycles": 21332,
+        "execution_input_stall_cycles": 13782
+      }
+    },
+    {
+      "variant": "packed",
+      "changes": {
+        "rf_banks": 8
+      },
+      "program_sha256": "a9af70608059ef67932cbe23b09d7c2aa7ceb4988409bd039fa853731eb962a3",
+      "resources": {
+        "elf_sha256": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+        "compiler_resources": {
+          "pack_a_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 12,
+            "sgpr": 12,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 24,
+            "pds_stack": 0
+          },
+          "mma_packed_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 33,
+            "sgpr": 11,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 40,
+            "pds_stack": 40
+          }
+        },
+        "launch_resources": {
+          "vgpr": 33,
+          "sgpr": 11,
+          "lds": 128
+        },
+        "blocks": 128,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 299312,
+      "cycles": 299312,
+      "instructions": 105344,
+      "requested_bytes": 3356672,
+      "host_ticks": 298533,
+      "idle_skipped": 429,
+      "counters": {
+        "scalar": 28672,
+        "vector": 43392,
+        "load": 19712,
+        "store": 10496,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1577088,
+        "memory_write_bytes": 967424,
+        "l2_hit": 3537,
+        "l2_miss": 12321,
+        "l1_merge": 62,
+        "l1_hit": 12880,
+        "l1_write_miss": 6662,
+        "l1_read_miss": 9196,
+        "lds_rounds": 2432,
+        "writeback_stall_cycles": 25945,
+        "execution_input_stall_cycles": 3497
+      }
+    },
+    {
+      "variant": "packed",
+      "changes": {
+        "rf_read_ports": 2,
+        "rf_write_ports": 2,
+        "writeback_ports": 2
+      },
+      "program_sha256": "a9af70608059ef67932cbe23b09d7c2aa7ceb4988409bd039fa853731eb962a3",
+      "resources": {
+        "elf_sha256": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+        "compiler_resources": {
+          "pack_a_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 12,
+            "sgpr": 12,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 24,
+            "pds_stack": 0
+          },
+          "mma_packed_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 33,
+            "sgpr": 11,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 40,
+            "pds_stack": 40
+          }
+        },
+        "launch_resources": {
+          "vgpr": 33,
+          "sgpr": 11,
+          "lds": 128
+        },
+        "blocks": 128,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 307529,
+      "cycles": 307529,
+      "instructions": 105344,
+      "requested_bytes": 3356672,
+      "host_ticks": 306916,
+      "idle_skipped": 279,
+      "counters": {
+        "scalar": 28672,
+        "vector": 43392,
+        "load": 19712,
+        "store": 10496,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1565824,
+        "memory_write_bytes": 966656,
+        "l2_hit": 3333,
+        "l2_miss": 12233,
+        "l1_merge": 90,
+        "l1_hit": 13144,
+        "l1_write_miss": 6656,
+        "l1_read_miss": 8910,
+        "lds_rounds": 2432,
+        "writeback_stall_cycles": 8395,
+        "execution_input_stall_cycles": 3733
+      }
+    },
+    {
+      "variant": "packed",
+      "changes": {
+        "lsu_entries": 2,
+        "lsu_per_warp": 1
+      },
+      "program_sha256": "a9af70608059ef67932cbe23b09d7c2aa7ceb4988409bd039fa853731eb962a3",
+      "resources": {
+        "elf_sha256": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+        "compiler_resources": {
+          "pack_a_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 12,
+            "sgpr": 12,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 24,
+            "pds_stack": 0
+          },
+          "mma_packed_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 33,
+            "sgpr": 11,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 40,
+            "pds_stack": 40
+          }
+        },
+        "launch_resources": {
+          "vgpr": 33,
+          "sgpr": 11,
+          "lds": 128
+        },
+        "blocks": 128,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 463919,
+      "cycles": 463919,
+      "instructions": 105344,
+      "requested_bytes": 3356672,
+      "host_ticks": 463371,
+      "idle_skipped": 131,
+      "counters": {
+        "scalar": 28672,
+        "vector": 43392,
+        "load": 19712,
+        "store": 10496,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1547392,
+        "memory_write_bytes": 967424,
+        "l2_hit": 3184,
+        "l2_miss": 12089,
+        "l1_merge": 45,
+        "l1_hit": 13482,
+        "l1_write_miss": 6662,
+        "l1_read_miss": 8611,
+        "lds_rounds": 2432,
+        "writeback_stall_cycles": 21106,
+        "execution_input_stall_cycles": 2266
+      }
+    },
+    {
+      "variant": "packed",
+      "changes": {
+        "l1_mshrs": 1
+      },
+      "program_sha256": "a9af70608059ef67932cbe23b09d7c2aa7ceb4988409bd039fa853731eb962a3",
+      "resources": {
+        "elf_sha256": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+        "compiler_resources": {
+          "pack_a_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 12,
+            "sgpr": 12,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 24,
+            "pds_stack": 0
+          },
+          "mma_packed_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 33,
+            "sgpr": 11,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 40,
+            "pds_stack": 40
+          }
+        },
+        "launch_resources": {
+          "vgpr": 33,
+          "sgpr": 11,
+          "lds": 128
+        },
+        "blocks": 128,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 449821,
+      "cycles": 449821,
+      "instructions": 105344,
+      "requested_bytes": 3356672,
+      "host_ticks": 448500,
+      "idle_skipped": 913,
+      "counters": {
+        "scalar": 28672,
+        "vector": 43392,
+        "load": 19712,
+        "store": 10496,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1554176,
+        "memory_write_bytes": 966656,
+        "l2_hit": 3199,
+        "l2_miss": 12142,
+        "l1_merge": 191,
+        "l1_hit": 13268,
+        "l1_write_miss": 6656,
+        "l1_read_miss": 8685,
+        "lds_rounds": 2432,
+        "writeback_stall_cycles": 23292,
+        "execution_input_stall_cycles": 2329
+      }
+    },
+    {
+      "variant": "packed",
+      "changes": {
+        "l1_sets": 4,
+        "l1_ways": 1
+      },
+      "program_sha256": "a9af70608059ef67932cbe23b09d7c2aa7ceb4988409bd039fa853731eb962a3",
+      "resources": {
+        "elf_sha256": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+        "compiler_resources": {
+          "pack_a_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 12,
+            "sgpr": 12,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 24,
+            "pds_stack": 0
+          },
+          "mma_packed_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 33,
+            "sgpr": 11,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 40,
+            "pds_stack": 40
+          }
+        },
+        "launch_resources": {
+          "vgpr": 33,
+          "sgpr": 11,
+          "lds": 128
+        },
+        "blocks": 128,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 402726,
+      "cycles": 402726,
+      "instructions": 105344,
+      "requested_bytes": 3356672,
+      "host_ticks": 402060,
+      "idle_skipped": 496,
+      "counters": {
+        "scalar": 28672,
+        "vector": 43392,
+        "load": 19712,
+        "store": 10496,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1722880,
+        "memory_write_bytes": 1307904,
+        "l2_hit": 13559,
+        "l2_miss": 13460,
+        "l1_merge": 515,
+        "l1_hit": 1266,
+        "l1_write_miss": 10028,
+        "l1_read_miss": 16991,
+        "lds_rounds": 2432,
+        "writeback_stall_cycles": 23361,
+        "execution_input_stall_cycles": 1279
+      }
+    },
+    {
+      "variant": "packed",
+      "changes": {
+        "lds_ports": 2
+      },
+      "program_sha256": "a9af70608059ef67932cbe23b09d7c2aa7ceb4988409bd039fa853731eb962a3",
+      "resources": {
+        "elf_sha256": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+        "compiler_resources": {
+          "pack_a_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 12,
+            "sgpr": 12,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 24,
+            "pds_stack": 0
+          },
+          "mma_packed_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 33,
+            "sgpr": 11,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 40,
+            "pds_stack": 40
+          }
+        },
+        "launch_resources": {
+          "vgpr": 33,
+          "sgpr": 11,
+          "lds": 128
+        },
+        "blocks": 128,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 306273,
+      "cycles": 306273,
+      "instructions": 105344,
+      "requested_bytes": 3356672,
+      "host_ticks": 305582,
+      "idle_skipped": 315,
+      "counters": {
+        "scalar": 28672,
+        "vector": 43392,
+        "load": 19712,
+        "store": 10496,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1595008,
+        "memory_write_bytes": 971136,
+        "l2_hit": 3568,
+        "l2_miss": 12461,
+        "l1_merge": 98,
+        "l1_hit": 12673,
+        "l1_write_miss": 6693,
+        "l1_read_miss": 9336,
+        "lds_rounds": 2432,
+        "writeback_stall_cycles": 25334,
+        "execution_input_stall_cycles": 3536
+      }
+    },
+    {
+      "variant": "packed",
+      "changes": {
+        "sms": 1
+      },
+      "program_sha256": "a9af70608059ef67932cbe23b09d7c2aa7ceb4988409bd039fa853731eb962a3",
+      "resources": {
+        "elf_sha256": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+        "compiler_resources": {
+          "pack_a_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 12,
+            "sgpr": 12,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 24,
+            "pds_stack": 0
+          },
+          "mma_packed_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 33,
+            "sgpr": 11,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 40,
+            "pds_stack": 40
+          }
+        },
+        "launch_resources": {
+          "vgpr": 33,
+          "sgpr": 11,
+          "lds": 128
+        },
+        "blocks": 128,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 607293,
+      "cycles": 607293,
+      "instructions": 105344,
+      "requested_bytes": 3356672,
+      "host_ticks": 606870,
+      "idle_skipped": 201,
+      "counters": {
+        "scalar": 28672,
+        "vector": 43392,
+        "load": 19712,
+        "store": 10496,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1672192,
+        "memory_write_bytes": 969472,
+        "l2_hit": 3461,
+        "l2_miss": 13064,
+        "l1_merge": 87,
+        "l1_hit": 12188,
+        "l1_write_miss": 6678,
+        "l1_read_miss": 9847,
+        "lds_rounds": 2432,
+        "writeback_stall_cycles": 24674,
+        "execution_input_stall_cycles": 3301
+      }
+    },
+    {
+      "variant": "packed",
+      "changes": {
+        "tensor_units": 2
+      },
+      "program_sha256": "a9af70608059ef67932cbe23b09d7c2aa7ceb4988409bd039fa853731eb962a3",
+      "resources": {
+        "elf_sha256": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+        "compiler_resources": {
+          "pack_a_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 12,
+            "sgpr": 12,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 24,
+            "pds_stack": 0
+          },
+          "mma_packed_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 33,
+            "sgpr": 11,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 40,
+            "pds_stack": 40
+          }
+        },
+        "launch_resources": {
+          "vgpr": 33,
+          "sgpr": 11,
+          "lds": 128
+        },
+        "blocks": 128,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 304047,
+      "cycles": 304047,
+      "instructions": 105344,
+      "requested_bytes": 3356672,
+      "host_ticks": 303461,
+      "idle_skipped": 253,
+      "counters": {
+        "scalar": 28672,
+        "vector": 43392,
+        "load": 19712,
+        "store": 10496,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1574656,
+        "memory_write_bytes": 968064,
+        "l2_hit": 3215,
+        "l2_miss": 12302,
+        "l1_merge": 91,
+        "l1_hit": 13192,
+        "l1_write_miss": 6668,
+        "l1_read_miss": 8849,
+        "lds_rounds": 2432,
+        "writeback_stall_cycles": 28301,
+        "execution_input_stall_cycles": 511
+      }
+    },
+    {
+      "variant": "reuse",
+      "changes": {},
+      "program_sha256": "bb70c87b66289ac66f78c54349b95535523e63c28ba5ade924246c59a1bf628f",
+      "resources": {
+        "elf_sha256": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610",
+        "compiler_resources": {
+          "mma_reuse_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 98,
+            "sgpr": 14,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 44,
+            "pds_stack": 524
+          }
+        },
+        "launch_resources": {
+          "vgpr": 98,
+          "sgpr": 14,
+          "lds": 128
+        },
+        "blocks": 16,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 277145,
+      "cycles": 277145,
+      "instructions": 93952,
+      "requested_bytes": 2300096,
+      "host_ticks": 276494,
+      "idle_skipped": 118,
+      "counters": {
+        "scalar": 48384,
+        "vector": 23472,
+        "load": 8592,
+        "store": 10432,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1511168,
+        "memory_write_bytes": 1100672,
+        "l2_hit": 1112,
+        "l2_miss": 11806,
+        "l1_merge": 317,
+        "l1_hit": 6461,
+        "l1_write_miss": 7705,
+        "l1_read_miss": 5213,
+        "lds_rounds": 352,
+        "writeback_stall_cycles": 29075,
+        "execution_input_stall_cycles": 39848
+      }
+    },
+    {
+      "variant": "reuse",
+      "changes": {
+        "tensor_n": 4
+      },
+      "program_sha256": "bb70c87b66289ac66f78c54349b95535523e63c28ba5ade924246c59a1bf628f",
+      "resources": {
+        "elf_sha256": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610",
+        "compiler_resources": {
+          "mma_reuse_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 98,
+            "sgpr": 14,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 44,
+            "pds_stack": 524
+          }
+        },
+        "launch_resources": {
+          "vgpr": 98,
+          "sgpr": 14,
+          "lds": 128
+        },
+        "blocks": 16,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 278406,
+      "cycles": 278406,
+      "instructions": 93952,
+      "requested_bytes": 2300096,
+      "host_ticks": 277651,
+      "idle_skipped": 208,
+      "counters": {
+        "scalar": 48384,
+        "vector": 23472,
+        "load": 8592,
+        "store": 10432,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1539712,
+        "memory_write_bytes": 1101440,
+        "l2_hit": 1167,
+        "l2_miss": 12029,
+        "l1_merge": 195,
+        "l1_hit": 6305,
+        "l1_write_miss": 7712,
+        "l1_read_miss": 5484,
+        "lds_rounds": 352,
+        "writeback_stall_cycles": 27890,
+        "execution_input_stall_cycles": 108187
+      }
+    },
+    {
+      "variant": "reuse",
+      "changes": {
+        "rf_banks": 8
+      },
+      "program_sha256": "bb70c87b66289ac66f78c54349b95535523e63c28ba5ade924246c59a1bf628f",
+      "resources": {
+        "elf_sha256": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610",
+        "compiler_resources": {
+          "mma_reuse_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 98,
+            "sgpr": 14,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 44,
+            "pds_stack": 524
+          }
+        },
+        "launch_resources": {
+          "vgpr": 98,
+          "sgpr": 14,
+          "lds": 128
+        },
+        "blocks": 16,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 273602,
+      "cycles": 273602,
+      "instructions": 93952,
+      "requested_bytes": 2300096,
+      "host_ticks": 272946,
+      "idle_skipped": 115,
+      "counters": {
+        "scalar": 48384,
+        "vector": 23472,
+        "load": 8592,
+        "store": 10432,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1484288,
+        "memory_write_bytes": 1102464,
+        "l2_hit": 1089,
+        "l2_miss": 11596,
+        "l1_merge": 314,
+        "l1_hit": 6697,
+        "l1_write_miss": 7718,
+        "l1_read_miss": 4967,
+        "lds_rounds": 352,
+        "writeback_stall_cycles": 29560,
+        "execution_input_stall_cycles": 50536
+      }
+    },
+    {
+      "variant": "reuse",
+      "changes": {
+        "rf_read_ports": 2,
+        "rf_write_ports": 2,
+        "writeback_ports": 2
+      },
+      "program_sha256": "bb70c87b66289ac66f78c54349b95535523e63c28ba5ade924246c59a1bf628f",
+      "resources": {
+        "elf_sha256": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610",
+        "compiler_resources": {
+          "mma_reuse_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 98,
+            "sgpr": 14,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 44,
+            "pds_stack": 524
+          }
+        },
+        "launch_resources": {
+          "vgpr": 98,
+          "sgpr": 14,
+          "lds": 128
+        },
+        "blocks": 16,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 276249,
+      "cycles": 276249,
+      "instructions": 93952,
+      "requested_bytes": 2300096,
+      "host_ticks": 275598,
+      "idle_skipped": 118,
+      "counters": {
+        "scalar": 48384,
+        "vector": 23472,
+        "load": 8592,
+        "store": 10432,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1513728,
+        "memory_write_bytes": 1101312,
+        "l2_hit": 1143,
+        "l2_miss": 11826,
+        "l1_merge": 299,
+        "l1_hit": 6428,
+        "l1_write_miss": 7708,
+        "l1_read_miss": 5261,
+        "lds_rounds": 352,
+        "writeback_stall_cycles": 7410,
+        "execution_input_stall_cycles": 38160
+      }
+    },
+    {
+      "variant": "reuse",
+      "changes": {
+        "lsu_entries": 2,
+        "lsu_per_warp": 1
+      },
+      "program_sha256": "bb70c87b66289ac66f78c54349b95535523e63c28ba5ade924246c59a1bf628f",
+      "resources": {
+        "elf_sha256": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610",
+        "compiler_resources": {
+          "mma_reuse_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 98,
+            "sgpr": 14,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 44,
+            "pds_stack": 524
+          }
+        },
+        "launch_resources": {
+          "vgpr": 98,
+          "sgpr": 14,
+          "lds": 128
+        },
+        "blocks": 16,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 373548,
+      "cycles": 373548,
+      "instructions": 93952,
+      "requested_bytes": 2300096,
+      "host_ticks": 372873,
+      "idle_skipped": 128,
+      "counters": {
+        "scalar": 48384,
+        "vector": 23472,
+        "load": 8592,
+        "store": 10432,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1456768,
+        "memory_write_bytes": 1100288,
+        "l2_hit": 847,
+        "l2_miss": 11381,
+        "l1_merge": 113,
+        "l1_hit": 7355,
+        "l1_write_miss": 7700,
+        "l1_read_miss": 4528,
+        "lds_rounds": 352,
+        "writeback_stall_cycles": 25238,
+        "execution_input_stall_cycles": 33369
+      }
+    },
+    {
+      "variant": "reuse",
+      "changes": {
+        "l1_mshrs": 1
+      },
+      "program_sha256": "bb70c87b66289ac66f78c54349b95535523e63c28ba5ade924246c59a1bf628f",
+      "resources": {
+        "elf_sha256": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610",
+        "compiler_resources": {
+          "mma_reuse_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 98,
+            "sgpr": 14,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 44,
+            "pds_stack": 524
+          }
+        },
+        "launch_resources": {
+          "vgpr": 98,
+          "sgpr": 14,
+          "lds": 128
+        },
+        "blocks": 16,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 403013,
+      "cycles": 403013,
+      "instructions": 93952,
+      "requested_bytes": 2300096,
+      "host_ticks": 401983,
+      "idle_skipped": 481,
+      "counters": {
+        "scalar": 48384,
+        "vector": 23472,
+        "load": 8592,
+        "store": 10432,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1508864,
+        "memory_write_bytes": 1101824,
+        "l2_hit": 1122,
+        "l2_miss": 11788,
+        "l1_merge": 545,
+        "l1_hit": 6241,
+        "l1_write_miss": 7712,
+        "l1_read_miss": 5198,
+        "lds_rounds": 352,
+        "writeback_stall_cycles": 24264,
+        "execution_input_stall_cycles": 23593
+      }
+    },
+    {
+      "variant": "reuse",
+      "changes": {
+        "l1_sets": 4,
+        "l1_ways": 1
+      },
+      "program_sha256": "bb70c87b66289ac66f78c54349b95535523e63c28ba5ade924246c59a1bf628f",
+      "resources": {
+        "elf_sha256": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610",
+        "compiler_resources": {
+          "mma_reuse_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 98,
+            "sgpr": 14,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 44,
+            "pds_stack": 524
+          }
+        },
+        "launch_resources": {
+          "vgpr": 98,
+          "sgpr": 14,
+          "lds": 128
+        },
+        "blocks": 16,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 364377,
+      "cycles": 364377,
+      "instructions": 93952,
+      "requested_bytes": 2300096,
+      "host_ticks": 364265,
+      "idle_skipped": 113,
+      "counters": {
+        "scalar": 48384,
+        "vector": 23472,
+        "load": 8592,
+        "store": 10432,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1583872,
+        "memory_write_bytes": 1439360,
+        "l2_hit": 6289,
+        "l2_miss": 12374,
+        "l1_merge": 323,
+        "l1_hit": 710,
+        "l1_write_miss": 10938,
+        "l1_read_miss": 7725,
+        "lds_rounds": 352,
+        "writeback_stall_cycles": 24430,
+        "execution_input_stall_cycles": 31164
+      }
+    },
+    {
+      "variant": "reuse",
+      "changes": {
+        "lds_ports": 2
+      },
+      "program_sha256": "bb70c87b66289ac66f78c54349b95535523e63c28ba5ade924246c59a1bf628f",
+      "resources": {
+        "elf_sha256": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610",
+        "compiler_resources": {
+          "mma_reuse_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 98,
+            "sgpr": 14,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 44,
+            "pds_stack": 524
+          }
+        },
+        "launch_resources": {
+          "vgpr": 98,
+          "sgpr": 14,
+          "lds": 128
+        },
+        "blocks": 16,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 277145,
+      "cycles": 277145,
+      "instructions": 93952,
+      "requested_bytes": 2300096,
+      "host_ticks": 276494,
+      "idle_skipped": 118,
+      "counters": {
+        "scalar": 48384,
+        "vector": 23472,
+        "load": 8592,
+        "store": 10432,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1511168,
+        "memory_write_bytes": 1100672,
+        "l2_hit": 1112,
+        "l2_miss": 11806,
+        "l1_merge": 317,
+        "l1_hit": 6461,
+        "l1_write_miss": 7705,
+        "l1_read_miss": 5213,
+        "lds_rounds": 352,
+        "writeback_stall_cycles": 29075,
+        "execution_input_stall_cycles": 39848
+      }
+    },
+    {
+      "variant": "reuse",
+      "changes": {
+        "sms": 1
+      },
+      "program_sha256": "bb70c87b66289ac66f78c54349b95535523e63c28ba5ade924246c59a1bf628f",
+      "resources": {
+        "elf_sha256": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610",
+        "compiler_resources": {
+          "mma_reuse_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 98,
+            "sgpr": 14,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 44,
+            "pds_stack": 524
+          }
+        },
+        "launch_resources": {
+          "vgpr": 98,
+          "sgpr": 14,
+          "lds": 128
+        },
+        "blocks": 16,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 571920,
+      "cycles": 571920,
+      "instructions": 93952,
+      "requested_bytes": 2300096,
+      "host_ticks": 571245,
+      "idle_skipped": 218,
+      "counters": {
+        "scalar": 48384,
+        "vector": 23472,
+        "load": 8592,
+        "store": 10432,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1650432,
+        "memory_write_bytes": 1100032,
+        "l2_hit": 1094,
+        "l2_miss": 12894,
+        "l1_merge": 234,
+        "l1_hit": 5474,
+        "l1_write_miss": 7698,
+        "l1_read_miss": 6290,
+        "lds_rounds": 352,
+        "writeback_stall_cycles": 27096,
+        "execution_input_stall_cycles": 26785
+      }
+    },
+    {
+      "variant": "reuse",
+      "changes": {
+        "tensor_units": 2
+      },
+      "program_sha256": "bb70c87b66289ac66f78c54349b95535523e63c28ba5ade924246c59a1bf628f",
+      "resources": {
+        "elf_sha256": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610",
+        "compiler_resources": {
+          "mma_reuse_bf16": {
+            "version": 3,
+            "flags": 0,
+            "vgpr": 98,
+            "sgpr": 14,
+            "lds_static": 0,
+            "pds_static": 0,
+            "lds_stack": 44,
+            "pds_stack": 524
+          }
+        },
+        "launch_resources": {
+          "vgpr": 98,
+          "sgpr": 14,
+          "lds": 128
+        },
+        "blocks": 16,
+        "warps_per_block": 1,
+        "threads": 32
+      },
+      "start": 0,
+      "end": 274892,
+      "cycles": 274892,
+      "instructions": 93952,
+      "requested_bytes": 2300096,
+      "host_ticks": 274210,
+      "idle_skipped": 137,
+      "counters": {
+        "scalar": 48384,
+        "vector": 23472,
+        "load": 8592,
+        "store": 10432,
+        "convert": 1024,
+        "mma_bf16": 2048,
+        "memory_read_bytes": 1501952,
+        "memory_write_bytes": 1101184,
+        "l2_hit": 1107,
+        "l2_miss": 11734,
+        "l1_merge": 365,
+        "l1_hit": 6490,
+        "l1_write_miss": 7708,
+        "l1_read_miss": 5133,
+        "lds_rounds": 352,
+        "writeback_stall_cycles": 35391,
+        "execution_input_stall_cycles": 10211
+      }
+    }
+  ]
+}

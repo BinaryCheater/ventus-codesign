@@ -1,0 +1,11 @@
+diff --git a/llvm/lib/Target/RISCV/RISCVTargetMachine.cpp b/llvm/lib/Target/RISCV/RISCVTargetMachine.cpp
+--- a/llvm/lib/Target/RISCV/RISCVTargetMachine.cpp
++++ b/llvm/lib/Target/RISCV/RISCVTargetMachine.cpp
+@@ -61,6 +61,7 @@ extern "C" LLVM_EXTERNAL_VISIBILITY void LLVMInitializeRISCVTarget() {
+   RegisterTargetMachine<RISCVTargetMachine> Y(getTheRISCV64Target());
+   auto *PR = PassRegistry::getPassRegistry();
+   initializeGlobalISel(*PR);
++  initializeLegacyDivergenceAnalysisPass(*PR);
+   initializeRISCVMakeCompressibleOptPass(*PR);
+   initializeRISCVCodeGenPreparePass(*PR);
+   initializeRISCVMergeBaseOffsetOptPass(*PR);

@@ -1,0 +1,416 @@
+{
+  "version": "ventus-search-space-v1",
+  "ranges": {
+    "sms": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "warps_per_sm": [
+      4,
+      8,
+      16
+    ],
+    "blocks_per_sm": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "rf_banks": [
+      4,
+      8,
+      16
+    ],
+    "rf_read_ports": [
+      1,
+      2
+    ],
+    "rf_write_ports": [
+      1,
+      2
+    ],
+    "writeback_ports": [
+      1,
+      2
+    ],
+    "collectors": [
+      4,
+      8,
+      16
+    ],
+    "vgpr_slots": [
+      512,
+      1024,
+      2048
+    ],
+    "sgpr_slots": [
+      1024,
+      2048,
+      4096
+    ],
+    "tensor_m": [
+      2,
+      4,
+      8
+    ],
+    "tensor_n": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "tensor_k": [
+      2,
+      4,
+      8
+    ],
+    "tensor_units": [
+      1,
+      2,
+      4
+    ],
+    "lds_bytes": [
+      16384,
+      32768,
+      65536,
+      131072
+    ],
+    "lds_banks": [
+      8,
+      16,
+      32
+    ],
+    "lds_ports": [
+      1,
+      2
+    ],
+    "l1_sets": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "l1_ways": [
+      1,
+      2,
+      4
+    ],
+    "l1_mshrs": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "l1_subentries": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "l1_write_entries": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "l2_sets": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "l2_ways": [
+      4,
+      8,
+      16
+    ],
+    "l2_mshrs": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "lsu_entries": [
+      4,
+      8,
+      16
+    ],
+    "lsu_per_warp": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "legal_tensor_shapes": [
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      4
+    ],
+    [
+      2,
+      2,
+      8
+    ],
+    [
+      2,
+      4,
+      2
+    ],
+    [
+      2,
+      4,
+      4
+    ],
+    [
+      2,
+      4,
+      8
+    ],
+    [
+      2,
+      8,
+      2
+    ],
+    [
+      2,
+      8,
+      4
+    ],
+    [
+      2,
+      16,
+      2
+    ],
+    [
+      4,
+      2,
+      2
+    ],
+    [
+      4,
+      2,
+      4
+    ],
+    [
+      4,
+      2,
+      8
+    ],
+    [
+      4,
+      4,
+      2
+    ],
+    [
+      4,
+      4,
+      4
+    ],
+    [
+      4,
+      4,
+      8
+    ],
+    [
+      4,
+      8,
+      2
+    ],
+    [
+      4,
+      8,
+      4
+    ],
+    [
+      8,
+      2,
+      2
+    ],
+    [
+      8,
+      2,
+      4
+    ],
+    [
+      8,
+      4,
+      2
+    ],
+    [
+      8,
+      4,
+      4
+    ]
+  ],
+  "constraints": [
+    "blocks_per_sm <= warps_per_sm",
+    "tensor_m*tensor_n <= 32; tensor_m*tensor_k <= 32; tensor_n*tensor_k <= 32",
+    "vgpr_slots and sgpr_slots divisible by rf_banks",
+    "128 >= lds_banks*4",
+    "total area <= baseline budget",
+    "resident blocks limited by warp slots, block slots, per-block VGPR/SGPR/LDS use"
+  ],
+  "fixed_software_advice": {
+    "sgpr_slots": "1024 already exceeds every current compiled kernel need at 16 resident warps; larger values remain for baseline or future software",
+    "lds_bytes": "16 KiB already exceeds current per-block launch allocation at 16 resident blocks; larger capacity requires software reuse to help",
+    "rf_write_ports": "2 cannot help when writeback_ports=1; search these together",
+    "tensor_dimensions": "current grouped MMA time depends on m*n*k, so different shapes with same product are timing-equivalent in that path; area can differ",
+    "software_blocks": "ELF frontend supports one warp/block; warps and block limits are coupled"
+  },
+  "evidence": "docs/evidence/baseline-range-audit-20261007/audit.json",
+  "active_budget_ranges": {
+    "sms": [
+      1,
+      2,
+      4
+    ],
+    "warps_per_sm": [
+      4,
+      8,
+      16
+    ],
+    "blocks_per_sm": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "rf_banks": [
+      4,
+      8,
+      16
+    ],
+    "rf_read_ports": [
+      1,
+      2
+    ],
+    "rf_write_ports": [
+      1,
+      2
+    ],
+    "writeback_ports": [
+      1,
+      2
+    ],
+    "collectors": [
+      4,
+      8,
+      16
+    ],
+    "vgpr_slots": [
+      512,
+      1024,
+      2048
+    ],
+    "sgpr_slots": [
+      1024,
+      2048,
+      4096
+    ],
+    "tensor_m": [
+      2,
+      4,
+      8
+    ],
+    "tensor_n": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "tensor_k": [
+      2,
+      4,
+      8
+    ],
+    "tensor_units": [
+      1,
+      2,
+      4
+    ],
+    "lds_bytes": [
+      16384,
+      32768,
+      65536,
+      131072
+    ],
+    "lds_banks": [
+      8,
+      16,
+      32
+    ],
+    "lds_ports": [
+      1,
+      2
+    ],
+    "l1_sets": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "l1_ways": [
+      1,
+      2,
+      4
+    ],
+    "l1_mshrs": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "l1_subentries": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "l1_write_entries": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "l2_sets": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "l2_ways": [
+      4,
+      8,
+      16
+    ],
+    "l2_mshrs": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "lsu_entries": [
+      4,
+      8,
+      16
+    ],
+    "lsu_per_warp": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "budget_pruning": {
+    "sms_8": "cost MIP proved infeasible even with minimum resources at baseline budget; retain in structural range for larger budgets"
+  }
+}

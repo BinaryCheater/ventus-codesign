@@ -1,0 +1,28 @@
+{
+  "schema": "ventus-kernel-bundle-v1",
+  "generic": "generic.elf",
+  "mma": "mma.elf",
+  "packed": "packed.elf",
+  "reuse": "reuse.elf",
+  "precision": "BF16",
+  "software": "branchless-finite-softmax; warp-shuffle-RMS; compact-GQA-KV; packed-SwiGLU",
+  "sources": {
+    "pytorch": "2b0e0cffbd4a46add6ec5f89bea665ce233c6b17",
+    "llvm": "97df137e687669f9acf4bfd734779f52f2878614"
+  },
+  "instruction_target": {
+    "packed_latency": 3,
+    "conversion_latency": 2,
+    "sfu_latency": 4,
+    "mma_pipeline_latency": 14,
+    "multiply_packing": 2,
+    "fmul_latency": 3,
+    "compare_latency": 2,
+    "shuffle_latency": 1
+  },
+  "target_status": "declared uncalibrated extended-ISA target; no low-precision measured cost",
+  "generic_sha256": "5ad53bb9cd0c33023086232205ec8ac79417a27022a6e9e9627868529b55a32c",
+  "mma_sha256": "837a3dfb28a1f15917de5b6578d8daa0de518d7cab2d65d3e72d0cc0f4020d55",
+  "packed_sha256": "d14e1f70df57e3b2d7867d7e5b6d5eb81cc31fd54ba89746f1edb153dce7ef8f",
+  "reuse_sha256": "5fba8cea96052989a4fe98a9d635c264c71f09c53b8db851919081b1d4352610"
+}

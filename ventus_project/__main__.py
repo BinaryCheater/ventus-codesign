@@ -12,6 +12,7 @@ from .share import audit, pack
 
 MODULES = {
     "model": "codesign.ventus",
+    "baseline": "codesign.ventus.baseline",
     "costs": "codesign.ventus_costs",
     "tests": "pytest",
     "evidence": "ventus_project.evidence",

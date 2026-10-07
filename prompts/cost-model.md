@@ -3,6 +3,8 @@
 Read README.md and docs/cost-model.md and workflows.md. Configure tools and private
 machine paths through local.toml; avoid adding owner/server values to source.
 
+Follow docs/area-budget.md and examples/project-baseline-v2.json for the current unified area policy. Multi-precision assumptions are fixed; do not block experiments on new precision RTL or calibration. Preserve v1/v2 and the independent-memory-budget historical results.
+
 Extend only dimensions needed by an explicit hardware search menu. Inspect RTL
 couplings and sampled synthesis points before adding coefficients. Collect fresh
 component/full-SM points for missing RF capacities/ports, cache dimensions or

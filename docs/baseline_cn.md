@@ -1,0 +1,66 @@
+# Ventus 项目整体基线
+
+版本：`ventus-project-baseline-v2`，更新：2026-10-07。
+
+本项目比较相同总面积预算下的 GPU 资源配置和软件实现。硬件结构采用仓库固定版本的 Ventus 默认值，多精度能力采用固定近似；软件使用仓库已有的可编译设备程序。所有参与者从同一基线出发，不依赖其他聊天记录或项目负责人的服务器。
+
+## 硬件与面积
+
+| 项目 | 基线 |
+|---|---|
+| SM / 线程组织 | 2 SM，每 SM 最多 8 warp、8 block，每 warp 32 线程 |
+| RF / collector | 4 banks；读、写、写回端口各 1；8 collectors；VGPR 1024 slots、SGPR 2048 slots |
+| Tensor | 每 SM 1 单元，(m,n,k)=(4,8,4)，n 是归约维 |
+| LDS | 每 SM 128 KiB、32 banks、1 port |
+| L1 | 每 SM 256 sets × 2 ways × 128 B；4 MSHR、2 subentries、4 write entries |
+| L2 | 共享 64 sets × 16 ways × 128 B，32 MSHR |
+| LSU | 每 SM 8 entries，每 warp 并发上限 4 |
+| 外存实验条件 | 1 通道、64 B/cycle、基础延迟 100 cycles |
+| 统一总面积预算 | **1.1039550819992285 mm²，展示为约 1.10 mm²** |
+| 主频 | 不设已验证的 GHz 值；主指标为设备周期，不用宿主运行秒数代替 |
+
+结构来源为固定快照 `681172541a8a34ffb43c483a19c075acbc11a4eb` 的默认参数，含项目保留的源码补丁，文件 hash 见采集记录。默认 RTL 为 FP32 Tensor；BF16/FP16/TF32 是本实验固定的派生硬件假设。外存条件也属于实验设定。不要把整个目标称为已经验证的官方默认多精度芯片。
+
+逻辑面积估计 0.762630 mm²，容量等效存储面积 0.341325 mm²，合计约 1.104 mm²。计算与存储共用面积预算，不另限制总存储 bits；各 kernel 的容量可行性仍需满足。完整公式、范围和 MIP 接口见[面积规则](area-budget.md)。
+
+## 固定多精度假设
+
+BF16/FP16/TF32 能力对所有候选固定。转换 2 cycles，打包计算 3，SFU 4，MMA 基础流水 14，multiply packing 2，FMUL 3，比较 2，shuffle 1。MMA 服务间隔仍随选定 Tensor 组织变化。软件实际执行的转换、打包和搬运正常计入；不再额外加精度切换罚时。成本沿用每种非 FP32 模式增加 10% Tensor 逻辑的假设，随资源规模变化。精度模式和这些目标系数不作为学生搜索变量，也不要求另做多精度 RTL。
+
+## 软件、workload 与对照
+
+主任务使用完整 Qwen2.5-0.5B-Instruct，batch=1：prefill 128/512，以及起始上下文 128/512、连续 decode 16 步。Prefill cache 冷启动，decode 初始 KV 在外存且 cache 冷启动，后续步骤保留状态；不计主机加载、tokenizer 和采样。保持全部网络层、真实尺寸及最后位置的 LM head。
+
+参考软件 S0 固定为仓库 ELF bundle 的 **packed64** 映射。这是项目已有的设备软件变体，已含优化，不能称作原版 PyTorch 默认实现。它构成较强的共同起点；可用 packed、scalar 或新实现比较，不能默认 packed64 在每个场景都最好。记录程序 hash、mapping、完整 instruction target、硬件及成本版本。
+
+每人完成 prefill 专用、decode 专用和联合优化；保留默认、仅软件、仅硬件、先软件后硬件、联合优化对照。每份设计都在四个 Qwen 场景上评估。GPT-2 和 Pythia 是完整入口接通后的迁移扩展，当前不作为主任务完成的前提。
+
+## 开始运行
+
+按[环境说明](workflows.md)安装依赖后，一条命令完成两个 128 场景的程序生成、成本检查和执行，并附上已保存的 512 推算结果：
+
+```bash
+./run baseline --out results/baseline-001 --jobs 1 --budget 7200
+```
+
+默认遵守私有执行配置；本机显式使用 `./run --local baseline ...`。`--jobs 1` 顺序执行，宿主耗时容易比较；可设 2–4 并行，模拟周期不受宿主并行影响，宿主耗时需注明并行度。`--budget` 为每场景宿主预算，超时保留 checkpoint，不将未完成周期作为完整结果。`--prepare-only` 只生成所选场景。输出目录必须新建。
+
+结果包含冻结配置、硬件、面积检查、所选场景程序、各场景日志/逐 kernel 记录/checkpoint，以及 `summary.json`。完成标志必须为 true；失败或未完成的运行返回非零退出码。逐场景运行与恢复命令见[运行说明](instruction-programs.md)。
+
+[整体配置](../examples/project-baseline-v2.json)固定场景、软件、精度及文件 hash；[硬件文件](../examples/baseline-hardware-v1.json)可直接传 `--hardware`；[面积规则](../examples/unified-area-policy-v2.json)和[搜索选项](../examples/search-space-v2.json)可供建模读取。整体 manifest/policy 不能当硬件 JSON 传入。
+
+## 搜索和结果边界
+
+完整场景运行需数分钟至数十分钟，不要求每个候选都跑整网。先用真实尺寸的代表 kernel/子图或有说明的性能近似筛选，再对保留设计做完整场景评估。MIP 必须参与结构与软件选择，不能只在穷举结果中选最快项。27 个硬件字段按公共范围开放；当前编译入口每 block 仅支持一个 32-lane warp，多 warp/block 软件映射不纳入本轮。`warps_per_sm`、`blocks_per_sm` 仍可改变多个 block 的驻留上限。只能在已有执行路径真正支持的映射上比较。
+
+当前[基线结果](evidence/baseline-run-20261007/README.md)包含两个 128 场景的完整模拟和两个 512 场景的推算。512 按用户要求停止完整模拟，不能标为完成实测，也不能将这一基线推算比例直接套给不同硬件候选。结果保留来源标签；需要严格四场景对比时使用同一种评价方式，或补完 512 模拟。最终结论是固定多精度与面积近似下的模型预测收益，无需为每个候选跑 RTL。
+
+## 变量范围检查
+
+27 个字段存在条件约束和当前软件用不到的容量。Tensor 从 21 个合法三元组中选择；现有 MMA 时序主要看三维乘积。新范围加入 3 SM，VGPR 为 256/512/1024/2048，SGPR 为 128/256/512/1024/2048。当前程序最多使用 22 个 SGPR/warp，因此 128/256 可以限制驻留，512 已足够容纳 16 个 warp；保留 2048 是为了包含默认基线。packed64 的 reuse 内核每 warp 使用 98 个 VGPR slots，256/512/1024 会跨过驻留阈值。LDS 容量对当前软件仍较宽裕，端口与 bank 仍参与时序。详见[新范围检查](evidence/search-expansion-20261007/README.md)和[原始扫描](evidence/baseline-range-audit-20261007/README.md)。
+
+如需以后实际运行 512，可显式加 `--scenarios Q-P512 Q-D512`，本轮不再执行。四场景全选为 `--scenarios Q-P128 Q-P512 Q-D128 Q-D512`。默认只运行两个 128 场景；512 推算不会触发额外仿真。
+
+在当前面积预算下，成本 MIP 重新检查后已排除 8 SM（最小面积 1.802 mm²），新范围中主搜索使用 1/2/3/4 SM；4 SM 的最小资源面积约 0.914 mm²，因此它仍是可行的联合设计方向。更大面积实验可以恢复结构范围中的 8 SM。
+
+本次 v2 只扩展候选范围，成本公式、基线硬件和时序目标均未改变，因此已有 128 测量与 512 递推仍适用。旧 v1 配置与结果保留。新范围在结构约束后、面积筛选前有 34,673,723,965,440 种组合；数量不等于性能各异的设计数。

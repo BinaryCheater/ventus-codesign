@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-07",
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "pytest_passed": 190,
+  "pytest_note": "complete standalone workspace regression",
+  "cost_tests_passed": 40,
+  "readonly_receipt_verify": "passed",
+  "new_synthesis_runs": 0,
+  "old_table_sha256": "5990e97468f1a646e9093db21d6756bcce650c191d701d076a4924f64b9782d3"
+}
