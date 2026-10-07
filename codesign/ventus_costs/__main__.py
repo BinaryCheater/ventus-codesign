@@ -6,7 +6,7 @@ from pathlib import Path
 
 from .model import evaluate_cost
 from .structural import evaluate_structural_cost, factorized_cost_coefficients, structural_target
-from .unified import LEGACY_POLICY, POLICY, evaluate_unified_area
+from .unified import LEGACY_POLICY, POLICY, V2_POLICY, V3_POLICY, evaluate_unified_area
 
 
 def main():
@@ -14,7 +14,15 @@ def main():
     parser.add_argument("--hardware", type=Path, help="Hardware field overrides JSON")
     parser.add_argument(
         "--model",
-        choices=["v1", "structural-v2", "structural-v2.1", "unified-v1", "unified-v2"],
+        choices=[
+            "v1",
+            "structural-v2",
+            "structural-v2.1",
+            "unified-v1",
+            "unified-v2",
+            "unified-v3",
+            "unified-v4",
+        ],
         default="v1",
     )
     parser.add_argument("--precisions", nargs="+", default=["fp32"])
@@ -29,7 +37,13 @@ def main():
                 "unified-v1 fixes precision capabilities; use add_unified_area_constraints for MIP"
             )
         result = evaluate_unified_area(
-            overrides, policy_path=LEGACY_POLICY if args.model == "unified-v1" else POLICY
+            overrides,
+            policy_path={
+                "unified-v1": LEGACY_POLICY,
+                "unified-v2": V2_POLICY,
+                "unified-v3": V3_POLICY,
+                "unified-v4": POLICY,
+            }[args.model],
         )
     elif args.model == "v1":
         if args.coefficients or args.precisions != ["fp32"]:

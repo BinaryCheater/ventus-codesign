@@ -35,7 +35,7 @@ def main():
     args = parser.parse_args()
     if not 1 <= args.jobs <= 4 or not 0 < args.budget < float("inf"):
         parser.error("jobs must be 1..4 and per-scenario budget finite and positive")
-    baseline = json.loads((ROOT / "examples/project-baseline-v2.json").read_text())
+    baseline = json.loads((ROOT / "examples/project-baseline-v4.json").read_text())
     for name, digest in baseline["sha256"].items():
         if hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != digest:
             raise ValueError(f"frozen input changed: {name}")

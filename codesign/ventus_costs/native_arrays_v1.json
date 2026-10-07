@@ -1,0 +1,375 @@
+{
+  "version": "ventus-native-arrays-v1",
+  "source_commit": "1ffd8dfb10303d306ecd8d215320aea07651e878",
+  "raw_report_sha256": "58e6913056807924a2921495fd83f101cf48bb1e8e62d0cb4787a2a1295898a6",
+  "technology_nm": 32,
+  "minimum_bank_bytes": {
+    "vgpr": 4096,
+    "sgpr": 128,
+    "lds": 512
+  },
+  "scope": "CACTI area-minimum native arrays; ratios to baseline FakeRAM anchors; not ASAP7 timing characterization",
+  "anchors": {
+    "vgpr": {
+      "capacity_bytes": 32768,
+      "area_mm2": 0.228871,
+      "access_ns": 0.423412,
+      "cycle_ns": 0.779234,
+      "source_id": "vgpr_32768-32nm-0RW-1R-1W"
+    },
+    "sgpr": {
+      "capacity_bytes": 2048,
+      "area_mm2": 0.00691452,
+      "access_ns": 0.216665,
+      "cycle_ns": 0.165813,
+      "source_id": "sgpr_2048-32nm-0RW-1R-1W"
+    },
+    "lds": {
+      "capacity_bytes": 4096,
+      "area_mm2": 0.00669328,
+      "access_ns": 0.199521,
+      "cycle_ns": 0.152013,
+      "source_id": "lds_4096-32nm-1RW-0R-0W"
+    }
+  },
+  "banks": {
+    "vgpr:4096:0:1:1": {
+      "area_mm2": 0.154069,
+      "access_ns": 0.357116,
+      "cycle_ns": 0.703216,
+      "source_id": "vgpr_4096-32nm-0RW-1R-1W"
+    },
+    "vgpr:4096:0:2:1": {
+      "area_mm2": 0.300292,
+      "access_ns": 0.448521,
+      "cycle_ns": 0.918011,
+      "source_id": "vgpr_4096-32nm-0RW-2R-1W"
+    },
+    "vgpr:4096:0:1:2": {
+      "area_mm2": 0.297906,
+      "access_ns": 0.448521,
+      "cycle_ns": 0.918666,
+      "source_id": "vgpr_4096-32nm-0RW-1R-2W"
+    },
+    "vgpr:4096:0:2:2": {
+      "area_mm2": 0.492088,
+      "access_ns": 0.547036,
+      "cycle_ns": 1.16356,
+      "source_id": "vgpr_4096-32nm-0RW-2R-2W"
+    },
+    "vgpr:8192:0:1:1": {
+      "area_mm2": 0.164852,
+      "access_ns": 0.357116,
+      "cycle_ns": 0.712858,
+      "source_id": "vgpr_8192-32nm-0RW-1R-1W"
+    },
+    "vgpr:8192:0:2:1": {
+      "area_mm2": 0.318123,
+      "access_ns": 0.448521,
+      "cycle_ns": 0.939873,
+      "source_id": "vgpr_8192-32nm-0RW-2R-1W"
+    },
+    "vgpr:8192:0:1:2": {
+      "area_mm2": 0.315736,
+      "access_ns": 0.448521,
+      "cycle_ns": 0.940388,
+      "source_id": "vgpr_8192-32nm-0RW-1R-2W"
+    },
+    "vgpr:8192:0:2:2": {
+      "area_mm2": 0.518845,
+      "access_ns": 0.547036,
+      "cycle_ns": 1.19194,
+      "source_id": "vgpr_8192-32nm-0RW-2R-2W"
+    },
+    "vgpr:16384:0:1:1": {
+      "area_mm2": 0.186232,
+      "access_ns": 0.364456,
+      "cycle_ns": 0.738262,
+      "source_id": "vgpr_16384-32nm-0RW-1R-1W"
+    },
+    "vgpr:16384:0:2:1": {
+      "area_mm2": 0.353508,
+      "access_ns": 0.465442,
+      "cycle_ns": 0.97478,
+      "source_id": "vgpr_16384-32nm-0RW-2R-1W"
+    },
+    "vgpr:16384:0:1:2": {
+      "area_mm2": 0.351121,
+      "access_ns": 0.465831,
+      "cycle_ns": 0.975169,
+      "source_id": "vgpr_16384-32nm-0RW-1R-2W"
+    },
+    "vgpr:16384:0:2:2": {
+      "area_mm2": 0.571914,
+      "access_ns": 0.578343,
+      "cycle_ns": 1.23709,
+      "source_id": "vgpr_16384-32nm-0RW-2R-2W"
+    },
+    "vgpr:32768:0:1:1": {
+      "area_mm2": 0.228871,
+      "access_ns": 0.423412,
+      "cycle_ns": 0.779234,
+      "source_id": "vgpr_32768-32nm-0RW-1R-1W"
+    },
+    "vgpr:32768:0:2:1": {
+      "area_mm2": 0.42399,
+      "access_ns": 0.54114,
+      "cycle_ns": 1.0305,
+      "source_id": "vgpr_32768-32nm-0RW-2R-1W"
+    },
+    "vgpr:32768:0:1:2": {
+      "area_mm2": 0.421603,
+      "access_ns": 0.541429,
+      "cycle_ns": 1.03079,
+      "source_id": "vgpr_32768-32nm-0RW-1R-2W"
+    },
+    "vgpr:32768:0:2:2": {
+      "area_mm2": 0.677465,
+      "access_ns": 0.673607,
+      "cycle_ns": 1.30886,
+      "source_id": "vgpr_32768-32nm-0RW-2R-2W"
+    },
+    "vgpr:65536:0:1:1": {
+      "area_mm2": 0.313876,
+      "access_ns": 0.521979,
+      "cycle_ns": 0.85415,
+      "source_id": "vgpr_65536-32nm-0RW-1R-1W"
+    },
+    "vgpr:65536:0:2:1": {
+      "area_mm2": 0.564516,
+      "access_ns": 0.671182,
+      "cycle_ns": 1.12509,
+      "source_id": "vgpr_65536-32nm-0RW-2R-1W"
+    },
+    "vgpr:65536:0:1:2": {
+      "area_mm2": 0.562129,
+      "access_ns": 0.671434,
+      "cycle_ns": 1.12534,
+      "source_id": "vgpr_65536-32nm-0RW-1R-2W"
+    },
+    "vgpr:65536:0:2:2": {
+      "area_mm2": 0.887988,
+      "access_ns": 0.840936,
+      "cycle_ns": 1.42644,
+      "source_id": "vgpr_65536-32nm-0RW-2R-2W"
+    },
+    "sgpr:128:0:1:1": {
+      "area_mm2": 0.000670078,
+      "access_ns": 0.115379,
+      "cycle_ns": 0.0962463,
+      "source_id": "sgpr_128-32nm-0RW-1R-1W"
+    },
+    "sgpr:128:0:2:1": {
+      "area_mm2": 0.00117428,
+      "access_ns": 0.115569,
+      "cycle_ns": 0.0942055,
+      "source_id": "sgpr_128-32nm-0RW-2R-1W"
+    },
+    "sgpr:128:0:1:2": {
+      "area_mm2": 0.00114779,
+      "access_ns": 0.115805,
+      "cycle_ns": 0.0944417,
+      "source_id": "sgpr_128-32nm-0RW-1R-2W"
+    },
+    "sgpr:128:0:2:2": {
+      "area_mm2": 0.00176541,
+      "access_ns": 0.120758,
+      "cycle_ns": 0.0989039,
+      "source_id": "sgpr_128-32nm-0RW-2R-2W"
+    },
+    "sgpr:256:0:1:1": {
+      "area_mm2": 0.00112236,
+      "access_ns": 0.130214,
+      "cycle_ns": 0.098019,
+      "source_id": "sgpr_256-32nm-0RW-1R-1W"
+    },
+    "sgpr:256:0:2:1": {
+      "area_mm2": 0.00193982,
+      "access_ns": 0.1374,
+      "cycle_ns": 0.104349,
+      "source_id": "sgpr_256-32nm-0RW-2R-1W"
+    },
+    "sgpr:256:0:1:2": {
+      "area_mm2": 0.00191171,
+      "access_ns": 0.137637,
+      "cycle_ns": 0.104587,
+      "source_id": "sgpr_256-32nm-0RW-1R-2W"
+    },
+    "sgpr:256:0:2:2": {
+      "area_mm2": 0.00294285,
+      "access_ns": 0.144748,
+      "cycle_ns": 0.11085,
+      "source_id": "sgpr_256-32nm-0RW-2R-2W"
+    },
+    "sgpr:512:0:1:1": {
+      "area_mm2": 0.00202163,
+      "access_ns": 0.141408,
+      "cycle_ns": 0.112915,
+      "source_id": "sgpr_512-32nm-0RW-1R-1W"
+    },
+    "sgpr:512:0:2:1": {
+      "area_mm2": 0.00349969,
+      "access_ns": 0.150648,
+      "cycle_ns": 0.121313,
+      "source_id": "sgpr_512-32nm-0RW-2R-1W"
+    },
+    "sgpr:512:0:1:2": {
+      "area_mm2": 0.00343663,
+      "access_ns": 0.150714,
+      "cycle_ns": 0.121379,
+      "source_id": "sgpr_512-32nm-0RW-1R-2W"
+    },
+    "sgpr:512:0:2:2": {
+      "area_mm2": 0.00535486,
+      "access_ns": 0.176588,
+      "cycle_ns": 0.135812,
+      "source_id": "sgpr_512-32nm-0RW-2R-2W"
+    },
+    "sgpr:1024:0:1:1": {
+      "area_mm2": 0.00356814,
+      "access_ns": 0.162863,
+      "cycle_ns": 0.129994,
+      "source_id": "sgpr_1024-32nm-0RW-1R-1W"
+    },
+    "sgpr:1024:0:2:1": {
+      "area_mm2": 0.00613007,
+      "access_ns": 0.17779,
+      "cycle_ns": 0.142468,
+      "source_id": "sgpr_1024-32nm-0RW-2R-1W"
+    },
+    "sgpr:1024:0:1:2": {
+      "area_mm2": 0.00606494,
+      "access_ns": 0.177855,
+      "cycle_ns": 0.142533,
+      "source_id": "sgpr_1024-32nm-0RW-1R-2W"
+    },
+    "sgpr:1024:0:2:2": {
+      "area_mm2": 0.0101328,
+      "access_ns": 0.183473,
+      "cycle_ns": 0.140565,
+      "source_id": "sgpr_1024-32nm-0RW-2R-2W"
+    },
+    "sgpr:2048:0:1:1": {
+      "area_mm2": 0.00691452,
+      "access_ns": 0.216665,
+      "cycle_ns": 0.165813,
+      "source_id": "sgpr_2048-32nm-0RW-1R-1W"
+    },
+    "sgpr:2048:0:2:1": {
+      "area_mm2": 0.0118177,
+      "access_ns": 0.242349,
+      "cycle_ns": 0.187051,
+      "source_id": "sgpr_2048-32nm-0RW-2R-1W"
+    },
+    "sgpr:2048:0:1:2": {
+      "area_mm2": 0.0117484,
+      "access_ns": 0.242415,
+      "cycle_ns": 0.187116,
+      "source_id": "sgpr_2048-32nm-0RW-1R-2W"
+    },
+    "sgpr:2048:0:2:2": {
+      "area_mm2": 0.018317,
+      "access_ns": 0.200778,
+      "cycle_ns": 0.165498,
+      "source_id": "sgpr_2048-32nm-0RW-2R-2W"
+    },
+    "lds:512:1:0:0": {
+      "area_mm2": 0.00095818,
+      "access_ns": 0.139237,
+      "cycle_ns": 0.104112,
+      "source_id": "lds_512-32nm-1RW-0R-0W"
+    },
+    "lds:512:2:0:0": {
+      "area_mm2": 0.00205575,
+      "access_ns": 0.151816,
+      "cycle_ns": 0.115245,
+      "source_id": "lds_512-32nm-2RW-0R-0W"
+    },
+    "lds:1024:1:0:0": {
+      "area_mm2": 0.0017331,
+      "access_ns": 0.148812,
+      "cycle_ns": 0.117512,
+      "source_id": "lds_1024-32nm-1RW-0R-0W"
+    },
+    "lds:1024:2:0:0": {
+      "area_mm2": 0.00362579,
+      "access_ns": 0.162587,
+      "cycle_ns": 0.129683,
+      "source_id": "lds_1024-32nm-2RW-0R-0W"
+    },
+    "lds:2048:1:0:0": {
+      "area_mm2": 0.00333259,
+      "access_ns": 0.191721,
+      "cycle_ns": 0.144581,
+      "source_id": "lds_2048-32nm-1RW-0R-0W"
+    },
+    "lds:2048:2:0:0": {
+      "area_mm2": 0.00697546,
+      "access_ns": 0.216389,
+      "cycle_ns": 0.165501,
+      "source_id": "lds_2048-32nm-2RW-0R-0W"
+    },
+    "lds:4096:1:0:0": {
+      "area_mm2": 0.00669328,
+      "access_ns": 0.199521,
+      "cycle_ns": 0.152013,
+      "source_id": "lds_4096-32nm-1RW-0R-0W"
+    },
+    "lds:4096:2:0:0": {
+      "area_mm2": 0.0138213,
+      "access_ns": 0.317035,
+      "cycle_ns": 0.242496,
+      "source_id": "lds_4096-32nm-2RW-0R-0W"
+    },
+    "lds:8192:1:0:0": {
+      "area_mm2": 0.0126809,
+      "access_ns": 0.270627,
+      "cycle_ns": 0.2088,
+      "source_id": "lds_8192-32nm-1RW-0R-0W"
+    },
+    "lds:8192:2:0:0": {
+      "area_mm2": 0.026148,
+      "access_ns": 0.320803,
+      "cycle_ns": 0.245584,
+      "source_id": "lds_8192-32nm-2RW-0R-0W"
+    },
+    "lds:16384:1:0:0": {
+      "area_mm2": 0.0245753,
+      "access_ns": 0.284591,
+      "cycle_ns": 0.241897,
+      "source_id": "lds_16384-32nm-1RW-0R-0W"
+    },
+    "lds:16384:2:0:0": {
+      "area_mm2": 0.0496359,
+      "access_ns": 0.342181,
+      "cycle_ns": 0.290332,
+      "source_id": "lds_16384-32nm-2RW-0R-0W"
+    }
+  },
+  "failed_probes": [
+    "vgpr_2048-32nm-0RW-1R-1W",
+    "vgpr_2048-32nm-0RW-2R-1W",
+    "vgpr_2048-32nm-0RW-1R-2W",
+    "vgpr_2048-32nm-0RW-2R-2W",
+    "sgpr_32-32nm-0RW-1R-1W",
+    "sgpr_32-32nm-0RW-2R-1W",
+    "sgpr_32-32nm-0RW-1R-2W",
+    "sgpr_32-32nm-0RW-2R-2W",
+    "sgpr_64-32nm-0RW-1R-1W",
+    "sgpr_64-32nm-0RW-2R-1W",
+    "sgpr_64-32nm-0RW-1R-2W",
+    "sgpr_64-32nm-0RW-2R-2W",
+    "vgpr_2048-22nm-0RW-1R-1W",
+    "vgpr_2048-22nm-0RW-2R-1W",
+    "vgpr_2048-22nm-0RW-1R-2W",
+    "vgpr_2048-22nm-0RW-2R-2W",
+    "sgpr_32-22nm-0RW-1R-1W",
+    "sgpr_32-22nm-0RW-2R-1W",
+    "sgpr_32-22nm-0RW-1R-2W",
+    "sgpr_32-22nm-0RW-2R-2W",
+    "sgpr_64-22nm-0RW-1R-1W",
+    "sgpr_64-22nm-0RW-2R-1W",
+    "sgpr_64-22nm-0RW-1R-2W",
+    "sgpr_64-22nm-0RW-2R-2W"
+  ]
+}

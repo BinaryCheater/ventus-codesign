@@ -9,7 +9,7 @@ memory-bit budget; neither returns SRAM macro area, energy or timing closure.
 
 ## Current experiment policy
 
-The main task uses [unified-area-policy-v2](area-budget.md): v2 logic plus estimated SRAM area, with one 1.104 mm² baseline budget and no aggregate bit cap. Query `./run costs --model unified-v2`. Fixed multi-precision assumptions require no additional RTL work for this experiment. The separate budgets below describe the preserved legacy v2 interface.
+The main task uses [unified-area-policy-v4](area-budget.md): v2.1 external logic plus native-array relative area for RF/LDS and density estimates for remaining storage, with one 1.11 mm² experiment budget and no aggregate bit cap. Query `./run costs --model unified-v4`. Fixed multi-precision assumptions require no additional RTL work for this experiment. The separate budgets below describe the preserved legacy v2 interface.
 
 ## Queries and capabilities
 
@@ -141,3 +141,7 @@ saved results remain unchanged. The separate unified-area policy adopts this cap
 Search revision (2026-10-07): structural cost v2.1 adds 3 SM and VGPR 256, and uses SGPR 128/256/512/1024/2048. Cost formulas and baseline area are unchanged. Unified policy v2 selects this range; `--model unified-v1` and `--model structural-v2` retain legacy ranges. See [expanded-domain evidence](evidence/search-expansion-20261007/README.md).
 
 The expanded v2.1 target produces 11,945 local factor choices, including the 8-SM structural option. These are module choices linked by shared hardware fields, not 11,945 whole-chip candidates. Pass `structural_target(precisions, version="ventus-structural-cost-v2.1")` explicitly to the low-level API; the unified v2 API selects it automatically.
+
+Multiport pilot (2026-10-07): [60 CACTI RF/LDS configurations](evidence/cacti-ports-20261007/README.md) completed at 22/32 nm. Area/access/cycle ratios and raw inputs/outputs are retained. This is exploratory evidence for a future cost revision; active port costs and timing remain unchanged.
+
+Active revision: native-array v1 replaces RF/LDS payload replication through unified policy v4 and its MIP adapter. See [full table coverage](evidence/cacti-full-domain-20261007/README.md) and [default baseline](evidence/baseline-native-arrays-20261007/README.md). Common-clock feasibility is not implemented; timing diagnostics do not change instruction cycles.

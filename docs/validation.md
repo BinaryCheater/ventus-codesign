@@ -106,7 +106,7 @@ targets, default structure, area arithmetic, explicit external-memory projection
 unsupported configurations, and an actual MIP storage/compute exchange. The latter
 selects more physical storage than the baseline under the same total-area budget,
 ensuring no hidden legacy bit cap remains. It tests the area interface, not full
-network optimality. Query `./run costs --model unified-v2 --hardware
+network optimality. Query `./run costs --model unified-v4 --hardware
 examples/baseline-hardware-v1.json` through the configured execution wrapper.
 Historical v1/v2 receipts remain unchanged.
 
@@ -115,3 +115,5 @@ Historical v1/v2 receipts remain unchanged.
 [Two completed Qwen runs and two 512 extrapolations](evidence/baseline-run-20261007/README.md) use the frozen hardware and program settings. [Range checks](evidence/baseline-range-audit-20261007/README.md) exercise every legal option on a compiled GEMM, record conditional changes, and prove 8-SM cost infeasibility within the current menu/budget. Probe inactivity is not a global performance proof. `./run --local baseline --out results/prepare-check-new --prepare-only` validates hashes and generates both default scenarios without executing them.
 
 Expanded-domain validation (2026-10-07): [cost minima and compiled register-capacity probes](evidence/search-expansion-20261007/README.md), with version/hash compatibility, fixed 3-SM MIP decode and shared-ELF timing regressions in `tests/test_ventus_search_expansion.py`. Full suite: 220 passed; Ruff check and format check passed. This validates model behavior, not new RTL configurations.
+
+Native-array v1 / unified v4: 225 tests passed, including full RF/LDS domain lookup, padding, baseline preservation, native multiport capacity accounting and MIP decode versus independent costing. CACTI timing is diagnostic only. No new full-network simulation was required: the retained baseline runtime and inputs match.

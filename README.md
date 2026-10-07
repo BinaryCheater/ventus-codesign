@@ -37,7 +37,7 @@ profile is part of the repository.
 
 ## Run
 
-Run the frozen Qwen baseline with `./run baseline --out results/baseline-001 --jobs 1 --budget 7200`. It measures the two 128 scenarios and attaches explicitly labeled 512 extrapolations. [Saved results](docs/evidence/baseline-run-20261007/README.md) and [audited search choices](examples/search-space-v2.json) are available.
+Run the frozen Qwen baseline with `./run baseline --out results/baseline-001 --jobs 1 --budget 7200`. It measures the two 128 scenarios and attaches explicitly labeled 512 extrapolations. [Saved results](docs/evidence/baseline-run-20261007/README.md) and [audited search choices](examples/search-space-v3.json) are available.
 
 For the existing server workflow, use `./run model ...` or `./run costs`; the
 local controller needs only Python 3.12+ and reads your private profile. It does
@@ -77,7 +77,7 @@ on the machine where they are invoked.
 
 ## Files
 
-For a standalone experiment, start with the Chinese [complete baseline](docs/baseline_cn.md) and its [frozen configuration](examples/project-baseline-v2.json). It uses the pinned Ventus default structure plus fixed modeled multi-precision support, a unified 1.104 mm² area budget, and Qwen as the complete core task.
+For a standalone experiment, start with the Chinese [complete baseline](docs/baseline_cn.md) and its [frozen configuration](examples/project-baseline-v4.json). It uses the pinned Ventus default structure plus fixed modeled multi-precision support, a unified 1.11 mm² area budget, and Qwen as the complete core task.
 
 For the collaborative experiments, start with the Chinese
 [project task guide](docs/project_tasks_cn.md). The

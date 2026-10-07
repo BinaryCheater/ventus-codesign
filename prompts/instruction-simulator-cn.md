@@ -62,4 +62,4 @@
 
 ## 当前实验约定
 
-以 docs/baseline_cn.md 与 examples/project-baseline-v2.json 为准。固定多精度目标，不新增切换罚时或要求新 RTL；显式转换/搬运仍计时。主任务为四个 Qwen 场景，GPT-2/Pythia 完整入口是后续扩展。使用统一总面积预算，无独立总 bits 上限；保持现有执行默认位置。
+以 docs/baseline_cn.md 与 examples/project-baseline-v4.json 为准。固定多精度目标，不新增切换罚时或要求新 RTL；显式转换/搬运仍计时。主任务为四个 Qwen 场景，GPT-2/Pythia 完整入口是后续扩展。使用统一总面积预算，无独立总 bits 上限；保持现有执行默认位置。

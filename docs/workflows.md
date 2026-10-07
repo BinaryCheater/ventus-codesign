@@ -111,6 +111,6 @@ profile default; the local measurements use `./run --local` explicitly.
 
 ## Standalone experiment baseline
 
-Use the [complete baseline](baseline_cn.md), not historical defaults. `./run costs --model unified-v2 --hardware examples/baseline-hardware-v1.json` checks its unified area. Pass that same hardware file to instruction runs; the private execution default remains unchanged. The [overall manifest](../examples/project-baseline-v2.json) freezes precision timings and the Qwen software mapping. It is a reference manifest, not an instruction-program input.
+Use the [complete baseline](baseline_cn.md), not historical defaults. `./run costs --model unified-v4 --hardware examples/baseline-hardware-v1.json` checks its unified area. Pass that same hardware file to instruction runs; the private execution default remains unchanged. The [overall manifest](../examples/project-baseline-v4.json) freezes precision timings and the Qwen software mapping. It is a reference manifest, not an instruction-program input.
 
 Run the two measured 128-token baseline scenarios with `./run baseline --out results/baseline-001 --jobs 1 --budget 7200`; add `--local` before `baseline` for an explicit local run. `--prepare-only` checks inputs and prepares selected scenarios without simulation.

@@ -56,3 +56,20 @@ def test_unified_mip_allows_storage_compute_tradeoff():
     assert result["cost"]["area_feasible"]
     assert result["cost"]["physical_memory_bits"] > evaluate_unified_area()["physical_memory_bits"]
     assert result["hardware"]["memory_bytes_per_cycle"] == 64
+
+
+def test_rounded_budget_preserves_baseline_area_and_legacy_policy():
+    from codesign.ventus_costs.unified import V2_POLICY
+
+    manifest = json.loads((ROOT / "examples/project-baseline-v3.json").read_text())
+    for name, digest in manifest["sha256"].items():
+        assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest
+    current = evaluate_unified_area()
+    old = evaluate_unified_area(policy_path=V2_POLICY)
+    assert current["total_area_mm2"] == old["total_area_mm2"]
+    assert current["budget_mm2"] == manifest["budget_total_area_mm2"] == 1.11
+    assert old["budget_mm2"] == old["total_area_mm2"]
+    model = highspy.Highs()
+    model.setOptionValue("output_flag", False)
+    binding = add_unified_area_constraints(model)
+    assert binding["budgets"] == {"total_area_mm2": 1.11}

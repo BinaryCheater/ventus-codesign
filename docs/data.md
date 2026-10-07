@@ -87,3 +87,5 @@ manifest to check export integrity; never overwrite historical evidence.
 storage inventory. The [frozen project baseline](baseline_cn.md) adopts a
 versioned uniform-storage-density approximation through [the area policy](area-budget.md);
 this adds no physical measurement to the preserved collection.
+
+Multiport pilot (2026-10-07): [60 CACTI RF/LDS configurations](evidence/cacti-ports-20261007/README.md) completed at 22/32 nm. Area/access/cycle ratios and raw inputs/outputs are retained. This is exploratory evidence for a future cost revision; active port costs and timing remain unchanged.

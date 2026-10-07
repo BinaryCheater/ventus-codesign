@@ -39,9 +39,9 @@ GPT-2 的旧模板入口无法直接反映任意 OpenCL 源码修改，不能与
 
 ## 2. 硬件与预算
 
-基线为 Ventus 默认结构的多精度派生配置：2 SM、每 SM 8 warp/8 block、32 线程、Tensor (4,8,4)，软件为 `packed64`。完整值见[基线配置](../examples/project-baseline-v2.json)。
+基线为 Ventus 默认结构的多精度派生配置：2 SM、每 SM 8 warp/8 block、32 线程、Tensor (4,8,4)，软件为 `packed64`。完整值见[基线配置](../examples/project-baseline-v4.json)。
 
-统一约束：**总面积 ≤ 1.1039550819992285 mm²**，包含逻辑和容量等效 SRAM，无额外总存储 bits 上限。固定外存 1 通道、64 B/cycle、100 cycles；固定线程宽度 32、cache line 128 B 和多精度时序目标。比较周期数，不搜索频率。
+统一约束：**总面积 ≤ 1.11 mm²**，采用 ASAP7 标准单元与 FakeRAM 参考面积估算，包含逻辑和容量等效 SRAM，无额外总存储 bits 上限。固定外存 1 通道、64 B/cycle、100 cycles；固定线程宽度 32、cache line 128 B 和多精度时序目标。比较周期数，不搜索频率。
 
 | 类别 | 可选值 |
 |---|---|
@@ -53,9 +53,9 @@ GPT-2 的旧模板入口无法直接反映任意 OpenCL 源码修改，不能与
 | L2 | sets：32/64/128/256；ways：4/8/16；MSHR：8/16/32/64 |
 | LSU | entries：4/8/16；per-warp：1/2/4/8 |
 
-共 27 个字段，使用[机器可读范围](../examples/search-space-v2.json)。block 数不超过 warp 槽数，寄存器容量按 bank 整除，Tensor 任意两维乘积不超过 32；程序每 block 的寄存器/LDS 需求须能容纳。8 SM 已因最小估计面积超预算排除。
+共 27 个字段，使用[机器可读范围](../examples/search-space-v3.json)。block 数不超过 warp 槽数，寄存器容量按 bank 整除，Tensor 任意两维乘积不超过 32；程序每 block 的寄存器/LDS 需求须能容纳。8 SM 已因最小估计面积超预算排除。
 
-成本查询：`./run costs --model unified-v2 --hardware <hardware.json>`。MIP 成本接口为 `add_unified_area_constraints`，解码复核为 `decode_unified_solution`。公式和采集数据见[面积规则](area-budget.md)。成本是统一结构估计，允许外推；结果称为 Ventus 派生架构的模型优化。
+成本查询：`./run costs --model unified-v4 --hardware <hardware.json>`。MIP 成本接口为 `add_unified_area_constraints`，解码复核为 `decode_unified_solution`。公式和采集数据见[面积规则](area-budget.md)。成本采用新版 RF/LDS 原生多端口面积表，其余部分保留结构估计；结果称为 Ventus 派生架构的模型优化。CACTI 延迟目前仅作诊断，所有候选共同时钟约束尚未接入。默认面积和周期见[基线数据](evidence/baseline-native-arrays-20261007/README.md)。
 
 ## 3. 软件怎么改，怎样配合硬件
 

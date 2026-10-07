@@ -98,3 +98,9 @@ and dedicated integer MUL/DIV-unit timing remain uncalibrated/incomplete; these
 are concrete limits on prediction accuracy, independent of host execution speed.
 
 Search revision (2026-10-07): structural cost v2.1 adds 3 SM and VGPR 256, and uses SGPR 128/256/512/1024/2048. Cost formulas and baseline area are unchanged. Unified policy v2 selects this range; `--model unified-v1` and `--model structural-v2` retain legacy ranges. See [expanded-domain evidence](evidence/search-expansion-20261007/README.md).
+
+Budget revision (2026-10-07): unified policy v3 sets an explicit 1.11 mm² experiment budget. The baseline estimate and all cost coefficients remain unchanged. Policies v1/v2 and their results retain their original budgets. New candidates must be evaluated with v3; historical optimization results are not claimed optimal under the expanded budget.
+
+Multiport pilot (2026-10-07): [60 CACTI RF/LDS configurations](evidence/cacti-ports-20261007/README.md) completed at 22/32 nm. Area/access/cycle ratios and raw inputs/outputs are retained. This is exploratory evidence for a future cost revision; active port costs and timing remain unchanged.
+
+Current baseline: [manifest v4](../examples/project-baseline-v4.json), unified area policy v4, native-array v1. Area 1.103955 mm² against 1.11 mm² budget; 128 timing receipts reused after identity checks; 512 extrapolations retained. [Evidence](evidence/baseline-native-arrays-20261007/README.md). Array-area coverage is complete over the configured domain with explicit padding; candidate common-clock timing validation remains pending.
